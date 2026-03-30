@@ -182,7 +182,7 @@ def classify_api_error(exc: Exception) -> str:
     if "out of memory" in msg or "oom" in msg or "cuda" in msg:
         return "oom"
 
-    if "connection refused" in msg or "connect" in msg and "error" in msg:
+    if "connection refused" in msg or ("connect" in msg and "error" in msg):
         return "connection_error"
 
     if "rate limit" in msg or "429" in msg:
@@ -234,6 +234,16 @@ class ResponseCollector:
             "- No explanations, no markdown, no extra keys, no code fences.\n"
             "- If there are no header cells, return exactly: {\"headers\": []}\n"
         )
+
+    def load_system_prompt(self) -> str:
+        path = Path(__file__).resolve().parent / "prompts" / "system.txt"
+        try:
+            text = path.read_text(encoding="utf-8").strip()
+            if text:
+                return text
+        except OSError as e:
+            logging.warning("Could not read system prompt from %s: %s", path, e)
+        return self.create_system_prompt()
 
     def _should_skip_path(self, path: Path) -> bool:
         if any(part in EXCLUDE_DIR_NAMES for part in path.parts):
@@ -296,8 +306,13 @@ class ResponseCollector:
                 prompt_table = sanitize_for_prompt(item)
                 true_headers = extract_true_coords_from_headers(item.get("headers", []))
                 table_kind = "matrix"
-                rows = len(item.get("data", []))
-                cols = len(item.get("data", [])[0]) if item.get("data") else 0
+                data_rows = item.get("data") or []
+                rows = len(data_rows)
+                if not data_rows:
+                    cols = 0
+                else:
+                    first = data_rows[0]
+                    cols = len(first) if isinstance(first, (list, tuple)) else 0
             else:
                 prompt_table = sanitize_for_prompt(item)
                 true_headers = []
@@ -364,26 +379,31 @@ class ResponseCollector:
         return tables
 
     def prepare_messages(self, prompt_config: Dict[str, Any], table_json: str) -> List[Dict[str, str]]:
-        system_prompt = self.create_system_prompt()
+    
+        # грузим system prompt из файла
+        system_prompt = self.load_system_prompt()
 
+        # добавляем доп. system инструкции (если есть)
         extra_system = prompt_config.get("system")
         if extra_system:
             if isinstance(extra_system, list):
                 extra_text = "\n".join(str(x) for x in extra_system)
             else:
                 extra_text = str(extra_system)
-            system_prompt = f"{system_prompt}\n\nAdditional instructions:\n{extra_text}"
+
+            system_prompt = f"{system_prompt}\n\n{extra_text}"
 
         user_template = str(prompt_config.get("user", ""))
 
-        # Keep both placeholders for backward compatibility.
-        if "{table_json}" in user_template or "{table_text}" in user_template:
-            user_prompt = (
-                user_template
-                .replace("{table_json}", table_json)
-                .replace("{table_text}", table_json)
-            )
-        else:
+        # универсальная подстановка
+        user_prompt = (
+            user_template
+            .replace("{table_json}", table_json)
+            .replace("{table_text}", table_json)
+            .replace("{table}", table_json)
+        )
+
+        if user_prompt == user_template:
             user_prompt = f"{user_template}\n\nTABLE_JSON:\n{table_json}"
 
         return [
@@ -517,7 +537,6 @@ class ResponseCollector:
         prompt_idx: int,
         prompt_config: Dict[str, Any],
         table_record: Dict[str, Any],
-        timestamp: str
     ) -> Dict[str, Any]:
         prompt_name = str(prompt_config.get("name", f"prompt_{prompt_idx}"))
         request_id = self.build_request_id(prompt_name, table_record)
@@ -570,7 +589,6 @@ class ResponseCollector:
                     prompt_idx=job["prompt_idx"],
                     prompt_config=job["prompt_config"],
                     table_record=job["table_record"],
-                    timestamp=timestamp,
                 )
 
                 # Store records
@@ -643,7 +661,6 @@ class ResponseCollector:
 
     def save_final_results(self, timestamp: str):
         total = self.completed_count
-        total_tasks = len(self.responses) + len(self.api_failed_requests)
 
         # Main records
         responses_json, responses_csv = self._save_records_json_csv(self.responses, "responses", timestamp)
