@@ -1,0 +1,2734 @@
+[
+  {
+    "cells": [
+      {
+        "row_nums": [
+          0,
+          1
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "unknown",
+        "style": "none",
+        "indented": false,
+        "is_column_header": true,
+        "pdf_bbox": [
+          56.69012451171875,
+          547.8001098632812,
+          147.8853302001953,
+          570.052978515625
+        ],
+        "pdf_text_tight_bbox": null,
+        "is_projected_row_header": false,
+        "xml_text_content": "",
+        "xml_raw_text_content": "",
+        "pdf_text_content": ""
+      },
+      {
+        "row_nums": [
+          0
+        ],
+        "column_nums": [
+          1,
+          2
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": true,
+        "pdf_bbox": [
+          171.77984619140625,
+          547.8001098632812,
+          284.3988037109375,
+          556.8463134765625
+        ],
+        "pdf_text_tight_bbox": [
+          201.37319946289062,
+          547.8001098632812,
+          254.8213653564453,
+          556.8463134765625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Smoking status",
+        "xml_raw_text_content": "Smoking status",
+        "pdf_text_content": "Smoking status"
+      },
+      {
+        "row_nums": [
+          0
+        ],
+        "column_nums": [
+          3,
+          4,
+          5
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": true,
+        "pdf_bbox": [
+          302.3316650390625,
+          547.8001098632812,
+          404.91119384765625,
+          556.8463134765625
+        ],
+        "pdf_text_tight_bbox": [
+          333.92559814453125,
+          547.8001098632812,
+          373.4020080566406,
+          556.8463134765625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Unadjusted",
+        "xml_raw_text_content": "Unadjusted",
+        "pdf_text_content": "Unadjusted"
+      },
+      {
+        "row_nums": [
+          0
+        ],
+        "column_nums": [
+          6,
+          7,
+          8
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": true,
+        "pdf_bbox": [
+          422.9289855957031,
+          547.8001098632812,
+          532.5663452148438,
+          556.8463134765625
+        ],
+        "pdf_text_tight_bbox": [
+          460.6358337402344,
+          547.8001098632812,
+          494.8837890625,
+          556.8463134765625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Adjusted*",
+        "xml_raw_text_content": "Adjusted*",
+        "pdf_text_content": "Adjusted*"
+      },
+      {
+        "row_nums": [
+          1
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": true,
+        "pdf_bbox": [
+          171.77984619140625,
+          561.0067749023438,
+          216.47674560546875,
+          570.052978515625
+        ],
+        "pdf_text_tight_bbox": [
+          171.77984619140625,
+          561.0067749023438,
+          216.47674560546875,
+          570.052978515625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Ever smoked",
+        "xml_raw_text_content": "Ever smoked",
+        "pdf_text_content": "Ever smoked"
+      },
+      {
+        "row_nums": [
+          1
+        ],
+        "column_nums": [
+          2
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": true,
+        "pdf_bbox": [
+          234.42562866210938,
+          561.0067749023438,
+          284.3988037109375,
+          570.052978515625
+        ],
+        "pdf_text_tight_bbox": [
+          234.42562866210938,
+          561.0067749023438,
+          284.3988037109375,
+          570.052978515625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Never smoked",
+        "xml_raw_text_content": "Never smoked",
+        "pdf_text_content": "Never smoked"
+      },
+      {
+        "row_nums": [
+          1
+        ],
+        "column_nums": [
+          3
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": true,
+        "pdf_bbox": [
+          302.3316650390625,
+          561.0067749023438,
+          315.1160583496094,
+          570.052978515625
+        ],
+        "pdf_text_tight_bbox": [
+          303.7106018066406,
+          561.0067749023438,
+          313.7450866699219,
+          570.052978515625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "OR",
+        "xml_raw_text_content": "OR",
+        "pdf_text_content": "OR"
+      },
+      {
+        "row_nums": [
+          1
+        ],
+        "column_nums": [
+          4
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": true,
+        "pdf_bbox": [
+          333.0569763183594,
+          561.0067749023438,
+          360.93670654296875,
+          570.052978515625
+        ],
+        "pdf_text_tight_bbox": [
+          334.7784423828125,
+          561.0067749023438,
+          359.239013671875,
+          570.052978515625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "95% CI",
+        "xml_raw_text_content": "95% CI",
+        "pdf_text_content": "95% CI"
+      },
+      {
+        "row_nums": [
+          1
+        ],
+        "column_nums": [
+          5
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": true,
+        "pdf_bbox": [
+          378.8695068359375,
+          561.0067749023438,
+          404.91119384765625,
+          570.052978515625
+        ],
+        "pdf_text_tight_bbox": [
+          379.2760314941406,
+          561.0067749023438,
+          404.5814208984375,
+          570.052978515625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "p - value",
+        "xml_raw_text_content": "p-value",
+        "pdf_text_content": "p-value"
+      },
+      {
+        "row_nums": [
+          1
+        ],
+        "column_nums": [
+          6
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": true,
+        "pdf_bbox": [
+          422.9289855957031,
+          561.0067749023438,
+          437.45068359375,
+          570.052978515625
+        ],
+        "pdf_text_tight_bbox": [
+          425.14453125,
+          561.0067749023438,
+          435.17901611328125,
+          570.052978515625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "OR",
+        "xml_raw_text_content": "OR",
+        "pdf_text_content": "OR"
+      },
+      {
+        "row_nums": [
+          1
+        ],
+        "column_nums": [
+          7
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": true,
+        "pdf_bbox": [
+          455.41552734375,
+          561.0067749023438,
+          486.94561767578125,
+          570.052978515625
+        ],
+        "pdf_text_tight_bbox": [
+          458.9302062988281,
+          561.0067749023438,
+          483.3349914550781,
+          570.052978515625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "95% CI",
+        "xml_raw_text_content": "95% CI",
+        "pdf_text_content": "95% CI"
+      },
+      {
+        "row_nums": [
+          1
+        ],
+        "column_nums": [
+          8
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": true,
+        "pdf_bbox": [
+          504.8546447753906,
+          561.0067749023438,
+          532.5663452148438,
+          570.052978515625
+        ],
+        "pdf_text_tight_bbox": [
+          506.09783935546875,
+          561.0067749023438,
+          531.4032592773438,
+          570.052978515625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "p - value",
+        "xml_raw_text_content": "p-value",
+        "pdf_text_content": "p-value"
+      },
+      {
+        "row_nums": [
+          2
+        ],
+        "column_nums": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          56.69012451171875,
+          574.21337890625,
+          532.5663452148438,
+          583.2595825195312
+        ],
+        "pdf_text_tight_bbox": [
+          56.69012451171875,
+          574.21337890625,
+          144.73696899414062,
+          583.2595825195312
+        ],
+        "is_projected_row_header": true,
+        "xml_text_content": "Combined Allele Analysis",
+        "xml_raw_text_content": "Combined Allele Analysis",
+        "pdf_text_content": "Combined Allele Analysis"
+      },
+      {
+        "row_nums": [
+          3
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": true,
+        "is_column_header": false,
+        "pdf_bbox": [
+          56.69012451171875,
+          586.3440551757812,
+          147.8853302001953,
+          595.2228393554688
+        ],
+        "pdf_text_tight_bbox": [
+          71.65815734863281,
+          586.3440551757812,
+          140.62428283691406,
+          595.2228393554688
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Wild type at all 3 loci",
+        "xml_raw_text_content": " Wild type at all 3 loci",
+        "pdf_text_content": "Wild type at all 3 loci"
+      },
+      {
+        "row_nums": [
+          3
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          171.77984619140625,
+          586.3440551757812,
+          216.47674560546875,
+          595.2228393554688
+        ],
+        "pdf_text_tight_bbox": [
+          175.74098205566406,
+          586.3440551757812,
+          212.5314178466797,
+          595.2228393554688
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "549 (58.1%)",
+        "xml_raw_text_content": "549 (58.1%)",
+        "pdf_text_content": "549 (58.1%)"
+      },
+      {
+        "row_nums": [
+          3
+        ],
+        "column_nums": [
+          2
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          234.42562866210938,
+          586.3440551757812,
+          284.3988037109375,
+          595.2228393554688
+        ],
+        "pdf_text_tight_bbox": [
+          240.99301147460938,
+          586.3440551757812,
+          277.783447265625,
+          595.2228393554688
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "336 (48.6%)",
+        "xml_raw_text_content": "336 (48.6%)",
+        "pdf_text_content": "336 (48.6%)"
+      },
+      {
+        "row_nums": [
+          3
+        ],
+        "column_nums": [
+          3
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          302.3316650390625,
+          586.3440551757812,
+          315.1160583496094,
+          595.2228393554688
+        ],
+        "pdf_text_tight_bbox": [
+          302.3316650390625,
+          586.3440551757812,
+          315.1078796386719,
+          595.2228393554688
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "1.00",
+        "xml_raw_text_content": "1.00",
+        "pdf_text_content": "1.00"
+      },
+      {
+        "row_nums": [
+          3
+        ],
+        "column_nums": [
+          4
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          333.0569763183594,
+          586.3440551757812,
+          360.93670654296875,
+          595.2228393554688
+        ],
+        "pdf_text_tight_bbox": [
+          345.81707763671875,
+          586.3440551757812,
+          348.13641357421875,
+          595.2228393554688
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "-",
+        "xml_raw_text_content": "-",
+        "pdf_text_content": "-"
+      },
+      {
+        "row_nums": [
+          3
+        ],
+        "column_nums": [
+          5
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          378.8695068359375,
+          586.3440551757812,
+          404.91119384765625,
+          595.2228393554688
+        ],
+        "pdf_text_tight_bbox": [
+          390.72918701171875,
+          586.3440551757812,
+          393.04852294921875,
+          595.2228393554688
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "-",
+        "xml_raw_text_content": "-",
+        "pdf_text_content": "-"
+      },
+      {
+        "row_nums": [
+          3
+        ],
+        "column_nums": [
+          6
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          422.9289855957031,
+          586.3440551757812,
+          437.45068359375,
+          595.2228393554688
+        ],
+        "pdf_text_tight_bbox": [
+          423.7816162109375,
+          586.3440551757812,
+          436.5578308105469,
+          595.2228393554688
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "1.00",
+        "xml_raw_text_content": "1.00",
+        "pdf_text_content": "1.00"
+      },
+      {
+        "row_nums": [
+          3
+        ],
+        "column_nums": [
+          7
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          455.41552734375,
+          586.3440551757812,
+          486.94561767578125,
+          595.2228393554688
+        ],
+        "pdf_text_tight_bbox": [
+          469.98486328125,
+          586.3440551757812,
+          472.30419921875,
+          595.2228393554688
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "-",
+        "xml_raw_text_content": "-",
+        "pdf_text_content": "-"
+      },
+      {
+        "row_nums": [
+          3
+        ],
+        "column_nums": [
+          8
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          504.8546447753906,
+          586.3440551757812,
+          532.5663452148438,
+          595.2228393554688
+        ],
+        "pdf_text_tight_bbox": [
+          517.551025390625,
+          586.3440551757812,
+          519.870361328125,
+          595.2228393554688
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "-",
+        "xml_raw_text_content": "-",
+        "pdf_text_content": "-"
+      },
+      {
+        "row_nums": [
+          4
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": true,
+        "is_column_header": false,
+        "pdf_bbox": [
+          56.69012451171875,
+          597.0353393554688,
+          147.8853302001953,
+          607.1896362304688
+        ],
+        "pdf_text_tight_bbox": [
+          71.65817260742188,
+          598.307373046875,
+          146.57009887695312,
+          607.1861572265625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Carrier of ≥ 1 risk allele",
+        "xml_raw_text_content": " Carrier of ≥ 1 risk allele",
+        "pdf_text_content": "Carrier of ≥ 1 risk allele"
+      },
+      {
+        "row_nums": [
+          4
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          171.77984619140625,
+          597.0353393554688,
+          216.47674560546875,
+          607.1896362304688
+        ],
+        "pdf_text_tight_bbox": [
+          175.74900817871094,
+          598.307373046875,
+          212.53944396972656,
+          607.1861572265625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "396 (41.9%)",
+        "xml_raw_text_content": "396 (41.9%)",
+        "pdf_text_content": "396 (41.9%)"
+      },
+      {
+        "row_nums": [
+          4
+        ],
+        "column_nums": [
+          2
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          234.42562866210938,
+          597.0353393554688,
+          284.3988037109375,
+          607.1896362304688
+        ],
+        "pdf_text_tight_bbox": [
+          241.00103759765625,
+          598.307373046875,
+          277.7914733886719,
+          607.1861572265625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "355 (51.4%)",
+        "xml_raw_text_content": "355 (51.4%)",
+        "pdf_text_content": "355 (51.4%)"
+      },
+      {
+        "row_nums": [
+          4
+        ],
+        "column_nums": [
+          3
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          302.3316650390625,
+          597.0353393554688,
+          315.1160583496094,
+          607.1896362304688
+        ],
+        "pdf_text_tight_bbox": [
+          302.3396911621094,
+          598.307373046875,
+          315.11590576171875,
+          607.1861572265625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "0.68",
+        "xml_raw_text_content": "0.68",
+        "pdf_text_content": "0.68"
+      },
+      {
+        "row_nums": [
+          4
+        ],
+        "column_nums": [
+          4
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          333.0569763183594,
+          597.0353393554688,
+          360.93670654296875,
+          607.1896362304688
+        ],
+        "pdf_text_tight_bbox": [
+          333.0647888183594,
+          598.307373046875,
+          360.9365539550781,
+          607.1861572265625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "0.56-0.83",
+        "xml_raw_text_content": "0.56-0.83",
+        "pdf_text_content": "0.56-0.83"
+      },
+      {
+        "row_nums": [
+          4
+        ],
+        "column_nums": [
+          5
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          378.8695068359375,
+          597.0353393554688,
+          404.91119384765625,
+          607.1896362304688
+        ],
+        "pdf_text_tight_bbox": [
+          378.8695068359375,
+          597.0353393554688,
+          404.91119384765625,
+          607.1861572265625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "1 × 10 -4",
+        "xml_raw_text_content": "1 × 10-4",
+        "pdf_text_content": "1 × 10-4"
+      },
+      {
+        "row_nums": [
+          4
+        ],
+        "column_nums": [
+          6
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          422.9289855957031,
+          597.0353393554688,
+          437.45068359375,
+          607.1896362304688
+        ],
+        "pdf_text_tight_bbox": [
+          422.9289855957031,
+          598.1434326171875,
+          437.45068359375,
+          607.1896362304688
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "0.71",
+        "xml_raw_text_content": "0.71",
+        "pdf_text_content": "0.71"
+      },
+      {
+        "row_nums": [
+          4
+        ],
+        "column_nums": [
+          7
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          455.41552734375,
+          597.0353393554688,
+          486.94561767578125,
+          607.1896362304688
+        ],
+        "pdf_text_tight_bbox": [
+          455.41552734375,
+          598.1434326171875,
+          486.94561767578125,
+          607.1896362304688
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "0.56-0.90",
+        "xml_raw_text_content": "0.56-0.90",
+        "pdf_text_content": "0.56-0.90"
+      },
+      {
+        "row_nums": [
+          4
+        ],
+        "column_nums": [
+          8
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          504.8546447753906,
+          597.0353393554688,
+          532.5663452148438,
+          607.1896362304688
+        ],
+        "pdf_text_tight_bbox": [
+          509.33392333984375,
+          598.1434326171875,
+          528.0878295898438,
+          607.1896362304688
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "0.005",
+        "xml_raw_text_content": "0.005",
+        "pdf_text_content": "0.005"
+      },
+      {
+        "row_nums": [
+          5
+        ],
+        "column_nums": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          56.69012451171875,
+          611.2942504882812,
+          532.5663452148438,
+          620.3404541015625
+        ],
+        "pdf_text_tight_bbox": [
+          56.6903076171875,
+          611.2942504882812,
+          133.3636474609375,
+          620.3404541015625
+        ],
+        "is_projected_row_header": true,
+        "xml_text_content": "R702W Polymorphism",
+        "xml_raw_text_content": "R702W Polymorphism",
+        "pdf_text_content": "R702W Polymorphism"
+      },
+      {
+        "row_nums": [
+          6
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": true,
+        "is_column_header": false,
+        "pdf_bbox": [
+          56.69012451171875,
+          623.4249267578125,
+          147.8853302001953,
+          632.3037109375
+        ],
+        "pdf_text_tight_bbox": [
+          71.65834045410156,
+          623.4249267578125,
+          102.3993911743164,
+          632.3037109375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Wild type",
+        "xml_raw_text_content": " Wild type",
+        "pdf_text_content": "Wild type"
+      },
+      {
+        "row_nums": [
+          6
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          171.77984619140625,
+          623.4249267578125,
+          216.47674560546875,
+          632.3037109375
+        ],
+        "pdf_text_tight_bbox": [
+          175.7491455078125,
+          623.4249267578125,
+          212.53956604003906,
+          632.3037109375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "776 (82.1%)",
+        "xml_raw_text_content": "776 (82.1%)",
+        "pdf_text_content": "776 (82.1%)"
+      },
+      {
+        "row_nums": [
+          6
+        ],
+        "column_nums": [
+          2
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          234.42562866210938,
+          623.4249267578125,
+          284.3988037109375,
+          632.3037109375
+        ],
+        "pdf_text_tight_bbox": [
+          241.00115966796875,
+          623.4249267578125,
+          277.7915954589844,
+          632.3037109375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "540 (78.1%)",
+        "xml_raw_text_content": "540 (78.1%)",
+        "pdf_text_content": "540 (78.1%)"
+      },
+      {
+        "row_nums": [
+          6
+        ],
+        "column_nums": [
+          3
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          302.3316650390625,
+          623.4249267578125,
+          315.1160583496094,
+          632.3037109375
+        ],
+        "pdf_text_tight_bbox": [
+          302.3398132324219,
+          623.4249267578125,
+          315.11602783203125,
+          632.3037109375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "1.00",
+        "xml_raw_text_content": "1.00",
+        "pdf_text_content": "1.00"
+      },
+      {
+        "row_nums": [
+          6
+        ],
+        "column_nums": [
+          4
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          333.0569763183594,
+          623.4249267578125,
+          360.93670654296875,
+          632.3037109375
+        ],
+        "pdf_text_tight_bbox": [
+          345.8251953125,
+          623.4249267578125,
+          348.14453125,
+          632.3037109375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "-",
+        "xml_raw_text_content": "-",
+        "pdf_text_content": "-"
+      },
+      {
+        "row_nums": [
+          6
+        ],
+        "column_nums": [
+          5
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          378.8695068359375,
+          623.4249267578125,
+          404.91119384765625,
+          632.3037109375
+        ],
+        "pdf_text_tight_bbox": [
+          390.7293701171875,
+          623.4249267578125,
+          393.0487060546875,
+          632.3037109375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "-",
+        "xml_raw_text_content": "-",
+        "pdf_text_content": "-"
+      },
+      {
+        "row_nums": [
+          6
+        ],
+        "column_nums": [
+          6
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          422.9289855957031,
+          623.4249267578125,
+          437.45068359375,
+          632.3037109375
+        ],
+        "pdf_text_tight_bbox": [
+          423.78179931640625,
+          623.4249267578125,
+          436.5580139160156,
+          632.3037109375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "1.00",
+        "xml_raw_text_content": "1.00",
+        "pdf_text_content": "1.00"
+      },
+      {
+        "row_nums": [
+          6
+        ],
+        "column_nums": [
+          7
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          455.41552734375,
+          623.4249267578125,
+          486.94561767578125,
+          632.3037109375
+        ],
+        "pdf_text_tight_bbox": [
+          469.98504638671875,
+          623.4249267578125,
+          472.30438232421875,
+          632.3037109375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "-",
+        "xml_raw_text_content": "-",
+        "pdf_text_content": "-"
+      },
+      {
+        "row_nums": [
+          6
+        ],
+        "column_nums": [
+          8
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          504.8546447753906,
+          623.4249267578125,
+          532.5663452148438,
+          632.3037109375
+        ],
+        "pdf_text_tight_bbox": [
+          517.5512084960938,
+          623.4249267578125,
+          519.8705444335938,
+          632.3037109375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "-",
+        "xml_raw_text_content": "-",
+        "pdf_text_content": "-"
+      },
+      {
+        "row_nums": [
+          7
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": true,
+        "is_column_header": false,
+        "pdf_bbox": [
+          56.69012451171875,
+          635.3882446289062,
+          147.8853302001953,
+          644.2670288085938
+        ],
+        "pdf_text_tight_bbox": [
+          71.65835571289062,
+          635.3882446289062,
+          132.67819213867188,
+          644.2670288085938
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Carrier of risk allele",
+        "xml_raw_text_content": " Carrier of risk allele",
+        "pdf_text_content": "Carrier of risk allele"
+      },
+      {
+        "row_nums": [
+          7
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          171.77984619140625,
+          635.3882446289062,
+          216.47674560546875,
+          644.2670288085938
+        ],
+        "pdf_text_tight_bbox": [
+          175.74917602539062,
+          635.3882446289062,
+          212.5395965576172,
+          644.2670288085938
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "169 (17.9%)",
+        "xml_raw_text_content": "169 (17.9%)",
+        "pdf_text_content": "169 (17.9%)"
+      },
+      {
+        "row_nums": [
+          7
+        ],
+        "column_nums": [
+          2
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          234.42562866210938,
+          635.3882446289062,
+          284.3988037109375,
+          644.2670288085938
+        ],
+        "pdf_text_tight_bbox": [
+          241.00119018554688,
+          635.3882446289062,
+          277.7916259765625,
+          644.2670288085938
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "151 (21.9%)",
+        "xml_raw_text_content": "151 (21.9%)",
+        "pdf_text_content": "151 (21.9%)"
+      },
+      {
+        "row_nums": [
+          7
+        ],
+        "column_nums": [
+          3
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          302.3316650390625,
+          635.3882446289062,
+          315.1160583496094,
+          644.2670288085938
+        ],
+        "pdf_text_tight_bbox": [
+          302.33984375,
+          635.3882446289062,
+          315.1160583496094,
+          644.2670288085938
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "0.78",
+        "xml_raw_text_content": "0.78",
+        "pdf_text_content": "0.78"
+      },
+      {
+        "row_nums": [
+          7
+        ],
+        "column_nums": [
+          4
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          333.0569763183594,
+          635.3882446289062,
+          360.93670654296875,
+          644.2670288085938
+        ],
+        "pdf_text_tight_bbox": [
+          333.06494140625,
+          635.3882446289062,
+          360.93670654296875,
+          644.2670288085938
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "0.61-1.00",
+        "xml_raw_text_content": "0.61-1.00",
+        "pdf_text_content": "0.61-1.00"
+      },
+      {
+        "row_nums": [
+          7
+        ],
+        "column_nums": [
+          5
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          378.8695068359375,
+          635.3882446289062,
+          404.91119384765625,
+          644.2670288085938
+        ],
+        "pdf_text_tight_bbox": [
+          385.50885009765625,
+          635.3882446289062,
+          398.2850646972656,
+          644.2670288085938
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "0.04",
+        "xml_raw_text_content": "0.04",
+        "pdf_text_content": "0.04"
+      },
+      {
+        "row_nums": [
+          7
+        ],
+        "column_nums": [
+          6
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          422.9289855957031,
+          635.3882446289062,
+          437.45068359375,
+          644.2670288085938
+        ],
+        "pdf_text_tight_bbox": [
+          423.7737731933594,
+          635.3882446289062,
+          436.54998779296875,
+          644.2670288085938
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "0.80",
+        "xml_raw_text_content": "0.80",
+        "pdf_text_content": "0.80"
+      },
+      {
+        "row_nums": [
+          7
+        ],
+        "column_nums": [
+          7
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          455.41552734375,
+          635.3882446289062,
+          486.94561767578125,
+          644.2670288085938
+        ],
+        "pdf_text_tight_bbox": [
+          457.2247009277344,
+          635.3882446289062,
+          485.0964660644531,
+          644.2670288085938
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "0.59-1.07",
+        "xml_raw_text_content": "0.59-1.07",
+        "pdf_text_content": "0.59-1.07"
+      },
+      {
+        "row_nums": [
+          7
+        ],
+        "column_nums": [
+          8
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          504.8546447753906,
+          635.3882446289062,
+          532.5663452148438,
+          644.2670288085938
+        ],
+        "pdf_text_tight_bbox": [
+          512.3306274414062,
+          635.3882446289062,
+          525.10693359375,
+          644.2670288085938
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "0.14",
+        "xml_raw_text_content": "0.14",
+        "pdf_text_content": "0.14"
+      },
+      {
+        "row_nums": [
+          8
+        ],
+        "column_nums": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          56.69012451171875,
+          648.4274291992188,
+          532.5663452148438,
+          657.4736328125
+        ],
+        "pdf_text_tight_bbox": [
+          56.690330505371094,
+          648.4274291992188,
+          131.6102294921875,
+          657.4736328125
+        ],
+        "is_projected_row_header": true,
+        "xml_text_content": "G908R Polymorphism",
+        "xml_raw_text_content": "G908R Polymorphism",
+        "pdf_text_content": "G908R Polymorphism"
+      },
+      {
+        "row_nums": [
+          9
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": true,
+        "is_column_header": false,
+        "pdf_bbox": [
+          56.69012451171875,
+          660.55810546875,
+          147.8853302001953,
+          669.4368896484375
+        ],
+        "pdf_text_tight_bbox": [
+          71.65836334228516,
+          660.55810546875,
+          102.39942169189453,
+          669.4368896484375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Wild type",
+        "xml_raw_text_content": " Wild type",
+        "pdf_text_content": "Wild type"
+      },
+      {
+        "row_nums": [
+          9
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          171.77984619140625,
+          660.55810546875,
+          216.47674560546875,
+          669.4368896484375
+        ],
+        "pdf_text_tight_bbox": [
+          175.74917602539062,
+          660.55810546875,
+          212.5395965576172,
+          669.4368896484375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "858 (90.8%)",
+        "xml_raw_text_content": "858 (90.8%)",
+        "pdf_text_content": "858 (90.8%)"
+      },
+      {
+        "row_nums": [
+          9
+        ],
+        "column_nums": [
+          2
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          234.42562866210938,
+          660.55810546875,
+          284.3988037109375,
+          669.4368896484375
+        ],
+        "pdf_text_tight_bbox": [
+          241.00119018554688,
+          660.55810546875,
+          277.7916259765625,
+          669.4368896484375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "626 (90.6%)",
+        "xml_raw_text_content": "626 (90.6%)",
+        "pdf_text_content": "626 (90.6%)"
+      },
+      {
+        "row_nums": [
+          9
+        ],
+        "column_nums": [
+          3
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          302.3316650390625,
+          660.55810546875,
+          315.1160583496094,
+          669.4368896484375
+        ],
+        "pdf_text_tight_bbox": [
+          302.33984375,
+          660.55810546875,
+          315.1160583496094,
+          669.4368896484375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "1.00",
+        "xml_raw_text_content": "1.00",
+        "pdf_text_content": "1.00"
+      },
+      {
+        "row_nums": [
+          9
+        ],
+        "column_nums": [
+          4
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          333.0569763183594,
+          660.55810546875,
+          360.93670654296875,
+          669.4368896484375
+        ],
+        "pdf_text_tight_bbox": [
+          345.82525634765625,
+          660.55810546875,
+          348.14459228515625,
+          669.4368896484375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "-",
+        "xml_raw_text_content": "-",
+        "pdf_text_content": "-"
+      },
+      {
+        "row_nums": [
+          9
+        ],
+        "column_nums": [
+          5
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          378.8695068359375,
+          660.55810546875,
+          404.91119384765625,
+          669.4368896484375
+        ],
+        "pdf_text_tight_bbox": [
+          390.7293701171875,
+          660.55810546875,
+          393.0487060546875,
+          669.4368896484375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "-",
+        "xml_raw_text_content": "-",
+        "pdf_text_content": "-"
+      },
+      {
+        "row_nums": [
+          9
+        ],
+        "column_nums": [
+          6
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          422.9289855957031,
+          660.55810546875,
+          437.45068359375,
+          669.4368896484375
+        ],
+        "pdf_text_tight_bbox": [
+          423.78179931640625,
+          660.55810546875,
+          436.5580139160156,
+          669.4368896484375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "1.00",
+        "xml_raw_text_content": "1.00",
+        "pdf_text_content": "1.00"
+      },
+      {
+        "row_nums": [
+          9
+        ],
+        "column_nums": [
+          7
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          455.41552734375,
+          660.55810546875,
+          486.94561767578125,
+          669.4368896484375
+        ],
+        "pdf_text_tight_bbox": [
+          469.98504638671875,
+          660.55810546875,
+          472.30438232421875,
+          669.4368896484375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "-",
+        "xml_raw_text_content": "-",
+        "pdf_text_content": "-"
+      },
+      {
+        "row_nums": [
+          9
+        ],
+        "column_nums": [
+          8
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          504.8546447753906,
+          660.55810546875,
+          532.5663452148438,
+          669.4368896484375
+        ],
+        "pdf_text_tight_bbox": [
+          517.5512084960938,
+          660.55810546875,
+          519.8705444335938,
+          669.4368896484375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "-",
+        "xml_raw_text_content": "-",
+        "pdf_text_content": "-"
+      },
+      {
+        "row_nums": [
+          10
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": true,
+        "is_column_header": false,
+        "pdf_bbox": [
+          56.69012451171875,
+          672.5213623046875,
+          147.8853302001953,
+          681.400146484375
+        ],
+        "pdf_text_tight_bbox": [
+          71.65835571289062,
+          672.5213623046875,
+          147.8853302001953,
+          681.400146484375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Hetero- or homozygote",
+        "xml_raw_text_content": " Hetero- or homozygote",
+        "pdf_text_content": "Hetero- or homozygote"
+      },
+      {
+        "row_nums": [
+          10
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          171.77984619140625,
+          672.5213623046875,
+          216.47674560546875,
+          681.400146484375
+        ],
+        "pdf_text_tight_bbox": [
+          179.54298400878906,
+          672.5213623046875,
+          208.7139129638672,
+          681.400146484375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "87 (9.2%)",
+        "xml_raw_text_content": "87 (9.2%)",
+        "pdf_text_content": "87 (9.2%)"
+      },
+      {
+        "row_nums": [
+          10
+        ],
+        "column_nums": [
+          2
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          234.42562866210938,
+          672.5213623046875,
+          284.3988037109375,
+          681.400146484375
+        ],
+        "pdf_text_tight_bbox": [
+          244.79501342773438,
+          672.5213623046875,
+          273.9659423828125,
+          681.400146484375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "65 (9.4%)",
+        "xml_raw_text_content": "65 (9.4%)",
+        "pdf_text_content": "65 (9.4%)"
+      },
+      {
+        "row_nums": [
+          10
+        ],
+        "column_nums": [
+          3
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          302.3316650390625,
+          672.5213623046875,
+          315.1160583496094,
+          681.400146484375
+        ],
+        "pdf_text_tight_bbox": [
+          302.3318786621094,
+          672.5213623046875,
+          315.10809326171875,
+          681.400146484375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "0.98",
+        "xml_raw_text_content": "0.98",
+        "pdf_text_content": "0.98"
+      },
+      {
+        "row_nums": [
+          10
+        ],
+        "column_nums": [
+          4
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          333.0569763183594,
+          672.5213623046875,
+          360.93670654296875,
+          681.400146484375
+        ],
+        "pdf_text_tight_bbox": [
+          333.0569763183594,
+          672.5213623046875,
+          360.9287414550781,
+          681.400146484375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "0.70-1.37",
+        "xml_raw_text_content": "0.70-1.37",
+        "pdf_text_content": "0.70-1.37"
+      },
+      {
+        "row_nums": [
+          10
+        ],
+        "column_nums": [
+          5
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          378.8695068359375,
+          672.5213623046875,
+          404.91119384765625,
+          681.400146484375
+        ],
+        "pdf_text_tight_bbox": [
+          385.5008544921875,
+          672.5213623046875,
+          398.2770690917969,
+          681.400146484375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "0.89",
+        "xml_raw_text_content": "0.89",
+        "pdf_text_content": "0.89"
+      },
+      {
+        "row_nums": [
+          10
+        ],
+        "column_nums": [
+          6
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          422.9289855957031,
+          672.5213623046875,
+          437.45068359375,
+          681.400146484375
+        ],
+        "pdf_text_tight_bbox": [
+          423.7657775878906,
+          672.5213623046875,
+          436.5419921875,
+          681.400146484375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "1.00",
+        "xml_raw_text_content": "1.00",
+        "pdf_text_content": "1.00"
+      },
+      {
+        "row_nums": [
+          10
+        ],
+        "column_nums": [
+          7
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          455.41552734375,
+          672.5213623046875,
+          486.94561767578125,
+          681.400146484375
+        ],
+        "pdf_text_tight_bbox": [
+          457.2167053222656,
+          672.5213623046875,
+          485.0884704589844,
+          681.400146484375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "0.67-1.53",
+        "xml_raw_text_content": "0.67-1.53",
+        "pdf_text_content": "0.67-1.53"
+      },
+      {
+        "row_nums": [
+          10
+        ],
+        "column_nums": [
+          8
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          504.8546447753906,
+          672.5213623046875,
+          532.5663452148438,
+          681.400146484375
+        ],
+        "pdf_text_tight_bbox": [
+          512.3226318359375,
+          672.5213623046875,
+          525.0989379882812,
+          681.400146484375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "0.96",
+        "xml_raw_text_content": "0.96",
+        "pdf_text_content": "0.96"
+      },
+      {
+        "row_nums": [
+          11
+        ],
+        "column_nums": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          56.69012451171875,
+          685.5606079101562,
+          532.5663452148438,
+          694.6068115234375
+        ],
+        "pdf_text_tight_bbox": [
+          56.6903190612793,
+          685.5606079101562,
+          131.95294189453125,
+          694.6068115234375
+        ],
+        "is_projected_row_header": true,
+        "xml_text_content": "1007fs Polymorphism",
+        "xml_raw_text_content": "1007fs Polymorphism",
+        "pdf_text_content": "1007fs Polymorphism"
+      },
+      {
+        "row_nums": [
+          12
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": true,
+        "is_column_header": false,
+        "pdf_bbox": [
+          56.69012451171875,
+          697.635498046875,
+          147.8853302001953,
+          706.5142822265625
+        ],
+        "pdf_text_tight_bbox": [
+          71.65835571289062,
+          697.635498046875,
+          102.39940643310547,
+          706.5142822265625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Wild type",
+        "xml_raw_text_content": " Wild type",
+        "pdf_text_content": "Wild type"
+      },
+      {
+        "row_nums": [
+          12
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          171.77984619140625,
+          697.635498046875,
+          216.47674560546875,
+          706.5142822265625
+        ],
+        "pdf_text_tight_bbox": [
+          175.74917602539062,
+          697.635498046875,
+          212.5395965576172,
+          706.5142822265625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "735 (77.8%)",
+        "xml_raw_text_content": "735 (77.8%)",
+        "pdf_text_content": "735 (77.8%)"
+      },
+      {
+        "row_nums": [
+          12
+        ],
+        "column_nums": [
+          2
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          234.42562866210938,
+          697.635498046875,
+          284.3988037109375,
+          706.5142822265625
+        ],
+        "pdf_text_tight_bbox": [
+          241.00119018554688,
+          697.635498046875,
+          277.7916259765625,
+          706.5142822265625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "477 (69.0%)",
+        "xml_raw_text_content": "477 (69.0%)",
+        "pdf_text_content": "477 (69.0%)"
+      },
+      {
+        "row_nums": [
+          12
+        ],
+        "column_nums": [
+          3
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          302.3316650390625,
+          697.635498046875,
+          315.1160583496094,
+          706.5142822265625
+        ],
+        "pdf_text_tight_bbox": [
+          302.33984375,
+          697.635498046875,
+          315.1160583496094,
+          706.5142822265625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "1.00",
+        "xml_raw_text_content": "1.00",
+        "pdf_text_content": "1.00"
+      },
+      {
+        "row_nums": [
+          12
+        ],
+        "column_nums": [
+          4
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          333.0569763183594,
+          697.635498046875,
+          360.93670654296875,
+          706.5142822265625
+        ],
+        "pdf_text_tight_bbox": [
+          345.82525634765625,
+          697.635498046875,
+          348.14459228515625,
+          706.5142822265625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "-",
+        "xml_raw_text_content": "-",
+        "pdf_text_content": "-"
+      },
+      {
+        "row_nums": [
+          12
+        ],
+        "column_nums": [
+          5
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          378.8695068359375,
+          697.635498046875,
+          404.91119384765625,
+          706.5142822265625
+        ],
+        "pdf_text_tight_bbox": [
+          390.7293701171875,
+          697.635498046875,
+          393.0487060546875,
+          706.5142822265625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "-",
+        "xml_raw_text_content": "-",
+        "pdf_text_content": "-"
+      },
+      {
+        "row_nums": [
+          12
+        ],
+        "column_nums": [
+          6
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          422.9289855957031,
+          697.635498046875,
+          437.45068359375,
+          706.5142822265625
+        ],
+        "pdf_text_tight_bbox": [
+          423.78179931640625,
+          697.635498046875,
+          436.5580139160156,
+          706.5142822265625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "1.00",
+        "xml_raw_text_content": "1.00",
+        "pdf_text_content": "1.00"
+      },
+      {
+        "row_nums": [
+          12
+        ],
+        "column_nums": [
+          7
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          455.41552734375,
+          697.635498046875,
+          486.94561767578125,
+          706.5142822265625
+        ],
+        "pdf_text_tight_bbox": [
+          469.98504638671875,
+          697.635498046875,
+          472.30438232421875,
+          706.5142822265625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "-",
+        "xml_raw_text_content": "-",
+        "pdf_text_content": "-"
+      },
+      {
+        "row_nums": [
+          12
+        ],
+        "column_nums": [
+          8
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          504.8546447753906,
+          697.635498046875,
+          532.5663452148438,
+          706.5142822265625
+        ],
+        "pdf_text_tight_bbox": [
+          517.5512084960938,
+          697.635498046875,
+          519.8705444335938,
+          706.5142822265625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "-",
+        "xml_raw_text_content": "-",
+        "pdf_text_content": "-"
+      },
+      {
+        "row_nums": [
+          13
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": true,
+        "is_column_header": false,
+        "pdf_bbox": [
+          56.69012451171875,
+          708.2685546875,
+          147.8853302001953,
+          718.4778442382812
+        ],
+        "pdf_text_tight_bbox": [
+          71.65835571289062,
+          709.5987548828125,
+          132.67819213867188,
+          718.4775390625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Carrier of risk allele",
+        "xml_raw_text_content": " Carrier of risk allele",
+        "pdf_text_content": "Carrier of risk allele"
+      },
+      {
+        "row_nums": [
+          13
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          171.77984619140625,
+          708.2685546875,
+          216.47674560546875,
+          718.4778442382812
+        ],
+        "pdf_text_tight_bbox": [
+          175.74917602539062,
+          709.5987548828125,
+          212.5395965576172,
+          718.4775390625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "210 (22.2%)",
+        "xml_raw_text_content": "210 (22.2%)",
+        "pdf_text_content": "210 (22.2%)"
+      },
+      {
+        "row_nums": [
+          13
+        ],
+        "column_nums": [
+          2
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          234.42562866210938,
+          708.2685546875,
+          284.3988037109375,
+          718.4778442382812
+        ],
+        "pdf_text_tight_bbox": [
+          241.00119018554688,
+          709.5987548828125,
+          277.7916259765625,
+          718.4775390625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "214 (31.0%)",
+        "xml_raw_text_content": "214 (31.0%)",
+        "pdf_text_content": "214 (31.0%)"
+      },
+      {
+        "row_nums": [
+          13
+        ],
+        "column_nums": [
+          3
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          302.3316650390625,
+          708.2685546875,
+          315.1160583496094,
+          718.4778442382812
+        ],
+        "pdf_text_tight_bbox": [
+          302.33984375,
+          709.5987548828125,
+          315.1160583496094,
+          718.4775390625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "0.64",
+        "xml_raw_text_content": "0.64",
+        "pdf_text_content": "0.64"
+      },
+      {
+        "row_nums": [
+          13
+        ],
+        "column_nums": [
+          4
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          333.0569763183594,
+          708.2685546875,
+          360.93670654296875,
+          718.4778442382812
+        ],
+        "pdf_text_tight_bbox": [
+          333.06494140625,
+          709.5987548828125,
+          360.93670654296875,
+          718.4775390625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "0.51-0.80",
+        "xml_raw_text_content": "0.51-0.80",
+        "pdf_text_content": "0.51-0.80"
+      },
+      {
+        "row_nums": [
+          13
+        ],
+        "column_nums": [
+          5
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          378.8695068359375,
+          708.2685546875,
+          404.91119384765625,
+          718.4778442382812
+        ],
+        "pdf_text_tight_bbox": [
+          378.8696594238281,
+          708.380126953125,
+          404.91119384765625,
+          718.4775390625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "7 × 10 -5",
+        "xml_raw_text_content": "7 × 10-5",
+        "pdf_text_content": "7 × 10-5"
+      },
+      {
+        "row_nums": [
+          13
+        ],
+        "column_nums": [
+          6
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          422.9289855957031,
+          708.2685546875,
+          437.45068359375,
+          718.4778442382812
+        ],
+        "pdf_text_tight_bbox": [
+          422.9289855957031,
+          709.431640625,
+          437.45068359375,
+          718.4778442382812
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "0.64",
+        "xml_raw_text_content": "0.64",
+        "pdf_text_content": "0.64"
+      },
+      {
+        "row_nums": [
+          13
+        ],
+        "column_nums": [
+          7
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          455.41552734375,
+          708.2685546875,
+          486.94561767578125,
+          718.4778442382812
+        ],
+        "pdf_text_tight_bbox": [
+          455.41552734375,
+          709.431640625,
+          486.94561767578125,
+          718.4778442382812
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "0.49-0.83",
+        "xml_raw_text_content": "0.49-0.83",
+        "pdf_text_content": "0.49-0.83"
+      },
+      {
+        "row_nums": [
+          13
+        ],
+        "column_nums": [
+          8
+        ],
+        "align": "center",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          504.8546447753906,
+          708.2685546875,
+          532.5663452148438,
+          718.4778442382812
+        ],
+        "pdf_text_tight_bbox": [
+          504.8546447753906,
+          708.2685546875,
+          532.5663452148438,
+          718.4778442382812
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "9 × 10 -4",
+        "xml_raw_text_content": "9 × 10-4",
+        "pdf_text_content": "9 × 10-4"
+      }
+    ],
+    "rows": [
+      {
+        "pdf_row_bbox": [
+          56.69012451171875,
+          547.8001098632812,
+          532.5663452148438,
+          556.8463134765625
+        ],
+        "is_column_header": true
+      },
+      {
+        "pdf_row_bbox": [
+          56.69012451171875,
+          561.0067749023438,
+          532.5663452148438,
+          570.052978515625
+        ],
+        "is_column_header": true
+      },
+      {
+        "pdf_row_bbox": [
+          56.69012451171875,
+          574.21337890625,
+          532.5663452148438,
+          583.2595825195312
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          56.69012451171875,
+          586.3440551757812,
+          532.5663452148438,
+          595.2228393554688
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          56.69012451171875,
+          597.0353393554688,
+          532.5663452148438,
+          607.1896362304688
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          56.69012451171875,
+          611.2942504882812,
+          532.5663452148438,
+          620.3404541015625
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          56.69012451171875,
+          623.4249267578125,
+          532.5663452148438,
+          632.3037109375
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          56.69012451171875,
+          635.3882446289062,
+          532.5663452148438,
+          644.2670288085938
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          56.69012451171875,
+          648.4274291992188,
+          532.5663452148438,
+          657.4736328125
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          56.69012451171875,
+          660.55810546875,
+          532.5663452148438,
+          669.4368896484375
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          56.69012451171875,
+          672.5213623046875,
+          532.5663452148438,
+          681.400146484375
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          56.69012451171875,
+          685.5606079101562,
+          532.5663452148438,
+          694.6068115234375
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          56.69012451171875,
+          697.635498046875,
+          532.5663452148438,
+          706.5142822265625
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          56.69012451171875,
+          708.2685546875,
+          532.5663452148438,
+          718.4778442382812
+        ],
+        "is_column_header": false
+      }
+    ],
+    "columns": [
+      {
+        "pdf_column_bbox": [
+          56.69012451171875,
+          547.8001098632812,
+          147.8853302001953,
+          718.4778442382812
+        ]
+      },
+      {
+        "pdf_column_bbox": [
+          171.77984619140625,
+          547.8001098632812,
+          216.47674560546875,
+          718.4778442382812
+        ]
+      },
+      {
+        "pdf_column_bbox": [
+          234.42562866210938,
+          547.8001098632812,
+          284.3988037109375,
+          718.4778442382812
+        ]
+      },
+      {
+        "pdf_column_bbox": [
+          302.3316650390625,
+          547.8001098632812,
+          315.1160583496094,
+          718.4778442382812
+        ]
+      },
+      {
+        "pdf_column_bbox": [
+          333.0569763183594,
+          547.8001098632812,
+          360.93670654296875,
+          718.4778442382812
+        ]
+      },
+      {
+        "pdf_column_bbox": [
+          378.8695068359375,
+          547.8001098632812,
+          404.91119384765625,
+          718.4778442382812
+        ]
+      },
+      {
+        "pdf_column_bbox": [
+          422.9289855957031,
+          547.8001098632812,
+          437.45068359375,
+          718.4778442382812
+        ]
+      },
+      {
+        "pdf_column_bbox": [
+          455.41552734375,
+          547.8001098632812,
+          486.94561767578125,
+          718.4778442382812
+        ]
+      },
+      {
+        "pdf_column_bbox": [
+          504.8546447753906,
+          547.8001098632812,
+          532.5663452148438,
+          718.4778442382812
+        ]
+      }
+    ],
+    "pmc_id": "PMC3314543",
+    "pdf_file_name": "1471-2350-13-14.pdf",
+    "xml_file_name": "1471-2350-13-14.nxml",
+    "split": "test",
+    "exclude_for_structure": false,
+    "exclude_for_detection": false,
+    "structure_id": "PMC3314543_table_1",
+    "xml_table_index": 1,
+    "pdf_page_index": 3,
+    "pdf_full_page_bbox": [
+      0.0,
+      0.0,
+      595.2760009765625,
+      793.7009887695312
+    ],
+    "pdf_table_bbox": [
+      56.69012451171875,
+      547.8001098632812,
+      532.5663452148438,
+      718.4778442382812
+    ],
+    "pdf_table_wrap_bbox": [
+      56.69012451171875,
+      522.677734375,
+      535.9775390625,
+      731.9483642578125
+    ],
+    "xml_table_wrap_start_character_index": 28339,
+    "xml_table_wrap_end_character_index": 32380
+  }
+]

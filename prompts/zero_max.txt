@@ -1,0 +1,31 @@
+Task: Identify which cells in the table are headers.
+
+ANALYSIS MODE: MAXIMUM STRATEGY (CONTEXTUAL)
+
+Definition:
+A header is any cell that logically or semantically GENERALIZES or DESCRIBES a group of other cells in a row or column.
+
+Important:
+The table must be interpreted within context (e.g., report, measurement, summary).
+First determine what process this table represents, and distinguish:
+— core factual data
+— contextual or interpretative elements
+
+Header criteria:
+— generalizes other values
+— defines category, group, period, type, or dimension
+— is not a direct observation
+— removing it reduces interpretability but not raw data
+
+Do NOT treat as headers:
+— numeric or factual values
+— individual records
+
+Requirement:
+Identify all header cells.
+
+Output format:
+List cell coordinates (row, column) or their text.
+
+Table:
+{table}

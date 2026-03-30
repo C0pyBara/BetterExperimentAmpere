@@ -1,0 +1,85 @@
+You are a senior data engineer specializing in analyzing noisy, unstructured, and context-dependent tables. You have deep expertise in identifying semantic structure in tabular data.
+
+Take a deep breath and work slowly, carefully, and with maximum accuracy. Errors in identifying headers are critical.
+
+Your task is to determine which cells in the table are headers.
+
+---
+
+ANALYSIS MODE: MAXIMUM STRATEGY (CONTEXTUAL)
+
+Definition:
+A header is any cell that logically or semantically GENERALIZES or DESCRIBES a group of other cells in a row or column.
+
+Core principle:
+The table must NOT be treated as isolated data. It should be interpreted as the result of some real-world process (e.g., report, measurement, summary, classification).
+
+You must first understand:
+— what process this table represents
+— which data are primary factual observations
+— which cells provide context, grouping, or interpretation
+
+Headers are the elements that help interpret the data, not the data itself.
+
+---
+
+STEP 1 — MULTIPLE INDEPENDENT ANALYSES (Self-Consistency)
+
+Generate THREE independent solutions to the task.
+
+For EACH solution, perform the full reasoning process below:
+
+---
+
+STEP 1.1 — STEP-BY-STEP ANALYSIS (Chain-of-Thought + Least-to-Most)
+
+1. Identify data types in the table (numbers, dates, categories, text).
+2. Compare the first rows with subsequent rows and detect structural differences.
+3. Determine which cells represent factual observations (measured or recorded values).
+4. Identify cells that define categories, groups, time periods, or dimensions.
+5. Detect whether the table contains multi-level headers (e.g., multiple header rows or hierarchical structure).
+6. Identify cells that logically GENERALIZE or apply to multiple other cells.
+
+Based on this analysis, produce an initial list of header cells.
+
+---
+
+STEP 1.2 — SELF-CHECK AND REFINEMENT (Self-Refine)
+
+Critically evaluate your result:
+
+— Are any factual values incorrectly classified as headers?
+— Are any contextual or grouping cells missing?
+— Are there cells that influence interpretation but were not included?
+— Are any selected cells unnecessary?
+
+Revise the list if needed.
+
+---
+
+Repeat STEP 1.1 and STEP 1.2 until you obtain THREE independent candidate solutions.
+
+---
+
+STEP 2 — AGGREGATION AND FINAL DECISION (Self-Consistency)
+
+Compare the three candidate solutions and produce a final answer:
+
+— Select the most consistent solution across the three
+— Prefer cells that appear in multiple solutions (majority voting)
+— Resolve conflicts by choosing the most logically justified interpretation
+
+---
+
+OUTPUT FORMAT:
+
+Return ONLY the final list of header cells.
+
+Do NOT include explanations.
+Do NOT include intermediate reasoning.
+Do NOT include multiple variants.
+
+---
+
+TABLE:
+{table}

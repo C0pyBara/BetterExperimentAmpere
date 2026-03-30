@@ -1,0 +1,154 @@
+=== health-table18.xlsx ===
+Cell A1 | value='Material' | fill=FFFFFF00 | rows=[0] | cols=[0] | col_header=True | row_header=True | metadata=False
+Cell B1 | value='Organism' | fill=FFFFFF00 | rows=[0] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C1 | value='Sampler' | fill=FFFFFF00 | rows=[0] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D1 | value='Log10 Recovery (Inoculation Control)' | fill=FFFFFF00 | rows=[0] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E1 | value='Log10 Recovery (Test Sample)' | fill=FFFFFF00 | rows=[0] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell F1 | value='Delta Log Recovery' | fill=FFFFFF00 | rows=[0] | cols=[5] | col_header=True | row_header=False | metadata=False
+Cell G1 | value='Mean Delta Log Recovery' | fill=FFFFFF00 | rows=[0] | cols=[6] | col_header=True | row_header=False | metadata=False
+Cell H1 | value='Standard Deviation Log Recovery' | fill=FFFFFF00 | rows=[0] | cols=[7] | col_header=True | row_header=False | metadata=False
+Cell A2 | value='ABS Plastic' | fill=FF00B050 | rows=[1, 2, 3, 4, 5, 6, 7, 8, 9] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B2 | value='Serratia marcescens' | fill=00000000 | rows=[1] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C2 | value='Solar Cult' | fill=00000000 | rows=[1] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D2 | value='7.72793333593787' | fill=00000000 | rows=[1] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E2 | value='6.60760963444225' | fill=00000000 | rows=[1] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F2 | value='1.1203237014956198' | fill=00000000 | rows=[1] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G2 | value='2.3342010174704746' | fill=00000000 | rows=[1, 2, 3, 4, 5, 6, 7, 8, 9] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H2 | value='0.9599788654465757' | fill=00000000 | rows=[1, 2, 3, 4, 5, 6, 7, 8, 9] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B3 | value='Escherichia coli' | fill=00000000 | rows=[2] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C3 | value='3M' | fill=00000000 | rows=[2] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D3 | value='7.79135924344441' | fill=00000000 | rows=[2] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E3 | value='4.72762050043944' | fill=00000000 | rows=[2] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F3 | value='3.0637387430049703' | fill=00000000 | rows=[2] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B4 | value='Escherichia coli' | fill=00000000 | rows=[3] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C4 | value='LabPlas' | fill=00000000 | rows=[3] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D4 | value='7.84371571213937' | fill=00000000 | rows=[3] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E4 | value='5.76358385126203' | fill=00000000 | rows=[3] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F4 | value='2.08013186087734' | fill=00000000 | rows=[3] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B5 | value='Escherichia coli' | fill=00000000 | rows=[4] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C5 | value='Solar Cult' | fill=00000000 | rows=[4] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D5 | value='7.75559715111338' | fill=00000000 | rows=[4] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E5 | value='6.25618769408375' | fill=00000000 | rows=[4] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F5 | value='1.4994094570296301' | fill=00000000 | rows=[4] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B6 | value='Serratia marcescens' | fill=00000000 | rows=[5] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C6 | value='3M' | fill=00000000 | rows=[5] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D6 | value='7.73413787582101' | fill=00000000 | rows=[5] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E6 | value='5.57518559029351' | fill=00000000 | rows=[5] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F6 | value='2.1589522855274996' | fill=00000000 | rows=[5] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B7 | value='Serratia marcescens' | fill=00000000 | rows=[6] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C7 | value='LabPlas' | fill=00000000 | rows=[6] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D7 | value='7.0677803416207' | fill=00000000 | rows=[6] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E7 | value='3.38052608682116' | fill=00000000 | rows=[6] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F7 | value='3.6872542547995395' | fill=00000000 | rows=[6] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B8 | value='Yersinia ruckeri' | fill=00000000 | rows=[7] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C8 | value='3M' | fill=00000000 | rows=[7] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D8 | value='7.74599901608914' | fill=00000000 | rows=[7] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E8 | value='3.84911098886513' | fill=00000000 | rows=[7] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F8 | value='3.8968880272240103' | fill=00000000 | rows=[7] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B9 | value='Yersinia ruckeri' | fill=00000000 | rows=[8] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C9 | value='LabPlas' | fill=00000000 | rows=[8] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D9 | value='7.56901864292095' | fill=00000000 | rows=[8] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E9 | value='5.29781794278174' | fill=00000000 | rows=[8] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F9 | value='2.27120070013921' | fill=00000000 | rows=[8] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B10 | value='Yersinia ruckeri' | fill=00000000 | rows=[9] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C10 | value='Solar Cult' | fill=00000000 | rows=[9] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D10 | value='7.5142009064726' | fill=00000000 | rows=[9] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E10 | value='6.28429077933615' | fill=00000000 | rows=[9] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F10 | value='1.22991012713645' | fill=00000000 | rows=[9] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell A11 | value='Glass' | fill=FF00B050 | rows=[10, 11, 12, 13, 14, 15, 16, 17, 18] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B11 | value='Serratia marcescens' | fill=00000000 | rows=[10] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C11 | value='Solar Cult' | fill=00000000 | rows=[10] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D11 | value='7.72793333593787' | fill=00000000 | rows=[10] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E11 | value='6.368879770696' | fill=00000000 | rows=[10] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F11 | value='1.3590535652418696' | fill=00000000 | rows=[10] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G11 | value='2.194840751222341' | fill=00000000 | rows=[10, 11, 12, 13, 14, 15, 16, 17, 18] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H11 | value='0.8169552723528529' | fill=00000000 | rows=[10, 11, 12, 13, 14, 15, 16, 17, 18] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B12 | value='Escherichia coli' | fill=00000000 | rows=[11] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C12 | value='3M' | fill=00000000 | rows=[11] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D12 | value='7.74784981787521' | fill=00000000 | rows=[11] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E12 | value='5.4735844071513' | fill=00000000 | rows=[11] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F12 | value='2.2742654107239098' | fill=00000000 | rows=[11] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B13 | value='Escherichia coli' | fill=00000000 | rows=[12] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C13 | value='LabPlas' | fill=00000000 | rows=[12] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D13 | value='7.68089754196551' | fill=00000000 | rows=[12] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E13 | value='6.19206081086993' | fill=00000000 | rows=[12] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F13 | value='1.4888367310955797' | fill=00000000 | rows=[12] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B14 | value='Escherichia coli' | fill=00000000 | rows=[13] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C14 | value='Solar Cult' | fill=00000000 | rows=[13] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D14 | value='7.7563158187764' | fill=00000000 | rows=[13] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E14 | value='5.75739906580233' | fill=00000000 | rows=[13] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F14 | value='1.9989167529740701' | fill=00000000 | rows=[13] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B15 | value='Serratia marcescens' | fill=00000000 | rows=[14] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C15 | value='3M' | fill=00000000 | rows=[14] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D15 | value='7.73413787582101' | fill=00000000 | rows=[14] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E15 | value='5.39878879122804' | fill=00000000 | rows=[14] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F15 | value='2.33534908459297' | fill=00000000 | rows=[14] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B16 | value='Serratia marcescens' | fill=00000000 | rows=[15] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C16 | value='LabPlas' | fill=00000000 | rows=[15] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D16 | value='7.0677803416207' | fill=00000000 | rows=[15] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E16 | value='4.01551417560811' | fill=00000000 | rows=[15] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F16 | value='3.05226616601259' | fill=00000000 | rows=[15] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B17 | value='Yersinia ruckeri' | fill=00000000 | rows=[16] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C17 | value='3M' | fill=00000000 | rows=[16] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D17 | value='7.74599901608914' | fill=00000000 | rows=[16] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E17 | value='3.80756035333505' | fill=00000000 | rows=[16] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F17 | value='3.93843866275409' | fill=00000000 | rows=[16] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B18 | value='Yersinia ruckeri' | fill=00000000 | rows=[17] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C18 | value='LabPlas' | fill=00000000 | rows=[17] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D18 | value='7.56901864292095' | fill=00000000 | rows=[17] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E18 | value='5.47801619747675' | fill=00000000 | rows=[17] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F18 | value='2.0910024454442' | fill=00000000 | rows=[17] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B19 | value='Yersinia ruckeri' | fill=00000000 | rows=[18] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C19 | value='Solar Cult' | fill=00000000 | rows=[18] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D19 | value='7.5142009064726' | fill=00000000 | rows=[18] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E19 | value='6.29876296431081' | fill=00000000 | rows=[18] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F19 | value='1.21543794216179' | fill=00000000 | rows=[18] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell A20 | value='Stainless Steel' | fill=FF00B050 | rows=[19, 20, 21, 22, 23, 24, 25, 26, 27] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B20 | value='Serratia marcescens' | fill=00000000 | rows=[19] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C20 | value='Solar Cult' | fill=00000000 | rows=[19] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D20 | value='7.72793333593787' | fill=00000000 | rows=[19] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E20 | value='6.15135860463705' | fill=00000000 | rows=[19] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F20 | value='1.5765747313008198' | fill=00000000 | rows=[19] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G20 | value='2.384067442646531' | fill=00000000 | rows=[19, 20, 21, 22, 23, 24, 25, 26, 27] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H20 | value='0.8312404060125493' | fill=00000000 | rows=[19, 20, 21, 22, 23, 24, 25, 26, 27] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B21 | value='Yersinia ruckeri' | fill=00000000 | rows=[20] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C21 | value='3M' | fill=00000000 | rows=[20] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D21 | value='7.74599901608914' | fill=00000000 | rows=[20] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E21 | value='3.72689565997511' | fill=00000000 | rows=[20] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F21 | value='4.01910335611403' | fill=00000000 | rows=[20] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B22 | value='Escherichia coli' | fill=00000000 | rows=[21] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C22 | value='3M' | fill=00000000 | rows=[21] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D22 | value='7.85862252184183' | fill=00000000 | rows=[21] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E22 | value='5.83027358641562' | fill=00000000 | rows=[21] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F22 | value='2.0283489354262096' | fill=00000000 | rows=[21] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B23 | value='Escherichia coli' | fill=00000000 | rows=[22] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C23 | value='LabPlas' | fill=00000000 | rows=[22] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D23 | value='7.63083076173145' | fill=00000000 | rows=[22] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E23 | value='4.83587165064615' | fill=00000000 | rows=[22] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F23 | value='2.7949591110852996' | fill=00000000 | rows=[22] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B24 | value='Escherichia coli' | fill=00000000 | rows=[23] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C24 | value='Solar Cult' | fill=00000000 | rows=[23] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D24 | value='7.77374718453539' | fill=00000000 | rows=[23] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E24 | value='6.06673908126751' | fill=00000000 | rows=[23] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F24 | value='1.7070081032678797' | fill=00000000 | rows=[23] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B25 | value='Serratia marcescens' | fill=00000000 | rows=[24] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C25 | value='3M' | fill=00000000 | rows=[24] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D25 | value='7.73413787582101' | fill=00000000 | rows=[24] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E25 | value='4.99409766660162' | fill=00000000 | rows=[24] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F25 | value='2.74004020921939' | fill=00000000 | rows=[24] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B26 | value='Serratia marcescens' | fill=00000000 | rows=[25] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C26 | value='LabPlas' | fill=00000000 | rows=[25] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D26 | value='7.0677803416207' | fill=00000000 | rows=[25] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E26 | value='3.99124969145348' | fill=00000000 | rows=[25] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F26 | value='3.0765306501672196' | fill=00000000 | rows=[25] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B27 | value='Yersinia ruckeri' | fill=00000000 | rows=[26] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C27 | value='LabPlas' | fill=00000000 | rows=[26] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D27 | value='7.56901864292095' | fill=00000000 | rows=[26] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E27 | value='5.20089823960737' | fill=00000000 | rows=[26] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F27 | value='2.36812040331358' | fill=00000000 | rows=[26] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B28 | value='Yersinia ruckeri' | fill=00000000 | rows=[27] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C28 | value='Solar Cult' | fill=00000000 | rows=[27] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D28 | value='7.5142009064726' | fill=00000000 | rows=[27] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E28 | value='6.36827942254825' | fill=00000000 | rows=[27] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F28 | value='1.14592148392435' | fill=00000000 | rows=[27] | cols=[5] | col_header=False | row_header=False | metadata=False
+

@@ -1,0 +1,685 @@
+[
+  {
+    "cells": [
+      {
+        "row_nums": [
+          0
+        ],
+        "column_nums": [
+          0,
+          1
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": false,
+        "is_column_header": true,
+        "pdf_bbox": [
+          60.659889221191406,
+          446.0669860839844,
+          283.09527587890625,
+          455.9541931152344
+        ],
+        "pdf_text_tight_bbox": [
+          60.65999984741211,
+          446.0669860839844,
+          136.68942260742188,
+          455.9541931152344
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "X-ray diffraction data",
+        "xml_raw_text_content": "X-ray diffraction data",
+        "pdf_text_content": "X-ray diffraction data"
+      },
+      {
+        "row_nums": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": false,
+        "is_column_header": true,
+        "pdf_bbox": [
+          60.659889221191406,
+          460.4022521972656,
+          183.8273162841797,
+          597.1948852539062
+        ],
+        "pdf_text_tight_bbox": [
+          60.65999984741211,
+          460.4022521972656,
+          183.8273162841797,
+          597.1948852539062
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Space group Unit Cell Dimensions: a, b, c (Å) α, β, γ (°) Wavelength (Å) Resolution Range (Å) R sym (%) I/σ Measured reflections Unique reflections Redundancy Completeness (%)",
+        "xml_raw_text_content": "Space group Unit Cell Dimensions: a, b, c (Å) α, β, γ (°) Wavelength (Å) Resolution Range (Å) Rsym (%) I/σ Measured reflections Unique reflections Redundancy Completeness (%)",
+        "pdf_text_content": "Space group Unit Cell Dimensions: a, b, c (Å) α, β, γ (°) Wavelength (Å) Resolution Range (Å) Rsym (%) I/σ Measured reflections Unique reflections Redundancy Completeness (%)"
+      },
+      {
+        "row_nums": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": false,
+        "is_column_header": true,
+        "pdf_bbox": [
+          191.52171325683594,
+          460.4022521972656,
+          283.09527587890625,
+          597.1948852539062
+        ],
+        "pdf_text_tight_bbox": [
+          191.52171325683594,
+          460.4022521972656,
+          283.09527587890625,
+          597.1948852539062
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "C2 162.0, 66.4, 93.6 90, 98.2, 90 1.0088 19.34 - 2.75 (2.90 - 2.75)* 7.0 (36.2) 19.92 (4.42) 64394 (9470) 22267 (3362) 2.89 (2.82) 86.0 (88.8)",
+        "xml_raw_text_content": "C2 162.0, 66.4, 93.6 90, 98.2, 90 1.0088 19.34 - 2.75 (2.90 - 2.75)* 7.0 (36.2) 19.92 (4.42) 64394 (9470) 22267 (3362) 2.89 (2.82) 86.0 (88.8)",
+        "pdf_text_content": "C2 162.0, 66.4, 93.6 90, 98.2, 90 1.0088 19.34 - 2.75 (2.90 - 2.75)* 7.0 (36.2) 19.92 (4.42) 64394 (9470) 22267 (3362) 2.89 (2.82) 86.0 (88.8)"
+      },
+      {
+        "row_nums": [
+          11
+        ],
+        "column_nums": [
+          0,
+          1
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          60.659889221191406,
+          613.5822143554688,
+          283.09527587890625,
+          623.1741943359375
+        ],
+        "pdf_text_tight_bbox": [
+          60.65999984741211,
+          613.5822143554688,
+          99.36538696289062,
+          623.1741943359375
+        ],
+        "is_projected_row_header": true,
+        "xml_text_content": "Refinement",
+        "xml_raw_text_content": "Refinement",
+        "pdf_text_content": "Refinement"
+      },
+      {
+        "row_nums": [
+          12
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          60.659889221191406,
+          627.5623779296875,
+          183.8273162841797,
+          637.1543579101562
+        ],
+        "pdf_text_tight_bbox": [
+          60.65999984741211,
+          627.5623779296875,
+          107.283935546875,
+          637.1543579101562
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Resolution (Å)",
+        "xml_raw_text_content": "Resolution (Å)",
+        "pdf_text_content": "Resolution (Å)"
+      },
+      {
+        "row_nums": [
+          12
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          191.52171325683594,
+          627.5623779296875,
+          283.09527587890625,
+          637.1543579101562
+        ],
+        "pdf_text_tight_bbox": [
+          191.59742736816406,
+          627.5623779296875,
+          229.4857177734375,
+          637.1543579101562
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "19.34 - 2.75",
+        "xml_raw_text_content": "19.34 - 2.75",
+        "pdf_text_content": "19.34 - 2.75"
+      },
+      {
+        "row_nums": [
+          13
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          60.659889221191406,
+          641.6022338867188,
+          183.8273162841797,
+          652.57421875
+        ],
+        "pdf_text_tight_bbox": [
+          60.65999984741211,
+          641.6022338867188,
+          102.8055191040039,
+          652.57421875
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "R cryst /R free (%)",
+        "xml_raw_text_content": "Rcryst/Rfree (%)",
+        "pdf_text_content": "Rcryst/Rfree (%)"
+      },
+      {
+        "row_nums": [
+          13
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          191.52171325683594,
+          641.6022338867188,
+          283.09527587890625,
+          652.57421875
+        ],
+        "pdf_text_tight_bbox": [
+          191.61892700195312,
+          641.6022338867188,
+          222.24700927734375,
+          651.1942138671875
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "23.8/29.2",
+        "xml_raw_text_content": "23.8/29.2",
+        "pdf_text_content": "23.8/29.2"
+      },
+      {
+        "row_nums": [
+          14
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          60.659889221191406,
+          656.7825927734375,
+          183.8273162841797,
+          666.3745727539062
+        ],
+        "pdf_text_tight_bbox": [
+          60.659942626953125,
+          656.7825927734375,
+          164.01773071289062,
+          666.3745727539062
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Atoms (protein/ligand/solvent)",
+        "xml_raw_text_content": "Atoms (protein/ligand/solvent)",
+        "pdf_text_content": "Atoms (protein/ligand/solvent)"
+      },
+      {
+        "row_nums": [
+          14
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          191.52171325683594,
+          656.7825927734375,
+          283.09527587890625,
+          666.3745727539062
+        ],
+        "pdf_text_tight_bbox": [
+          191.57107543945312,
+          656.7825927734375,
+          233.96087646484375,
+          666.3745727539062
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "5469/56/243",
+        "xml_raw_text_content": "5469/56/243",
+        "pdf_text_content": "5469/56/243"
+      },
+      {
+        "row_nums": [
+          15
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          60.659889221191406,
+          670.7627563476562,
+          183.8273162841797,
+          680.354736328125
+        ],
+        "pdf_text_tight_bbox": [
+          60.659942626953125,
+          670.7627563476562,
+          133.63626098632812,
+          680.354736328125
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Rmsd bond length (Å)",
+        "xml_raw_text_content": "Rmsd bond length (Å)",
+        "pdf_text_content": "Rmsd bond length (Å)"
+      },
+      {
+        "row_nums": [
+          15
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          191.52171325683594,
+          670.7627563476562,
+          283.09527587890625,
+          680.354736328125
+        ],
+        "pdf_text_tight_bbox": [
+          191.67001342773438,
+          670.7627563476562,
+          209.7024383544922,
+          680.354736328125
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "0.012",
+        "xml_raw_text_content": "0.012",
+        "pdf_text_content": "0.012"
+      },
+      {
+        "row_nums": [
+          16
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          60.659889221191406,
+          684.802734375,
+          183.8273162841797,
+          694.3947143554688
+        ],
+        "pdf_text_tight_bbox": [
+          60.659942626953125,
+          684.802734375,
+          131.27734375,
+          694.3947143554688
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Rmsd bond angles (°)",
+        "xml_raw_text_content": "Rmsd bond angles (°)",
+        "pdf_text_content": "Rmsd bond angles (°)"
+      },
+      {
+        "row_nums": [
+          16
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          191.52171325683594,
+          684.802734375,
+          283.09527587890625,
+          694.3947143554688
+        ],
+        "pdf_text_tight_bbox": [
+          191.710693359375,
+          684.802734375,
+          201.5524139404297,
+          694.3947143554688
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "1.6",
+        "xml_raw_text_content": "1.6",
+        "pdf_text_content": "1.6"
+      },
+      {
+        "row_nums": [
+          17
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          60.659889221191406,
+          698.7816772460938,
+          183.8273162841797,
+          718.8139038085938
+        ],
+        "pdf_text_tight_bbox": [
+          60.659889221191406,
+          699.2022094726562,
+          173.9727325439453,
+          718.8139038085938
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Average B-factors (Å 2 , main chain/side chain)",
+        "xml_raw_text_content": "Average B-factors (Å2, main chain/side chain)",
+        "pdf_text_content": "Average B-factors (Å2, main chain/ side chain)"
+      },
+      {
+        "row_nums": [
+          17
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "left",
+        "style": "none",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          191.52171325683594,
+          698.7816772460938,
+          283.09527587890625,
+          718.8139038085938
+        ],
+        "pdf_text_tight_bbox": [
+          191.63961791992188,
+          698.7816772460938,
+          205.57347106933594,
+          708.3736572265625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "66.4",
+        "xml_raw_text_content": "66.4",
+        "pdf_text_content": "66.4"
+      }
+    ],
+    "rows": [
+      {
+        "pdf_row_bbox": [
+          60.659889221191406,
+          446.0669860839844,
+          283.09527587890625,
+          455.9541931152344
+        ],
+        "is_column_header": true
+      },
+      {
+        "pdf_row_bbox": [
+          60.659889221191406,
+          460.4022521972656,
+          283.09527587890625,
+          469.99420166015625
+        ],
+        "is_column_header": true
+      },
+      {
+        "pdf_row_bbox": [
+          60.659889221191406,
+          474.3744201660156,
+          283.09527587890625,
+          483.974365234375
+        ],
+        "is_column_header": true
+      },
+      {
+        "pdf_row_bbox": [
+          60.659889221191406,
+          488.3625793457031,
+          283.09527587890625,
+          497.95452880859375
+        ],
+        "is_column_header": true
+      },
+      {
+        "pdf_row_bbox": [
+          60.659889221191406,
+          502.402587890625,
+          283.09527587890625,
+          511.9945373535156
+        ],
+        "is_column_header": true
+      },
+      {
+        "pdf_row_bbox": [
+          60.659889221191406,
+          516.3822021484375,
+          283.09527587890625,
+          527.354248046875
+        ],
+        "is_column_header": true
+      },
+      {
+        "pdf_row_bbox": [
+          60.659889221191406,
+          531.5625610351562,
+          283.09527587890625,
+          541.154541015625
+        ],
+        "is_column_header": true
+      },
+      {
+        "pdf_row_bbox": [
+          60.659889221191406,
+          545.6026000976562,
+          283.09527587890625,
+          555.194580078125
+        ],
+        "is_column_header": true
+      },
+      {
+        "pdf_row_bbox": [
+          60.659889221191406,
+          559.5827026367188,
+          283.09527587890625,
+          569.1746826171875
+        ],
+        "is_column_header": true
+      },
+      {
+        "pdf_row_bbox": [
+          60.659889221191406,
+          573.5629272460938,
+          283.09527587890625,
+          583.1549072265625
+        ],
+        "is_column_header": true
+      },
+      {
+        "pdf_row_bbox": [
+          60.659889221191406,
+          587.6029052734375,
+          283.09527587890625,
+          597.1948852539062
+        ],
+        "is_column_header": true
+      },
+      {
+        "pdf_row_bbox": [
+          60.659889221191406,
+          613.5822143554688,
+          283.09527587890625,
+          623.1741943359375
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          60.659889221191406,
+          627.5623779296875,
+          283.09527587890625,
+          637.1543579101562
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          60.659889221191406,
+          641.6022338867188,
+          283.09527587890625,
+          652.57421875
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          60.659889221191406,
+          656.7825927734375,
+          283.09527587890625,
+          666.3745727539062
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          60.659889221191406,
+          670.7627563476562,
+          283.09527587890625,
+          680.354736328125
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          60.659889221191406,
+          684.802734375,
+          283.09527587890625,
+          694.3947143554688
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          60.659889221191406,
+          698.7816772460938,
+          283.09527587890625,
+          718.8139038085938
+        ],
+        "is_column_header": false
+      }
+    ],
+    "columns": [
+      {
+        "pdf_column_bbox": [
+          60.659889221191406,
+          446.0669860839844,
+          183.8273162841797,
+          718.8139038085938
+        ]
+      },
+      {
+        "pdf_column_bbox": [
+          191.52171325683594,
+          446.0669860839844,
+          283.09527587890625,
+          718.8139038085938
+        ]
+      }
+    ],
+    "pmc_id": "PMC2906495",
+    "pdf_file_name": "1472-6807-10-19.pdf",
+    "xml_file_name": "1472-6807-10-19.nxml",
+    "split": "test",
+    "exclude_for_structure": false,
+    "exclude_for_detection": false,
+    "structure_id": "PMC2906495_table_1",
+    "xml_table_index": 1,
+    "pdf_page_index": 4,
+    "pdf_full_page_bbox": [
+      0.0,
+      0.0,
+      595.0,
+      794.0
+    ],
+    "pdf_table_bbox": [
+      60.659889221191406,
+      446.0669860839844,
+      283.09527587890625,
+      718.8139038085938
+    ],
+    "pdf_table_wrap_bbox": [
+      56.6395263671875,
+      93.54817199707031,
+      538.6882934570312,
+      744.2332153320312
+    ],
+    "xml_table_wrap_start_character_index": 23064,
+    "xml_table_wrap_end_character_index": 25150
+  }
+]

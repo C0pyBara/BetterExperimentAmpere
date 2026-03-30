@@ -1,0 +1,1149 @@
+[
+  {
+    "cells": [
+      {
+        "row_nums": [
+          0
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": true,
+        "pdf_bbox": [
+          303.71826171875,
+          544.044189453125,
+          379.2000427246094,
+          556.5091552734375
+        ],
+        "pdf_text_tight_bbox": [
+          303.7200012207031,
+          544.044189453125,
+          340.7190246582031,
+          556.5091552734375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": " Variables ",
+        "xml_raw_text_content": "\nVariables\n",
+        "pdf_text_content": "Variables"
+      },
+      {
+        "row_nums": [
+          0
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "center",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": true,
+        "pdf_bbox": [
+          393.7200012207031,
+          544.044189453125,
+          439.1610107421875,
+          556.5091552734375
+        ],
+        "pdf_text_tight_bbox": [
+          405.48028564453125,
+          544.044189453125,
+          427.4762878417969,
+          556.5091552734375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": " Cases ",
+        "xml_raw_text_content": "\nCases\n",
+        "pdf_text_content": "Cases"
+      },
+      {
+        "row_nums": [
+          0
+        ],
+        "column_nums": [
+          2
+        ],
+        "align": "center",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": true,
+        "pdf_bbox": [
+          465.3599853515625,
+          544.044189453125,
+          510.8009948730469,
+          556.5091552734375
+        ],
+        "pdf_text_tight_bbox": [
+          471.36029052734375,
+          544.044189453125,
+          504.8583068847656,
+          556.5091552734375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": " Controls ",
+        "xml_raw_text_content": "\nControls\n",
+        "pdf_text_content": "Controls"
+      },
+      {
+        "row_nums": [
+          1
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          303.71826171875,
+          560.0601806640625,
+          379.2000427246094,
+          570.0269775390625
+        ],
+        "pdf_text_tight_bbox": [
+          303.7200012207031,
+          560.0601806640625,
+          331.45806884765625,
+          570.0269775390625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Age (y)",
+        "xml_raw_text_content": "Age (y) ",
+        "pdf_text_content": "Age (y)"
+      },
+      {
+        "row_nums": [
+          1
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "center",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          393.7200012207031,
+          560.0601806640625,
+          439.1610107421875,
+          570.0269775390625
+        ],
+        "pdf_text_tight_bbox": [
+          393.7200012207031,
+          560.0601806640625,
+          439.1610107421875,
+          570.0269775390625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "56.30 ± 9.06",
+        "xml_raw_text_content": "56.30 ± 9.06",
+        "pdf_text_content": "56.30 ± 9.06"
+      },
+      {
+        "row_nums": [
+          1
+        ],
+        "column_nums": [
+          2
+        ],
+        "align": "center",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          465.3599853515625,
+          560.0601806640625,
+          510.8009948730469,
+          570.0269775390625
+        ],
+        "pdf_text_tight_bbox": [
+          465.3599853515625,
+          560.0601806640625,
+          510.8009948730469,
+          570.0269775390625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "57.67 ± 9.38",
+        "xml_raw_text_content": "57.67 ± 9.38",
+        "pdf_text_content": "57.67 ± 9.38"
+      },
+      {
+        "row_nums": [
+          2
+        ],
+        "column_nums": [
+          0,
+          1,
+          2
+        ],
+        "align": "left",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          303.71826171875,
+          580.460205078125,
+          510.8009948730469,
+          590.427001953125
+        ],
+        "pdf_text_tight_bbox": [
+          303.7200012207031,
+          580.460205078125,
+          317.2200012207031,
+          590.427001953125
+        ],
+        "is_projected_row_header": true,
+        "xml_text_content": "Sex",
+        "xml_raw_text_content": "Sex",
+        "pdf_text_content": "Sex"
+      },
+      {
+        "row_nums": [
+          3
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": " color:#000000;",
+        "indented": true,
+        "is_column_header": false,
+        "pdf_bbox": [
+          303.71826171875,
+          590.9002075195312,
+          379.2000427246094,
+          600.8670043945312
+        ],
+        "pdf_text_tight_bbox": [
+          310.4700012207031,
+          590.9002075195312,
+          328.9636535644531,
+          600.8670043945312
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Male",
+        "xml_raw_text_content": " Male",
+        "pdf_text_content": "Male"
+      },
+      {
+        "row_nums": [
+          3
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "center",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          393.7200012207031,
+          590.9002075195312,
+          439.1610107421875,
+          600.8670043945312
+        ],
+        "pdf_text_tight_bbox": [
+          409.6796875,
+          590.9002075195312,
+          423.1796875,
+          600.8670043945312
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "114",
+        "xml_raw_text_content": "114",
+        "pdf_text_content": "114"
+      },
+      {
+        "row_nums": [
+          3
+        ],
+        "column_nums": [
+          2
+        ],
+        "align": "center",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          465.3599853515625,
+          590.9002075195312,
+          510.8009948730469,
+          600.8670043945312
+        ],
+        "pdf_text_tight_bbox": [
+          483.5993957519531,
+          590.9002075195312,
+          492.5993957519531,
+          600.8670043945312
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "51",
+        "xml_raw_text_content": "51",
+        "pdf_text_content": "51"
+      },
+      {
+        "row_nums": [
+          4
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": " color:#000000;",
+        "indented": true,
+        "is_column_header": false,
+        "pdf_bbox": [
+          303.71826171875,
+          601.220458984375,
+          379.2000427246094,
+          611.187255859375
+        ],
+        "pdf_text_tight_bbox": [
+          310.4691162109375,
+          601.220458984375,
+          336.9637756347656,
+          611.187255859375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Female",
+        "xml_raw_text_content": " Female",
+        "pdf_text_content": "Female"
+      },
+      {
+        "row_nums": [
+          4
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "center",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          393.7200012207031,
+          601.220458984375,
+          439.1610107421875,
+          611.187255859375
+        ],
+        "pdf_text_tight_bbox": [
+          411.95941162109375,
+          601.220458984375,
+          420.95941162109375,
+          611.187255859375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "86",
+        "xml_raw_text_content": "86",
+        "pdf_text_content": "86"
+      },
+      {
+        "row_nums": [
+          4
+        ],
+        "column_nums": [
+          2
+        ],
+        "align": "center",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          465.3599853515625,
+          601.220458984375,
+          510.8009948730469,
+          611.187255859375
+        ],
+        "pdf_text_tight_bbox": [
+          483.59942626953125,
+          601.220458984375,
+          492.59942626953125,
+          611.187255859375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "59",
+        "xml_raw_text_content": "59",
+        "pdf_text_content": "59"
+      },
+      {
+        "row_nums": [
+          5
+        ],
+        "column_nums": [
+          0,
+          1,
+          2
+        ],
+        "align": "left",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          303.71826171875,
+          619.5805053710938,
+          510.8009948730469,
+          629.5473022460938
+        ],
+        "pdf_text_tight_bbox": [
+          303.7191162109375,
+          619.5805053710938,
+          357.9607849121094,
+          629.5473022460938
+        ],
+        "is_projected_row_header": true,
+        "xml_text_content": "Blood pressure",
+        "xml_raw_text_content": "Blood pressure",
+        "pdf_text_content": "Blood pressure"
+      },
+      {
+        "row_nums": [
+          6
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": " color:#000000;",
+        "indented": true,
+        "is_column_header": false,
+        "pdf_bbox": [
+          303.71826171875,
+          629.9007568359375,
+          379.2000427246094,
+          639.8675537109375
+        ],
+        "pdf_text_tight_bbox": [
+          310.4691162109375,
+          629.9007568359375,
+          341.9511413574219,
+          639.8675537109375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Affected",
+        "xml_raw_text_content": " Affected",
+        "pdf_text_content": "Affected"
+      },
+      {
+        "row_nums": [
+          6
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "center",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          393.7200012207031,
+          629.9007568359375,
+          439.1610107421875,
+          639.8675537109375
+        ],
+        "pdf_text_tight_bbox": [
+          411.95941162109375,
+          629.9007568359375,
+          420.95941162109375,
+          639.8675537109375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "55",
+        "xml_raw_text_content": "55",
+        "pdf_text_content": "55"
+      },
+      {
+        "row_nums": [
+          6
+        ],
+        "column_nums": [
+          2
+        ],
+        "align": "center",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          465.3599853515625,
+          629.9007568359375,
+          510.8009948730469,
+          639.8675537109375
+        ],
+        "pdf_text_tight_bbox": [
+          483.59942626953125,
+          629.9007568359375,
+          492.59942626953125,
+          639.8675537109375
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "22",
+        "xml_raw_text_content": "22",
+        "pdf_text_content": "22"
+      },
+      {
+        "row_nums": [
+          7
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": " color:#000000;",
+        "indented": true,
+        "is_column_header": false,
+        "pdf_bbox": [
+          303.71826171875,
+          640.3408203125,
+          379.2000427246094,
+          650.3076171875
+        ],
+        "pdf_text_tight_bbox": [
+          310.4691162109375,
+          640.3408203125,
+          355.19915771484375,
+          650.3076171875
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Not affected",
+        "xml_raw_text_content": " Not affected",
+        "pdf_text_content": "Not affected"
+      },
+      {
+        "row_nums": [
+          7
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "center",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          393.7200012207031,
+          640.3408203125,
+          439.1610107421875,
+          650.3076171875
+        ],
+        "pdf_text_tight_bbox": [
+          409.6788330078125,
+          640.3408203125,
+          423.1788330078125,
+          650.3076171875
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "145",
+        "xml_raw_text_content": "145",
+        "pdf_text_content": "145"
+      },
+      {
+        "row_nums": [
+          7
+        ],
+        "column_nums": [
+          2
+        ],
+        "align": "center",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          465.3599853515625,
+          640.3408203125,
+          510.8009948730469,
+          650.3076171875
+        ],
+        "pdf_text_tight_bbox": [
+          483.5985412597656,
+          640.3408203125,
+          492.5985412597656,
+          650.3076171875
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "88",
+        "xml_raw_text_content": "88",
+        "pdf_text_content": "88"
+      },
+      {
+        "row_nums": [
+          8
+        ],
+        "column_nums": [
+          0,
+          1,
+          2
+        ],
+        "align": "left",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          303.71826171875,
+          658.7008056640625,
+          510.8009948730469,
+          668.6676025390625
+        ],
+        "pdf_text_tight_bbox": [
+          303.71826171875,
+          658.7008056640625,
+          366.4678039550781,
+          668.6676025390625
+        ],
+        "is_projected_row_header": true,
+        "xml_text_content": "Diabetes mellitus",
+        "xml_raw_text_content": "Diabetes mellitus",
+        "pdf_text_content": "Diabetes mellitus"
+      },
+      {
+        "row_nums": [
+          9
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": " color:#000000;",
+        "indented": true,
+        "is_column_header": false,
+        "pdf_bbox": [
+          303.71826171875,
+          669.0211181640625,
+          379.2000427246094,
+          678.9879150390625
+        ],
+        "pdf_text_tight_bbox": [
+          310.46826171875,
+          669.0211181640625,
+          341.9502868652344,
+          678.9879150390625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Affected",
+        "xml_raw_text_content": " Affected",
+        "pdf_text_content": "Affected"
+      },
+      {
+        "row_nums": [
+          9
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "center",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          393.7200012207031,
+          669.0211181640625,
+          439.1610107421875,
+          678.9879150390625
+        ],
+        "pdf_text_tight_bbox": [
+          411.95855712890625,
+          669.0211181640625,
+          420.95855712890625,
+          678.9879150390625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "48",
+        "xml_raw_text_content": "48",
+        "pdf_text_content": "48"
+      },
+      {
+        "row_nums": [
+          9
+        ],
+        "column_nums": [
+          2
+        ],
+        "align": "center",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          465.3599853515625,
+          669.0211181640625,
+          510.8009948730469,
+          678.9879150390625
+        ],
+        "pdf_text_tight_bbox": [
+          485.8782653808594,
+          669.0211181640625,
+          490.3782653808594,
+          678.9879150390625
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "9",
+        "xml_raw_text_content": "9",
+        "pdf_text_content": "9"
+      },
+      {
+        "row_nums": [
+          10
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": " color:#000000;",
+        "indented": true,
+        "is_column_header": false,
+        "pdf_bbox": [
+          303.71826171875,
+          679.3413696289062,
+          379.2000427246094,
+          689.3081665039062
+        ],
+        "pdf_text_tight_bbox": [
+          310.46826171875,
+          679.3413696289062,
+          355.19830322265625,
+          689.3081665039062
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Not affected",
+        "xml_raw_text_content": " Not affected",
+        "pdf_text_content": "Not affected"
+      },
+      {
+        "row_nums": [
+          10
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "center",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          393.7200012207031,
+          679.3413696289062,
+          439.1610107421875,
+          689.3081665039062
+        ],
+        "pdf_text_tight_bbox": [
+          409.677978515625,
+          679.3413696289062,
+          423.177978515625,
+          689.3081665039062
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "152",
+        "xml_raw_text_content": "152",
+        "pdf_text_content": "152"
+      },
+      {
+        "row_nums": [
+          10
+        ],
+        "column_nums": [
+          2
+        ],
+        "align": "center",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          465.3599853515625,
+          679.3413696289062,
+          510.8009948730469,
+          689.3081665039062
+        ],
+        "pdf_text_tight_bbox": [
+          481.3179931640625,
+          679.3413696289062,
+          494.8179931640625,
+          689.3081665039062
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "101",
+        "xml_raw_text_content": "101",
+        "pdf_text_content": "101"
+      },
+      {
+        "row_nums": [
+          11
+        ],
+        "column_nums": [
+          0,
+          1,
+          2
+        ],
+        "align": "left",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          303.71826171875,
+          697.821044921875,
+          510.8009948730469,
+          707.787841796875
+        ],
+        "pdf_text_tight_bbox": [
+          303.7182922363281,
+          697.821044921875,
+          379.2000427246094,
+          707.787841796875
+        ],
+        "is_projected_row_header": true,
+        "xml_text_content": "hypertriglyceridemia",
+        "xml_raw_text_content": "hypertriglyceridemia",
+        "pdf_text_content": "hypertriglyceridemia"
+      },
+      {
+        "row_nums": [
+          12
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": " color:#000000;",
+        "indented": true,
+        "is_column_header": false,
+        "pdf_bbox": [
+          303.71826171875,
+          708.141357421875,
+          379.2000427246094,
+          718.108154296875
+        ],
+        "pdf_text_tight_bbox": [
+          310.4682922363281,
+          708.141357421875,
+          341.9503173828125,
+          718.108154296875
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Affected",
+        "xml_raw_text_content": " Affected",
+        "pdf_text_content": "Affected"
+      },
+      {
+        "row_nums": [
+          12
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "center",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          393.7200012207031,
+          708.141357421875,
+          439.1610107421875,
+          718.108154296875
+        ],
+        "pdf_text_tight_bbox": [
+          411.9585876464844,
+          708.141357421875,
+          420.9585876464844,
+          718.108154296875
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "61",
+        "xml_raw_text_content": "61",
+        "pdf_text_content": "61"
+      },
+      {
+        "row_nums": [
+          12
+        ],
+        "column_nums": [
+          2
+        ],
+        "align": "center",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          465.3599853515625,
+          708.141357421875,
+          510.8009948730469,
+          718.108154296875
+        ],
+        "pdf_text_tight_bbox": [
+          483.59857177734375,
+          708.141357421875,
+          492.59857177734375,
+          718.108154296875
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "14",
+        "xml_raw_text_content": "14",
+        "pdf_text_content": "14"
+      },
+      {
+        "row_nums": [
+          13
+        ],
+        "column_nums": [
+          0
+        ],
+        "align": "left",
+        "style": " color:#000000;",
+        "indented": true,
+        "is_column_header": false,
+        "pdf_bbox": [
+          303.71826171875,
+          718.461669921875,
+          379.2000427246094,
+          728.428466796875
+        ],
+        "pdf_text_tight_bbox": [
+          310.46826171875,
+          718.461669921875,
+          355.19830322265625,
+          728.428466796875
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "Not affected",
+        "xml_raw_text_content": " Not affected",
+        "pdf_text_content": "Not affected"
+      },
+      {
+        "row_nums": [
+          13
+        ],
+        "column_nums": [
+          1
+        ],
+        "align": "center",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          393.7200012207031,
+          718.461669921875,
+          439.1610107421875,
+          728.428466796875
+        ],
+        "pdf_text_tight_bbox": [
+          409.677978515625,
+          718.461669921875,
+          423.177978515625,
+          728.428466796875
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "139",
+        "xml_raw_text_content": "139",
+        "pdf_text_content": "139"
+      },
+      {
+        "row_nums": [
+          13
+        ],
+        "column_nums": [
+          2
+        ],
+        "align": "center",
+        "style": " color:#000000;",
+        "indented": false,
+        "is_column_header": false,
+        "pdf_bbox": [
+          465.3599853515625,
+          718.461669921875,
+          510.8009948730469,
+          728.428466796875
+        ],
+        "pdf_text_tight_bbox": [
+          483.5976867675781,
+          718.461669921875,
+          492.5976867675781,
+          728.428466796875
+        ],
+        "is_projected_row_header": false,
+        "xml_text_content": "96",
+        "xml_raw_text_content": "96",
+        "pdf_text_content": "96"
+      }
+    ],
+    "rows": [
+      {
+        "pdf_row_bbox": [
+          303.71826171875,
+          544.044189453125,
+          510.8009948730469,
+          556.5091552734375
+        ],
+        "is_column_header": true
+      },
+      {
+        "pdf_row_bbox": [
+          303.71826171875,
+          560.0601806640625,
+          510.8009948730469,
+          570.0269775390625
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          303.71826171875,
+          580.460205078125,
+          510.8009948730469,
+          590.427001953125
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          303.71826171875,
+          590.9002075195312,
+          510.8009948730469,
+          600.8670043945312
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          303.71826171875,
+          601.220458984375,
+          510.8009948730469,
+          611.187255859375
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          303.71826171875,
+          619.5805053710938,
+          510.8009948730469,
+          629.5473022460938
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          303.71826171875,
+          629.9007568359375,
+          510.8009948730469,
+          639.8675537109375
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          303.71826171875,
+          640.3408203125,
+          510.8009948730469,
+          650.3076171875
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          303.71826171875,
+          658.7008056640625,
+          510.8009948730469,
+          668.6676025390625
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          303.71826171875,
+          669.0211181640625,
+          510.8009948730469,
+          678.9879150390625
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          303.71826171875,
+          679.3413696289062,
+          510.8009948730469,
+          689.3081665039062
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          303.71826171875,
+          697.821044921875,
+          510.8009948730469,
+          707.787841796875
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          303.71826171875,
+          708.141357421875,
+          510.8009948730469,
+          718.108154296875
+        ],
+        "is_column_header": false
+      },
+      {
+        "pdf_row_bbox": [
+          303.71826171875,
+          718.461669921875,
+          510.8009948730469,
+          728.428466796875
+        ],
+        "is_column_header": false
+      }
+    ],
+    "columns": [
+      {
+        "pdf_column_bbox": [
+          303.71826171875,
+          544.044189453125,
+          379.2000427246094,
+          728.428466796875
+        ]
+      },
+      {
+        "pdf_column_bbox": [
+          393.7200012207031,
+          544.044189453125,
+          439.1610107421875,
+          728.428466796875
+        ]
+      },
+      {
+        "pdf_column_bbox": [
+          465.3599853515625,
+          544.044189453125,
+          510.8009948730469,
+          728.428466796875
+        ]
+      }
+    ],
+    "pmc_id": "PMC4726893",
+    "pdf_file_name": "ibj-20-122.pdf",
+    "xml_file_name": "ibj-20-122.nxml",
+    "split": "test",
+    "exclude_for_structure": false,
+    "exclude_for_detection": true,
+    "structure_id": "PMC4726893_table_0",
+    "xml_table_index": 0,
+    "pdf_page_index": 1,
+    "pdf_full_page_bbox": [
+      0.0,
+      0.0,
+      595.2760009765625,
+      841.8900146484375
+    ],
+    "pdf_table_bbox": [
+      303.71826171875,
+      544.044189453125,
+      510.8009948730469,
+      728.428466796875
+    ],
+    "pdf_table_wrap_bbox": [
+      296.2796936035156,
+      517.2841796875,
+      532.42822265625,
+      742.7069702148438
+    ],
+    "xml_table_wrap_start_character_index": 14563,
+    "xml_table_wrap_end_character_index": 18266
+  }
+]
