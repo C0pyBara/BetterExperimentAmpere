@@ -36,7 +36,7 @@ from openpyxl import load_workbook
 # =========================
 
 # Папка с исходными XLSX
-INPUT_DIR = Path(r"C:\Users\YtkaB\Desktop\Dataset_for_betterExperiment\expert_viewpoint")
+INPUT_DIR = Path(r"c:\Users\Юзя\Desktop\BetterExperimentAmpere\Convert_from_xlsx_to_Json\table_normalization")
 
 # Папка для выходных JSON
 OUTPUT_DIR = INPUT_DIR.parent / f"{INPUT_DIR.name}_converted_json"

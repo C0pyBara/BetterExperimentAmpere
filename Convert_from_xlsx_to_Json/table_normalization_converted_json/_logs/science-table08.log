@@ -1,0 +1,126 @@
+=== science-table08.xlsx ===
+Cell A1 | value='About' | fill=FF00B050 | rows=[0] | cols=[0] | col_header=True | row_header=True | metadata=False
+Cell B1 | value='This excel contains the 2020 update of the results from the 2017 State of Narragansett Bay and Its Watershed Technical Report (nbep.org), Chapter 13: "Benthic Habitat." Sites in Narragansett Bay were monitored across 1988, 2008, and 2018 for benthic habitat type and changes in benthic habitat quality via a sediment profile imaging survey. The results from this survey were published by Shumchenia and King (2019).' | fill=00000000 | rows=[0] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A2 | value='Date Published' | fill=FF00B050 | rows=[1] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B2 | value='2020-05-14 00:00:00' | fill=00000000 | rows=[1] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A3 | value='Point of Contact' | fill=FF00B050 | rows=[2] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B3 | value='Narragansett Bay Estuary Program
+235 Promenade Street
+Suite 393
+Providence, Rhode Island, 02908
+401-633-0550
+info@nbep.org' | fill=00000000 | rows=[2] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A5 | value='Excel Sheet' | fill=FF00B050 | rows=[4] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B5 | value='Stations' | fill=00000000 | rows=[4] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A6 | value='Summary' | fill=FF00B050 | rows=[5] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B6 | value='This excel table presents the final benthic monitoring data processed from each station in Narragansett Bay by Shumchenia and King (2019). It includes biotope classication, successional stage, habitat quality change, and apparent redox potential discontinuity (aRPD) for each station.' | fill=00000000 | rows=[5] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A8 | value='Column Headings' | fill=FFFFFF00 | rows=[7] | cols=[0] | col_header=True | row_header=False | metadata=False
+Cell A9 | value='station' | fill=00000000 | rows=[8] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B9 | value='The unique alpha-numeric identification code used by Shumchenia and King (2019) and Shumchenia et al. (2016) referencing the benthic monitoring station.' | fill=00000000 | rows=[8] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A10 | value='biotope88' | fill=00000000 | rows=[9] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B10 | value='Biotope classification for 1988. Each sediment profile image was first assigned to a sediment grain size category, then biota were described from the biotic surface and subsurface features. These elements were summarized into a short phrase using the sediment grain size descriptor and dominant biota. Non-dominant but conspicuous biota were included in the descriptions when present. More detailed biota and sediment descriptions and the designated biotope for each SPI image replicate are presented in Shumchenia and King (2019). [AM: Ampelisca beds occasionally with other small tube-building and shallowburrowing fauna on substrates ranging from organic-rich muds to sand. Beggiatoa spp. or Mulinia lateralis may be present; SA: Hard sands with epibenthic sponges, rafting or attached macroalgae, and/or mobile gastropods; SH.SA: Very coarse sands with shell hash. Rafting macroalgae or Crepidula beds may be present; SH.SI: Crepidula bed on mud. Mobile crustaceans, gastropods, or Beggiatoa spp. may be presen; UN.SF: Organic-rich mud with tolerant species such as Beggiatoa spp., tube-building polychaetes, and shallow burrowing fauna; UN.SH: Burrowing fauna on mud with shell hash. Tube-building polychaetes or deep burrowing fauna may be present; UN.SI: Burrowing fauna on mud. Tubebuilding polychaetes, larger tubebuilders such as Chaetopterus, or deep burrowing fauna may be present; UN.SS: Burrowing and tube-building fauna on sandy mud; UN.ST: Small tube-building fauna on mud or organic-rich mud. Larger tube builders, such as Chaetopterus, and shallow or deep-burrowing fauna may be present.; NA: Station not sampled and/or no images obtained from station and/or images missing from the archive, preventing reanalysis; indet: Images were collected but not interpretable for biotope classification.)' | fill=00000000 | rows=[9] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A11 | value='biotope08' | fill=00000000 | rows=[10] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B11 | value='Biotope classification for 2008.' | fill=00000000 | rows=[10] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A12 | value='biotope18' | fill=00000000 | rows=[11] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B12 | value='Biotope classification for 2018.' | fill=00000000 | rows=[11] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A13 | value='stage88' | fill=00000000 | rows=[12] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B13 | value='Infaunal successional stage provides an additional way to characterize benthic communities, and can be used as a modifying metric to accompany benthic biotope descriptors. Successional stage designation relies on the assumption that in fine-grained benthic biotopes a predictable 4-stage sequence of benthic community types develops following disturbance (e.g., hypoxia/anoxia, dredging, etc.). Successional stage was assigned for each 1988 image based on the organism-sediment relationships visible in each image. (0 = Stage 0: Immediately following disturbance; no macrofauna visible; if oxygen and/or organic enrichment are major stressors, black reduced sediment will be visible at sediment-water interface; 1 = Stage 1: Characterized by “pioneer” species such as very small polychaetes, usually densely populated at or near the sediment-water interface; 2 = Stage 2: Ampelisca is a hallmark organism of this stage in Northeast US coastal systems; burrowing organisms are also present; 3 = Stage 3: Considered a mature benthic community consisting of largebodied, deep-burrowing organisms; head-down deposit-feeding is characterized by deep sediment oxidation and the presence of feeding voids at depth; Entries such as "1 on 3" indicate that organisms emblematic of multiple successional stages-e.g., -stages 1 and 3--were present.' | fill=00000000 | rows=[12] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A14 | value='stage08' | fill=00000000 | rows=[13] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B14 | value='Successional stage designation for 2008.' | fill=00000000 | rows=[13] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A15 | value='stage18' | fill=00000000 | rows=[14] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B15 | value='Successional stage designation for 2018.' | fill=00000000 | rows=[14] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A16 | value='change8808' | fill=00000000 | rows=[15] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B16 | value='Benthic habitat change trends for 1988-2008 were assigned by comparing the Successional Stage descriptors for those time periods. Trends indicate that the biotope changed and/or there was evidence of higher successional stage. Improved: Any portion of the 2018 Successional Stage descriptor is higher than in 2008. Remained good quality: The highest portion of the Successional Stage descriptor present in 2008 is still present in 2018 (e.g., a change from Stage 2 on 3 to Stage 1 on 3). Remained poor quality: A Successional Stage less than 2 is present in both years. Declined: Any portion of the 2018 Successional Stage descriptor is lower than in 2008 AND the 2018 Successional Stage is below 2. Change status not determined: Change status was not determined if there was insufficient information.' | fill=00000000 | rows=[15] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A17 | value='change0818' | fill=00000000 | rows=[16] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B17 | value='Benthic habitat change trends for 2008-2018 were assigned by comparing the Successional Stage descriptors for those time periods. Trends indicate that the biotope changed and/or there was evidence of higher successional stage.' | fill=00000000 | rows=[16] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A18 | value='LON' | fill=00000000 | rows=[17] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B18 | value='The longitude in decimal degrees recorded coordinates of the first camera drop at each station.' | fill=00000000 | rows=[17] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A19 | value='LAT' | fill=00000000 | rows=[18] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B19 | value='The latitude in decimal degrees recorded coordinates of the first camera drop at each station.' | fill=00000000 | rows=[18] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A20 | value='arpd08' | fill=00000000 | rows=[19] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B20 | value='The depth of the apparent redox potential discontinuity (aRPD) in 2008, or the change in sediment color from oxidized (reddish/brown/tan) to reduced (black). The aRPD depth represents the recent history of bottom-water oxygen concentrations and bioturbation/irrigation. In Narragansett Bay, the aRPD depth is responsive to oxygen concentrations between 14-28 days prior to image collection. The maximum aRPD depth of any station replicate was used to represent the station. NA: Station not sampled and/or no images obtained from station and/or images missing from the archive, preventing reanalysis. indet: Images were collected but not interpretable for aRPD depth.' | fill=00000000 | rows=[19] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A21 | value='arpd18' | fill=00000000 | rows=[20] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B21 | value='The depth of the apparent redox potential discontinuity (aRPD) in 2018.' | fill=00000000 | rows=[20] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A22 | value='arpd_chg' | fill=00000000 | rows=[21] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B22 | value='The difference in the apparent redox potential discontinuity (aRPD) between 2008 and 2018 (arpd08-arpd18).' | fill=00000000 | rows=[21] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A23 | value='nbep_div' | fill=00000000 | rows=[22] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B23 | value='Bay divisions were based on grouping NBEP bay segments along similarities in the benthic community. PS: Providence and Seekonk Rivers. UB: Upper Bay, Upper East & West Passages, Greenwich Bay. MB: Middle East & West Passages. LB: Lower East & West Passages. MHB: Mount Hope Bay. MO: Mouth of Narragansett Bay.' | fill=00000000 | rows=[22] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A24 | value='DataSource' | fill=00000000 | rows=[23] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B24 | value='The source(s) of the primary data used to produce this dataset (Shumchenia et al. 2019)' | fill=00000000 | rows=[23] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A25 | value='SourceYear' | fill=00000000 | rows=[24] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B25 | value='The publication year(s) of the primary data used to produce this dataset.' | fill=00000000 | rows=[24] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A26 | value='NBEPYear' | fill=00000000 | rows=[25] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B26 | value='The publication year of the NBEP State of Narragansett Bay & Its Watershed Technical Report associated with this dataset.' | fill=00000000 | rows=[25] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A28 | value='Excel Sheet' | fill=FF00B050 | rows=[27] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B28 | value='ByBayDivision' | fill=00000000 | rows=[27] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A29 | value='Summary' | fill=FF00B050 | rows=[28] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B29 | value='This excel table summarizes final benthic habitat types (biotopes) for each bay division in Narragansett Bay, for 1988, 2008, and 2018.' | fill=00000000 | rows=[28] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A31 | value='Column Headings' | fill=FFFFFF00 | rows=[30] | cols=[0] | col_header=True | row_header=False | metadata=False
+Cell A32 | value='Bay Division' | fill=00000000 | rows=[31] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B32 | value='Bay divisions were based on grouping NBEP bay segments along similarities in the benthic community.' | fill=00000000 | rows=[31] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A33 | value='Abbreviation' | fill=00000000 | rows=[32] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B33 | value='Abbreviation for the bay division.' | fill=00000000 | rows=[32] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A34 | value='Year' | fill=00000000 | rows=[33] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B34 | value='The year the data were collected.' | fill=00000000 | rows=[33] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A35 | value='UN.SF' | fill=00000000 | rows=[34] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B35 | value='Organic-rich mud with tolerant species such as Beggiatoa spp., tube-building polychaetes, and shallow burrowing fauna.' | fill=00000000 | rows=[34] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A36 | value='UN.SI' | fill=00000000 | rows=[35] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B36 | value='Burrowing fauna on mud. Tubebuilding polychaetes, larger tubebuilders such as Chaetopterus, or deep burrowing fauna may be present.' | fill=00000000 | rows=[35] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A37 | value='UN.ST' | fill=00000000 | rows=[36] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B37 | value='Small tube-building fauna on mud or organic-rich mud. Larger tube builders, such as Chaetopterus, and shallow or deep-burrowing fauna may be present.' | fill=00000000 | rows=[36] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A38 | value='UN.SS' | fill=00000000 | rows=[37] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B38 | value='Burrowing and tube-building fauna on sandy mud.' | fill=00000000 | rows=[37] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A39 | value='AM' | fill=00000000 | rows=[38] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B39 | value='Ampelisca beds occasionally with other small tube-building and shallowburrowing fauna on substrates ranging from organic-rich muds to sand. Beggiatoa spp. or Mulinia lateralis may be present.' | fill=00000000 | rows=[38] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A40 | value='UN.SH' | fill=00000000 | rows=[39] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B40 | value='Burrowing fauna on mud with shell hash. Tube-building polychaetes or deep burrowing fauna may be present.' | fill=00000000 | rows=[39] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A41 | value='SH.SA' | fill=00000000 | rows=[40] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B41 | value='Very coarse sands with shell hash. Rafting macroalgae or Crepidula beds may be present.' | fill=00000000 | rows=[40] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A42 | value='SA' | fill=00000000 | rows=[41] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B42 | value='Hard sands with epibenthic sponges, rafting or attached macroalgae, and/or mobile gastropods.' | fill=00000000 | rows=[41] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A43 | value='SH.SI' | fill=00000000 | rows=[42] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B43 | value='Crepidula bed on mud. Mobile crustaceans, gastropods, or Beggiatoa spp. may be present' | fill=00000000 | rows=[42] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A44 | value='Other' | fill=00000000 | rows=[43] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B44 | value='Other habitat.' | fill=00000000 | rows=[43] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A45 | value='DataSource' | fill=00000000 | rows=[44] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B45 | value='The source(s) of the primary data used to produce this dataset (Shumchenia et al. 2019)' | fill=00000000 | rows=[44] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A46 | value='SourceYear' | fill=00000000 | rows=[45] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B46 | value='The publication year(s) of the primary data used to produce this dataset.' | fill=00000000 | rows=[45] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A47 | value='NBEPYear' | fill=00000000 | rows=[46] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B47 | value='The publication year of the NBEP State of Narragansett Bay & Its Watershed Technical Report associated with this dataset.' | fill=00000000 | rows=[46] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A49 | value='Excel Sheet' | fill=FF00B050 | rows=[48] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B49 | value='ByStudyArea' | fill=00000000 | rows=[48] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A50 | value='Summary' | fill=FF00B050 | rows=[49] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B50 | value='This excel table summarizes final benthic habitat types (biotopes) for all of Narragansett Bay, for 1988, 2008, and 2018.' | fill=00000000 | rows=[49] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A52 | value='Column Headings' | fill=FFFFFF00 | rows=[51] | cols=[0] | col_header=True | row_header=False | metadata=False
+Cell A53 | value='StudyArea' | fill=00000000 | rows=[52] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B53 | value='The NBEP study area in  which sampling was conducted.' | fill=00000000 | rows=[52] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A54 | value='Year' | fill=00000000 | rows=[53] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B54 | value='The year the data were collected.' | fill=00000000 | rows=[53] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A55 | value='UN.SF' | fill=00000000 | rows=[54] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B55 | value='Organic-rich mud with tolerant species such as Beggiatoa spp., tube-building polychaetes, and shallow burrowing fauna.' | fill=00000000 | rows=[54] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A56 | value='UN.SI' | fill=00000000 | rows=[55] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B56 | value='Burrowing fauna on mud. Tubebuilding polychaetes, larger tubebuilders such as Chaetopterus, or deep burrowing fauna may be present.' | fill=00000000 | rows=[55] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A57 | value='UN.ST' | fill=00000000 | rows=[56] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B57 | value='Small tube-building fauna on mud or organic-rich mud. Larger tube builders, such as Chaetopterus, and shallow or deep-burrowing fauna may be present.' | fill=00000000 | rows=[56] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A58 | value='UN.SS' | fill=00000000 | rows=[57] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B58 | value='Burrowing and tube-building fauna on sandy mud.' | fill=00000000 | rows=[57] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A59 | value='AM' | fill=00000000 | rows=[58] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B59 | value='Ampelisca beds occasionally with other small tube-building and shallowburrowing fauna on substrates ranging from organic-rich muds to sand. Beggiatoa spp. or Mulinia lateralis may be present.' | fill=00000000 | rows=[58] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A60 | value='UN.SH' | fill=00000000 | rows=[59] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B60 | value='Burrowing fauna on mud with shell hash. Tube-building polychaetes or deep burrowing fauna may be present.' | fill=00000000 | rows=[59] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A61 | value='SH.SA' | fill=00000000 | rows=[60] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B61 | value='Very coarse sands with shell hash. Rafting macroalgae or Crepidula beds may be present.' | fill=00000000 | rows=[60] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A62 | value='SA' | fill=00000000 | rows=[61] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B62 | value='Hard sands with epibenthic sponges, rafting or attached macroalgae, and/or mobile gastropods.' | fill=00000000 | rows=[61] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A63 | value='SH.SI' | fill=00000000 | rows=[62] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B63 | value='Crepidula bed on mud. Mobile crustaceans, gastropods, or Beggiatoa spp. may be present' | fill=00000000 | rows=[62] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A64 | value='Other' | fill=00000000 | rows=[63] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B64 | value='Other habitat.' | fill=00000000 | rows=[63] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A65 | value='DataSource' | fill=00000000 | rows=[64] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B65 | value='The source(s) of the primary data used to produce this dataset (Shumchenia et al. 2019)' | fill=00000000 | rows=[64] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A66 | value='SourceYear' | fill=00000000 | rows=[65] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B66 | value='The publication year(s) of the primary data used to produce this dataset.' | fill=00000000 | rows=[65] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell A67 | value='NBEPYear' | fill=00000000 | rows=[66] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B67 | value='The publication year of the NBEP State of Narragansett Bay & Its Watershed Technical Report associated with this dataset.' | fill=00000000 | rows=[66] | cols=[1] | col_header=False | row_header=False | metadata=False
+
