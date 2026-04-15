@@ -1,0 +1,115 @@
+You are a senior data engineer specializing in data normalization.
+
+Task: Identify header cells using the MINIMUM STRATEGY (STRUCTURAL / NORMALIZATION).
+A header is a cell that names an INDEPENDENT ATTRIBUTE or ENTITY required for normalized (relational) form.
+Include ONLY: attribute names and entity identifiers essential to reconstruct the schema.
+Exclude: aggregates, descriptive text, section labels, data values.
+
+Coordinates are 0-based. For spanning cells use the top-left anchor (row_nums[0], column_nums[0]).
+
+---
+EXAMPLE 1 — Two-level column headers + row labels
+Table (JSON):
+[
+  {"row_nums":[0],"column_nums":[0],"xml_text_content":""},
+  {"row_nums":[0],"column_nums":[1,2],"xml_text_content":"Treatment A"},
+  {"row_nums":[0],"column_nums":[3,4],"xml_text_content":"Treatment B"},
+  {"row_nums":[1],"column_nums":[0],"xml_text_content":"Characteristic"},
+  {"row_nums":[1],"column_nums":[1],"xml_text_content":"n"},
+  {"row_nums":[1],"column_nums":[2],"xml_text_content":"%"},
+  {"row_nums":[1],"column_nums":[3],"xml_text_content":"n"},
+  {"row_nums":[1],"column_nums":[4],"xml_text_content":"%"},
+  {"row_nums":[2],"column_nums":[0],"xml_text_content":"Age (years)"},
+  {"row_nums":[2],"column_nums":[1],"xml_text_content":"45"},
+  {"row_nums":[2],"column_nums":[2],"xml_text_content":"60.0"},
+  {"row_nums":[2],"column_nums":[3],"xml_text_content":"38"},
+  {"row_nums":[2],"column_nums":[4],"xml_text_content":"55.1"},
+  {"row_nums":[3],"column_nums":[0],"xml_text_content":"Sex (F/M)"},
+  {"row_nums":[3],"column_nums":[1],"xml_text_content":"30"},
+  {"row_nums":[3],"column_nums":[2],"xml_text_content":"40.0"},
+  {"row_nums":[3],"column_nums":[3],"xml_text_content":"25"},
+  {"row_nums":[3],"column_nums":[4],"xml_text_content":"36.2"}
+]
+
+Analysis (normalization):
+Normalized schema: (Characteristic, Group, Metric) → Value
+- "Treatment A" and "Treatment B" at row 0 are group names — needed for the schema.
+- "n" and "%" at row 1 are attribute names — essential.
+- "Characteristic" at (1,0) names the row dimension — essential.
+- "Age (years)", "Sex (F/M)" at col 0 are entity key values — they ARE data (entity identifiers in the fact table), not schema-level attribute names. EXCLUDE in minimum strategy.
+- Empty cell (0,0): structural filler, not an attribute name — EXCLUDE.
+
+MINIMUM output (schema-level only):
+0 1
+0 3
+1 0
+1 1
+1 2
+1 3
+1 4
+
+---
+EXAMPLE 2 — Section separators (projected row headers) mid-table
+Table (JSON):
+[
+  {"row_nums":[0],"column_nums":[0],"xml_text_content":"Variable"},
+  {"row_nums":[0],"column_nums":[1],"xml_text_content":"Cases"},
+  {"row_nums":[0],"column_nums":[2],"xml_text_content":"Controls"},
+  {"row_nums":[1],"column_nums":[0,1,2],"xml_text_content":"Demographic factors"},
+  {"row_nums":[2],"column_nums":[0],"xml_text_content":"Age"},
+  {"row_nums":[2],"column_nums":[1],"xml_text_content":"52.3"},
+  {"row_nums":[2],"column_nums":[2],"xml_text_content":"48.7"},
+  {"row_nums":[3],"column_nums":[0],"xml_text_content":"BMI"},
+  {"row_nums":[3],"column_nums":[1],"xml_text_content":"26.1"},
+  {"row_nums":[3],"column_nums":[2],"xml_text_content":"24.9"},
+  {"row_nums":[4],"column_nums":[0,1,2],"xml_text_content":"Clinical factors"},
+  {"row_nums":[5],"column_nums":[0],"xml_text_content":"Smoking"},
+  {"row_nums":[5],"column_nums":[1],"xml_text_content":"18"},
+  {"row_nums":[5],"column_nums":[2],"xml_text_content":"11"},
+  {"row_nums":[6],"column_nums":[0],"xml_text_content":"Hypertension"},
+  {"row_nums":[6],"column_nums":[1],"xml_text_content":"31"},
+  {"row_nums":[6],"column_nums":[2],"xml_text_content":"22"}
+]
+
+Analysis (normalization):
+Normalized schema: (Variable, Group) → Value
+- "Variable", "Cases", "Controls" at row 0 — attribute names → include.
+- "Demographic factors", "Clinical factors" — contextual section labels, not attribute names → EXCLUDE in minimum strategy.
+- "Age", "BMI", "Smoking", "Hypertension" at col 0 — entity key values (variable names), they ARE data in the normalized form → EXCLUDE.
+
+MINIMUM output:
+0 0
+0 1
+0 2
+
+---
+EXAMPLE 3 — Simple matrix, no row headers
+Table (HTML):
+<table>
+  <tr><td>Region</td><td>2020</td><td>2021</td><td>2022</td></tr>
+  <tr><td>North</td><td>1240</td><td>1380</td><td>1510</td></tr>
+  <tr><td>South</td><td>980</td><td>1050</td><td>1120</td></tr>
+  <tr><td>Total</td><td>2220</td><td>2430</td><td>2630</td></tr>
+</table>
+
+Analysis (normalization):
+Normalized schema: (Region, Year) → Value
+- "Region" at (0,0): names the row entity dimension → attribute name → include.
+- "2020", "2021", "2022": year values used as column keys. In minimum strategy these are dimension values acting as column pivots — include as they define the schema.
+- "North", "South": entity key values (data) → EXCLUDE.
+- "Total" row: aggregate, not part of the normalized schema → EXCLUDE.
+
+MINIMUM output:
+0 0
+0 1
+0 2
+0 3
+
+---
+Now apply the MINIMUM STRATEGY to the following table.
+Include ONLY attribute names and entity dimension labels essential for relational normalization.
+Exclude aggregates, section labels, and data values.
+Output ONLY coordinates, one per line, 0-based, format: row col
+
+Table:
+{table}

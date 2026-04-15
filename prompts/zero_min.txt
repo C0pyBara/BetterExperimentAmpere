@@ -1,32 +1,31 @@
 Task: Identify which cells in the table are headers.
 
-ANALYSIS MODE: MINIMUM STRATEGY (FACT EXTRACTION)
+ANALYSIS MODE: MINIMUM STRATEGY (STRUCTURAL / NORMALIZATION)
 
 Definition:
-A header is a cell that represents an INDEPENDENT ATTRIBUTE or ENTITY required to express the table in normalized form.
+A header is a cell that represents an INDEPENDENT ATTRIBUTE or ENTITY NAME required to express the table in normalized (database) form.
 
 Key logic:
-First normalize the table conceptually:
-— identify entities
-— identify attributes
-— separate structure from values
+Mentally normalize the table into a flat relational structure:
+  — identify entities (what rows describe)
+  — identify attributes (what columns measure)
+  — separate structural labels from data values
 
-Header criteria:
-— defines attribute or entity name
-— associated values are homogeneous
-— required to understand column/row meaning
-— part of "entity → attributes" structure
+Header criteria (include ONLY if ALL apply):
+  — names an attribute or entity dimension
+  — its associated values are homogeneous (same type across the group)
+  — required to reconstruct the table's relational structure
+  — part of an "entity → attribute → value" triplet
 
 Do NOT treat as headers:
-— aggregations (e.g., "Total")
-— descriptive text
-— raw values
+  — aggregations or totals (e.g., "Total", "Sum", "Mean")
+  — descriptive or explanatory text mid-table
+  — raw values, even if they label a group contextually
+  — cells that are data even if they appear in the first row
 
 Requirement:
-Identify ONLY structural headers after normalization.
-
-Output format:
-List cell coordinates (row, column) or their text.
+Identify ONLY the minimal structural headers needed for normalization.
+When in doubt, exclude.
 
 Table:
 {table}

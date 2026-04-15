@@ -1,0 +1,390 @@
+=== energy-table05.xlsx ===
+Cell A1 | value='Risk
+ID' | fill=FF00B0F0 | rows=[0] | cols=[0] | col_header=True | row_header=True | metadata=True
+Cell B1 | value='Item
+Description' | fill=FFFFFF00 | rows=[0] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C1 | value='Function' | fill=FFFFFF00 | rows=[0] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D1 | value='Tech. Class' | fill=FFFFFF00 | rows=[0] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E1 | value='Novel Aspects' | fill=FFFFFF00 | rows=[0] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell F1 | value='Failure
+Mode' | fill=FFFFFF00 | rows=[0] | cols=[5] | col_header=True | row_header=False | metadata=False
+Cell G1 | value='Failure 
+Effects
+(Local, WEC, System)' | fill=FFFFFF00 | rows=[0] | cols=[6] | col_header=True | row_header=False | metadata=False
+Cell H1 | value='Failure
+Cause(s)' | fill=FFFFFF00 | rows=[0] | cols=[7] | col_header=True | row_header=False | metadata=False
+Cell I1 | value='Initial Mode
+ of
+Operation' | fill=FFFFFF00 | rows=[0] | cols=[8] | col_header=True | row_header=False | metadata=False
+Cell J1 | value='Risk Reduction 
+Design' | fill=FFFFFF00 | rows=[0] | cols=[9] | col_header=True | row_header=False | metadata=False
+Cell K1 | value='Preventative
+Detection' | fill=FFFFFF00 | rows=[0] | cols=[10] | col_header=True | row_header=False | metadata=False
+Cell L1 | value='Post Failure
+Detection' | fill=FFFFFF00 | rows=[0] | cols=[11] | col_header=True | row_header=False | metadata=False
+Cell M1 | value='Post Failure
+Repair
+Strategy 
+(automated, manual)' | fill=FFFFFF00 | rows=[0] | cols=[12] | col_header=True | row_header=False | metadata=False
+Cell A2 | value='0521-1' | fill=FF00B0F0 | rows=[1] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B2 | value='Smoke alarms' | fill=FF00B050 | rows=[1] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C2 | value='Alarms in case of smoke in nacelle' | fill=9 | rows=[1] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D2 | value='1' | fill=9 | rows=[1] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E2 | value='none' | fill=9 | rows=[1] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F2 | value='No smoke alarm' | fill=9 | rows=[1] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G2 | value='Failure to alarm with smoke present' | fill=9 | rows=[1] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H2 | value='1) Sensor defect, contamination, or corrosion
+2) wiring fault' | fill=9 | rows=[1] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I2 | value='Normal' | fill=9 | rows=[1] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J2 | value='1) V&V (QC)
+2) Redundant sensors' | fill=9 | rows=[1] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K2 | value='Visual inspection' | fill=9 | rows=[1] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L2 | value='1) SCADA - Loss of other systems, temperature increase
+2) Visual - camera inspection' | fill=9 | rows=[1] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M2 | value='1) Repair in-situ if possible. 
+2) dry dock' | fill=9 | rows=[1] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A3 | value='0521-2' | fill=FF00B0F0 | rows=[2] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B3 | value='Smoke alarms' | fill=FF00B050 | rows=[2] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C3 | value='Alarms in case of smoke in nacelle' | fill=9 | rows=[2] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D3 | value='1' | fill=9 | rows=[2] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E3 | value='none' | fill=9 | rows=[2] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F3 | value='False alarm' | fill=9 | rows=[2] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G3 | value='Alarm sounds with no smoke present' | fill=9 | rows=[2] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H3 | value='1) Sensor defect, contamination, or corrosion
+2) wiring fault' | fill=9 | rows=[2] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I3 | value='Normal' | fill=9 | rows=[2] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J3 | value='1) V&V (QC)
+2) Redundant sensors' | fill=9 | rows=[2] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K3 | value='Visual inspection' | fill=9 | rows=[2] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L3 | value='1) SCADA - All systems & temp are normal
+2) Visual - camera inspection' | fill=9 | rows=[2] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M3 | value='1) Do nothing
+2) Repair in-situ if possible.' | fill=9 | rows=[2] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A4 | value='0522-1' | fill=FF00B0F0 | rows=[3] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B4 | value='Flooding Alarms' | fill=FF00B050 | rows=[3] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C4 | value='Monitor for water intrusion and alarm if water present' | fill=6 | rows=[3] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D4 | value='1' | fill=6 | rows=[3] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E4 | value='none' | fill=6 | rows=[3] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F4 | value='No water intrusion alarm' | fill=6 | rows=[3] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G4 | value='Failure to alarm with water present' | fill=6 | rows=[3] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H4 | value='1) Sensor defect, contamination, or corrosion
+2) wiring fault' | fill=6 | rows=[3] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I4 | value='Normal' | fill=6 | rows=[3] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J4 | value='1) V&V (QC)
+2) Redundant sensors' | fill=6 | rows=[3] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K4 | value='Visual inspection' | fill=6 | rows=[3] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L4 | value='1) SCADA - Loss of other systems, humidity increase
+2) Visual - camera inspection' | fill=6 | rows=[3] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M4 | value='1) Repair in-situ if possible. 
+2) dry dock' | fill=6 | rows=[3] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A5 | value='0522-2' | fill=FF00B0F0 | rows=[4] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B5 | value='Flooding Alarms' | fill=FF00B050 | rows=[4] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C5 | value='Monitor for water intrusion and alarm if water present' | fill=6 | rows=[4] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D5 | value='1' | fill=6 | rows=[4] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E5 | value='none' | fill=6 | rows=[4] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F5 | value='False alarm' | fill=6 | rows=[4] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G5 | value='False alarm with no water present' | fill=6 | rows=[4] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H5 | value='1) Sensor defect, contamination, or corrosion
+2) wiring fault' | fill=6 | rows=[4] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I5 | value='Normal' | fill=6 | rows=[4] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J5 | value='1) V&V (QC)
+2) Redundant sensors' | fill=6 | rows=[4] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K5 | value='Visual inspection' | fill=6 | rows=[4] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L5 | value='1) SCADA - All systems normal
+2) Visual - camera inspection' | fill=6 | rows=[4] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M5 | value='1) Do nothing
+2) Repair in-situ if possible.' | fill=6 | rows=[4] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A6 | value='0523-1' | fill=FF00B0F0 | rows=[5] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B6 | value='Temperature Sensors' | fill=FF00B050 | rows=[5] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C6 | value='Monitor temperature in nacelle' | fill=7 | rows=[5] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D6 | value='1' | fill=7 | rows=[5] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E6 | value='none' | fill=7 | rows=[5] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F6 | value='Erroneous reading' | fill=7 | rows=[5] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G6 | value='Sensor reading significantly high causes systems shutdown for overheat protection' | fill=7 | rows=[5] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H6 | value='1) Sensor defect, contamination, or corrosion
+2) wiring fault' | fill=7 | rows=[5] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I6 | value='Normal' | fill=7 | rows=[5] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J6 | value='1) V&V (QC)
+2) Redundant sensors' | fill=7 | rows=[5] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K6 | value='Visual inspection' | fill=7 | rows=[5] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L6 | value='1) SCADA - other systems temperatures normal' | fill=7 | rows=[5] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M6 | value='1) Do nothing
+2) Repair in-situ if possible.' | fill=7 | rows=[5] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A7 | value='0523-2' | fill=FF00B0F0 | rows=[6] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B7 | value='Temperature Sensors' | fill=FF00B050 | rows=[6] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C7 | value='Monitor temperature in nacelle' | fill=7 | rows=[6] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D7 | value='1' | fill=7 | rows=[6] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E7 | value='none' | fill=7 | rows=[6] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F7 | value='Erroneous reading' | fill=7 | rows=[6] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G7 | value='Sensor reading significantly low results in loss of confidence and iceing concern' | fill=7 | rows=[6] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H7 | value='1) Sensor defect, contamination, or corrosion
+2) wiring fault' | fill=7 | rows=[6] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I7 | value='Normal' | fill=7 | rows=[6] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J7 | value='1) V&V (QC)
+2) Redundant sensors' | fill=7 | rows=[6] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K7 | value='Visual inspection' | fill=7 | rows=[6] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L7 | value='1) SCADA - other systems temperatures normal' | fill=7 | rows=[6] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M7 | value='1) Do nothing
+2) Repair in-situ if possible.' | fill=7 | rows=[6] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A8 | value='0524-1' | fill=FF00B0F0 | rows=[7] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B8 | value='Humidity Sensors' | fill=FF00B050 | rows=[7] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C8 | value='Monitor humidity in nacelle' | fill=2 | rows=[7] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D8 | value='1' | fill=2 | rows=[7] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E8 | value='none' | fill=2 | rows=[7] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F8 | value='Erroneous reading' | fill=2 | rows=[7] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G8 | value='Sensor reading significantly high causes systems shutdown for condensation protection' | fill=2 | rows=[7] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H8 | value='1) Sensor defect, contamination, or corrosion
+2) wiring fault' | fill=2 | rows=[7] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I8 | value='Normal' | fill=2 | rows=[7] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J8 | value='1) V&V (QC)
+2) Redundant sensors' | fill=2 | rows=[7] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K8 | value='Visual inspection' | fill=2 | rows=[7] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L8 | value='1) SCADA - other systems normal, access closed, no water intrusion' | fill=2 | rows=[7] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M8 | value='1) Do nothing
+2) Repair in-situ if possible.' | fill=2 | rows=[7] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A9 | value='0524-2' | fill=FF00B0F0 | rows=[8] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B9 | value='Humidity Sensors' | fill=FF00B050 | rows=[8] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C9 | value='Monitor humidity in nacelle' | fill=2 | rows=[8] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D9 | value='1' | fill=2 | rows=[8] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E9 | value='none' | fill=2 | rows=[8] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F9 | value='Erroneous reading' | fill=2 | rows=[8] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G9 | value='Sensor reading significantly low results in loss of confidence' | fill=2 | rows=[8] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H9 | value='1) Sensor defect, contamination, or corrosion
+2) wiring fault' | fill=2 | rows=[8] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I9 | value='Normal' | fill=2 | rows=[8] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J9 | value='1) V&V (QC)
+2) Redundant sensors' | fill=2 | rows=[8] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K9 | value='Visual inspection' | fill=2 | rows=[8] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L9 | value='1) SCADA - other systems normal' | fill=2 | rows=[8] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M9 | value='1) Do nothing
+2) Repair in-situ if possible.' | fill=2 | rows=[8] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A10 | value='0525-1' | fill=FF00B0F0 | rows=[9] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B10 | value='Access Alarms' | fill=FF00B050 | rows=[9] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C10 | value='Monitor access sensors and alarm based on SCADA operational setting.  Indicate hatch status' | fill=4 | rows=[9] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D10 | value='1' | fill=4 | rows=[9] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E10 | value='none' | fill=4 | rows=[9] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F10 | value='Failed CLOSED, hatch sensor fails to identify open access panel' | fill=4 | rows=[9] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G10 | value='Failure to alarm when access panel is opened' | fill=4 | rows=[9] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H10 | value='1) Sensor defect, contamination, or corrosion
+2) wiring fault' | fill=4 | rows=[9] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I10 | value='Normal' | fill=4 | rows=[9] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J10 | value='1) V&V (QC)
+2) Redundant sensors' | fill=4 | rows=[9] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K10 | value='Visual inspection' | fill=4 | rows=[9] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L10 | value='1) SCADA - water intrusion, humidity, temperature
+2) Visual - camera inspection' | fill=4 | rows=[9] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M10 | value='1) Repair in-situ if possible. 
+2) dry dock' | fill=4 | rows=[9] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A11 | value='0525-2' | fill=FF00B0F0 | rows=[10] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B11 | value='Access Alarms' | fill=FF00B050 | rows=[10] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C11 | value='Monitor access sensors and alarm based on SCADA operational setting.  Indicate hatch status' | fill=4 | rows=[10] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D11 | value='1' | fill=4 | rows=[10] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E11 | value='none' | fill=4 | rows=[10] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F11 | value='Failed OPEN, hatch sensor inducates false open' | fill=4 | rows=[10] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G11 | value='Hatch indicates open while closed' | fill=4 | rows=[10] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H11 | value='1) Sensor defect, contamination, or corrosion
+2) wiring fault' | fill=4 | rows=[10] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I11 | value='Normal' | fill=4 | rows=[10] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J11 | value='1) V&V (QC)
+2) Redundant sensors' | fill=4 | rows=[10] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K11 | value='Visual inspection' | fill=4 | rows=[10] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L11 | value='1) SCADA - water intrusion, humidity, temperature
+2) Visual - camera inspection' | fill=4 | rows=[10] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M11 | value='1) Do nothing
+2) Repair in-situ if possible.' | fill=4 | rows=[10] | cols=[12] | col_header=False | row_header=False | metadata=False
+
+=== energy-table05.xlsx ===
+Cell A1 | value='Risk
+ID' | fill=FF00B0F0 | rows=[0] | cols=[0] | col_header=True | row_header=True | metadata=True
+Cell B1 | value='Item
+Description' | fill=FFFFFF00 | rows=[0] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C1 | value='Function' | fill=FFFFFF00 | rows=[0] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D1 | value='Tech. Class' | fill=FFFFFF00 | rows=[0] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E1 | value='Novel Aspects' | fill=FFFFFF00 | rows=[0] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell F1 | value='Failure
+Mode' | fill=FFFFFF00 | rows=[0] | cols=[5] | col_header=True | row_header=False | metadata=False
+Cell G1 | value='Failure 
+Effects
+(Local, WEC, System)' | fill=FFFFFF00 | rows=[0] | cols=[6] | col_header=True | row_header=False | metadata=False
+Cell H1 | value='Failure
+Cause(s)' | fill=FFFFFF00 | rows=[0] | cols=[7] | col_header=True | row_header=False | metadata=False
+Cell I1 | value='Initial Mode
+ of
+Operation' | fill=FFFFFF00 | rows=[0] | cols=[8] | col_header=True | row_header=False | metadata=False
+Cell J1 | value='Risk Reduction 
+Design' | fill=FFFFFF00 | rows=[0] | cols=[9] | col_header=True | row_header=False | metadata=False
+Cell K1 | value='Preventative
+Detection' | fill=FFFFFF00 | rows=[0] | cols=[10] | col_header=True | row_header=False | metadata=False
+Cell L1 | value='Post Failure
+Detection' | fill=FFFFFF00 | rows=[0] | cols=[11] | col_header=True | row_header=False | metadata=False
+Cell M1 | value='Post Failure
+Repair
+Strategy 
+(automated, manual)' | fill=FFFFFF00 | rows=[0] | cols=[12] | col_header=True | row_header=False | metadata=False
+Cell A2 | value='0521-1' | fill=FF00B0F0 | rows=[1] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B2 | value='Smoke alarms' | fill=FF00B050 | rows=[1] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C2 | value='Alarms in case of smoke in nacelle' | fill=9 | rows=[1] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D2 | value='1' | fill=9 | rows=[1] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E2 | value='none' | fill=9 | rows=[1] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F2 | value='No smoke alarm' | fill=9 | rows=[1] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G2 | value='Failure to alarm with smoke present' | fill=9 | rows=[1] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H2 | value='1) Sensor defect, contamination, or corrosion
+2) wiring fault' | fill=9 | rows=[1] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I2 | value='Normal' | fill=9 | rows=[1] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J2 | value='1) V&V (QC)
+2) Redundant sensors' | fill=9 | rows=[1] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K2 | value='Visual inspection' | fill=9 | rows=[1] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L2 | value='1) SCADA - Loss of other systems, temperature increase
+2) Visual - camera inspection' | fill=9 | rows=[1] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M2 | value='1) Repair in-situ if possible. 
+2) dry dock' | fill=9 | rows=[1] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A3 | value='0521-2' | fill=FF00B0F0 | rows=[2] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B3 | value='Smoke alarms' | fill=FF00B050 | rows=[2] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C3 | value='Alarms in case of smoke in nacelle' | fill=9 | rows=[2] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D3 | value='1' | fill=9 | rows=[2] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E3 | value='none' | fill=9 | rows=[2] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F3 | value='False alarm' | fill=9 | rows=[2] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G3 | value='Alarm sounds with no smoke present' | fill=9 | rows=[2] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H3 | value='1) Sensor defect, contamination, or corrosion
+2) wiring fault' | fill=9 | rows=[2] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I3 | value='Normal' | fill=9 | rows=[2] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J3 | value='1) V&V (QC)
+2) Redundant sensors' | fill=9 | rows=[2] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K3 | value='Visual inspection' | fill=9 | rows=[2] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L3 | value='1) SCADA - All systems & temp are normal
+2) Visual - camera inspection' | fill=9 | rows=[2] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M3 | value='1) Do nothing
+2) Repair in-situ if possible.' | fill=9 | rows=[2] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A4 | value='0522-1' | fill=FF00B0F0 | rows=[3] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B4 | value='Flooding Alarms' | fill=FF00B050 | rows=[3] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C4 | value='Monitor for water intrusion and alarm if water present' | fill=6 | rows=[3] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D4 | value='1' | fill=6 | rows=[3] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E4 | value='none' | fill=6 | rows=[3] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F4 | value='No water intrusion alarm' | fill=6 | rows=[3] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G4 | value='Failure to alarm with water present' | fill=6 | rows=[3] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H4 | value='1) Sensor defect, contamination, or corrosion
+2) wiring fault' | fill=6 | rows=[3] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I4 | value='Normal' | fill=6 | rows=[3] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J4 | value='1) V&V (QC)
+2) Redundant sensors' | fill=6 | rows=[3] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K4 | value='Visual inspection' | fill=6 | rows=[3] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L4 | value='1) SCADA - Loss of other systems, humidity increase
+2) Visual - camera inspection' | fill=6 | rows=[3] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M4 | value='1) Repair in-situ if possible. 
+2) dry dock' | fill=6 | rows=[3] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A5 | value='0522-2' | fill=FF00B0F0 | rows=[4] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B5 | value='Flooding Alarms' | fill=FF00B050 | rows=[4] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C5 | value='Monitor for water intrusion and alarm if water present' | fill=6 | rows=[4] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D5 | value='1' | fill=6 | rows=[4] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E5 | value='none' | fill=6 | rows=[4] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F5 | value='False alarm' | fill=6 | rows=[4] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G5 | value='False alarm with no water present' | fill=6 | rows=[4] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H5 | value='1) Sensor defect, contamination, or corrosion
+2) wiring fault' | fill=6 | rows=[4] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I5 | value='Normal' | fill=6 | rows=[4] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J5 | value='1) V&V (QC)
+2) Redundant sensors' | fill=6 | rows=[4] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K5 | value='Visual inspection' | fill=6 | rows=[4] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L5 | value='1) SCADA - All systems normal
+2) Visual - camera inspection' | fill=6 | rows=[4] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M5 | value='1) Do nothing
+2) Repair in-situ if possible.' | fill=6 | rows=[4] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A6 | value='0523-1' | fill=FF00B0F0 | rows=[5] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B6 | value='Temperature Sensors' | fill=FF00B050 | rows=[5] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C6 | value='Monitor temperature in nacelle' | fill=7 | rows=[5] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D6 | value='1' | fill=7 | rows=[5] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E6 | value='none' | fill=7 | rows=[5] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F6 | value='Erroneous reading' | fill=7 | rows=[5] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G6 | value='Sensor reading significantly high causes systems shutdown for overheat protection' | fill=7 | rows=[5] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H6 | value='1) Sensor defect, contamination, or corrosion
+2) wiring fault' | fill=7 | rows=[5] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I6 | value='Normal' | fill=7 | rows=[5] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J6 | value='1) V&V (QC)
+2) Redundant sensors' | fill=7 | rows=[5] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K6 | value='Visual inspection' | fill=7 | rows=[5] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L6 | value='1) SCADA - other systems temperatures normal' | fill=7 | rows=[5] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M6 | value='1) Do nothing
+2) Repair in-situ if possible.' | fill=7 | rows=[5] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A7 | value='0523-2' | fill=FF00B0F0 | rows=[6] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B7 | value='Temperature Sensors' | fill=FF00B050 | rows=[6] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C7 | value='Monitor temperature in nacelle' | fill=7 | rows=[6] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D7 | value='1' | fill=7 | rows=[6] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E7 | value='none' | fill=7 | rows=[6] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F7 | value='Erroneous reading' | fill=7 | rows=[6] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G7 | value='Sensor reading significantly low results in loss of confidence and iceing concern' | fill=7 | rows=[6] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H7 | value='1) Sensor defect, contamination, or corrosion
+2) wiring fault' | fill=7 | rows=[6] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I7 | value='Normal' | fill=7 | rows=[6] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J7 | value='1) V&V (QC)
+2) Redundant sensors' | fill=7 | rows=[6] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K7 | value='Visual inspection' | fill=7 | rows=[6] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L7 | value='1) SCADA - other systems temperatures normal' | fill=7 | rows=[6] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M7 | value='1) Do nothing
+2) Repair in-situ if possible.' | fill=7 | rows=[6] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A8 | value='0524-1' | fill=FF00B0F0 | rows=[7] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B8 | value='Humidity Sensors' | fill=FF00B050 | rows=[7] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C8 | value='Monitor humidity in nacelle' | fill=2 | rows=[7] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D8 | value='1' | fill=2 | rows=[7] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E8 | value='none' | fill=2 | rows=[7] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F8 | value='Erroneous reading' | fill=2 | rows=[7] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G8 | value='Sensor reading significantly high causes systems shutdown for condensation protection' | fill=2 | rows=[7] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H8 | value='1) Sensor defect, contamination, or corrosion
+2) wiring fault' | fill=2 | rows=[7] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I8 | value='Normal' | fill=2 | rows=[7] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J8 | value='1) V&V (QC)
+2) Redundant sensors' | fill=2 | rows=[7] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K8 | value='Visual inspection' | fill=2 | rows=[7] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L8 | value='1) SCADA - other systems normal, access closed, no water intrusion' | fill=2 | rows=[7] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M8 | value='1) Do nothing
+2) Repair in-situ if possible.' | fill=2 | rows=[7] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A9 | value='0524-2' | fill=FF00B0F0 | rows=[8] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B9 | value='Humidity Sensors' | fill=FF00B050 | rows=[8] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C9 | value='Monitor humidity in nacelle' | fill=2 | rows=[8] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D9 | value='1' | fill=2 | rows=[8] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E9 | value='none' | fill=2 | rows=[8] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F9 | value='Erroneous reading' | fill=2 | rows=[8] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G9 | value='Sensor reading significantly low results in loss of confidence' | fill=2 | rows=[8] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H9 | value='1) Sensor defect, contamination, or corrosion
+2) wiring fault' | fill=2 | rows=[8] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I9 | value='Normal' | fill=2 | rows=[8] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J9 | value='1) V&V (QC)
+2) Redundant sensors' | fill=2 | rows=[8] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K9 | value='Visual inspection' | fill=2 | rows=[8] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L9 | value='1) SCADA - other systems normal' | fill=2 | rows=[8] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M9 | value='1) Do nothing
+2) Repair in-situ if possible.' | fill=2 | rows=[8] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A10 | value='0525-1' | fill=FF00B0F0 | rows=[9] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B10 | value='Access Alarms' | fill=FF00B050 | rows=[9] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C10 | value='Monitor access sensors and alarm based on SCADA operational setting.  Indicate hatch status' | fill=4 | rows=[9] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D10 | value='1' | fill=4 | rows=[9] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E10 | value='none' | fill=4 | rows=[9] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F10 | value='Failed CLOSED, hatch sensor fails to identify open access panel' | fill=4 | rows=[9] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G10 | value='Failure to alarm when access panel is opened' | fill=4 | rows=[9] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H10 | value='1) Sensor defect, contamination, or corrosion
+2) wiring fault' | fill=4 | rows=[9] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I10 | value='Normal' | fill=4 | rows=[9] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J10 | value='1) V&V (QC)
+2) Redundant sensors' | fill=4 | rows=[9] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K10 | value='Visual inspection' | fill=4 | rows=[9] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L10 | value='1) SCADA - water intrusion, humidity, temperature
+2) Visual - camera inspection' | fill=4 | rows=[9] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M10 | value='1) Repair in-situ if possible. 
+2) dry dock' | fill=4 | rows=[9] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A11 | value='0525-2' | fill=FF00B0F0 | rows=[10] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B11 | value='Access Alarms' | fill=FF00B050 | rows=[10] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C11 | value='Monitor access sensors and alarm based on SCADA operational setting.  Indicate hatch status' | fill=4 | rows=[10] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D11 | value='1' | fill=4 | rows=[10] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E11 | value='none' | fill=4 | rows=[10] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F11 | value='Failed OPEN, hatch sensor inducates false open' | fill=4 | rows=[10] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G11 | value='Hatch indicates open while closed' | fill=4 | rows=[10] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H11 | value='1) Sensor defect, contamination, or corrosion
+2) wiring fault' | fill=4 | rows=[10] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I11 | value='Normal' | fill=4 | rows=[10] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J11 | value='1) V&V (QC)
+2) Redundant sensors' | fill=4 | rows=[10] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K11 | value='Visual inspection' | fill=4 | rows=[10] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L11 | value='1) SCADA - water intrusion, humidity, temperature
+2) Visual - camera inspection' | fill=4 | rows=[10] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M11 | value='1) Do nothing
+2) Repair in-situ if possible.' | fill=4 | rows=[10] | cols=[12] | col_header=False | row_header=False | metadata=False
+

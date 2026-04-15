@@ -6,26 +6,27 @@ Definition:
 A header is any cell that logically or semantically GENERALIZES or DESCRIBES a group of other cells in a row or column.
 
 Important:
-The table must be interpreted within context (e.g., report, measurement, summary).
-First determine what process this table represents, and distinguish:
-— core factual data
-— contextual or interpretative elements
+The table must be interpreted within its context (e.g., report, measurement, summary, classification).
+First determine what process or domain this table represents, then distinguish:
+  — core factual data (measurements, values, observations)
+  — contextual or interpretive elements (labels, categories, group names)
 
-Header criteria:
-— generalizes other values
-— defines category, group, period, type, or dimension
-— is not a direct observation
-— removing it reduces interpretability but not raw data
+Header criteria (include if ANY apply):
+  — generalizes or names a group of values below or beside it
+  — defines a category, group, time period, type, or dimension
+  — is not a direct observation or measurement
+  — removing it reduces interpretability of surrounding data
+  — acts as a section label or separator within the table body (projected row header)
+  — spans multiple columns or rows to label a group
 
 Do NOT treat as headers:
-— numeric or factual values
-— individual records
+  — numeric or factual values (counts, measurements, percentages)
+  — individual records or observations
+  — cells that are data even if they appear in the first row
 
 Requirement:
-Identify all header cells.
-
-Output format:
-List cell coordinates (row, column) or their text.
+Identify ALL header cells using the maximum interpretation.
+Include column headers, row headers, section separators, and spanning labels.
 
 Table:
 {table}

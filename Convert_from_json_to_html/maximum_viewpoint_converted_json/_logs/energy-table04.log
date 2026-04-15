@@ -1,0 +1,656 @@
+=== energy-table04.xlsx ===
+Cell A1 | value='Risk
+ID' | fill=FF00B0F0 | rows=[0] | cols=[0] | col_header=True | row_header=True | metadata=True
+Cell B1 | value='Item
+Description' | fill=FFFFFF00 | rows=[0] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C1 | value='Function' | fill=FFFFFF00 | rows=[0] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D1 | value='Tech. Class' | fill=FFFFFF00 | rows=[0] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E1 | value='Novel Aspects' | fill=FFFFFF00 | rows=[0] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell F1 | value='Failure
+Mode' | fill=FFFFFF00 | rows=[0] | cols=[5] | col_header=True | row_header=False | metadata=False
+Cell G1 | value='Failure 
+Effects
+(Local, WEC, System)' | fill=FFFFFF00 | rows=[0] | cols=[6] | col_header=True | row_header=False | metadata=False
+Cell H1 | value='Failure
+Cause(s)' | fill=FFFFFF00 | rows=[0] | cols=[7] | col_header=True | row_header=False | metadata=False
+Cell I1 | value='Initial Mode
+ of
+Operation' | fill=FFFFFF00 | rows=[0] | cols=[8] | col_header=True | row_header=False | metadata=False
+Cell J1 | value='Risk Reduction 
+Design' | fill=FFFFFF00 | rows=[0] | cols=[9] | col_header=True | row_header=False | metadata=False
+Cell K1 | value='Preventative
+Detection' | fill=FFFFFF00 | rows=[0] | cols=[10] | col_header=True | row_header=False | metadata=False
+Cell L1 | value='Post Failure
+Detection' | fill=FFFFFF00 | rows=[0] | cols=[11] | col_header=True | row_header=False | metadata=False
+Cell M1 | value='Post Failure
+Repair
+Strategy 
+(automated, manual)' | fill=FFFFFF00 | rows=[0] | cols=[12] | col_header=True | row_header=False | metadata=False
+Cell A2 | value='310-1' | fill=FF00B0F0 | rows=[1] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B2 | value='Motor Drive' | fill=FF00B050 | rows=[1] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C2 | value='Convert Motor Generator Voltages to DC voltage for transmission and storage.' | fill=9 | rows=[1] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D2 | value='2' | fill=9 | rows=[1] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E2 | value='Marine application, loading' | fill=9 | rows=[1] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F2 | value='Short or Open Circuit' | fill=9 | rows=[1] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G2 | value='Loss of Power Production, PTO Controlled Shutdown may or may not be possible' | fill=9 | rows=[1] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H2 | value='Corrosion Induced Short Circuit' | fill=9 | rows=[1] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I2 | value='Normal' | fill=9 | rows=[1] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J2 | value='Marine Rated system for corrosion protection, controlled nacelle environment' | fill=9 | rows=[1] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K2 | value='Visual Inspection, SCADA Detection of Flooding' | fill=9 | rows=[1] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L2 | value='SCADA Diagnosis' | fill=9 | rows=[1] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M2 | value='In-Situ Inspection, Repair or Replacement' | fill=9 | rows=[1] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A3 | value='310-2' | fill=FF00B0F0 | rows=[2] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B3 | value='Motor Drive' | fill=FF00B050 | rows=[2] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C3 | value='Convert Motor Generator Voltages to DC voltage for transmission and storage.' | fill=9 | rows=[2] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D3 | value='2' | fill=9 | rows=[2] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E3 | value='Marine application, loading' | fill=9 | rows=[2] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F3 | value='Short or Open Circuit' | fill=9 | rows=[2] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G3 | value='Loss of Power Production, PTO Controlled Shutdown may or may not be possible' | fill=9 | rows=[2] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H3 | value='Improper Installation or Manufacturing defect' | fill=9 | rows=[2] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I3 | value='Normal' | fill=9 | rows=[2] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J3 | value='V&V (QA/QC)' | fill=9 | rows=[2] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K3 | value='Visual Inspection' | fill=9 | rows=[2] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L3 | value='SCADA Diagnosis' | fill=9 | rows=[2] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M3 | value='In-Situ Inspection, Repair or Replacement of faulty component' | fill=9 | rows=[2] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A4 | value='310-3' | fill=FF00B0F0 | rows=[3] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B4 | value='Motor Drive' | fill=FF00B050 | rows=[3] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C4 | value='Convert Motor Generator Voltages to DC voltage for transmission and storage.' | fill=9 | rows=[3] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D4 | value='2' | fill=9 | rows=[3] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E4 | value='Marine application, loading' | fill=9 | rows=[3] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F4 | value='Short or Open Circuit' | fill=9 | rows=[3] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G4 | value='Loss of Power Production, PTO Controlled Shutdown may or may not be possible' | fill=9 | rows=[3] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H4 | value='Vibration or Buoy Motion induced failure' | fill=9 | rows=[3] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I4 | value='Normal' | fill=9 | rows=[3] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J4 | value='V&V (QA/QC), Proper selection of bus attachment system' | fill=9 | rows=[3] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K4 | value='Visual Inspection' | fill=9 | rows=[3] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L4 | value='SCADA Diagnosis and visual inspection' | fill=9 | rows=[3] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M4 | value='In-Situ Inspection, Repair or Replacement of faulty component or mounting' | fill=9 | rows=[3] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A5 | value='310-4' | fill=FF00B0F0 | rows=[4] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B5 | value='Motor Drive' | fill=FF00B050 | rows=[4] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C5 | value='Convert Motor Generator Voltages to DC voltage for transmission and storage.' | fill=9 | rows=[4] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D5 | value='2' | fill=9 | rows=[4] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E5 | value='Marine application, loading' | fill=9 | rows=[4] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F5 | value='Short Circuit' | fill=9 | rows=[4] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G5 | value='Loss of Power Production, PTO Controlled Shutdown may or may not be possible' | fill=9 | rows=[4] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H5 | value='Flooding Induced Failure (contact with water not corrosion)' | fill=9 | rows=[4] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I5 | value='Normal' | fill=9 | rows=[4] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J5 | value='System level isolation from water ingress, Marine rated Components, System level seperation of equipment.' | fill=9 | rows=[4] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K5 | value='Visual Inspection, SCADA Detection of Flooding' | fill=9 | rows=[4] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L5 | value='SCADA Diagnosis and visual inspection' | fill=9 | rows=[4] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M5 | value='Removal of Bouy from Water for dry repair or dry dock overhaul' | fill=9 | rows=[4] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A6 | value='330-1' | fill=FF00B0F0 | rows=[5] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B6 | value='Energy Storage' | fill=FF00B050 | rows=[5] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C6 | value='Power smoothing for continuous power flow over umbilical to subsea battery, and to support local payload power needs' | fill=4 | rows=[5] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D6 | value='2' | fill=4 | rows=[5] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E6 | value='Marine application, loading' | fill=4 | rows=[5] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F6 | value='Faulted Energy Storage' | fill=4 | rows=[5] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G6 | value='Loss of Power smoothing, Reduced Damping, Reduction in power production to the battery' | fill=4 | rows=[5] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H6 | value='Corrosion induced failure short/open circuit' | fill=4 | rows=[5] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I6 | value='Normal' | fill=4 | rows=[5] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J6 | value='Marine Rated system for corrosion protection, controlled nacelle environment' | fill=4 | rows=[5] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K6 | value='Visual Inspection, SCADA Detection of Flooding' | fill=4 | rows=[5] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L6 | value='SCADA Diagnosis' | fill=4 | rows=[5] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M6 | value='In-Situ Inspection, Repair or Replacement' | fill=4 | rows=[5] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A7 | value='330-2' | fill=FF00B0F0 | rows=[6] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B7 | value='Energy Storage' | fill=FF00B050 | rows=[6] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C7 | value='Power smoothing for continuous power flow over umbilical to subsea battery, and to support local payload power needs' | fill=4 | rows=[6] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D7 | value='2' | fill=4 | rows=[6] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E7 | value='Marine application, loading' | fill=4 | rows=[6] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F7 | value='Faulted Energy Storage' | fill=4 | rows=[6] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G7 | value='Loss of Power smoothing, Reduced Damping, Reduction in power production to the battery' | fill=4 | rows=[6] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H7 | value='Improper Installation or Manufacturing defect' | fill=4 | rows=[6] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I7 | value='Normal' | fill=4 | rows=[6] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J7 | value='V&V (QA/QC)' | fill=4 | rows=[6] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K7 | value='Visual Inspection' | fill=4 | rows=[6] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L7 | value='SCADA Diagnosis' | fill=4 | rows=[6] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M7 | value='In-Situ Inspection, Repair or Replacement of faulty component' | fill=4 | rows=[6] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A8 | value='330-3' | fill=FF00B0F0 | rows=[7] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B8 | value='Energy Storage' | fill=FF00B050 | rows=[7] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C8 | value='Power smoothing for continuous power flow over umbilical to subsea battery, and to support local payload power needs' | fill=4 | rows=[7] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D8 | value='2' | fill=4 | rows=[7] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E8 | value='Marine application, loading' | fill=4 | rows=[7] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F8 | value='Faulted Energy Storage' | fill=4 | rows=[7] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G8 | value='Loss of Power smoothing, Reduced Damping, Reduction in power production to the battery' | fill=4 | rows=[7] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H8 | value='Vibration or Buoy Motion induced failure' | fill=4 | rows=[7] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I8 | value='Normal' | fill=4 | rows=[7] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J8 | value='V&V (QA/QC), Proper selection of bus attachment system' | fill=4 | rows=[7] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K8 | value='Visual Inspection' | fill=4 | rows=[7] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L8 | value='SCADA Diagnosis and visual inspection' | fill=4 | rows=[7] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M8 | value='In-Situ Inspection, Repair or Replacement of faulty component or mounting' | fill=4 | rows=[7] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A9 | value='330-4' | fill=FF00B0F0 | rows=[8] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B9 | value='Energy Storage' | fill=FF00B050 | rows=[8] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C9 | value='Power smoothing for continuous power flow over umbilical to subsea battery, and to support local payload power needs' | fill=4 | rows=[8] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D9 | value='2' | fill=4 | rows=[8] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E9 | value='Marine application, loading' | fill=4 | rows=[8] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F9 | value='Faulted Energy Storage' | fill=4 | rows=[8] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G9 | value='Loss of Power smoothing, Reduced Damping, Reduction in power production to the battery' | fill=4 | rows=[8] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H9 | value='Flooding Induced Failure (contact with water not corrosion)' | fill=4 | rows=[8] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I9 | value='Normal' | fill=4 | rows=[8] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J9 | value='System level isolation from water ingress, Marine rated Components, System level seperation of equipment.' | fill=4 | rows=[8] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K9 | value='Visual Inspection, SCADA Detection of Flooding' | fill=4 | rows=[8] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L9 | value='SCADA Diagnosis and visual inspection' | fill=4 | rows=[8] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M9 | value='Removal of Bouy from Water for dry repair or dry dock overhaul' | fill=4 | rows=[8] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A10 | value='330-5' | fill=FF00B0F0 | rows=[9] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B10 | value='Energy Storage' | fill=FF00B050 | rows=[9] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C10 | value='Power smoothing for continuous power flow over umbilical to subsea battery, and to support local payload power needs' | fill=4 | rows=[9] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D10 | value='2' | fill=4 | rows=[9] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E10 | value='Marine application, loading' | fill=4 | rows=[9] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F10 | value='Fire/Smoke' | fill=4 | rows=[9] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G10 | value='Loss of Power smoothing, Reduced Damping, Reduction in power production to the battery' | fill=4 | rows=[9] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H10 | value='Fire/Smoke induced failure' | fill=4 | rows=[9] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I10 | value='Normal' | fill=4 | rows=[9] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J10 | value='Safety and Emergency system smoke alarm, overcurrent protection' | fill=4 | rows=[9] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K10 | value='Visual Inspection, SCADA Detection of Fire' | fill=4 | rows=[9] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L10 | value='SCADA Diagnosis and visual inspection' | fill=4 | rows=[9] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M10 | value='In-Situ Inspection, In-Situ Repair or Replacement of faulty component or Removal of Bouy from Water for dry repair or dry dock overhaul' | fill=4 | rows=[9] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A11 | value='330-5' | fill=FF00B0F0 | rows=[10] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B11 | value='Energy Storage' | fill=FF00B050 | rows=[10] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C11 | value='Power smoothing for continuous power flow over umbilical to subsea battery, and to support local payload power needs' | fill=4 | rows=[10] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D11 | value='2' | fill=4 | rows=[10] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E11 | value='Marine application, loading' | fill=4 | rows=[10] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F11 | value='Faulted Energy Storage' | fill=4 | rows=[10] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G11 | value='Loss of Power smoothing, Reduced Damping, Reduction in power production to the battery' | fill=4 | rows=[10] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H11 | value='Failure of Capacitor internally' | fill=4 | rows=[10] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I11 | value='Normal' | fill=4 | rows=[10] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J11 | value='temperature monitoring, charge control. V&V (QA/QC)' | fill=4 | rows=[10] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K11 | value='Visual Inspection, SCADA Detection' | fill=4 | rows=[10] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L11 | value='SCADA Diagnosis and visual inspection' | fill=4 | rows=[10] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M11 | value='In-Situ Inspection, Repair of faulty component' | fill=4 | rows=[10] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A12 | value='340-1' | fill=FF00B0F0 | rows=[11] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B12 | value='Umbilical Power Converter' | fill=FF00B050 | rows=[11] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C12 | value='Control power flow over umbilical to subsea battery' | fill=2 | rows=[11] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D12 | value='2' | fill=2 | rows=[11] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E12 | value='Marine application, loading' | fill=2 | rows=[11] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F12 | value='Short or Open Circuit' | fill=2 | rows=[11] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G12 | value='Loss of power transmission across umbilical' | fill=2 | rows=[11] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H12 | value='Corrosion Induced Short Circuit' | fill=2 | rows=[11] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I12 | value='Normal' | fill=2 | rows=[11] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J12 | value='Marine Rated system for corrosion protection, controlled nacelle environment' | fill=2 | rows=[11] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K12 | value='Visual Inspection, SCADA Detection of Flooding' | fill=2 | rows=[11] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L12 | value='SCADA Diagnosis' | fill=2 | rows=[11] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M12 | value='In-Situ Inspection, Repair or Replacement' | fill=2 | rows=[11] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A13 | value='340-2' | fill=FF00B0F0 | rows=[12] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B13 | value='Umbilical Power Converter' | fill=FF00B050 | rows=[12] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C13 | value='Control power flow over umbilical to subsea battery' | fill=2 | rows=[12] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D13 | value='2' | fill=2 | rows=[12] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E13 | value='Marine application, loading' | fill=2 | rows=[12] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F13 | value='Short or Open Circuit' | fill=2 | rows=[12] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G13 | value='Loss of power transmission across umbilical' | fill=2 | rows=[12] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H13 | value='Improper Installation or Manufacturing defect' | fill=2 | rows=[12] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I13 | value='Normal' | fill=2 | rows=[12] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J13 | value='V&V (QA/QC)' | fill=2 | rows=[12] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K13 | value='Visual Inspection' | fill=2 | rows=[12] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L13 | value='SCADA Diagnosis' | fill=2 | rows=[12] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M13 | value='In-Situ Inspection, Repair or Replacement of faulty component' | fill=2 | rows=[12] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A14 | value='340-3' | fill=FF00B0F0 | rows=[13] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B14 | value='Umbilical Power Converter' | fill=FF00B050 | rows=[13] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C14 | value='Control power flow over umbilical to subsea battery' | fill=2 | rows=[13] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D14 | value='2' | fill=2 | rows=[13] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E14 | value='Marine application, loading' | fill=2 | rows=[13] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F14 | value='Short or Open Circuit' | fill=2 | rows=[13] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G14 | value='Loss of power transmission across umbilical' | fill=2 | rows=[13] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H14 | value='Vibration or Buoy Motion induced failure' | fill=2 | rows=[13] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I14 | value='Normal' | fill=2 | rows=[13] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J14 | value='V&V (QA/QC), Proper selection of bus attachment system' | fill=2 | rows=[13] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K14 | value='Visual Inspection' | fill=2 | rows=[13] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L14 | value='SCADA Diagnosis and visual inspection' | fill=2 | rows=[13] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M14 | value='In-Situ Inspection, Repair or Replacement of faulty component or mounting' | fill=2 | rows=[13] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A15 | value='340-4' | fill=FF00B0F0 | rows=[14] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B15 | value='Umbilical Power Converter' | fill=FF00B050 | rows=[14] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C15 | value='Control power flow over umbilical to subsea battery' | fill=2 | rows=[14] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D15 | value='2' | fill=2 | rows=[14] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E15 | value='Marine application, loading' | fill=2 | rows=[14] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F15 | value='Short Circuit' | fill=2 | rows=[14] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G15 | value='Loss of power transmission across umbilical' | fill=2 | rows=[14] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H15 | value='Flooding Induced Failure (contact with water not corrosion)' | fill=2 | rows=[14] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I15 | value='Normal' | fill=2 | rows=[14] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J15 | value='System level isolation from water ingress, Marine rated Components, System level seperation of equipment.' | fill=2 | rows=[14] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K15 | value='Visual Inspection, SCADA Detection of Flooding' | fill=2 | rows=[14] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L15 | value='SCADA Diagnosis and visual inspection' | fill=2 | rows=[14] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M15 | value='Removal of Bouy from Water for dry repair or dry dock overhaul' | fill=2 | rows=[14] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A16 | value='370-1' | fill=FF00B0F0 | rows=[15] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B16 | value='Emergency Resistor' | fill=FF00B050 | rows=[15] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C16 | value='Electrical Resistor for dissipating power in over voltage situations' | fill=7 | rows=[15] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D16 | value='2' | fill=7 | rows=[15] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E16 | value='Marine application, loading' | fill=7 | rows=[15] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F16 | value='Open circuit occurs in resistor under load' | fill=7 | rows=[15] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G16 | value='Overvoltage from loss of emergency resistor could damage Electrical Insulation, and result in shorts or open circuits in other components, loss of PTO damping may lead to structural fatigue' | fill=7 | rows=[15] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H16 | value='Failure due to Corrosion, Inproper Mounting, Vibration, overheating, or over-current' | fill=7 | rows=[15] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I16 | value='Normal' | fill=7 | rows=[15] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J16 | value='Marine-rated resistor module, design to provide sufficient cooling and vibration damping' | fill=7 | rows=[15] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K16 | value='SCADA - temperature, vibration, and current monitoring' | fill=7 | rows=[15] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L16 | value='SCADA - PTO controller error diagnostics, physical inspection/test' | fill=7 | rows=[15] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M16 | value='In-Situ Inspection, Repair or Replacement of faulty component' | fill=7 | rows=[15] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A17 | value='380-1' | fill=FF00B0F0 | rows=[16] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B17 | value='Motor Bus' | fill=FF00B050 | rows=[16] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C17 | value='Electrical Connection between Generating Motor and Motor Drive' | fill=6 | rows=[16] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D17 | value='2' | fill=6 | rows=[16] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E17 | value='Marine application, loading' | fill=6 | rows=[16] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F17 | value='Short Or Open Bus' | fill=6 | rows=[16] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G17 | value='Loss of Power Generation, PTO Controlled Shutdown' | fill=6 | rows=[16] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H17 | value='Corrosion Induced Short Circuit' | fill=6 | rows=[16] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I17 | value='Normal' | fill=6 | rows=[16] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J17 | value='Marine Rated system for corrosion protection, controlled nacelle environment' | fill=6 | rows=[16] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K17 | value='Visual Inspection, SCADA Detection of Flooding' | fill=6 | rows=[16] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L17 | value='SCADA Diagnosis' | fill=6 | rows=[16] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M17 | value='In-Situ Inspection, Repair or Replacement' | fill=6 | rows=[16] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A18 | value='380-2' | fill=FF00B0F0 | rows=[17] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B18 | value='Motor Bus' | fill=FF00B050 | rows=[17] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C18 | value='Electrical Connection between Generating Motor and Motor Drive' | fill=6 | rows=[17] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D18 | value='2' | fill=6 | rows=[17] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E18 | value='Marine application, loading' | fill=6 | rows=[17] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F18 | value='Short Or Open Bus' | fill=6 | rows=[17] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G18 | value='Loss of Power Generation, PTO Controlled Shutdown' | fill=6 | rows=[17] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H18 | value='Improper Installation or Manufacturing defect' | fill=6 | rows=[17] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I18 | value='Normal' | fill=6 | rows=[17] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J18 | value='V&V (QA/QC)' | fill=6 | rows=[17] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K18 | value='Visual Inspection' | fill=6 | rows=[17] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L18 | value='SCADA Diagnosis' | fill=6 | rows=[17] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M18 | value='In-Situ Inspection, Repair or Replacement of faulty component' | fill=6 | rows=[17] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A19 | value='380-3' | fill=FF00B0F0 | rows=[18] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B19 | value='Motor Bus' | fill=FF00B050 | rows=[18] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C19 | value='Electrical Connection between Generating Motor and Motor Drive' | fill=6 | rows=[18] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D19 | value='2' | fill=6 | rows=[18] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E19 | value='Marine application, loading' | fill=6 | rows=[18] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F19 | value='Short Or Open Bus' | fill=6 | rows=[18] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G19 | value='Loss of Power Generation, PTO Controlled Shutdown' | fill=6 | rows=[18] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H19 | value='Vibration or Buoy Motion induced failure' | fill=6 | rows=[18] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I19 | value='Normal' | fill=6 | rows=[18] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J19 | value='V&V (QA/QC), Proper selection of bus attachment system' | fill=6 | rows=[18] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K19 | value='Visual Inspection' | fill=6 | rows=[18] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L19 | value='SCADA Diagnosis and visual inspection' | fill=6 | rows=[18] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M19 | value='In-Situ Inspection, Repair or Replacement of faulty component or mounting' | fill=6 | rows=[18] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A20 | value='380-4' | fill=FF00B0F0 | rows=[19] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B20 | value='Motor Bus' | fill=FF00B050 | rows=[19] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C20 | value='Electrical Connection between Generating Motor and Motor Drive' | fill=6 | rows=[19] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D20 | value='2' | fill=6 | rows=[19] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E20 | value='Marine application, loading' | fill=6 | rows=[19] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F20 | value='Short on Bus' | fill=6 | rows=[19] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G20 | value='Loss of Power Generation, PTO Controlled Shutdown' | fill=6 | rows=[19] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H20 | value='Flooding Induced Failure (contact with water not corrosion)' | fill=6 | rows=[19] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I20 | value='Normal' | fill=6 | rows=[19] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J20 | value='System level isolation from water ingress, Marine rated Components, System level seperation of equipment.' | fill=6 | rows=[19] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K20 | value='Visual Inspection, SCADA Detection of Flooding' | fill=6 | rows=[19] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L20 | value='SCADA Diagnosis and visual inspection' | fill=6 | rows=[19] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M20 | value='Removal of Bouy from Water for dry repair or dry dock overhaul' | fill=6 | rows=[19] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A21 | value='380-5' | fill=FF00B0F0 | rows=[20] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B21 | value='DC Bus' | fill=FF00B050 | rows=[20] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C21 | value='Common electrical connection between motor drive, local energy storage, and umbilical power converter' | fill=8 | rows=[20] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D21 | value='2' | fill=8 | rows=[20] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E21 | value='Marine application, loading' | fill=8 | rows=[20] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F21 | value='Short Or Open Bus' | fill=8 | rows=[20] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G21 | value='Loss of Power Generation, PTO Controlled Shutdown' | fill=8 | rows=[20] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H21 | value='Corrosion Induced Short Circuit' | fill=8 | rows=[20] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I21 | value='Normal' | fill=8 | rows=[20] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J21 | value='Marine Rated system for corrosion protection, controlled nacelle environment' | fill=8 | rows=[20] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K21 | value='Visual Inspection, SCADA Detection of Flooding' | fill=8 | rows=[20] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L21 | value='SCADA Diagnosis' | fill=8 | rows=[20] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M21 | value='In-Situ Inspection, Repair or Replacement' | fill=8 | rows=[20] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A22 | value='380-6' | fill=FF00B0F0 | rows=[21] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B22 | value='DC Bus' | fill=FF00B050 | rows=[21] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C22 | value='Common electrical connection between motor drive, local energy storage, and umbilical power converter' | fill=8 | rows=[21] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D22 | value='2' | fill=8 | rows=[21] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E22 | value='Marine application, loading' | fill=8 | rows=[21] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F22 | value='Short Or Open Bus' | fill=8 | rows=[21] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G22 | value='Loss of Power Generation, PTO Controlled Shutdown' | fill=8 | rows=[21] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H22 | value='Improper Installation or Manufacturing defect' | fill=8 | rows=[21] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I22 | value='Normal' | fill=8 | rows=[21] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J22 | value='V&V (QA/QC)' | fill=8 | rows=[21] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K22 | value='Visual Inspection' | fill=8 | rows=[21] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L22 | value='SCADA Diagnosis' | fill=8 | rows=[21] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M22 | value='In-Situ Inspection, Repair or Replacement of faulty component' | fill=8 | rows=[21] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A23 | value='380-7' | fill=FF00B0F0 | rows=[22] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B23 | value='DC Bus' | fill=FF00B050 | rows=[22] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C23 | value='Common electrical connection between motor drive, local energy storage, and umbilical power converter' | fill=8 | rows=[22] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D23 | value='2' | fill=8 | rows=[22] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E23 | value='Marine application, loading' | fill=8 | rows=[22] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F23 | value='Short Or Open Bus' | fill=8 | rows=[22] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G23 | value='Loss of Power Generation, PTO Controlled Shutdown' | fill=8 | rows=[22] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H23 | value='Vibration or Buoy Motion induced failure' | fill=8 | rows=[22] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I23 | value='Normal' | fill=8 | rows=[22] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J23 | value='V&V (QA/QC), Proper selection of bus attachment system' | fill=8 | rows=[22] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K23 | value='Visual Inspection' | fill=8 | rows=[22] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L23 | value='SCADA Diagnosis and visual inspection' | fill=8 | rows=[22] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M23 | value='In-Situ Inspection, Repair or Replacement of faulty component or mounting' | fill=8 | rows=[22] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A24 | value='380-8' | fill=FF00B0F0 | rows=[23] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B24 | value='DC Bus' | fill=FF00B050 | rows=[23] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C24 | value='Common electrical connection between motor drive, local energy storage, and umbilical power converter' | fill=8 | rows=[23] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D24 | value='2' | fill=8 | rows=[23] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E24 | value='Marine application, loading' | fill=8 | rows=[23] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F24 | value='Short on Bus' | fill=8 | rows=[23] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G24 | value='Loss of Power Generation, PTO Controlled Shutdown' | fill=8 | rows=[23] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H24 | value='Flooding Induced Failure (contact with water not corrosion)' | fill=8 | rows=[23] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I24 | value='Normal' | fill=8 | rows=[23] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J24 | value='System level isolation from water ingress, Marine rated Components, System level seperation of equipment.' | fill=8 | rows=[23] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K24 | value='Visual Inspection, SCADA Detection of Flooding' | fill=8 | rows=[23] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L24 | value='SCADA Diagnosis and visual inspection' | fill=8 | rows=[23] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M24 | value='Removal of Bouy from Water for dry repair or dry dock overhaul' | fill=8 | rows=[23] | cols=[12] | col_header=False | row_header=False | metadata=False
+
+=== energy-table04.xlsx ===
+Cell A1 | value='Risk
+ID' | fill=FF00B0F0 | rows=[0] | cols=[0] | col_header=True | row_header=True | metadata=True
+Cell B1 | value='Item
+Description' | fill=FFFFFF00 | rows=[0] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C1 | value='Function' | fill=FFFFFF00 | rows=[0] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D1 | value='Tech. Class' | fill=FFFFFF00 | rows=[0] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E1 | value='Novel Aspects' | fill=FFFFFF00 | rows=[0] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell F1 | value='Failure
+Mode' | fill=FFFFFF00 | rows=[0] | cols=[5] | col_header=True | row_header=False | metadata=False
+Cell G1 | value='Failure 
+Effects
+(Local, WEC, System)' | fill=FFFFFF00 | rows=[0] | cols=[6] | col_header=True | row_header=False | metadata=False
+Cell H1 | value='Failure
+Cause(s)' | fill=FFFFFF00 | rows=[0] | cols=[7] | col_header=True | row_header=False | metadata=False
+Cell I1 | value='Initial Mode
+ of
+Operation' | fill=FFFFFF00 | rows=[0] | cols=[8] | col_header=True | row_header=False | metadata=False
+Cell J1 | value='Risk Reduction 
+Design' | fill=FFFFFF00 | rows=[0] | cols=[9] | col_header=True | row_header=False | metadata=False
+Cell K1 | value='Preventative
+Detection' | fill=FFFFFF00 | rows=[0] | cols=[10] | col_header=True | row_header=False | metadata=False
+Cell L1 | value='Post Failure
+Detection' | fill=FFFFFF00 | rows=[0] | cols=[11] | col_header=True | row_header=False | metadata=False
+Cell M1 | value='Post Failure
+Repair
+Strategy 
+(automated, manual)' | fill=FFFFFF00 | rows=[0] | cols=[12] | col_header=True | row_header=False | metadata=False
+Cell A2 | value='310-1' | fill=FF00B0F0 | rows=[1] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B2 | value='Motor Drive' | fill=FF00B050 | rows=[1] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C2 | value='Convert Motor Generator Voltages to DC voltage for transmission and storage.' | fill=9 | rows=[1] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D2 | value='2' | fill=9 | rows=[1] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E2 | value='Marine application, loading' | fill=9 | rows=[1] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F2 | value='Short or Open Circuit' | fill=9 | rows=[1] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G2 | value='Loss of Power Production, PTO Controlled Shutdown may or may not be possible' | fill=9 | rows=[1] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H2 | value='Corrosion Induced Short Circuit' | fill=9 | rows=[1] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I2 | value='Normal' | fill=9 | rows=[1] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J2 | value='Marine Rated system for corrosion protection, controlled nacelle environment' | fill=9 | rows=[1] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K2 | value='Visual Inspection, SCADA Detection of Flooding' | fill=9 | rows=[1] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L2 | value='SCADA Diagnosis' | fill=9 | rows=[1] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M2 | value='In-Situ Inspection, Repair or Replacement' | fill=9 | rows=[1] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A3 | value='310-2' | fill=FF00B0F0 | rows=[2] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B3 | value='Motor Drive' | fill=FF00B050 | rows=[2] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C3 | value='Convert Motor Generator Voltages to DC voltage for transmission and storage.' | fill=9 | rows=[2] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D3 | value='2' | fill=9 | rows=[2] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E3 | value='Marine application, loading' | fill=9 | rows=[2] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F3 | value='Short or Open Circuit' | fill=9 | rows=[2] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G3 | value='Loss of Power Production, PTO Controlled Shutdown may or may not be possible' | fill=9 | rows=[2] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H3 | value='Improper Installation or Manufacturing defect' | fill=9 | rows=[2] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I3 | value='Normal' | fill=9 | rows=[2] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J3 | value='V&V (QA/QC)' | fill=9 | rows=[2] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K3 | value='Visual Inspection' | fill=9 | rows=[2] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L3 | value='SCADA Diagnosis' | fill=9 | rows=[2] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M3 | value='In-Situ Inspection, Repair or Replacement of faulty component' | fill=9 | rows=[2] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A4 | value='310-3' | fill=FF00B0F0 | rows=[3] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B4 | value='Motor Drive' | fill=FF00B050 | rows=[3] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C4 | value='Convert Motor Generator Voltages to DC voltage for transmission and storage.' | fill=9 | rows=[3] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D4 | value='2' | fill=9 | rows=[3] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E4 | value='Marine application, loading' | fill=9 | rows=[3] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F4 | value='Short or Open Circuit' | fill=9 | rows=[3] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G4 | value='Loss of Power Production, PTO Controlled Shutdown may or may not be possible' | fill=9 | rows=[3] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H4 | value='Vibration or Buoy Motion induced failure' | fill=9 | rows=[3] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I4 | value='Normal' | fill=9 | rows=[3] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J4 | value='V&V (QA/QC), Proper selection of bus attachment system' | fill=9 | rows=[3] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K4 | value='Visual Inspection' | fill=9 | rows=[3] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L4 | value='SCADA Diagnosis and visual inspection' | fill=9 | rows=[3] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M4 | value='In-Situ Inspection, Repair or Replacement of faulty component or mounting' | fill=9 | rows=[3] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A5 | value='310-4' | fill=FF00B0F0 | rows=[4] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B5 | value='Motor Drive' | fill=FF00B050 | rows=[4] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C5 | value='Convert Motor Generator Voltages to DC voltage for transmission and storage.' | fill=9 | rows=[4] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D5 | value='2' | fill=9 | rows=[4] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E5 | value='Marine application, loading' | fill=9 | rows=[4] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F5 | value='Short Circuit' | fill=9 | rows=[4] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G5 | value='Loss of Power Production, PTO Controlled Shutdown may or may not be possible' | fill=9 | rows=[4] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H5 | value='Flooding Induced Failure (contact with water not corrosion)' | fill=9 | rows=[4] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I5 | value='Normal' | fill=9 | rows=[4] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J5 | value='System level isolation from water ingress, Marine rated Components, System level seperation of equipment.' | fill=9 | rows=[4] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K5 | value='Visual Inspection, SCADA Detection of Flooding' | fill=9 | rows=[4] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L5 | value='SCADA Diagnosis and visual inspection' | fill=9 | rows=[4] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M5 | value='Removal of Bouy from Water for dry repair or dry dock overhaul' | fill=9 | rows=[4] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A6 | value='330-1' | fill=FF00B0F0 | rows=[5] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B6 | value='Energy Storage' | fill=FF00B050 | rows=[5] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C6 | value='Power smoothing for continuous power flow over umbilical to subsea battery, and to support local payload power needs' | fill=4 | rows=[5] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D6 | value='2' | fill=4 | rows=[5] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E6 | value='Marine application, loading' | fill=4 | rows=[5] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F6 | value='Faulted Energy Storage' | fill=4 | rows=[5] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G6 | value='Loss of Power smoothing, Reduced Damping, Reduction in power production to the battery' | fill=4 | rows=[5] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H6 | value='Corrosion induced failure short/open circuit' | fill=4 | rows=[5] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I6 | value='Normal' | fill=4 | rows=[5] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J6 | value='Marine Rated system for corrosion protection, controlled nacelle environment' | fill=4 | rows=[5] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K6 | value='Visual Inspection, SCADA Detection of Flooding' | fill=4 | rows=[5] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L6 | value='SCADA Diagnosis' | fill=4 | rows=[5] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M6 | value='In-Situ Inspection, Repair or Replacement' | fill=4 | rows=[5] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A7 | value='330-2' | fill=FF00B0F0 | rows=[6] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B7 | value='Energy Storage' | fill=FF00B050 | rows=[6] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C7 | value='Power smoothing for continuous power flow over umbilical to subsea battery, and to support local payload power needs' | fill=4 | rows=[6] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D7 | value='2' | fill=4 | rows=[6] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E7 | value='Marine application, loading' | fill=4 | rows=[6] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F7 | value='Faulted Energy Storage' | fill=4 | rows=[6] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G7 | value='Loss of Power smoothing, Reduced Damping, Reduction in power production to the battery' | fill=4 | rows=[6] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H7 | value='Improper Installation or Manufacturing defect' | fill=4 | rows=[6] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I7 | value='Normal' | fill=4 | rows=[6] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J7 | value='V&V (QA/QC)' | fill=4 | rows=[6] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K7 | value='Visual Inspection' | fill=4 | rows=[6] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L7 | value='SCADA Diagnosis' | fill=4 | rows=[6] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M7 | value='In-Situ Inspection, Repair or Replacement of faulty component' | fill=4 | rows=[6] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A8 | value='330-3' | fill=FF00B0F0 | rows=[7] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B8 | value='Energy Storage' | fill=FF00B050 | rows=[7] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C8 | value='Power smoothing for continuous power flow over umbilical to subsea battery, and to support local payload power needs' | fill=4 | rows=[7] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D8 | value='2' | fill=4 | rows=[7] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E8 | value='Marine application, loading' | fill=4 | rows=[7] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F8 | value='Faulted Energy Storage' | fill=4 | rows=[7] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G8 | value='Loss of Power smoothing, Reduced Damping, Reduction in power production to the battery' | fill=4 | rows=[7] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H8 | value='Vibration or Buoy Motion induced failure' | fill=4 | rows=[7] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I8 | value='Normal' | fill=4 | rows=[7] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J8 | value='V&V (QA/QC), Proper selection of bus attachment system' | fill=4 | rows=[7] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K8 | value='Visual Inspection' | fill=4 | rows=[7] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L8 | value='SCADA Diagnosis and visual inspection' | fill=4 | rows=[7] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M8 | value='In-Situ Inspection, Repair or Replacement of faulty component or mounting' | fill=4 | rows=[7] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A9 | value='330-4' | fill=FF00B0F0 | rows=[8] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B9 | value='Energy Storage' | fill=FF00B050 | rows=[8] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C9 | value='Power smoothing for continuous power flow over umbilical to subsea battery, and to support local payload power needs' | fill=4 | rows=[8] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D9 | value='2' | fill=4 | rows=[8] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E9 | value='Marine application, loading' | fill=4 | rows=[8] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F9 | value='Faulted Energy Storage' | fill=4 | rows=[8] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G9 | value='Loss of Power smoothing, Reduced Damping, Reduction in power production to the battery' | fill=4 | rows=[8] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H9 | value='Flooding Induced Failure (contact with water not corrosion)' | fill=4 | rows=[8] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I9 | value='Normal' | fill=4 | rows=[8] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J9 | value='System level isolation from water ingress, Marine rated Components, System level seperation of equipment.' | fill=4 | rows=[8] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K9 | value='Visual Inspection, SCADA Detection of Flooding' | fill=4 | rows=[8] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L9 | value='SCADA Diagnosis and visual inspection' | fill=4 | rows=[8] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M9 | value='Removal of Bouy from Water for dry repair or dry dock overhaul' | fill=4 | rows=[8] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A10 | value='330-5' | fill=FF00B0F0 | rows=[9] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B10 | value='Energy Storage' | fill=FF00B050 | rows=[9] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C10 | value='Power smoothing for continuous power flow over umbilical to subsea battery, and to support local payload power needs' | fill=4 | rows=[9] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D10 | value='2' | fill=4 | rows=[9] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E10 | value='Marine application, loading' | fill=4 | rows=[9] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F10 | value='Fire/Smoke' | fill=4 | rows=[9] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G10 | value='Loss of Power smoothing, Reduced Damping, Reduction in power production to the battery' | fill=4 | rows=[9] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H10 | value='Fire/Smoke induced failure' | fill=4 | rows=[9] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I10 | value='Normal' | fill=4 | rows=[9] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J10 | value='Safety and Emergency system smoke alarm, overcurrent protection' | fill=4 | rows=[9] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K10 | value='Visual Inspection, SCADA Detection of Fire' | fill=4 | rows=[9] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L10 | value='SCADA Diagnosis and visual inspection' | fill=4 | rows=[9] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M10 | value='In-Situ Inspection, In-Situ Repair or Replacement of faulty component or Removal of Bouy from Water for dry repair or dry dock overhaul' | fill=4 | rows=[9] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A11 | value='330-5' | fill=FF00B0F0 | rows=[10] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B11 | value='Energy Storage' | fill=FF00B050 | rows=[10] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C11 | value='Power smoothing for continuous power flow over umbilical to subsea battery, and to support local payload power needs' | fill=4 | rows=[10] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D11 | value='2' | fill=4 | rows=[10] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E11 | value='Marine application, loading' | fill=4 | rows=[10] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F11 | value='Faulted Energy Storage' | fill=4 | rows=[10] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G11 | value='Loss of Power smoothing, Reduced Damping, Reduction in power production to the battery' | fill=4 | rows=[10] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H11 | value='Failure of Capacitor internally' | fill=4 | rows=[10] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I11 | value='Normal' | fill=4 | rows=[10] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J11 | value='temperature monitoring, charge control. V&V (QA/QC)' | fill=4 | rows=[10] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K11 | value='Visual Inspection, SCADA Detection' | fill=4 | rows=[10] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L11 | value='SCADA Diagnosis and visual inspection' | fill=4 | rows=[10] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M11 | value='In-Situ Inspection, Repair of faulty component' | fill=4 | rows=[10] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A12 | value='340-1' | fill=FF00B0F0 | rows=[11] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B12 | value='Umbilical Power Converter' | fill=FF00B050 | rows=[11] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C12 | value='Control power flow over umbilical to subsea battery' | fill=2 | rows=[11] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D12 | value='2' | fill=2 | rows=[11] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E12 | value='Marine application, loading' | fill=2 | rows=[11] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F12 | value='Short or Open Circuit' | fill=2 | rows=[11] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G12 | value='Loss of power transmission across umbilical' | fill=2 | rows=[11] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H12 | value='Corrosion Induced Short Circuit' | fill=2 | rows=[11] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I12 | value='Normal' | fill=2 | rows=[11] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J12 | value='Marine Rated system for corrosion protection, controlled nacelle environment' | fill=2 | rows=[11] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K12 | value='Visual Inspection, SCADA Detection of Flooding' | fill=2 | rows=[11] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L12 | value='SCADA Diagnosis' | fill=2 | rows=[11] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M12 | value='In-Situ Inspection, Repair or Replacement' | fill=2 | rows=[11] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A13 | value='340-2' | fill=FF00B0F0 | rows=[12] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B13 | value='Umbilical Power Converter' | fill=FF00B050 | rows=[12] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C13 | value='Control power flow over umbilical to subsea battery' | fill=2 | rows=[12] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D13 | value='2' | fill=2 | rows=[12] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E13 | value='Marine application, loading' | fill=2 | rows=[12] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F13 | value='Short or Open Circuit' | fill=2 | rows=[12] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G13 | value='Loss of power transmission across umbilical' | fill=2 | rows=[12] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H13 | value='Improper Installation or Manufacturing defect' | fill=2 | rows=[12] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I13 | value='Normal' | fill=2 | rows=[12] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J13 | value='V&V (QA/QC)' | fill=2 | rows=[12] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K13 | value='Visual Inspection' | fill=2 | rows=[12] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L13 | value='SCADA Diagnosis' | fill=2 | rows=[12] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M13 | value='In-Situ Inspection, Repair or Replacement of faulty component' | fill=2 | rows=[12] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A14 | value='340-3' | fill=FF00B0F0 | rows=[13] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B14 | value='Umbilical Power Converter' | fill=FF00B050 | rows=[13] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C14 | value='Control power flow over umbilical to subsea battery' | fill=2 | rows=[13] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D14 | value='2' | fill=2 | rows=[13] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E14 | value='Marine application, loading' | fill=2 | rows=[13] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F14 | value='Short or Open Circuit' | fill=2 | rows=[13] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G14 | value='Loss of power transmission across umbilical' | fill=2 | rows=[13] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H14 | value='Vibration or Buoy Motion induced failure' | fill=2 | rows=[13] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I14 | value='Normal' | fill=2 | rows=[13] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J14 | value='V&V (QA/QC), Proper selection of bus attachment system' | fill=2 | rows=[13] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K14 | value='Visual Inspection' | fill=2 | rows=[13] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L14 | value='SCADA Diagnosis and visual inspection' | fill=2 | rows=[13] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M14 | value='In-Situ Inspection, Repair or Replacement of faulty component or mounting' | fill=2 | rows=[13] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A15 | value='340-4' | fill=FF00B0F0 | rows=[14] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B15 | value='Umbilical Power Converter' | fill=FF00B050 | rows=[14] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C15 | value='Control power flow over umbilical to subsea battery' | fill=2 | rows=[14] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D15 | value='2' | fill=2 | rows=[14] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E15 | value='Marine application, loading' | fill=2 | rows=[14] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F15 | value='Short Circuit' | fill=2 | rows=[14] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G15 | value='Loss of power transmission across umbilical' | fill=2 | rows=[14] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H15 | value='Flooding Induced Failure (contact with water not corrosion)' | fill=2 | rows=[14] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I15 | value='Normal' | fill=2 | rows=[14] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J15 | value='System level isolation from water ingress, Marine rated Components, System level seperation of equipment.' | fill=2 | rows=[14] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K15 | value='Visual Inspection, SCADA Detection of Flooding' | fill=2 | rows=[14] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L15 | value='SCADA Diagnosis and visual inspection' | fill=2 | rows=[14] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M15 | value='Removal of Bouy from Water for dry repair or dry dock overhaul' | fill=2 | rows=[14] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A16 | value='370-1' | fill=FF00B0F0 | rows=[15] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B16 | value='Emergency Resistor' | fill=FF00B050 | rows=[15] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C16 | value='Electrical Resistor for dissipating power in over voltage situations' | fill=7 | rows=[15] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D16 | value='2' | fill=7 | rows=[15] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E16 | value='Marine application, loading' | fill=7 | rows=[15] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F16 | value='Open circuit occurs in resistor under load' | fill=7 | rows=[15] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G16 | value='Overvoltage from loss of emergency resistor could damage Electrical Insulation, and result in shorts or open circuits in other components, loss of PTO damping may lead to structural fatigue' | fill=7 | rows=[15] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H16 | value='Failure due to Corrosion, Inproper Mounting, Vibration, overheating, or over-current' | fill=7 | rows=[15] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I16 | value='Normal' | fill=7 | rows=[15] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J16 | value='Marine-rated resistor module, design to provide sufficient cooling and vibration damping' | fill=7 | rows=[15] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K16 | value='SCADA - temperature, vibration, and current monitoring' | fill=7 | rows=[15] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L16 | value='SCADA - PTO controller error diagnostics, physical inspection/test' | fill=7 | rows=[15] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M16 | value='In-Situ Inspection, Repair or Replacement of faulty component' | fill=7 | rows=[15] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A17 | value='380-1' | fill=FF00B0F0 | rows=[16] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B17 | value='Motor Bus' | fill=FF00B050 | rows=[16] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C17 | value='Electrical Connection between Generating Motor and Motor Drive' | fill=6 | rows=[16] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D17 | value='2' | fill=6 | rows=[16] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E17 | value='Marine application, loading' | fill=6 | rows=[16] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F17 | value='Short Or Open Bus' | fill=6 | rows=[16] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G17 | value='Loss of Power Generation, PTO Controlled Shutdown' | fill=6 | rows=[16] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H17 | value='Corrosion Induced Short Circuit' | fill=6 | rows=[16] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I17 | value='Normal' | fill=6 | rows=[16] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J17 | value='Marine Rated system for corrosion protection, controlled nacelle environment' | fill=6 | rows=[16] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K17 | value='Visual Inspection, SCADA Detection of Flooding' | fill=6 | rows=[16] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L17 | value='SCADA Diagnosis' | fill=6 | rows=[16] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M17 | value='In-Situ Inspection, Repair or Replacement' | fill=6 | rows=[16] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A18 | value='380-2' | fill=FF00B0F0 | rows=[17] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B18 | value='Motor Bus' | fill=FF00B050 | rows=[17] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C18 | value='Electrical Connection between Generating Motor and Motor Drive' | fill=6 | rows=[17] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D18 | value='2' | fill=6 | rows=[17] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E18 | value='Marine application, loading' | fill=6 | rows=[17] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F18 | value='Short Or Open Bus' | fill=6 | rows=[17] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G18 | value='Loss of Power Generation, PTO Controlled Shutdown' | fill=6 | rows=[17] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H18 | value='Improper Installation or Manufacturing defect' | fill=6 | rows=[17] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I18 | value='Normal' | fill=6 | rows=[17] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J18 | value='V&V (QA/QC)' | fill=6 | rows=[17] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K18 | value='Visual Inspection' | fill=6 | rows=[17] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L18 | value='SCADA Diagnosis' | fill=6 | rows=[17] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M18 | value='In-Situ Inspection, Repair or Replacement of faulty component' | fill=6 | rows=[17] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A19 | value='380-3' | fill=FF00B0F0 | rows=[18] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B19 | value='Motor Bus' | fill=FF00B050 | rows=[18] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C19 | value='Electrical Connection between Generating Motor and Motor Drive' | fill=6 | rows=[18] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D19 | value='2' | fill=6 | rows=[18] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E19 | value='Marine application, loading' | fill=6 | rows=[18] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F19 | value='Short Or Open Bus' | fill=6 | rows=[18] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G19 | value='Loss of Power Generation, PTO Controlled Shutdown' | fill=6 | rows=[18] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H19 | value='Vibration or Buoy Motion induced failure' | fill=6 | rows=[18] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I19 | value='Normal' | fill=6 | rows=[18] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J19 | value='V&V (QA/QC), Proper selection of bus attachment system' | fill=6 | rows=[18] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K19 | value='Visual Inspection' | fill=6 | rows=[18] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L19 | value='SCADA Diagnosis and visual inspection' | fill=6 | rows=[18] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M19 | value='In-Situ Inspection, Repair or Replacement of faulty component or mounting' | fill=6 | rows=[18] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A20 | value='380-4' | fill=FF00B0F0 | rows=[19] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B20 | value='Motor Bus' | fill=FF00B050 | rows=[19] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C20 | value='Electrical Connection between Generating Motor and Motor Drive' | fill=6 | rows=[19] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D20 | value='2' | fill=6 | rows=[19] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E20 | value='Marine application, loading' | fill=6 | rows=[19] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F20 | value='Short on Bus' | fill=6 | rows=[19] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G20 | value='Loss of Power Generation, PTO Controlled Shutdown' | fill=6 | rows=[19] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H20 | value='Flooding Induced Failure (contact with water not corrosion)' | fill=6 | rows=[19] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I20 | value='Normal' | fill=6 | rows=[19] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J20 | value='System level isolation from water ingress, Marine rated Components, System level seperation of equipment.' | fill=6 | rows=[19] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K20 | value='Visual Inspection, SCADA Detection of Flooding' | fill=6 | rows=[19] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L20 | value='SCADA Diagnosis and visual inspection' | fill=6 | rows=[19] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M20 | value='Removal of Bouy from Water for dry repair or dry dock overhaul' | fill=6 | rows=[19] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A21 | value='380-5' | fill=FF00B0F0 | rows=[20] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B21 | value='DC Bus' | fill=FF00B050 | rows=[20] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C21 | value='Common electrical connection between motor drive, local energy storage, and umbilical power converter' | fill=8 | rows=[20] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D21 | value='2' | fill=8 | rows=[20] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E21 | value='Marine application, loading' | fill=8 | rows=[20] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F21 | value='Short Or Open Bus' | fill=8 | rows=[20] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G21 | value='Loss of Power Generation, PTO Controlled Shutdown' | fill=8 | rows=[20] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H21 | value='Corrosion Induced Short Circuit' | fill=8 | rows=[20] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I21 | value='Normal' | fill=8 | rows=[20] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J21 | value='Marine Rated system for corrosion protection, controlled nacelle environment' | fill=8 | rows=[20] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K21 | value='Visual Inspection, SCADA Detection of Flooding' | fill=8 | rows=[20] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L21 | value='SCADA Diagnosis' | fill=8 | rows=[20] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M21 | value='In-Situ Inspection, Repair or Replacement' | fill=8 | rows=[20] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A22 | value='380-6' | fill=FF00B0F0 | rows=[21] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B22 | value='DC Bus' | fill=FF00B050 | rows=[21] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C22 | value='Common electrical connection between motor drive, local energy storage, and umbilical power converter' | fill=8 | rows=[21] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D22 | value='2' | fill=8 | rows=[21] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E22 | value='Marine application, loading' | fill=8 | rows=[21] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F22 | value='Short Or Open Bus' | fill=8 | rows=[21] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G22 | value='Loss of Power Generation, PTO Controlled Shutdown' | fill=8 | rows=[21] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H22 | value='Improper Installation or Manufacturing defect' | fill=8 | rows=[21] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I22 | value='Normal' | fill=8 | rows=[21] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J22 | value='V&V (QA/QC)' | fill=8 | rows=[21] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K22 | value='Visual Inspection' | fill=8 | rows=[21] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L22 | value='SCADA Diagnosis' | fill=8 | rows=[21] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M22 | value='In-Situ Inspection, Repair or Replacement of faulty component' | fill=8 | rows=[21] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A23 | value='380-7' | fill=FF00B0F0 | rows=[22] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B23 | value='DC Bus' | fill=FF00B050 | rows=[22] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C23 | value='Common electrical connection between motor drive, local energy storage, and umbilical power converter' | fill=8 | rows=[22] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D23 | value='2' | fill=8 | rows=[22] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E23 | value='Marine application, loading' | fill=8 | rows=[22] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F23 | value='Short Or Open Bus' | fill=8 | rows=[22] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G23 | value='Loss of Power Generation, PTO Controlled Shutdown' | fill=8 | rows=[22] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H23 | value='Vibration or Buoy Motion induced failure' | fill=8 | rows=[22] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I23 | value='Normal' | fill=8 | rows=[22] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J23 | value='V&V (QA/QC), Proper selection of bus attachment system' | fill=8 | rows=[22] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K23 | value='Visual Inspection' | fill=8 | rows=[22] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L23 | value='SCADA Diagnosis and visual inspection' | fill=8 | rows=[22] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M23 | value='In-Situ Inspection, Repair or Replacement of faulty component or mounting' | fill=8 | rows=[22] | cols=[12] | col_header=False | row_header=False | metadata=False
+Cell A24 | value='380-8' | fill=FF00B0F0 | rows=[23] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B24 | value='DC Bus' | fill=FF00B050 | rows=[23] | cols=[1] | col_header=False | row_header=True | metadata=False
+Cell C24 | value='Common electrical connection between motor drive, local energy storage, and umbilical power converter' | fill=8 | rows=[23] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D24 | value='2' | fill=8 | rows=[23] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E24 | value='Marine application, loading' | fill=8 | rows=[23] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F24 | value='Short on Bus' | fill=8 | rows=[23] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell G24 | value='Loss of Power Generation, PTO Controlled Shutdown' | fill=8 | rows=[23] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H24 | value='Flooding Induced Failure (contact with water not corrosion)' | fill=8 | rows=[23] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I24 | value='Normal' | fill=8 | rows=[23] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J24 | value='System level isolation from water ingress, Marine rated Components, System level seperation of equipment.' | fill=8 | rows=[23] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K24 | value='Visual Inspection, SCADA Detection of Flooding' | fill=8 | rows=[23] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell L24 | value='SCADA Diagnosis and visual inspection' | fill=8 | rows=[23] | cols=[11] | col_header=False | row_header=False | metadata=False
+Cell M24 | value='Removal of Bouy from Water for dry repair or dry dock overhaul' | fill=8 | rows=[23] | cols=[12] | col_header=False | row_header=False | metadata=False
+

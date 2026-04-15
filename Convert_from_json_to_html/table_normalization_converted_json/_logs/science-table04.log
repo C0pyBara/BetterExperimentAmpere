@@ -1,0 +1,203 @@
+=== science-table04.xlsx ===
+Cell A2 | value='#REF!' | fill=FF00B0F0 | rows=[1] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell A3 | value='Units' | fill=FF00B0F0 | rows=[2] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell B5 | value='Unit Conversion - ESSENTIAL' | fill=FF00B0F0 | rows=[4] | cols=[1] | col_header=False | row_header=False | metadata=True
+Cell B7 | value='User Guide' | fill=FF00B0F0 | rows=[6] | cols=[1] | col_header=False | row_header=False | metadata=True
+Cell B8 | value='In this section, we have provided the conversion factors for some commonly used units. 
+If the unit you want to use is missing, you can add it at the bottom of the table; in that case carefully check the sources of the multiplier factor. Remember to also add a proper named range to the new unit.
+
+The base unit selected are: 
+- Second for Time
+- Joule for Energy
+- Watt for Power
+- Meter for Length
+- m2 for Area
+- Kilo for Mass' | fill=FF00B0F0 | rows=[7] | cols=[1, 2, 3, 4, 5] | col_header=False | row_header=False | metadata=True
+Cell B10 | value='POWERS OF TEN' | fill=00000000 | rows=[9] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell I10 | value='3.7260356487235e+17' | fill=FF00B0F0 | rows=[9] | cols=[8] | col_header=False | row_header=False | metadata=True
+Cell B12 | value='Prefix' | fill=FFFFFF00 | rows=[11] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C12 | value='Name' | fill=FFFFFF00 | rows=[11] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D12 | value='Reference' | fill=FFFFFF00 | rows=[11] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E12 | value='Multiplier' | fill=FFFFFF00 | rows=[11] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell F12 | value='Notes/source' | fill=FFFFFF00 | rows=[11] | cols=[5] | col_header=True | row_header=False | metadata=False
+Cell B13 | value='k' | fill=00000000 | rows=[12] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C13 | value='Kilo' | fill=00000000 | rows=[12] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D13 | value='kilo' | fill=00000000 | rows=[12] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E13 | value='1000' | fill=00000000 | rows=[12] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell B14 | value='M' | fill=00000000 | rows=[13] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C14 | value='Mega' | fill=00000000 | rows=[13] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D14 | value='mega' | fill=00000000 | rows=[13] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E14 | value='1000000' | fill=00000000 | rows=[13] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell I14 | value='1.66833500166834e+17' | fill=FF00B0F0 | rows=[13] | cols=[8] | col_header=False | row_header=False | metadata=True
+Cell B15 | value='G' | fill=00000000 | rows=[14] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C15 | value='Giga' | fill=00000000 | rows=[14] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D15 | value='giga' | fill=00000000 | rows=[14] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E15 | value='1000000000' | fill=00000000 | rows=[14] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell B16 | value='T' | fill=00000000 | rows=[15] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C16 | value='Tera' | fill=00000000 | rows=[15] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D16 | value='tera' | fill=00000000 | rows=[15] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E16 | value='1000000000000' | fill=00000000 | rows=[15] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell B17 | value='P' | fill=00000000 | rows=[16] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C17 | value='Peta' | fill=00000000 | rows=[16] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D17 | value='peta' | fill=00000000 | rows=[16] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E17 | value='1000000000000000' | fill=00000000 | rows=[16] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell B18 | value='E' | fill=00000000 | rows=[17] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C18 | value='Exa' | fill=00000000 | rows=[17] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D18 | value='exa' | fill=00000000 | rows=[17] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E18 | value='1e+18' | fill=00000000 | rows=[17] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell B20 | value='TIME' | fill=00000000 | rows=[19] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell B22 | value='Unit' | fill=FFFFFF00 | rows=[21] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C22 | value='Name' | fill=FFFFFF00 | rows=[21] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D22 | value='Reference' | fill=FFFFFF00 | rows=[21] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E22 | value='Multiplier' | fill=FFFFFF00 | rows=[21] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell F22 | value='Notes/source' | fill=FFFFFF00 | rows=[21] | cols=[5] | col_header=True | row_header=False | metadata=False
+Cell B23 | value='s' | fill=00000000 | rows=[22] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C23 | value='Second' | fill=00000000 | rows=[22] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D23 | value='second' | fill=00000000 | rows=[22] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E23 | value='1' | fill=00000000 | rows=[22] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F23 | value='BASE UNIT' | fill=00000000 | rows=[22] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B24 | value='min' | fill=00000000 | rows=[23] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C24 | value='Minute' | fill=00000000 | rows=[23] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D24 | value='minute' | fill=00000000 | rows=[23] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E24 | value='60' | fill=00000000 | rows=[23] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell B25 | value='h' | fill=00000000 | rows=[24] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C25 | value='Hour' | fill=00000000 | rows=[24] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D25 | value='hour' | fill=00000000 | rows=[24] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E25 | value='3600' | fill=00000000 | rows=[24] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell B26 | value='d' | fill=00000000 | rows=[25] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C26 | value='Day' | fill=00000000 | rows=[25] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D26 | value='day' | fill=00000000 | rows=[25] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E26 | value='86400' | fill=00000000 | rows=[25] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell B27 | value='y' | fill=00000000 | rows=[26] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C27 | value='Year' | fill=00000000 | rows=[26] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D27 | value='year' | fill=00000000 | rows=[26] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E27 | value='31536000' | fill=00000000 | rows=[26] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F27 | value='365 days (note - not valid for leap years)' | fill=00000000 | rows=[26] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B29 | value='ENERGY' | fill=00000000 | rows=[28] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell B31 | value='Unit' | fill=FFFFFF00 | rows=[30] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C31 | value='Name' | fill=FFFFFF00 | rows=[30] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D31 | value='Reference' | fill=FFFFFF00 | rows=[30] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E31 | value='Multiplier' | fill=FFFFFF00 | rows=[30] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell F31 | value='Notes/source' | fill=FFFFFF00 | rows=[30] | cols=[5] | col_header=True | row_header=False | metadata=False
+Cell B32 | value='J' | fill=00000000 | rows=[31] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C32 | value='Joules' | fill=00000000 | rows=[31] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D32 | value='joule' | fill=00000000 | rows=[31] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E32 | value='1' | fill=00000000 | rows=[31] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F32 | value='BASE UNIT' | fill=00000000 | rows=[31] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B33 | value='Wh' | fill=00000000 | rows=[32] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C33 | value='Watt-hours' | fill=00000000 | rows=[32] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D33 | value='W.h' | fill=00000000 | rows=[32] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E33 | value='3600' | fill=00000000 | rows=[32] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell B34 | value='Wh / p / d (UK)' | fill=00000000 | rows=[33] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C34 | value='Watt-hours per person per day UK- equivalent' | fill=00000000 | rows=[33] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D34 | value='W.h_p_d' | fill=00000000 | rows=[33] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E34 | value='78840000000000' | fill=00000000 | rows=[33] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F34 | value='Population = 60m; 1 year = 365 days' | fill=00000000 | rows=[33] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B35 | value='toe' | fill=00000000 | rows=[34] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C35 | value='Tonnes of oil equivalent' | fill=00000000 | rows=[34] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D35 | value='toe' | fill=00000000 | rows=[34] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E35 | value='41868000000' | fill=00000000 | rows=[34] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F35 | value='International Table definition, from the APS' | fill=00000000 | rows=[34] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B36 | value='therm' | fill=00000000 | rows=[35] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C36 | value='Therms' | fill=00000000 | rows=[35] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D36 | value='therm' | fill=00000000 | rows=[35] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E36 | value='105505585.262' | fill=00000000 | rows=[35] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F36 | value='100,000 Btu' | fill=00000000 | rows=[35] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B37 | value='Btu' | fill=00000000 | rows=[36] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C37 | value='British Thermal Units' | fill=00000000 | rows=[36] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D37 | value='Btu' | fill=00000000 | rows=[36] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E37 | value='1055.05585262' | fill=00000000 | rows=[36] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F37 | value='International Table definition, from the APS' | fill=00000000 | rows=[36] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B38 | value='cal' | fill=00000000 | rows=[37] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C38 | value='Calories' | fill=00000000 | rows=[37] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D38 | value='calorie' | fill=00000000 | rows=[37] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E38 | value='4.1868' | fill=00000000 | rows=[37] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F38 | value='International Table definition, from the APS' | fill=00000000 | rows=[37] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B39 | value='W y' | fill=00000000 | rows=[38] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C39 | value='Watt-years' | fill=00000000 | rows=[38] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D39 | value='W.y' | fill=00000000 | rows=[38] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E39 | value='31536000' | fill=00000000 | rows=[38] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell B41 | value='POWER' | fill=00000000 | rows=[40] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell B43 | value='Unit' | fill=FFFFFF00 | rows=[42] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C43 | value='Name' | fill=FFFFFF00 | rows=[42] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D43 | value='Reference' | fill=FFFFFF00 | rows=[42] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E43 | value='Multiplier' | fill=FFFFFF00 | rows=[42] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell F43 | value='Notes/source' | fill=FFFFFF00 | rows=[42] | cols=[5] | col_header=True | row_header=False | metadata=False
+Cell B44 | value='W' | fill=00000000 | rows=[43] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C44 | value='Watts' | fill=00000000 | rows=[43] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D44 | value='watt' | fill=00000000 | rows=[43] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E44 | value='1' | fill=00000000 | rows=[43] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F44 | value='BASE UNIT' | fill=00000000 | rows=[43] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B45 | value='Horsepower' | fill=00000000 | rows=[44] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C45 | value='Horsepower' | fill=00000000 | rows=[44] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D45 | value='horsepower' | fill=00000000 | rows=[44] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E45 | value='746' | fill=00000000 | rows=[44] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F45 | value='From APS' | fill=00000000 | rows=[44] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B47 | value='LENGTH' | fill=00000000 | rows=[46] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell B49 | value='Unit' | fill=FFFFFF00 | rows=[48] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C49 | value='Name' | fill=FFFFFF00 | rows=[48] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D49 | value='Reference' | fill=FFFFFF00 | rows=[48] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E49 | value='Multiplier' | fill=FFFFFF00 | rows=[48] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell F49 | value='Notes/source' | fill=FFFFFF00 | rows=[48] | cols=[5] | col_header=True | row_header=False | metadata=False
+Cell B50 | value='m' | fill=00000000 | rows=[49] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C50 | value='Metres' | fill=00000000 | rows=[49] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D50 | value='metre' | fill=00000000 | rows=[49] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E50 | value='1' | fill=00000000 | rows=[49] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F50 | value='BASE UNIT' | fill=00000000 | rows=[49] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B51 | value='yd' | fill=00000000 | rows=[50] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C51 | value='Yards' | fill=00000000 | rows=[50] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D51 | value='yard' | fill=00000000 | rows=[50] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E51 | value='0.9144' | fill=00000000 | rows=[50] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F51 | value='Wikipedia (source: NIST)' | fill=00000000 | rows=[50] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B52 | value='km' | fill=00000000 | rows=[51] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C52 | value='Kilometres' | fill=00000000 | rows=[51] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D52 | value='kilometre' | fill=00000000 | rows=[51] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E52 | value='1000' | fill=00000000 | rows=[51] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F52 | value='Definition' | fill=00000000 | rows=[51] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B53 | value='mile' | fill=00000000 | rows=[52] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C53 | value='Miles' | fill=00000000 | rows=[52] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D53 | value='mile' | fill=00000000 | rows=[52] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E53 | value='1609.3' | fill=00000000 | rows=[52] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F53 | value='DUKES' | fill=00000000 | rows=[52] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B55 | value='AREA' | fill=00000000 | rows=[54] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell B57 | value='Unit' | fill=FFFFFF00 | rows=[56] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C57 | value='Name' | fill=FFFFFF00 | rows=[56] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D57 | value='Reference' | fill=FFFFFF00 | rows=[56] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E57 | value='Multiplier' | fill=FFFFFF00 | rows=[56] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell F57 | value='Notes/source' | fill=FFFFFF00 | rows=[56] | cols=[5] | col_header=True | row_header=False | metadata=False
+Cell B58 | value='m2' | fill=00000000 | rows=[57] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C58 | value='Square metres' | fill=00000000 | rows=[57] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D58 | value='sq_metre' | fill=00000000 | rows=[57] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E58 | value='1' | fill=00000000 | rows=[57] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F58 | value='BASE UNIT' | fill=00000000 | rows=[57] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B59 | value='ha' | fill=00000000 | rows=[58] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C59 | value='Hectares' | fill=00000000 | rows=[58] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D59 | value='hectare' | fill=00000000 | rows=[58] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E59 | value='10000' | fill=00000000 | rows=[58] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F59 | value='Definition' | fill=00000000 | rows=[58] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B60 | value='acrea' | fill=00000000 | rows=[59] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C60 | value='Acres' | fill=00000000 | rows=[59] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D60 | value='acre' | fill=00000000 | rows=[59] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E60 | value='4046.8564224' | fill=00000000 | rows=[59] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F60 | value='1 acre = 4840 square yards' | fill=00000000 | rows=[59] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B61 | value='Wales' | fill=00000000 | rows=[60] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C61 | value='Wales' | fill=00000000 | rows=[60] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D61 | value='Wales' | fill=00000000 | rows=[60] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E61 | value='20732000000' | fill=00000000 | rows=[60] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F61 | value='UK National Statistics' | fill=00000000 | rows=[60] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B63 | value='MASS' | fill=00000000 | rows=[62] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell B65 | value='Unit' | fill=FFFFFF00 | rows=[64] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C65 | value='Name' | fill=FFFFFF00 | rows=[64] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D65 | value='Reference' | fill=FFFFFF00 | rows=[64] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E65 | value='Multiplier' | fill=FFFFFF00 | rows=[64] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell F65 | value='Notes/source' | fill=FFFFFF00 | rows=[64] | cols=[5] | col_header=True | row_header=False | metadata=False
+Cell B66 | value='kg' | fill=00000000 | rows=[65] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C66 | value='Kilogrammes' | fill=00000000 | rows=[65] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D66 | value='kg' | fill=00000000 | rows=[65] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E66 | value='1' | fill=00000000 | rows=[65] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell F66 | value='BASE UNIT' | fill=00000000 | rows=[65] | cols=[5] | col_header=False | row_header=False | metadata=False
+Cell B67 | value='tonne' | fill=00000000 | rows=[66] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C67 | value='Tonnes' | fill=00000000 | rows=[66] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D67 | value='tonne' | fill=00000000 | rows=[66] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E67 | value='1000' | fill=00000000 | rows=[66] | cols=[4] | col_header=False | row_header=False | metadata=False
+

@@ -1,0 +1,124 @@
+You are a senior data engineer specializing in complex tables.
+
+Task: Identify header cells using the MAXIMUM STRATEGY (CONTEXTUAL).
+A header is any cell that logically GENERALIZES or DESCRIBES a group of other cells.
+Include: column headers, row headers, section separators, spanning labels.
+Exclude: data values, measurements, individual records.
+
+Coordinates are 0-based. For spanning cells use the top-left anchor (row_nums[0], column_nums[0]).
+
+---
+EXAMPLE 1 — Two-level column headers + row labels
+Table (JSON):
+[
+  {"row_nums":[0],"column_nums":[0],"xml_text_content":""},
+  {"row_nums":[0],"column_nums":[1,2],"xml_text_content":"Treatment A"},
+  {"row_nums":[0],"column_nums":[3,4],"xml_text_content":"Treatment B"},
+  {"row_nums":[1],"column_nums":[0],"xml_text_content":"Characteristic"},
+  {"row_nums":[1],"column_nums":[1],"xml_text_content":"n"},
+  {"row_nums":[1],"column_nums":[2],"xml_text_content":"%"},
+  {"row_nums":[1],"column_nums":[3],"xml_text_content":"n"},
+  {"row_nums":[1],"column_nums":[4],"xml_text_content":"%"},
+  {"row_nums":[2],"column_nums":[0],"xml_text_content":"Age (years)"},
+  {"row_nums":[2],"column_nums":[1],"xml_text_content":"45"},
+  {"row_nums":[2],"column_nums":[2],"xml_text_content":"60.0"},
+  {"row_nums":[2],"column_nums":[3],"xml_text_content":"38"},
+  {"row_nums":[2],"column_nums":[4],"xml_text_content":"55.1"},
+  {"row_nums":[3],"column_nums":[0],"xml_text_content":"Sex (F/M)"},
+  {"row_nums":[3],"column_nums":[1],"xml_text_content":"30"},
+  {"row_nums":[3],"column_nums":[2],"xml_text_content":"40.0"},
+  {"row_nums":[3],"column_nums":[3],"xml_text_content":"25"},
+  {"row_nums":[3],"column_nums":[4],"xml_text_content":"36.2"}
+]
+
+Analysis:
+- Row 0: spanning cells "Treatment A" (cols 1-2) and "Treatment B" (cols 3-4) label groups of columns → headers. Empty cell (0,0) is part of the header block → header.
+- Row 1: "Characteristic", "n", "%" are sub-column labels → headers.
+- Rows 2-3: "Age (years)", "Sex (F/M)" describe what the row measures → row headers. Numeric values are data.
+
+MAXIMUM output (all structural and contextual labels):
+0 0
+0 1
+0 3
+1 0
+1 1
+1 2
+1 3
+1 4
+2 0
+3 0
+
+---
+EXAMPLE 2 — Section separators (projected row headers) mid-table
+Table (JSON):
+[
+  {"row_nums":[0],"column_nums":[0],"xml_text_content":"Variable"},
+  {"row_nums":[0],"column_nums":[1],"xml_text_content":"Cases"},
+  {"row_nums":[0],"column_nums":[2],"xml_text_content":"Controls"},
+  {"row_nums":[1],"column_nums":[0,1,2],"xml_text_content":"Demographic factors"},
+  {"row_nums":[2],"column_nums":[0],"xml_text_content":"Age"},
+  {"row_nums":[2],"column_nums":[1],"xml_text_content":"52.3"},
+  {"row_nums":[2],"column_nums":[2],"xml_text_content":"48.7"},
+  {"row_nums":[3],"column_nums":[0],"xml_text_content":"BMI"},
+  {"row_nums":[3],"column_nums":[1],"xml_text_content":"26.1"},
+  {"row_nums":[3],"column_nums":[2],"xml_text_content":"24.9"},
+  {"row_nums":[4],"column_nums":[0,1,2],"xml_text_content":"Clinical factors"},
+  {"row_nums":[5],"column_nums":[0],"xml_text_content":"Smoking"},
+  {"row_nums":[5],"column_nums":[1],"xml_text_content":"18"},
+  {"row_nums":[5],"column_nums":[2],"xml_text_content":"11"},
+  {"row_nums":[6],"column_nums":[0],"xml_text_content":"Hypertension"},
+  {"row_nums":[6],"column_nums":[1],"xml_text_content":"31"},
+  {"row_nums":[6],"column_nums":[2],"xml_text_content":"22"}
+]
+
+Analysis:
+- Row 0: "Variable", "Cases", "Controls" — column headers.
+- Row 1: "Demographic factors" spans all columns, labels a section → projected row header (section separator).
+- Rows 2-3: "Age", "BMI" are row labels describing what is measured → row headers.
+- Row 4: "Clinical factors" spans all columns, labels another section → projected row header.
+- Rows 5-6: "Smoking", "Hypertension" — row labels → row headers.
+- Numeric values: data, not headers.
+
+MAXIMUM output:
+0 0
+0 1
+0 2
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+
+---
+EXAMPLE 3 — Simple matrix, no row headers
+Table (HTML):
+<table>
+  <tr><td>Region</td><td>2020</td><td>2021</td><td>2022</td></tr>
+  <tr><td>North</td><td>1240</td><td>1380</td><td>1510</td></tr>
+  <tr><td>South</td><td>980</td><td>1050</td><td>1120</td></tr>
+  <tr><td>Total</td><td>2220</td><td>2430</td><td>2630</td></tr>
+</table>
+
+Analysis:
+- Row 0: "Region", "2020", "2021", "2022" — these label what each column contains → column headers. Years are dimension labels, not data values.
+- Rows 1-2: "North", "South" are row identifiers → row headers under MAX strategy.
+- Row 3: "Total" is an aggregate — MAX strategy includes it as a section label; the numeric totals are data.
+- All numeric cells in rows 1-3: data values.
+
+MAXIMUM output:
+0 0
+0 1
+0 2
+0 3
+1 0
+2 0
+3 0
+
+---
+Now apply the MAXIMUM STRATEGY to the following table.
+Include column headers, row headers, section separators, spanning labels, and all contextual labels.
+Output ONLY coordinates, one per line, 0-based, format: row col
+
+Table:
+{table}

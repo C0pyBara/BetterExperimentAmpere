@@ -1,0 +1,606 @@
+=== science-table18.xlsx ===
+Cell A1 | value='Time = 15 min' | fill=FF00B0F0 | rows=[0] | cols=[0] | col_header=True | row_header=True | metadata=True
+Cell A2 | value='ROI 1' | fill=FF00B0F0 | rows=[1] | cols=[0, 1, 2, 3, 4] | col_header=False | row_header=False | metadata=True
+Cell G2 | value='ROI 2' | fill=FF00B0F0 | rows=[1] | cols=[6, 7, 8, 9, 10] | col_header=False | row_header=False | metadata=True
+Cell B3 | value='M0' | fill=FFFFFF00 | rows=[2] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C3 | value='IFN-y' | fill=FFFFFF00 | rows=[2] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D3 | value='LPS' | fill=FFFFFF00 | rows=[2] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E3 | value='M2' | fill=FFFFFF00 | rows=[2] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell H3 | value='M0' | fill=FFFFFF00 | rows=[2] | cols=[7] | col_header=True | row_header=False | metadata=False
+Cell I3 | value='IFN-y' | fill=FFFFFF00 | rows=[2] | cols=[8] | col_header=True | row_header=False | metadata=False
+Cell J3 | value='LPS' | fill=FFFFFF00 | rows=[2] | cols=[9] | col_header=True | row_header=False | metadata=False
+Cell K3 | value='M2' | fill=FFFFFF00 | rows=[2] | cols=[10] | col_header=True | row_header=False | metadata=False
+Cell A4 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[3] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B4 | value='7' | fill=00000000 | rows=[3] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C4 | value='4' | fill=00000000 | rows=[3] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D4 | value='0' | fill=00000000 | rows=[3] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E4 | value='24' | fill=00000000 | rows=[3] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G4 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[3] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H4 | value='1' | fill=00000000 | rows=[3] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I4 | value='24' | fill=00000000 | rows=[3] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J4 | value='15' | fill=00000000 | rows=[3] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K4 | value='10' | fill=00000000 | rows=[3] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A5 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[4] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B5 | value='3' | fill=00000000 | rows=[4] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C5 | value='0' | fill=00000000 | rows=[4] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D5 | value='0' | fill=00000000 | rows=[4] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E5 | value='0' | fill=00000000 | rows=[4] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G5 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[4] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H5 | value='0' | fill=00000000 | rows=[4] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I5 | value='1' | fill=00000000 | rows=[4] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J5 | value='4' | fill=00000000 | rows=[4] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K5 | value='0' | fill=00000000 | rows=[4] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A6 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[5] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B6 | value='5' | fill=00000000 | rows=[5] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C6 | value='0' | fill=00000000 | rows=[5] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D6 | value='0' | fill=00000000 | rows=[5] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E6 | value='0' | fill=00000000 | rows=[5] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G6 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[5] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H6 | value='0' | fill=00000000 | rows=[5] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I6 | value='1' | fill=00000000 | rows=[5] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J6 | value='22' | fill=00000000 | rows=[5] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K6 | value='0' | fill=00000000 | rows=[5] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A7 | value='% Phagocytosis' | fill=FF00B050 | rows=[6] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B7 | value='42.8571428571429' | fill=00000000 | rows=[6] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C7 | value='0' | fill=00000000 | rows=[6] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D7 | value='#DIV/0!' | fill=00000000 | rows=[6] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E7 | value='0' | fill=00000000 | rows=[6] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G7 | value='% Phagocytosis' | fill=FF00B050 | rows=[6] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H7 | value='0' | fill=00000000 | rows=[6] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I7 | value='4.16666666666667' | fill=00000000 | rows=[6] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J7 | value='26.6666666666667' | fill=00000000 | rows=[6] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K7 | value='0' | fill=00000000 | rows=[6] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A9 | value='ROI 3' | fill=FF00B0F0 | rows=[8] | cols=[0, 1, 2, 3, 4] | col_header=False | row_header=False | metadata=True
+Cell G9 | value='ROI 4' | fill=FF00B0F0 | rows=[8] | cols=[6, 7, 8, 9, 10] | col_header=False | row_header=False | metadata=True
+Cell B10 | value='M0' | fill=FFFFFF00 | rows=[9] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C10 | value='IFN-y' | fill=FFFFFF00 | rows=[9] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D10 | value='LPS' | fill=FFFFFF00 | rows=[9] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E10 | value='M2' | fill=FFFFFF00 | rows=[9] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell H10 | value='M0' | fill=FFFFFF00 | rows=[9] | cols=[7] | col_header=True | row_header=False | metadata=False
+Cell I10 | value='IFN-y' | fill=FFFFFF00 | rows=[9] | cols=[8] | col_header=True | row_header=False | metadata=False
+Cell J10 | value='LPS' | fill=FFFFFF00 | rows=[9] | cols=[9] | col_header=True | row_header=False | metadata=False
+Cell K10 | value='M2' | fill=FFFFFF00 | rows=[9] | cols=[10] | col_header=True | row_header=False | metadata=False
+Cell A11 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[10] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B11 | value='1' | fill=00000000 | rows=[10] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C11 | value='23' | fill=00000000 | rows=[10] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D11 | value='19' | fill=00000000 | rows=[10] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E11 | value='11' | fill=00000000 | rows=[10] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G11 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[10] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H11 | value='8' | fill=00000000 | rows=[10] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I11 | value='120' | fill=00000000 | rows=[10] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J11 | value='42' | fill=00000000 | rows=[10] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K11 | value='9' | fill=00000000 | rows=[10] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A12 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[11] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B12 | value='0' | fill=00000000 | rows=[11] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C12 | value='17' | fill=00000000 | rows=[11] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D12 | value='2' | fill=00000000 | rows=[11] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E12 | value='0' | fill=00000000 | rows=[11] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G12 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[11] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H12 | value='5' | fill=00000000 | rows=[11] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I12 | value='60' | fill=00000000 | rows=[11] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J12 | value='5' | fill=00000000 | rows=[11] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K12 | value='4' | fill=00000000 | rows=[11] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A13 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[12] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B13 | value='0' | fill=00000000 | rows=[12] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C13 | value='68' | fill=00000000 | rows=[12] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D13 | value='4' | fill=00000000 | rows=[12] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E13 | value='0' | fill=00000000 | rows=[12] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G13 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[12] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H13 | value='43' | fill=00000000 | rows=[12] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I13 | value='220' | fill=00000000 | rows=[12] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J13 | value='28' | fill=00000000 | rows=[12] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K13 | value='8' | fill=00000000 | rows=[12] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A14 | value='% Phagocytosis' | fill=FF00B050 | rows=[13] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B14 | value='0' | fill=00000000 | rows=[13] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C14 | value='73.9130434782609' | fill=00000000 | rows=[13] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D14 | value='10.5263157894737' | fill=00000000 | rows=[13] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E14 | value='0' | fill=00000000 | rows=[13] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G14 | value='% Phagocytosis' | fill=FF00B050 | rows=[13] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H14 | value='62.5' | fill=00000000 | rows=[13] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I14 | value='50' | fill=00000000 | rows=[13] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J14 | value='11.9047619047619' | fill=00000000 | rows=[13] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K14 | value='44.4444444444444' | fill=00000000 | rows=[13] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A16 | value='ROI 5' | fill=FF00B0F0 | rows=[15] | cols=[0, 1, 2, 3, 4] | col_header=False | row_header=False | metadata=True
+Cell G16 | value='ROI 6' | fill=FF00B0F0 | rows=[15] | cols=[6, 7, 8, 9, 10] | col_header=False | row_header=False | metadata=True
+Cell B17 | value='M0' | fill=FFFFFF00 | rows=[16] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C17 | value='IFN-y' | fill=FFFFFF00 | rows=[16] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D17 | value='LPS' | fill=FFFFFF00 | rows=[16] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E17 | value='M2' | fill=FFFFFF00 | rows=[16] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell H17 | value='M0' | fill=FFFFFF00 | rows=[16] | cols=[7] | col_header=True | row_header=False | metadata=False
+Cell I17 | value='IFN-y' | fill=FFFFFF00 | rows=[16] | cols=[8] | col_header=True | row_header=False | metadata=False
+Cell J17 | value='LPS' | fill=FFFFFF00 | rows=[16] | cols=[9] | col_header=True | row_header=False | metadata=False
+Cell K17 | value='M2' | fill=FFFFFF00 | rows=[16] | cols=[10] | col_header=True | row_header=False | metadata=False
+Cell A18 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[17] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B18 | value='7' | fill=00000000 | rows=[17] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C18 | value='37' | fill=00000000 | rows=[17] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D18 | value='34' | fill=00000000 | rows=[17] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E18 | value='4' | fill=00000000 | rows=[17] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G18 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[17] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H18 | value='0' | fill=00000000 | rows=[17] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I18 | value='27' | fill=00000000 | rows=[17] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J18 | value='45' | fill=00000000 | rows=[17] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K18 | value='8' | fill=00000000 | rows=[17] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A19 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[18] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B19 | value='6' | fill=00000000 | rows=[18] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C19 | value='19' | fill=00000000 | rows=[18] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D19 | value='0' | fill=00000000 | rows=[18] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E19 | value='1' | fill=00000000 | rows=[18] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G19 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[18] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H19 | value='0' | fill=00000000 | rows=[18] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I19 | value='24' | fill=00000000 | rows=[18] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J19 | value='5' | fill=00000000 | rows=[18] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K19 | value='2' | fill=00000000 | rows=[18] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A20 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[19] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B20 | value='41' | fill=00000000 | rows=[19] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C20 | value='70' | fill=00000000 | rows=[19] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D20 | value='0' | fill=00000000 | rows=[19] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E20 | value='1' | fill=00000000 | rows=[19] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G20 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[19] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H20 | value='0' | fill=00000000 | rows=[19] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I20 | value='98' | fill=00000000 | rows=[19] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J20 | value='25' | fill=00000000 | rows=[19] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K20 | value='4' | fill=00000000 | rows=[19] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A21 | value='% Phagocytosis' | fill=FF00B050 | rows=[20] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B21 | value='85.7142857142857' | fill=00000000 | rows=[20] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C21 | value='51.3513513513513' | fill=00000000 | rows=[20] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D21 | value='0' | fill=00000000 | rows=[20] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E21 | value='25' | fill=00000000 | rows=[20] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G21 | value='% Phagocytosis' | fill=FF00B050 | rows=[20] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H21 | value='#DIV/0!' | fill=00000000 | rows=[20] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I21 | value='88.8888888888889' | fill=00000000 | rows=[20] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J21 | value='11.1111111111111' | fill=00000000 | rows=[20] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K21 | value='25' | fill=00000000 | rows=[20] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A23 | value='Time = 30 min' | fill=FF00B0F0 | rows=[22] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell A24 | value='ROI 1' | fill=FF00B0F0 | rows=[23] | cols=[0, 1, 2, 3, 4] | col_header=False | row_header=False | metadata=True
+Cell G24 | value='ROI 2' | fill=FF00B0F0 | rows=[23] | cols=[6, 7, 8, 9, 10] | col_header=False | row_header=False | metadata=True
+Cell B25 | value='M0' | fill=FFFFFF00 | rows=[24] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C25 | value='IFN-y' | fill=FFFFFF00 | rows=[24] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D25 | value='LPS' | fill=FFFFFF00 | rows=[24] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E25 | value='M2' | fill=FFFFFF00 | rows=[24] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell H25 | value='M0' | fill=FFFFFF00 | rows=[24] | cols=[7] | col_header=True | row_header=False | metadata=False
+Cell I25 | value='IFN-y' | fill=FFFFFF00 | rows=[24] | cols=[8] | col_header=True | row_header=False | metadata=False
+Cell J25 | value='LPS' | fill=FFFFFF00 | rows=[24] | cols=[9] | col_header=True | row_header=False | metadata=False
+Cell K25 | value='M2' | fill=FFFFFF00 | rows=[24] | cols=[10] | col_header=True | row_header=False | metadata=False
+Cell A26 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[25] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B26 | value='7' | fill=00000000 | rows=[25] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C26 | value='4' | fill=00000000 | rows=[25] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D26 | value='0' | fill=00000000 | rows=[25] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E26 | value='25' | fill=00000000 | rows=[25] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G26 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[25] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H26 | value='1' | fill=00000000 | rows=[25] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I26 | value='26' | fill=00000000 | rows=[25] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J26 | value='15' | fill=00000000 | rows=[25] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K26 | value='11' | fill=00000000 | rows=[25] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A27 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[26] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B27 | value='2' | fill=00000000 | rows=[26] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C27 | value='0' | fill=00000000 | rows=[26] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D27 | value='0' | fill=00000000 | rows=[26] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E27 | value='0' | fill=00000000 | rows=[26] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G27 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[26] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H27 | value='0' | fill=00000000 | rows=[26] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I27 | value='0' | fill=00000000 | rows=[26] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J27 | value='0' | fill=00000000 | rows=[26] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K27 | value='0' | fill=00000000 | rows=[26] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A28 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[27] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B28 | value='2' | fill=00000000 | rows=[27] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C28 | value='0' | fill=00000000 | rows=[27] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D28 | value='0' | fill=00000000 | rows=[27] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E28 | value='0' | fill=00000000 | rows=[27] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G28 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[27] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H28 | value='0' | fill=00000000 | rows=[27] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I28 | value='0' | fill=00000000 | rows=[27] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J28 | value='0' | fill=00000000 | rows=[27] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K28 | value='0' | fill=00000000 | rows=[27] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A29 | value='% Phagocytosis' | fill=FF00B050 | rows=[28] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B29 | value='28.5714285714286' | fill=00000000 | rows=[28] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C29 | value='0' | fill=00000000 | rows=[28] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D29 | value='#DIV/0!' | fill=00000000 | rows=[28] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E29 | value='0' | fill=00000000 | rows=[28] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G29 | value='% Phagocytosis' | fill=FF00B050 | rows=[28] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H29 | value='0' | fill=00000000 | rows=[28] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I29 | value='0' | fill=00000000 | rows=[28] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J29 | value='0' | fill=00000000 | rows=[28] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K29 | value='0' | fill=00000000 | rows=[28] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A31 | value='ROI 3' | fill=FF00B0F0 | rows=[30] | cols=[0, 1, 2, 3, 4] | col_header=False | row_header=False | metadata=True
+Cell G31 | value='ROI 4' | fill=FF00B0F0 | rows=[30] | cols=[6, 7, 8, 9, 10] | col_header=False | row_header=False | metadata=True
+Cell B32 | value='M0' | fill=FFFFFF00 | rows=[31] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C32 | value='IFN-y' | fill=FFFFFF00 | rows=[31] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D32 | value='LPS' | fill=FFFFFF00 | rows=[31] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E32 | value='M2' | fill=FFFFFF00 | rows=[31] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell H32 | value='M0' | fill=FFFFFF00 | rows=[31] | cols=[7] | col_header=True | row_header=False | metadata=False
+Cell I32 | value='IFN-y' | fill=FFFFFF00 | rows=[31] | cols=[8] | col_header=True | row_header=False | metadata=False
+Cell J32 | value='LPS' | fill=FFFFFF00 | rows=[31] | cols=[9] | col_header=True | row_header=False | metadata=False
+Cell K32 | value='M2' | fill=FFFFFF00 | rows=[31] | cols=[10] | col_header=True | row_header=False | metadata=False
+Cell A33 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[32] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B33 | value='1' | fill=00000000 | rows=[32] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C33 | value='17' | fill=00000000 | rows=[32] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D33 | value='19' | fill=00000000 | rows=[32] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E33 | value='11' | fill=00000000 | rows=[32] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G33 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[32] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H33 | value='10' | fill=00000000 | rows=[32] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I33 | value='200' | fill=00000000 | rows=[32] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J33 | value='44' | fill=00000000 | rows=[32] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K33 | value='9' | fill=00000000 | rows=[32] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A34 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[33] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B34 | value='0' | fill=00000000 | rows=[33] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C34 | value='4' | fill=00000000 | rows=[33] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D34 | value='1' | fill=00000000 | rows=[33] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E34 | value='0' | fill=00000000 | rows=[33] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G34 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[33] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H34 | value='8' | fill=00000000 | rows=[33] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I34 | value='110' | fill=00000000 | rows=[33] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J34 | value='0' | fill=00000000 | rows=[33] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K34 | value='5' | fill=00000000 | rows=[33] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A35 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[34] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B35 | value='0' | fill=00000000 | rows=[34] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C35 | value='40' | fill=00000000 | rows=[34] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D35 | value='2' | fill=00000000 | rows=[34] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E35 | value='0' | fill=00000000 | rows=[34] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G35 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[34] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H35 | value='38' | fill=00000000 | rows=[34] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I35 | value='450' | fill=00000000 | rows=[34] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J35 | value='0' | fill=00000000 | rows=[34] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K35 | value='13' | fill=00000000 | rows=[34] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A36 | value='% Phagocytosis' | fill=FF00B050 | rows=[35] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B36 | value='0' | fill=00000000 | rows=[35] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C36 | value='23.5294117647059' | fill=00000000 | rows=[35] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D36 | value='5.26315789473684' | fill=00000000 | rows=[35] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E36 | value='0' | fill=00000000 | rows=[35] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G36 | value='% Phagocytosis' | fill=FF00B050 | rows=[35] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H36 | value='80' | fill=00000000 | rows=[35] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I36 | value='55' | fill=00000000 | rows=[35] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J36 | value='0' | fill=00000000 | rows=[35] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K36 | value='55.5555555555556' | fill=00000000 | rows=[35] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A38 | value='ROI 5' | fill=FF00B0F0 | rows=[37] | cols=[0, 1, 2, 3, 4] | col_header=False | row_header=False | metadata=True
+Cell G38 | value='ROI 6' | fill=FF00B0F0 | rows=[37] | cols=[6, 7, 8, 9, 10] | col_header=False | row_header=False | metadata=True
+Cell B39 | value='M0' | fill=FFFFFF00 | rows=[38] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C39 | value='IFN-y' | fill=FFFFFF00 | rows=[38] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D39 | value='LPS' | fill=FFFFFF00 | rows=[38] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E39 | value='M2' | fill=FFFFFF00 | rows=[38] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell H39 | value='M0' | fill=FFFFFF00 | rows=[38] | cols=[7] | col_header=True | row_header=False | metadata=False
+Cell I39 | value='IFN-y' | fill=FFFFFF00 | rows=[38] | cols=[8] | col_header=True | row_header=False | metadata=False
+Cell J39 | value='LPS' | fill=FFFFFF00 | rows=[38] | cols=[9] | col_header=True | row_header=False | metadata=False
+Cell K39 | value='M2' | fill=FFFFFF00 | rows=[38] | cols=[10] | col_header=True | row_header=False | metadata=False
+Cell A40 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[39] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B40 | value='8' | fill=00000000 | rows=[39] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C40 | value='44' | fill=00000000 | rows=[39] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D40 | value='29' | fill=00000000 | rows=[39] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E40 | value='4' | fill=00000000 | rows=[39] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G40 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[39] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H40 | value='0' | fill=00000000 | rows=[39] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I40 | value='39' | fill=00000000 | rows=[39] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J40 | value='42' | fill=00000000 | rows=[39] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K40 | value='9' | fill=00000000 | rows=[39] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A41 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[40] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B41 | value='6' | fill=00000000 | rows=[40] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C41 | value='36' | fill=00000000 | rows=[40] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D41 | value='0' | fill=00000000 | rows=[40] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E41 | value='0' | fill=00000000 | rows=[40] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G41 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[40] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H41 | value='0' | fill=00000000 | rows=[40] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I41 | value='29' | fill=00000000 | rows=[40] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J41 | value='9' | fill=00000000 | rows=[40] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K41 | value='1' | fill=00000000 | rows=[40] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A42 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[41] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B42 | value='34' | fill=00000000 | rows=[41] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C42 | value='61' | fill=00000000 | rows=[41] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D42 | value='0' | fill=00000000 | rows=[41] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E42 | value='0' | fill=00000000 | rows=[41] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G42 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[41] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H42 | value='0' | fill=00000000 | rows=[41] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I42 | value='14' | fill=00000000 | rows=[41] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J42 | value='69' | fill=00000000 | rows=[41] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K42 | value='6' | fill=00000000 | rows=[41] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A43 | value='% Phagocytosis' | fill=FF00B050 | rows=[42] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B43 | value='75' | fill=00000000 | rows=[42] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C43 | value='81.8181818181818' | fill=00000000 | rows=[42] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D43 | value='0' | fill=00000000 | rows=[42] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E43 | value='0' | fill=00000000 | rows=[42] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G43 | value='% Phagocytosis' | fill=FF00B050 | rows=[42] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H43 | value='#DIV/0!' | fill=00000000 | rows=[42] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I43 | value='74.3589743589744' | fill=00000000 | rows=[42] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J43 | value='21.4285714285714' | fill=00000000 | rows=[42] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K43 | value='11.1111111111111' | fill=00000000 | rows=[42] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A45 | value='Time = 75 min' | fill=FF00B0F0 | rows=[44] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell A46 | value='ROI 1' | fill=FF00B0F0 | rows=[45] | cols=[0, 1, 2, 3, 4] | col_header=False | row_header=False | metadata=True
+Cell G46 | value='ROI 2' | fill=FF00B0F0 | rows=[45] | cols=[6, 7, 8, 9, 10] | col_header=False | row_header=False | metadata=True
+Cell B47 | value='M0' | fill=FFFFFF00 | rows=[46] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C47 | value='IFN-y' | fill=FFFFFF00 | rows=[46] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D47 | value='LPS' | fill=FFFFFF00 | rows=[46] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E47 | value='M2' | fill=FFFFFF00 | rows=[46] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell H47 | value='M0' | fill=FFFFFF00 | rows=[46] | cols=[7] | col_header=True | row_header=False | metadata=False
+Cell I47 | value='IFN-y' | fill=FFFFFF00 | rows=[46] | cols=[8] | col_header=True | row_header=False | metadata=False
+Cell J47 | value='LPS' | fill=FFFFFF00 | rows=[46] | cols=[9] | col_header=True | row_header=False | metadata=False
+Cell K47 | value='M2' | fill=FFFFFF00 | rows=[46] | cols=[10] | col_header=True | row_header=False | metadata=False
+Cell A48 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[47] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B48 | value='6' | fill=00000000 | rows=[47] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C48 | value='4' | fill=00000000 | rows=[47] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D48 | value='0' | fill=00000000 | rows=[47] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E48 | value='25' | fill=00000000 | rows=[47] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G48 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[47] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H48 | value='1' | fill=00000000 | rows=[47] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I48 | value='27' | fill=00000000 | rows=[47] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J48 | value='15' | fill=00000000 | rows=[47] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K48 | value='10' | fill=00000000 | rows=[47] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A49 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[48] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B49 | value='1' | fill=00000000 | rows=[48] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C49 | value='0' | fill=00000000 | rows=[48] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D49 | value='0' | fill=00000000 | rows=[48] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E49 | value='0' | fill=00000000 | rows=[48] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G49 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[48] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H49 | value='0' | fill=00000000 | rows=[48] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I49 | value='0' | fill=00000000 | rows=[48] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J49 | value='0' | fill=00000000 | rows=[48] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K49 | value='0' | fill=00000000 | rows=[48] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A50 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[49] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B50 | value='12' | fill=00000000 | rows=[49] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C50 | value='0' | fill=00000000 | rows=[49] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D50 | value='0' | fill=00000000 | rows=[49] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E50 | value='0' | fill=00000000 | rows=[49] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G50 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[49] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H50 | value='0' | fill=00000000 | rows=[49] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I50 | value='0' | fill=00000000 | rows=[49] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J50 | value='0' | fill=00000000 | rows=[49] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K50 | value='0' | fill=00000000 | rows=[49] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A51 | value='% Phagocytosis' | fill=FF00B050 | rows=[50] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B51 | value='16.6666666666667' | fill=00000000 | rows=[50] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C51 | value='0' | fill=00000000 | rows=[50] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D51 | value='#DIV/0!' | fill=00000000 | rows=[50] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E51 | value='0' | fill=00000000 | rows=[50] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G51 | value='% Phagocytosis' | fill=FF00B050 | rows=[50] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H51 | value='0' | fill=00000000 | rows=[50] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I51 | value='0' | fill=00000000 | rows=[50] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J51 | value='0' | fill=00000000 | rows=[50] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K51 | value='0' | fill=00000000 | rows=[50] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A53 | value='ROI 3' | fill=FF00B0F0 | rows=[52] | cols=[0, 1, 2, 3, 4] | col_header=False | row_header=False | metadata=True
+Cell G53 | value='ROI 4' | fill=FF00B0F0 | rows=[52] | cols=[6, 7, 8, 9, 10] | col_header=False | row_header=False | metadata=True
+Cell B54 | value='M0' | fill=FFFFFF00 | rows=[53] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C54 | value='IFN-y' | fill=FFFFFF00 | rows=[53] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D54 | value='LPS' | fill=FFFFFF00 | rows=[53] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E54 | value='M2' | fill=FFFFFF00 | rows=[53] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell H54 | value='M0' | fill=FFFFFF00 | rows=[53] | cols=[7] | col_header=True | row_header=False | metadata=False
+Cell I54 | value='IFN-y' | fill=FFFFFF00 | rows=[53] | cols=[8] | col_header=True | row_header=False | metadata=False
+Cell J54 | value='LPS' | fill=FFFFFF00 | rows=[53] | cols=[9] | col_header=True | row_header=False | metadata=False
+Cell K54 | value='M2' | fill=FFFFFF00 | rows=[53] | cols=[10] | col_header=True | row_header=False | metadata=False
+Cell A55 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[54] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B55 | value='1' | fill=00000000 | rows=[54] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C55 | value='18' | fill=00000000 | rows=[54] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D55 | value='20' | fill=00000000 | rows=[54] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E55 | value='12' | fill=00000000 | rows=[54] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G55 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[54] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H55 | value='12' | fill=00000000 | rows=[54] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I55 | value='230' | fill=00000000 | rows=[54] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J55 | value='40' | fill=00000000 | rows=[54] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K55 | value='9' | fill=00000000 | rows=[54] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A56 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[55] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B56 | value='0' | fill=00000000 | rows=[55] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C56 | value='0' | fill=00000000 | rows=[55] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D56 | value='1' | fill=00000000 | rows=[55] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E56 | value='0' | fill=00000000 | rows=[55] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G56 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[55] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H56 | value='9' | fill=00000000 | rows=[55] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I56 | value='90' | fill=00000000 | rows=[55] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J56 | value='0' | fill=00000000 | rows=[55] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K56 | value='3' | fill=00000000 | rows=[55] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A57 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[56] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B57 | value='0' | fill=00000000 | rows=[56] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C57 | value='0' | fill=00000000 | rows=[56] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D57 | value='2' | fill=00000000 | rows=[56] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E57 | value='0' | fill=00000000 | rows=[56] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G57 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[56] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H57 | value='37' | fill=00000000 | rows=[56] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I57 | value='230' | fill=00000000 | rows=[56] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J57 | value='0' | fill=00000000 | rows=[56] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K57 | value='18' | fill=00000000 | rows=[56] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A58 | value='% Phagocytosis' | fill=FF00B050 | rows=[57] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B58 | value='0' | fill=00000000 | rows=[57] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C58 | value='0' | fill=00000000 | rows=[57] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D58 | value='5' | fill=00000000 | rows=[57] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E58 | value='0' | fill=00000000 | rows=[57] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G58 | value='% Phagocytosis' | fill=FF00B050 | rows=[57] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H58 | value='75' | fill=00000000 | rows=[57] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I58 | value='39.1304347826087' | fill=00000000 | rows=[57] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J58 | value='0' | fill=00000000 | rows=[57] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K58 | value='33.3333333333333' | fill=00000000 | rows=[57] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A60 | value='ROI 5' | fill=FF00B0F0 | rows=[59] | cols=[0, 1, 2, 3, 4] | col_header=False | row_header=False | metadata=True
+Cell G60 | value='ROI 6' | fill=FF00B0F0 | rows=[59] | cols=[6, 7, 8, 9, 10] | col_header=False | row_header=False | metadata=True
+Cell B61 | value='M0' | fill=FFFFFF00 | rows=[60] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C61 | value='IFN-y' | fill=FFFFFF00 | rows=[60] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D61 | value='LPS' | fill=FFFFFF00 | rows=[60] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E61 | value='M2' | fill=FFFFFF00 | rows=[60] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell H61 | value='M0' | fill=FFFFFF00 | rows=[60] | cols=[7] | col_header=True | row_header=False | metadata=False
+Cell I61 | value='IFN-y' | fill=FFFFFF00 | rows=[60] | cols=[8] | col_header=True | row_header=False | metadata=False
+Cell J61 | value='LPS' | fill=FFFFFF00 | rows=[60] | cols=[9] | col_header=True | row_header=False | metadata=False
+Cell K61 | value='M2' | fill=FFFFFF00 | rows=[60] | cols=[10] | col_header=True | row_header=False | metadata=False
+Cell A62 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[61] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B62 | value='7' | fill=00000000 | rows=[61] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C62 | value='38' | fill=00000000 | rows=[61] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D62 | value='16' | fill=00000000 | rows=[61] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E62 | value='4' | fill=00000000 | rows=[61] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G62 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[61] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H62 | value='0' | fill=00000000 | rows=[61] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I62 | value='28' | fill=00000000 | rows=[61] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J62 | value='47' | fill=00000000 | rows=[61] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K62 | value='8' | fill=00000000 | rows=[61] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A63 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[62] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B63 | value='5' | fill=00000000 | rows=[62] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C63 | value='26' | fill=00000000 | rows=[62] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D63 | value='0' | fill=00000000 | rows=[62] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E63 | value='0' | fill=00000000 | rows=[62] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G63 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[62] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H63 | value='0' | fill=00000000 | rows=[62] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I63 | value='22' | fill=00000000 | rows=[62] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J63 | value='8' | fill=00000000 | rows=[62] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K63 | value='0' | fill=00000000 | rows=[62] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A64 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[63] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B64 | value='21' | fill=00000000 | rows=[63] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C64 | value='116' | fill=00000000 | rows=[63] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D64 | value='0' | fill=00000000 | rows=[63] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E64 | value='0' | fill=00000000 | rows=[63] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G64 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[63] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H64 | value='0' | fill=00000000 | rows=[63] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I64 | value='82' | fill=00000000 | rows=[63] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J64 | value='38' | fill=00000000 | rows=[63] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K64 | value='0' | fill=00000000 | rows=[63] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A65 | value='% Phagocytosis' | fill=FF00B050 | rows=[64] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B65 | value='71.4285714285714' | fill=00000000 | rows=[64] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C65 | value='68.4210526315789' | fill=00000000 | rows=[64] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D65 | value='0' | fill=00000000 | rows=[64] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E65 | value='0' | fill=00000000 | rows=[64] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G65 | value='% Phagocytosis' | fill=FF00B050 | rows=[64] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H65 | value='#DIV/0!' | fill=00000000 | rows=[64] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I65 | value='78.5714285714286' | fill=00000000 | rows=[64] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J65 | value='17.0212765957447' | fill=00000000 | rows=[64] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K65 | value='0' | fill=00000000 | rows=[64] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A67 | value='Time = 90 min' | fill=FF00B0F0 | rows=[66] | cols=[0] | col_header=False | row_header=False | metadata=True
+Cell A68 | value='ROI 1' | fill=FF00B0F0 | rows=[67] | cols=[0, 1, 2, 3, 4] | col_header=False | row_header=False | metadata=True
+Cell G68 | value='ROI 2' | fill=FF00B0F0 | rows=[67] | cols=[6, 7, 8, 9, 10] | col_header=False | row_header=False | metadata=True
+Cell B69 | value='M0' | fill=FFFFFF00 | rows=[68] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C69 | value='IFN-y' | fill=FFFFFF00 | rows=[68] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D69 | value='LPS' | fill=FFFFFF00 | rows=[68] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E69 | value='M2' | fill=FFFFFF00 | rows=[68] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell H69 | value='M0' | fill=FFFFFF00 | rows=[68] | cols=[7] | col_header=True | row_header=False | metadata=False
+Cell I69 | value='IFN-y' | fill=FFFFFF00 | rows=[68] | cols=[8] | col_header=True | row_header=False | metadata=False
+Cell J69 | value='LPS' | fill=FFFFFF00 | rows=[68] | cols=[9] | col_header=True | row_header=False | metadata=False
+Cell K69 | value='M2' | fill=FFFFFF00 | rows=[68] | cols=[10] | col_header=True | row_header=False | metadata=False
+Cell A70 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[69] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B70 | value='5' | fill=00000000 | rows=[69] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C70 | value='4' | fill=00000000 | rows=[69] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D70 | value='0' | fill=00000000 | rows=[69] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E70 | value='26' | fill=00000000 | rows=[69] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G70 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[69] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H70 | value='1' | fill=00000000 | rows=[69] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I70 | value='26' | fill=00000000 | rows=[69] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J70 | value='17' | fill=00000000 | rows=[69] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K70 | value='11' | fill=00000000 | rows=[69] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A71 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[70] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B71 | value='3' | fill=00000000 | rows=[70] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C71 | value='0' | fill=00000000 | rows=[70] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D71 | value='0' | fill=00000000 | rows=[70] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E71 | value='0' | fill=00000000 | rows=[70] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G71 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[70] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H71 | value='0' | fill=00000000 | rows=[70] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I71 | value='0' | fill=00000000 | rows=[70] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J71 | value='0' | fill=00000000 | rows=[70] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K71 | value='0' | fill=00000000 | rows=[70] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A72 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[71] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B72 | value='9' | fill=00000000 | rows=[71] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C72 | value='0' | fill=00000000 | rows=[71] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D72 | value='0' | fill=00000000 | rows=[71] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E72 | value='0' | fill=00000000 | rows=[71] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G72 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[71] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H72 | value='0' | fill=00000000 | rows=[71] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I72 | value='0' | fill=00000000 | rows=[71] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J72 | value='0' | fill=00000000 | rows=[71] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K72 | value='0' | fill=00000000 | rows=[71] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A73 | value='% Phagocytosis' | fill=FF00B050 | rows=[72] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B73 | value='60' | fill=00000000 | rows=[72] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C73 | value='0' | fill=00000000 | rows=[72] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D73 | value='#DIV/0!' | fill=00000000 | rows=[72] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E73 | value='0' | fill=00000000 | rows=[72] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G73 | value='% Phagocytosis' | fill=00000000 | rows=[72] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H73 | value='0' | fill=00000000 | rows=[72] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I73 | value='0' | fill=00000000 | rows=[72] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J73 | value='0' | fill=00000000 | rows=[72] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K73 | value='0' | fill=00000000 | rows=[72] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A75 | value='ROI 3' | fill=FF00B0F0 | rows=[74] | cols=[0, 1, 2, 3, 4] | col_header=False | row_header=False | metadata=True
+Cell G75 | value='ROI 4' | fill=FF00B0F0 | rows=[74] | cols=[6, 7, 8, 9, 10] | col_header=False | row_header=False | metadata=True
+Cell B76 | value='M0' | fill=FFFFFF00 | rows=[75] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C76 | value='IFN-y' | fill=FFFFFF00 | rows=[75] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D76 | value='LPS' | fill=FFFFFF00 | rows=[75] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E76 | value='M2' | fill=FFFFFF00 | rows=[75] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell H76 | value='M0' | fill=FFFFFF00 | rows=[75] | cols=[7] | col_header=True | row_header=False | metadata=False
+Cell I76 | value='IFN-y' | fill=FFFFFF00 | rows=[75] | cols=[8] | col_header=True | row_header=False | metadata=False
+Cell J76 | value='LPS' | fill=FFFFFF00 | rows=[75] | cols=[9] | col_header=True | row_header=False | metadata=False
+Cell K76 | value='M2' | fill=FFFFFF00 | rows=[75] | cols=[10] | col_header=True | row_header=False | metadata=False
+Cell A77 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[76] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B77 | value='1' | fill=00000000 | rows=[76] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C77 | value='18' | fill=00000000 | rows=[76] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D77 | value='21' | fill=00000000 | rows=[76] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E77 | value='12' | fill=00000000 | rows=[76] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G77 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[76] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H77 | value='10' | fill=00000000 | rows=[76] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I77 | value='290' | fill=00000000 | rows=[76] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J77 | value='43' | fill=00000000 | rows=[76] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K77 | value='9' | fill=00000000 | rows=[76] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A78 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[77] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B78 | value='0' | fill=00000000 | rows=[77] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C78 | value='3' | fill=00000000 | rows=[77] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D78 | value='1' | fill=00000000 | rows=[77] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E78 | value='0' | fill=00000000 | rows=[77] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G78 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[77] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H78 | value='5' | fill=00000000 | rows=[77] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I78 | value='70' | fill=00000000 | rows=[77] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J78 | value='0' | fill=00000000 | rows=[77] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K78 | value='5' | fill=00000000 | rows=[77] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A79 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[78] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B79 | value='0' | fill=00000000 | rows=[78] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C79 | value='3' | fill=00000000 | rows=[78] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D79 | value='5' | fill=00000000 | rows=[78] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E79 | value='0' | fill=00000000 | rows=[78] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G79 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[78] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H79 | value='14' | fill=00000000 | rows=[78] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I79 | value='190' | fill=00000000 | rows=[78] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J79 | value='0' | fill=00000000 | rows=[78] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K79 | value='16' | fill=00000000 | rows=[78] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A80 | value='% Phagocytosis' | fill=FF00B050 | rows=[79] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B80 | value='0' | fill=00000000 | rows=[79] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C80 | value='16.6666666666667' | fill=00000000 | rows=[79] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D80 | value='4.76190476190476' | fill=00000000 | rows=[79] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E80 | value='0' | fill=00000000 | rows=[79] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G80 | value='% Phagocytosis' | fill=FF00B050 | rows=[79] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H80 | value='50' | fill=00000000 | rows=[79] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I80 | value='24.1379310344828' | fill=00000000 | rows=[79] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J80 | value='0' | fill=00000000 | rows=[79] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K80 | value='55.5555555555556' | fill=00000000 | rows=[79] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A82 | value='ROI 5' | fill=FF00B0F0 | rows=[81] | cols=[0, 1, 2, 3, 4] | col_header=False | row_header=False | metadata=True
+Cell G82 | value='ROI 6' | fill=FF00B0F0 | rows=[81] | cols=[6, 7, 8, 9, 10] | col_header=False | row_header=False | metadata=True
+Cell B83 | value='M0' | fill=FFFFFF00 | rows=[82] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C83 | value='IFN-y' | fill=FFFFFF00 | rows=[82] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D83 | value='LPS' | fill=FFFFFF00 | rows=[82] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E83 | value='M2' | fill=FFFFFF00 | rows=[82] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell H83 | value='M0' | fill=FFFFFF00 | rows=[82] | cols=[7] | col_header=True | row_header=False | metadata=False
+Cell I83 | value='IFN-y' | fill=FFFFFF00 | rows=[82] | cols=[8] | col_header=True | row_header=False | metadata=False
+Cell J83 | value='LPS' | fill=FFFFFF00 | rows=[82] | cols=[9] | col_header=True | row_header=False | metadata=False
+Cell K83 | value='M2' | fill=FFFFFF00 | rows=[82] | cols=[10] | col_header=True | row_header=False | metadata=False
+Cell A84 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[83] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B84 | value='7' | fill=00000000 | rows=[83] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C84 | value='33' | fill=00000000 | rows=[83] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D84 | value='26' | fill=00000000 | rows=[83] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E84 | value='4' | fill=00000000 | rows=[83] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G84 | value='Number of M1 per FOV' | fill=FF00B050 | rows=[83] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H84 | value='0' | fill=00000000 | rows=[83] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I84 | value='26' | fill=00000000 | rows=[83] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J84 | value='47' | fill=00000000 | rows=[83] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K84 | value='8' | fill=00000000 | rows=[83] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A85 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[84] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B85 | value='0' | fill=00000000 | rows=[84] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C85 | value='14' | fill=00000000 | rows=[84] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D85 | value='0' | fill=00000000 | rows=[84] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E85 | value='0' | fill=00000000 | rows=[84] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G85 | value='Number of M1 phagocytosising' | fill=FF00B050 | rows=[84] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H85 | value='0' | fill=00000000 | rows=[84] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I85 | value='24' | fill=00000000 | rows=[84] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J85 | value='3' | fill=00000000 | rows=[84] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K85 | value='0' | fill=00000000 | rows=[84] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A86 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[85] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B86 | value='0' | fill=00000000 | rows=[85] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C86 | value='49' | fill=00000000 | rows=[85] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D86 | value='0' | fill=00000000 | rows=[85] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E86 | value='0' | fill=00000000 | rows=[85] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G86 | value='Number of Engulfed Cells' | fill=FF00B050 | rows=[85] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H86 | value='0' | fill=00000000 | rows=[85] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I86 | value='90' | fill=00000000 | rows=[85] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J86 | value='6' | fill=00000000 | rows=[85] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K86 | value='0' | fill=00000000 | rows=[85] | cols=[10] | col_header=False | row_header=False | metadata=False
+Cell A87 | value='% Phagocytosis' | fill=FF00B050 | rows=[86] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B87 | value='0' | fill=00000000 | rows=[86] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C87 | value='42.4242424242424' | fill=00000000 | rows=[86] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D87 | value='0' | fill=00000000 | rows=[86] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E87 | value='0' | fill=00000000 | rows=[86] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G87 | value='% Phagocytosis' | fill=FF00B050 | rows=[86] | cols=[6] | col_header=False | row_header=True | metadata=False
+Cell H87 | value='#DIV/0!' | fill=00000000 | rows=[86] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell I87 | value='92.3076923076923' | fill=00000000 | rows=[86] | cols=[8] | col_header=False | row_header=False | metadata=False
+Cell J87 | value='6.38297872340426' | fill=00000000 | rows=[86] | cols=[9] | col_header=False | row_header=False | metadata=False
+Cell K87 | value='0' | fill=00000000 | rows=[86] | cols=[10] | col_header=False | row_header=False | metadata=False
+

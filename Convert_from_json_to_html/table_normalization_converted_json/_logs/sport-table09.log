@@ -1,0 +1,656 @@
+=== sport-table09.xlsx ===
+Cell A1 | value='league' | fill=FFFFFF00 | rows=[0] | cols=[0] | col_header=True | row_header=True | metadata=False
+Cell B1 | value='gametime' | fill=FFFFFF00 | rows=[0] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C1 | value='gamedate' | fill=FFFFFF00 | rows=[0] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D1 | value='home' | fill=FFFFFF00 | rows=[0] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E1 | value='positionH' | fill=FFFFFF00 | rows=[0] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell F1 | value='versus' | fill=FF00B0F0 | rows=[0] | cols=[5] | col_header=False | row_header=False | metadata=True
+Cell G1 | value='away' | fill=FFFFFF00 | rows=[0] | cols=[6] | col_header=True | row_header=False | metadata=False
+Cell H1 | value='positionA' | fill=FFFFFF00 | rows=[0] | cols=[7] | col_header=True | row_header=False | metadata=False
+Cell A2 | value='ARGENTINA>SUPERLIGA ARGENTINA' | fill=00000000 | rows=[1, 2, 3, 4, 5] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B2 | value='01:05' | fill=00000000 | rows=[1] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C2 | value='01/10/2017' | fill=00000000 | rows=[1] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D2 | value='ARGENTINOS JRS' | fill=00000000 | rows=[1] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E2 | value='26' | fill=00000000 | rows=[1] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G2 | value='RACING CLUB' | fill=00000000 | rows=[1] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H2 | value='14' | fill=00000000 | rows=[1] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B3 | value='16:05' | fill=00000000 | rows=[2] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C3 | value='01/10/2017' | fill=00000000 | rows=[2] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D3 | value='TALLERES CORDOBA' | fill=00000000 | rows=[2] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E3 | value='10' | fill=00000000 | rows=[2] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G3 | value='PATRONATO' | fill=00000000 | rows=[2] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H3 | value='5' | fill=00000000 | rows=[2] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B4 | value='19:05' | fill=00000000 | rows=[3] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C4 | value='01/10/2017' | fill=00000000 | rows=[3] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D4 | value='SAN MARTIN S.J.' | fill=00000000 | rows=[3] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E4 | value='19' | fill=00000000 | rows=[3] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G4 | value='ROSARIO CENTRAL' | fill=00000000 | rows=[3] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H4 | value='23' | fill=00000000 | rows=[3] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B5 | value='21:05' | fill=00000000 | rows=[4] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C5 | value='01/10/2017' | fill=00000000 | rows=[4] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D5 | value='INDEPENDIENTE' | fill=00000000 | rows=[4] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E5 | value='17' | fill=00000000 | rows=[4] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G5 | value='VELEZ SARSFIELD' | fill=00000000 | rows=[4] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H5 | value='11' | fill=00000000 | rows=[4] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B6 | value='23:05' | fill=00000000 | rows=[5] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C6 | value='01/10/2017' | fill=00000000 | rows=[5] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D6 | value='BOCA JUNIORS' | fill=00000000 | rows=[5] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E6 | value='1' | fill=00000000 | rows=[5] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G6 | value='CHACARITA JUNIORS' | fill=00000000 | rows=[5] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H6 | value='24' | fill=00000000 | rows=[5] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A7 | value='AUSTRIA>BUNDESLIGA' | fill=00000000 | rows=[6, 7] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B7 | value='16:30' | fill=00000000 | rows=[6] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C7 | value='01/10/2017' | fill=00000000 | rows=[6] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D7 | value='AUSTRIA VIENNA' | fill=00000000 | rows=[6] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E7 | value='3' | fill=00000000 | rows=[6] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G7 | value='SCR ALTACH' | fill=00000000 | rows=[6] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H7 | value='7' | fill=00000000 | rows=[6] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B8 | value='19:00' | fill=00000000 | rows=[7] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C8 | value='01/10/2017' | fill=00000000 | rows=[7] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D8 | value='RED BULL SALZBURG' | fill=00000000 | rows=[7] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E8 | value='2' | fill=00000000 | rows=[7] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G8 | value='WOLFSBERGER AC' | fill=00000000 | rows=[7] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H8 | value='8' | fill=00000000 | rows=[7] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A9 | value='BELARUS>DIVISION 1' | fill=00000000 | rows=[8, 9, 10] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B9 | value='13:00' | fill=00000000 | rows=[8] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C9 | value='01/10/2017' | fill=00000000 | rows=[8] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D9 | value='FC SLUTSK' | fill=00000000 | rows=[8] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E9 | value='7' | fill=00000000 | rows=[8] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G9 | value='SHAKHTER SOLIGORSK' | fill=00000000 | rows=[8] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H9 | value='1' | fill=00000000 | rows=[8] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B10 | value='15:00' | fill=00000000 | rows=[9] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C10 | value='01/10/2017' | fill=00000000 | rows=[9] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D10 | value='DINAMO MINSK' | fill=00000000 | rows=[9] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E10 | value='2' | fill=00000000 | rows=[9] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G10 | value='BATE BORISOV' | fill=00000000 | rows=[9] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H10 | value='3' | fill=00000000 | rows=[9] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B11 | value='17:00' | fill=00000000 | rows=[10] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C11 | value='01/10/2017' | fill=00000000 | rows=[10] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D11 | value='TORPEDO ZHODINO' | fill=00000000 | rows=[10] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E11 | value='4' | fill=00000000 | rows=[10] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G11 | value='GORODEYA' | fill=00000000 | rows=[10] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H11 | value='9' | fill=00000000 | rows=[10] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A12 | value='BELGIUM>FIRST DIVISION A' | fill=00000000 | rows=[11, 12, 13] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B12 | value='14:30' | fill=00000000 | rows=[11] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C12 | value='01/10/2017' | fill=00000000 | rows=[11] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D12 | value='CLUB BRUGGE' | fill=00000000 | rows=[11] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E12 | value='1' | fill=00000000 | rows=[11] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G12 | value='GENT' | fill=00000000 | rows=[11] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H12 | value='14' | fill=00000000 | rows=[11] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B13 | value='18:00' | fill=00000000 | rows=[12] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C13 | value='01/10/2017' | fill=00000000 | rows=[12] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D13 | value='ANDERLECHT' | fill=00000000 | rows=[12] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E13 | value='7' | fill=00000000 | rows=[12] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G13 | value='STANDARD LIEGE' | fill=00000000 | rows=[12] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H13 | value='11' | fill=00000000 | rows=[12] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B14 | value='20:00' | fill=00000000 | rows=[13] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C14 | value='01/10/2017' | fill=00000000 | rows=[13] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D14 | value='ZULTE-WAREGEM' | fill=00000000 | rows=[13] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E14 | value='3' | fill=00000000 | rows=[13] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G14 | value='LOKEREN' | fill=00000000 | rows=[13] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H14 | value='12' | fill=00000000 | rows=[13] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A15 | value='BRAZIL>SERIE A' | fill=00000000 | rows=[14, 15, 16, 17, 18, 19] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B15 | value='00:00' | fill=00000000 | rows=[14] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C15 | value='01/10/2017' | fill=00000000 | rows=[14] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D15 | value='PALMEIRAS' | fill=00000000 | rows=[14] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E15 | value='4' | fill=00000000 | rows=[14] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G15 | value='SANTOS' | fill=00000000 | rows=[14] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H15 | value='2' | fill=00000000 | rows=[14] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B16 | value='21:00' | fill=00000000 | rows=[15] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C16 | value='01/10/2017' | fill=00000000 | rows=[15] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D16 | value='AVAI' | fill=00000000 | rows=[15] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E16 | value='15' | fill=00000000 | rows=[15] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G16 | value='ATLETICO GOIANIENSE' | fill=00000000 | rows=[15] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H16 | value='20' | fill=00000000 | rows=[15] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B17 | value='21:00' | fill=00000000 | rows=[16] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C17 | value='01/10/2017' | fill=00000000 | rows=[16] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D17 | value='BOTAFOGO' | fill=00000000 | rows=[16] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E17 | value='6' | fill=00000000 | rows=[16] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G17 | value='VITORIA' | fill=00000000 | rows=[16] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H17 | value='16' | fill=00000000 | rows=[16] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B18 | value='21:00' | fill=00000000 | rows=[17] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C18 | value='01/10/2017' | fill=00000000 | rows=[17] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D18 | value='CRUZEIRO' | fill=00000000 | rows=[17] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E18 | value='5' | fill=00000000 | rows=[17] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G18 | value='CORINTHIANS' | fill=00000000 | rows=[17] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H18 | value='1' | fill=00000000 | rows=[17] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B19 | value='21:00' | fill=00000000 | rows=[18] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C19 | value='01/10/2017' | fill=00000000 | rows=[18] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D19 | value='GREMIO' | fill=00000000 | rows=[18] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E19 | value='3' | fill=00000000 | rows=[18] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G19 | value='FLUMINENSE' | fill=00000000 | rows=[18] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H19 | value='11' | fill=00000000 | rows=[18] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B20 | value='21:00' | fill=00000000 | rows=[19] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C20 | value='01/10/2017' | fill=00000000 | rows=[19] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D20 | value='SAO PAULO' | fill=00000000 | rows=[19] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E20 | value='17' | fill=00000000 | rows=[19] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G20 | value='SPORT RECIFE' | fill=00000000 | rows=[19] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H20 | value='14' | fill=00000000 | rows=[19] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A21 | value='COLOMBIA>CLAUSURA' | fill=00000000 | rows=[20, 21, 22] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B21 | value='01:00' | fill=00000000 | rows=[20] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C21 | value='01/10/2017' | fill=00000000 | rows=[20] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D21 | value='ATLETICO NACIONAL' | fill=00000000 | rows=[20] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E21 | value='2' | fill=00000000 | rows=[20] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G21 | value='HUILA' | fill=00000000 | rows=[20] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H21 | value='14' | fill=00000000 | rows=[20] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B22 | value='02:45' | fill=00000000 | rows=[21] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C22 | value='01/10/2017' | fill=00000000 | rows=[21] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D22 | value='JUNIOR' | fill=00000000 | rows=[21] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E22 | value='3' | fill=00000000 | rows=[21] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G22 | value='DEPORTIVO CALI' | fill=00000000 | rows=[21] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H22 | value='8' | fill=00000000 | rows=[21] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B23 | value='22:15' | fill=00000000 | rows=[22] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C23 | value='01/10/2017' | fill=00000000 | rows=[22] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D23 | value='JAGUARES' | fill=00000000 | rows=[22] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E23 | value='12' | fill=00000000 | rows=[22] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G23 | value='TIGRES FC' | fill=00000000 | rows=[22] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H23 | value='11' | fill=00000000 | rows=[22] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A24 | value='DENMARK>SUPERLIGAEN' | fill=00000000 | rows=[23, 24, 25, 26] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B24 | value='12:00' | fill=00000000 | rows=[23] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C24 | value='01/10/2017' | fill=00000000 | rows=[23] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D24 | value='SILKEBORG' | fill=00000000 | rows=[23] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E24 | value='11' | fill=00000000 | rows=[23] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G24 | value='FC NORDSJAELLAND' | fill=00000000 | rows=[23] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H24 | value='1' | fill=00000000 | rows=[23] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B25 | value='14:00' | fill=00000000 | rows=[24] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C25 | value='01/10/2017' | fill=00000000 | rows=[24] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D25 | value='FC MIDTJYLLAND' | fill=00000000 | rows=[24] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E25 | value='2' | fill=00000000 | rows=[24] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G25 | value='AALBORG' | fill=00000000 | rows=[24] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H25 | value='9' | fill=00000000 | rows=[24] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B26 | value='16:00' | fill=00000000 | rows=[25] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C26 | value='01/10/2017' | fill=00000000 | rows=[25] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D26 | value='BRONDBY' | fill=00000000 | rows=[25] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E26 | value='5' | fill=00000000 | rows=[25] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G26 | value='SONDERJYSKE' | fill=00000000 | rows=[25] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H26 | value='10' | fill=00000000 | rows=[25] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B27 | value='18:00' | fill=00000000 | rows=[26] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C27 | value='01/10/2017' | fill=00000000 | rows=[26] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D27 | value='LYNGBY' | fill=00000000 | rows=[26] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E27 | value='12' | fill=00000000 | rows=[26] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G27 | value='FC COPENHAGEN' | fill=00000000 | rows=[26] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H27 | value='4' | fill=00000000 | rows=[26] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A28 | value='ENGLAND>PREMIER LEAGUE' | fill=00000000 | rows=[27, 28, 29] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B28 | value='13:00' | fill=00000000 | rows=[27] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C28 | value='01/10/2017' | fill=00000000 | rows=[27] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D28 | value='ARSENAL' | fill=00000000 | rows=[27] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E28 | value='7' | fill=00000000 | rows=[27] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G28 | value='BRIGHTON' | fill=00000000 | rows=[27] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H28 | value='14' | fill=00000000 | rows=[27] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B29 | value='15:15' | fill=00000000 | rows=[28] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C29 | value='01/10/2017' | fill=00000000 | rows=[28] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D29 | value='EVERTON' | fill=00000000 | rows=[28] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E29 | value='16' | fill=00000000 | rows=[28] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G29 | value='BURNLEY' | fill=00000000 | rows=[28] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H29 | value='8' | fill=00000000 | rows=[28] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B30 | value='17:30' | fill=00000000 | rows=[29] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C30 | value='01/10/2017' | fill=00000000 | rows=[29] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D30 | value='NEWCASTLE' | fill=00000000 | rows=[29] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E30 | value='9' | fill=00000000 | rows=[29] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G30 | value='LIVERPOOL' | fill=00000000 | rows=[29] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H30 | value='6' | fill=00000000 | rows=[29] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A31 | value='FINLAND>VEIKKAUSLIIGA' | fill=00000000 | rows=[30] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B31 | value='17:30' | fill=00000000 | rows=[30] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C31 | value='01/10/2017' | fill=00000000 | rows=[30] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D31 | value='IFK MARIEHAMN' | fill=00000000 | rows=[30] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E31 | value='6' | fill=00000000 | rows=[30] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G31 | value='SJK' | fill=00000000 | rows=[30] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H31 | value='5' | fill=00000000 | rows=[30] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A32 | value='FRANCE>LIGUE 1' | fill=00000000 | rows=[31, 32, 33] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B32 | value='15:00' | fill=00000000 | rows=[31] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C32 | value='01/10/2017' | fill=00000000 | rows=[31] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D32 | value='ESTAC TROYES' | fill=00000000 | rows=[31] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E32 | value='13' | fill=00000000 | rows=[31] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G32 | value='ST ETIENNE' | fill=00000000 | rows=[31] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H32 | value='4' | fill=00000000 | rows=[31] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B33 | value='17:00' | fill=00000000 | rows=[32] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C33 | value='01/10/2017' | fill=00000000 | rows=[32] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D33 | value='ANGERS' | fill=00000000 | rows=[32] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E33 | value='12' | fill=00000000 | rows=[32] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G33 | value='LYON' | fill=00000000 | rows=[32] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H33 | value='7' | fill=00000000 | rows=[32] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B34 | value='21:00' | fill=00000000 | rows=[33] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C34 | value='01/10/2017' | fill=00000000 | rows=[33] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D34 | value='NICE' | fill=00000000 | rows=[33] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E34 | value='9' | fill=00000000 | rows=[33] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G34 | value='MARSEILLE' | fill=00000000 | rows=[33] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H34 | value='5' | fill=00000000 | rows=[33] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A35 | value='GERMANY>BUNDESLIGA' | fill=00000000 | rows=[34, 35, 36] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B35 | value='13:30' | fill=00000000 | rows=[34] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C35 | value='01/10/2017' | fill=00000000 | rows=[34] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D35 | value='SC FREIBURG' | fill=00000000 | rows=[34] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E35 | value='16' | fill=00000000 | rows=[34] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G35 | value='1899 HOFFENHEIM' | fill=00000000 | rows=[34] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H35 | value='2' | fill=00000000 | rows=[34] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B36 | value='15:30' | fill=00000000 | rows=[35] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C36 | value='01/10/2017' | fill=00000000 | rows=[35] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D36 | value='HERTHA BERLIN' | fill=00000000 | rows=[35] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E36 | value='11' | fill=00000000 | rows=[35] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G36 | value='BAYERN MUNICH' | fill=00000000 | rows=[35] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H36 | value='3' | fill=00000000 | rows=[35] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B37 | value='18:00' | fill=00000000 | rows=[36] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C37 | value='01/10/2017' | fill=00000000 | rows=[36] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D37 | value='FC KOLN' | fill=00000000 | rows=[36] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E37 | value='18' | fill=00000000 | rows=[36] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G37 | value='RB LEIPZIG' | fill=00000000 | rows=[36] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H37 | value='7' | fill=00000000 | rows=[36] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A38 | value='GREECE>SUPER LEAGUE' | fill=00000000 | rows=[37, 38, 39, 40] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B38 | value='15:00' | fill=00000000 | rows=[37] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C38 | value='01/10/2017' | fill=00000000 | rows=[37] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D38 | value='OLYMPIAKOS PIRAEUS' | fill=00000000 | rows=[37] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E38 | value='4' | fill=00000000 | rows=[37] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G38 | value='ATROMITOS ATHINON' | fill=00000000 | rows=[37] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H38 | value='6' | fill=00000000 | rows=[37] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B39 | value='17:15' | fill=00000000 | rows=[38] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C39 | value='01/10/2017' | fill=00000000 | rows=[38] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D39 | value='A.O.K. KERKYRA' | fill=00000000 | rows=[38] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E39 | value='11' | fill=00000000 | rows=[38] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G39 | value='XANTHI FC' | fill=00000000 | rows=[38] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H39 | value='8' | fill=00000000 | rows=[38] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B40 | value='17:15' | fill=00000000 | rows=[39] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C40 | value='01/10/2017' | fill=00000000 | rows=[39] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D40 | value='LEVADIAKOS' | fill=00000000 | rows=[39] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E40 | value='7' | fill=00000000 | rows=[39] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G40 | value='APOLLON SMIRNIS' | fill=00000000 | rows=[39] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H40 | value='16' | fill=00000000 | rows=[39] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B41 | value='19:30' | fill=00000000 | rows=[40] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C41 | value='01/10/2017' | fill=00000000 | rows=[40] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D41 | value='ASTERAS TRIPOLIS' | fill=00000000 | rows=[40] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E41 | value='14' | fill=00000000 | rows=[40] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G41 | value='AEK ATHENS' | fill=00000000 | rows=[40] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H41 | value='1' | fill=00000000 | rows=[40] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A42 | value='ITALY>SERIE A' | fill=00000000 | rows=[41, 42, 43, 44, 45, 46, 47, 48] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B42 | value='12:30' | fill=00000000 | rows=[41] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C42 | value='01/10/2017' | fill=00000000 | rows=[41] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D42 | value='NAPOLI' | fill=00000000 | rows=[41] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E42 | value='1' | fill=00000000 | rows=[41] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G42 | value='CAGLIARI' | fill=00000000 | rows=[41] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H42 | value='13' | fill=00000000 | rows=[41] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B43 | value='15:00' | fill=00000000 | rows=[42] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C43 | value='01/10/2017' | fill=00000000 | rows=[42] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D43 | value='BENEVENTO' | fill=00000000 | rows=[42] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E43 | value='20' | fill=00000000 | rows=[42] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G43 | value='INTER' | fill=00000000 | rows=[42] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H43 | value='3' | fill=00000000 | rows=[42] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B44 | value='15:00' | fill=00000000 | rows=[43] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C44 | value='01/10/2017' | fill=00000000 | rows=[43] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D44 | value='CHIEVO' | fill=00000000 | rows=[43] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E44 | value='10' | fill=00000000 | rows=[43] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G44 | value='FIORENTINA' | fill=00000000 | rows=[43] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H44 | value='12' | fill=00000000 | rows=[43] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B45 | value='15:00' | fill=00000000 | rows=[44] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C45 | value='01/10/2017' | fill=00000000 | rows=[44] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D45 | value='LAZIO' | fill=00000000 | rows=[44] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E45 | value='4' | fill=00000000 | rows=[44] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G45 | value='SASSUOLO' | fill=00000000 | rows=[44] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H45 | value='15' | fill=00000000 | rows=[44] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B46 | value='15:00' | fill=00000000 | rows=[45] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C46 | value='01/10/2017' | fill=00000000 | rows=[45] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D46 | value='SPAL' | fill=00000000 | rows=[45] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E46 | value='14' | fill=00000000 | rows=[45] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G46 | value='CROTONE' | fill=00000000 | rows=[45] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H46 | value='16' | fill=00000000 | rows=[45] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B47 | value='15:00' | fill=00000000 | rows=[46] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C47 | value='01/10/2017' | fill=00000000 | rows=[46] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D47 | value='TORINO' | fill=00000000 | rows=[46] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E47 | value='8' | fill=00000000 | rows=[46] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G47 | value='VERONA' | fill=00000000 | rows=[46] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H47 | value='19' | fill=00000000 | rows=[46] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B48 | value='18:00' | fill=00000000 | rows=[47] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C48 | value='01/10/2017' | fill=00000000 | rows=[47] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D48 | value='AC MILAN' | fill=00000000 | rows=[47] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E48 | value='6' | fill=00000000 | rows=[47] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G48 | value='ROMA' | fill=00000000 | rows=[47] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H48 | value='5' | fill=00000000 | rows=[47] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B49 | value='20:45' | fill=00000000 | rows=[48] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C49 | value='01/10/2017' | fill=00000000 | rows=[48] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D49 | value='ATALANTA' | fill=00000000 | rows=[48] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E49 | value='9' | fill=00000000 | rows=[48] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G49 | value='JUVENTUS' | fill=00000000 | rows=[48] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H49 | value='2' | fill=00000000 | rows=[48] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A50 | value='ITALY>SERIE B' | fill=00000000 | rows=[49] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B50 | value='15:00' | fill=00000000 | rows=[49] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C50 | value='01/10/2017' | fill=00000000 | rows=[49] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D50 | value='FOGGIA' | fill=00000000 | rows=[49] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E50 | value='19' | fill=00000000 | rows=[49] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G50 | value='NOVARA' | fill=00000000 | rows=[49] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H50 | value='18' | fill=00000000 | rows=[49] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A51 | value='JAPAN>J1 LEAGUE' | fill=00000000 | rows=[50] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B51 | value='07:00' | fill=00000000 | rows=[50] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C51 | value='01/10/2017' | fill=00000000 | rows=[50] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D51 | value='VEGALTA SENDAI' | fill=00000000 | rows=[50] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E51 | value='12' | fill=00000000 | rows=[50] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G51 | value='URAWA RED DIAMONDS' | fill=00000000 | rows=[50] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H51 | value='7' | fill=00000000 | rows=[50] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A52 | value='NETHERLANDS>EREDIVISIE' | fill=00000000 | rows=[51, 52, 53, 54] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B52 | value='12:30' | fill=00000000 | rows=[51] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C52 | value='01/10/2017' | fill=00000000 | rows=[51] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D52 | value='AZ ALKMAAR' | fill=00000000 | rows=[51] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E52 | value='5' | fill=00000000 | rows=[51] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G52 | value='FEYENOORD' | fill=00000000 | rows=[51] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H52 | value='4' | fill=00000000 | rows=[51] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B53 | value='14:30' | fill=00000000 | rows=[52] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C53 | value='01/10/2017' | fill=00000000 | rows=[52] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D53 | value='HEERENVEEN' | fill=00000000 | rows=[52] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E53 | value='2' | fill=00000000 | rows=[52] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G53 | value='AJAX' | fill=00000000 | rows=[52] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H53 | value='7' | fill=00000000 | rows=[52] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B54 | value='14:30' | fill=00000000 | rows=[53] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C54 | value='01/10/2017' | fill=00000000 | rows=[53] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D54 | value='VITESSE' | fill=00000000 | rows=[53] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E54 | value='3' | fill=00000000 | rows=[53] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G54 | value='UTRECHT' | fill=00000000 | rows=[53] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H54 | value='9' | fill=00000000 | rows=[53] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B55 | value='16:45' | fill=00000000 | rows=[54] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C55 | value='01/10/2017' | fill=00000000 | rows=[54] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D55 | value='SPARTA ROTTERDAM' | fill=00000000 | rows=[54] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E55 | value='16' | fill=00000000 | rows=[54] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G55 | value='RODA' | fill=00000000 | rows=[54] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H55 | value='18' | fill=00000000 | rows=[54] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A56 | value='NORWAY>ELITESERIEN' | fill=00000000 | rows=[55, 56, 57, 58, 59, 60] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B56 | value='18:00' | fill=00000000 | rows=[55] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C56 | value='01/10/2017' | fill=00000000 | rows=[55] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D56 | value='ODD BALLKLUBB' | fill=00000000 | rows=[55] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E56 | value='7' | fill=00000000 | rows=[55] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G56 | value='HAUGESUND' | fill=00000000 | rows=[55] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H56 | value='5' | fill=00000000 | rows=[55] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B57 | value='18:00' | fill=00000000 | rows=[56] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C57 | value='01/10/2017' | fill=00000000 | rows=[56] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D57 | value='SANDEFJORD' | fill=00000000 | rows=[56] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E57 | value='8' | fill=00000000 | rows=[56] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G57 | value='AALESUND' | fill=00000000 | rows=[56] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H57 | value='14' | fill=00000000 | rows=[56] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B58 | value='18:00' | fill=00000000 | rows=[57] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C58 | value='01/10/2017' | fill=00000000 | rows=[57] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D58 | value='SOGNDAL' | fill=00000000 | rows=[57] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E58 | value='13' | fill=00000000 | rows=[57] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G58 | value='MOLDE' | fill=00000000 | rows=[57] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H58 | value='4' | fill=00000000 | rows=[57] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B59 | value='18:00' | fill=00000000 | rows=[58] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C59 | value='01/10/2017' | fill=00000000 | rows=[58] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D59 | value='TROMSO' | fill=00000000 | rows=[58] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E59 | value='15' | fill=00000000 | rows=[58] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G59 | value='LILLESTROM' | fill=00000000 | rows=[58] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H59 | value='11' | fill=00000000 | rows=[58] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B60 | value='18:00' | fill=00000000 | rows=[59] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C60 | value='01/10/2017' | fill=00000000 | rows=[59] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D60 | value='VIKING' | fill=00000000 | rows=[59] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E60 | value='16' | fill=00000000 | rows=[59] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G60 | value='STROMSGODSET' | fill=00000000 | rows=[59] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H60 | value='6' | fill=00000000 | rows=[59] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B61 | value='20:00' | fill=00000000 | rows=[60] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C61 | value='01/10/2017' | fill=00000000 | rows=[60] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D61 | value='ROSENBORG' | fill=00000000 | rows=[60] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E61 | value='1' | fill=00000000 | rows=[60] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G61 | value='SARPSBORG 08 FF' | fill=00000000 | rows=[60] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H61 | value='2' | fill=00000000 | rows=[60] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A62 | value='PERU>CLAUSURA' | fill=00000000 | rows=[61, 62, 63] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B62 | value='18:00' | fill=00000000 | rows=[61] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C62 | value='01/10/2017' | fill=00000000 | rows=[61] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D62 | value='AYACUCHO FC' | fill=00000000 | rows=[61] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E62 | value='15' | fill=00000000 | rows=[61] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G62 | value='SPORTING CRISTAL' | fill=00000000 | rows=[61] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H62 | value='11' | fill=00000000 | rows=[61] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B63 | value='18:30' | fill=00000000 | rows=[62] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C63 | value='01/10/2017' | fill=00000000 | rows=[62] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D63 | value='FBC MELGAR' | fill=00000000 | rows=[62] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E63 | value='5' | fill=00000000 | rows=[62] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G63 | value='SPORT ROSARIO' | fill=00000000 | rows=[62] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H63 | value='13' | fill=00000000 | rows=[62] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B64 | value='20:30' | fill=00000000 | rows=[63] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C64 | value='01/10/2017' | fill=00000000 | rows=[63] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D64 | value='REAL GARCILASO' | fill=00000000 | rows=[63] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E64 | value='2' | fill=00000000 | rows=[63] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G64 | value='ACADEMIA CANTOLAO' | fill=00000000 | rows=[63] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H64 | value='14' | fill=00000000 | rows=[63] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A65 | value='POLAND>EKSTRAKLASA' | fill=00000000 | rows=[64, 65, 66] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B65 | value='15:30' | fill=00000000 | rows=[64] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C65 | value='01/10/2017' | fill=00000000 | rows=[64] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D65 | value='GORNIK ZABRZE' | fill=00000000 | rows=[64] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E65 | value='1' | fill=00000000 | rows=[64] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G65 | value='PIAST GLIWICE' | fill=00000000 | rows=[64] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H65 | value='15' | fill=00000000 | rows=[64] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B66 | value='15:30' | fill=00000000 | rows=[65] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C66 | value='01/10/2017' | fill=00000000 | rows=[65] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D66 | value='WISLA PLOCK' | fill=00000000 | rows=[65] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E66 | value='11' | fill=00000000 | rows=[65] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G66 | value='TERMALICA NIECIECZA' | fill=00000000 | rows=[65] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H66 | value='14' | fill=00000000 | rows=[65] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B67 | value='18:00' | fill=00000000 | rows=[66] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C67 | value='01/10/2017' | fill=00000000 | rows=[66] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D67 | value='LECH POZNAN' | fill=00000000 | rows=[66] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E67 | value='3' | fill=00000000 | rows=[66] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G67 | value='LEGIA WARSZAWA' | fill=00000000 | rows=[66] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H67 | value='6' | fill=00000000 | rows=[66] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A68 | value='PORTUGAL>PRIMEIRA LIGA' | fill=00000000 | rows=[67, 68, 69, 70] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B68 | value='18:15' | fill=00000000 | rows=[67] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C68 | value='01/10/2017' | fill=00000000 | rows=[67] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D68 | value='SC BRAGA' | fill=00000000 | rows=[67] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E68 | value='5' | fill=00000000 | rows=[67] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G68 | value='ESTORIL' | fill=00000000 | rows=[67] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H68 | value='16' | fill=00000000 | rows=[67] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B69 | value='20:15' | fill=00000000 | rows=[68] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C69 | value='01/10/2017' | fill=00000000 | rows=[68] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D69 | value='SPORTING CP' | fill=00000000 | rows=[68] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E69 | value='2' | fill=00000000 | rows=[68] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G69 | value='FC PORTO' | fill=00000000 | rows=[68] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H69 | value='1' | fill=00000000 | rows=[68] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B70 | value='22:30' | fill=00000000 | rows=[69] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C70 | value='01/10/2017' | fill=00000000 | rows=[69] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D70 | value='BELENENSES' | fill=00000000 | rows=[69] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E70 | value='7' | fill=00000000 | rows=[69] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G70 | value='GUIMARAES' | fill=00000000 | rows=[69] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H70 | value='8' | fill=00000000 | rows=[69] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B71 | value='22:30' | fill=00000000 | rows=[70] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C71 | value='01/10/2017' | fill=00000000 | rows=[70] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D71 | value='MARITIMO' | fill=00000000 | rows=[70] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E71 | value='4' | fill=00000000 | rows=[70] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G71 | value='BENFICA' | fill=00000000 | rows=[70] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H71 | value='3' | fill=00000000 | rows=[70] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A72 | value='SOUTH KOREA>K LEAGUE' | fill=00000000 | rows=[71, 72, 73] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B72 | value='08:00' | fill=00000000 | rows=[71] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C72 | value='01/10/2017' | fill=00000000 | rows=[71] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D72 | value='GANGWON FC' | fill=00000000 | rows=[71] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E72 | value='6' | fill=00000000 | rows=[71] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G72 | value='ULSAN HYUNDAI FC' | fill=00000000 | rows=[71] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H72 | value='3' | fill=00000000 | rows=[71] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B73 | value='08:00' | fill=00000000 | rows=[72] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C73 | value='01/10/2017' | fill=00000000 | rows=[72] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D73 | value='JEJU UNITED FC' | fill=00000000 | rows=[72] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E73 | value='2' | fill=00000000 | rows=[72] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G73 | value='GWANGJU FC' | fill=00000000 | rows=[72] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H73 | value='12' | fill=00000000 | rows=[72] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B74 | value='08:00' | fill=00000000 | rows=[73] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C74 | value='01/10/2017' | fill=00000000 | rows=[73] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D74 | value='SUWON BLUEWINGS' | fill=00000000 | rows=[73] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E74 | value='4' | fill=00000000 | rows=[73] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G74 | value='JEONBUK MOTORS' | fill=00000000 | rows=[73] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H74 | value='1' | fill=00000000 | rows=[73] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A75 | value='SPAIN>PRIMERA DIVISION' | fill=00000000 | rows=[74, 75, 76, 77, 78] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B75 | value='12:00' | fill=00000000 | rows=[74] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C75 | value='01/10/2017' | fill=00000000 | rows=[74] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D75 | value='REAL SOCIEDAD' | fill=00000000 | rows=[74] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E75 | value='8' | fill=00000000 | rows=[74] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G75 | value='BETIS' | fill=00000000 | rows=[74] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H75 | value='5' | fill=00000000 | rows=[74] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B76 | value='16:15' | fill=00000000 | rows=[75] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C76 | value='01/10/2017' | fill=00000000 | rows=[75] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D76 | value='BARCELONA' | fill=00000000 | rows=[75] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E76 | value='1' | fill=00000000 | rows=[75] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G76 | value='LAS PALMAS' | fill=00000000 | rows=[75] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H76 | value='17' | fill=00000000 | rows=[75] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B77 | value='18:30' | fill=00000000 | rows=[76] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C77 | value='01/10/2017' | fill=00000000 | rows=[76] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D77 | value='VALENCIA' | fill=00000000 | rows=[76] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E77 | value='4' | fill=00000000 | rows=[76] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G77 | value='ATHLETIC CLUB' | fill=00000000 | rows=[76] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H77 | value='12' | fill=00000000 | rows=[76] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B78 | value='18:30' | fill=00000000 | rows=[77] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C78 | value='01/10/2017' | fill=00000000 | rows=[77] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D78 | value='VILLARREAL' | fill=00000000 | rows=[77] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E78 | value='14' | fill=00000000 | rows=[77] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G78 | value='EIBAR' | fill=00000000 | rows=[77] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H78 | value='18' | fill=00000000 | rows=[77] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B79 | value='20:45' | fill=00000000 | rows=[78] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C79 | value='01/10/2017' | fill=00000000 | rows=[78] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D79 | value='REAL MADRID' | fill=00000000 | rows=[78] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E79 | value='6' | fill=00000000 | rows=[78] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G79 | value='ESPANYOL' | fill=00000000 | rows=[78] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H79 | value='13' | fill=00000000 | rows=[78] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A80 | value='SWEDEN>ALLSVENSKAN' | fill=00000000 | rows=[79, 80, 81, 82, 83, 84] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B80 | value='15:00' | fill=00000000 | rows=[79] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C80 | value='01/10/2017' | fill=00000000 | rows=[79] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D80 | value='GIF SUNDSVALL' | fill=00000000 | rows=[79] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E80 | value='13' | fill=00000000 | rows=[79] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G80 | value='DJURGARDEN' | fill=00000000 | rows=[79] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H80 | value='2' | fill=00000000 | rows=[79] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B81 | value='15:00' | fill=00000000 | rows=[80] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C81 | value='01/10/2017' | fill=00000000 | rows=[80] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D81 | value='MALMO FF' | fill=00000000 | rows=[80] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E81 | value='1' | fill=00000000 | rows=[80] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G81 | value='HALMSTAD' | fill=00000000 | rows=[80] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H81 | value='16' | fill=00000000 | rows=[80] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B82 | value='15:00' | fill=00000000 | rows=[81] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C82 | value='01/10/2017' | fill=00000000 | rows=[81] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D82 | value='OSTERSUNDS FK' | fill=00000000 | rows=[81] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E82 | value='6' | fill=00000000 | rows=[81] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G82 | value='HACKEN' | fill=00000000 | rows=[81] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H82 | value='4' | fill=00000000 | rows=[81] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B83 | value='17:30' | fill=00000000 | rows=[82] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C83 | value='01/10/2017' | fill=00000000 | rows=[82] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D83 | value='AIK' | fill=00000000 | rows=[82] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E83 | value='3' | fill=00000000 | rows=[82] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G83 | value='IF ELFSBORG' | fill=00000000 | rows=[82] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H83 | value='11' | fill=00000000 | rows=[82] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B84 | value='17:30' | fill=00000000 | rows=[83] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C84 | value='01/10/2017' | fill=00000000 | rows=[83] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D84 | value='HAMMARBY' | fill=00000000 | rows=[83] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E84 | value='8' | fill=00000000 | rows=[83] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G84 | value='IFK NORRKOPING' | fill=00000000 | rows=[83] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H84 | value='5' | fill=00000000 | rows=[83] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B85 | value='17:30' | fill=00000000 | rows=[84] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C85 | value='01/10/2017' | fill=00000000 | rows=[84] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D85 | value='OREBRO' | fill=00000000 | rows=[84] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E85 | value='10' | fill=00000000 | rows=[84] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G85 | value='KALMAR FF' | fill=00000000 | rows=[84] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H85 | value='12' | fill=00000000 | rows=[84] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A86 | value='SWITZERLAND>SUPER LEAGUE' | fill=00000000 | rows=[85, 86, 87] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B86 | value='16:00' | fill=00000000 | rows=[85] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C86 | value='01/10/2017' | fill=00000000 | rows=[85] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D86 | value='BSC YOUNG BOYS' | fill=00000000 | rows=[85] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E86 | value='1' | fill=00000000 | rows=[85] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G86 | value='FC ST. GALLEN' | fill=00000000 | rows=[85] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H86 | value='2' | fill=00000000 | rows=[85] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B87 | value='16:00' | fill=00000000 | rows=[86] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C87 | value='01/10/2017' | fill=00000000 | rows=[86] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D87 | value='FC THUN' | fill=00000000 | rows=[86] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E87 | value='9' | fill=00000000 | rows=[86] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G87 | value='FC LUZERN' | fill=00000000 | rows=[86] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H87 | value='7' | fill=00000000 | rows=[86] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B88 | value='16:00' | fill=00000000 | rows=[87] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C88 | value='01/10/2017' | fill=00000000 | rows=[87] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D88 | value='FC ZURICH' | fill=00000000 | rows=[87] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E88 | value='3' | fill=00000000 | rows=[87] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G88 | value='FC LUGANO' | fill=00000000 | rows=[87] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H88 | value='10' | fill=00000000 | rows=[87] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A89 | value='TURKEY>SUPER LIG' | fill=00000000 | rows=[88, 89, 90, 91] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B89 | value='13:00' | fill=00000000 | rows=[88] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C89 | value='01/10/2017' | fill=00000000 | rows=[88] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D89 | value='YENI MALATYASPOR' | fill=00000000 | rows=[88] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E89 | value='12' | fill=00000000 | rows=[88] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G89 | value='KONYASPOR' | fill=00000000 | rows=[88] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H89 | value='14' | fill=00000000 | rows=[88] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B90 | value='15:30' | fill=00000000 | rows=[89] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C90 | value='01/10/2017' | fill=00000000 | rows=[89] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D90 | value='ALANYASPOR' | fill=00000000 | rows=[89] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E90 | value='13' | fill=00000000 | rows=[89] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G90 | value='GENCLERBIRLIGI' | fill=00000000 | rows=[89] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H90 | value='17' | fill=00000000 | rows=[89] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B91 | value='18:30' | fill=00000000 | rows=[90] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C91 | value='01/10/2017' | fill=00000000 | rows=[90] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D91 | value='BESIKTAS' | fill=00000000 | rows=[90] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E91 | value='3' | fill=00000000 | rows=[90] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G91 | value='TRABZONSPOR' | fill=00000000 | rows=[90] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H91 | value='10' | fill=00000000 | rows=[90] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B92 | value='18:30' | fill=00000000 | rows=[91] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C92 | value='01/10/2017' | fill=00000000 | rows=[91] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D92 | value='GOZTEPE' | fill=00000000 | rows=[91] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E92 | value='4' | fill=00000000 | rows=[91] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G92 | value='ISTANBUL BASAKSEHIR' | fill=00000000 | rows=[91] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H92 | value='7' | fill=00000000 | rows=[91] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A93 | value='USA>MAJOR LEAGUE SOCCER' | fill=00000000 | rows=[92, 93, 94, 95, 96, 97, 98, 99, 100, 101] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B93 | value='01:00' | fill=00000000 | rows=[92] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C93 | value='01/10/2017' | fill=00000000 | rows=[92] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D93 | value='TORONTO FC' | fill=00000000 | rows=[92] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E93 | value='1' | fill=00000000 | rows=[92] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G93 | value='NEW YORK RED BULLS' | fill=00000000 | rows=[92] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H93 | value='6' | fill=00000000 | rows=[92] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B94 | value='01:30' | fill=00000000 | rows=[93] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C94 | value='01/10/2017' | fill=00000000 | rows=[93] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D94 | value='COLUMBUS CREW' | fill=00000000 | rows=[93] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E94 | value='5' | fill=00000000 | rows=[93] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G94 | value='DC UNITED' | fill=00000000 | rows=[93] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H94 | value='11' | fill=00000000 | rows=[93] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B95 | value='01:30' | fill=00000000 | rows=[94] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C95 | value='01/10/2017' | fill=00000000 | rows=[94] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D95 | value='NEW ENG. REVOLUTION' | fill=00000000 | rows=[94] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E95 | value='8' | fill=00000000 | rows=[94] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G95 | value='ATLANTA UNITED FC' | fill=00000000 | rows=[94] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H95 | value='3' | fill=00000000 | rows=[94] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B96 | value='02:30' | fill=00000000 | rows=[95] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C96 | value='01/10/2017' | fill=00000000 | rows=[95] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D96 | value='CHICAGO FIRE' | fill=00000000 | rows=[95] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E96 | value='4' | fill=00000000 | rows=[95] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G96 | value='NEW YORK CITY FC' | fill=00000000 | rows=[95] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H96 | value='2' | fill=00000000 | rows=[95] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B97 | value='02:30' | fill=00000000 | rows=[96] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C97 | value='01/10/2017' | fill=00000000 | rows=[96] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D97 | value='HOUSTON DYNAMO' | fill=00000000 | rows=[96] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E97 | value='7' | fill=00000000 | rows=[96] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G97 | value='MINNESOTA UNITED FC' | fill=00000000 | rows=[96] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H97 | value='9' | fill=00000000 | rows=[96] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B98 | value='03:00' | fill=00000000 | rows=[97] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C98 | value='01/10/2017' | fill=00000000 | rows=[97] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D98 | value='COLORADO RAPIDS' | fill=00000000 | rows=[97] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E98 | value='11' | fill=00000000 | rows=[97] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G98 | value='MONTREAL IMPACT' | fill=00000000 | rows=[97] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H98 | value='7' | fill=00000000 | rows=[97] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B99 | value='03:00' | fill=00000000 | rows=[98] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C99 | value='01/10/2017' | fill=00000000 | rows=[98] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D99 | value='SPORTING KANSAS CITY' | fill=00000000 | rows=[98] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E99 | value='3' | fill=00000000 | rows=[98] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G99 | value='VANCOUVER WHITECAPS' | fill=00000000 | rows=[98] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H99 | value='1' | fill=00000000 | rows=[98] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B100 | value='04:30' | fill=00000000 | rows=[99] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C100 | value='01/10/2017' | fill=00000000 | rows=[99] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D100 | value='LOS ANGELES GALAXY' | fill=00000000 | rows=[99] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E100 | value='10' | fill=00000000 | rows=[99] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G100 | value='REAL SALT LAKE' | fill=00000000 | rows=[99] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H100 | value='6' | fill=00000000 | rows=[99] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B101 | value='04:30' | fill=00000000 | rows=[100] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C101 | value='01/10/2017' | fill=00000000 | rows=[100] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D101 | value='SAN JOSE EARTHQUAKES' | fill=00000000 | rows=[100] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E101 | value='8' | fill=00000000 | rows=[100] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G101 | value='PORTLAND TIMBERS' | fill=00000000 | rows=[100] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H101 | value='2' | fill=00000000 | rows=[100] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell B102 | value='19:00' | fill=00000000 | rows=[101] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C102 | value='01/10/2017' | fill=00000000 | rows=[101] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D102 | value='PHILADELPHIA UNION' | fill=00000000 | rows=[101] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E102 | value='10' | fill=00000000 | rows=[101] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G102 | value='SEATTLE SOUNDERS' | fill=00000000 | rows=[101] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H102 | value='4' | fill=00000000 | rows=[101] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A103 | value='COLOMBIA>CLAUSURA' | fill=00000000 | rows=[102] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B103 | value='(00:30)' | fill=00000000 | rows=[102] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C103 | value='01/10/2017' | fill=00000000 | rows=[102] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D103 | value='DEPORTES TOLIMA' | fill=00000000 | rows=[102] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E103 | value='9' | fill=00000000 | rows=[102] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G103 | value='INDEPENDIENTE MEDELLIN' | fill=00000000 | rows=[102] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H103 | value='7' | fill=00000000 | rows=[102] | cols=[7] | col_header=False | row_header=False | metadata=False
+Cell A104 | value='PERU>CLAUSURA' | fill=00000000 | rows=[103] | cols=[0] | col_header=False | row_header=False | metadata=False
+Cell B104 | value='(22:30)' | fill=00000000 | rows=[103] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C104 | value='01/10/2017' | fill=00000000 | rows=[103] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D104 | value='COMERCIANTES UNIDOS' | fill=00000000 | rows=[103] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E104 | value='8' | fill=00000000 | rows=[103] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell G104 | value='UNIVERSITARIO' | fill=00000000 | rows=[103] | cols=[6] | col_header=False | row_header=False | metadata=False
+Cell H104 | value='4' | fill=00000000 | rows=[103] | cols=[7] | col_header=False | row_header=False | metadata=False
+

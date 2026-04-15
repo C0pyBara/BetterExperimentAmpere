@@ -1,0 +1,27 @@
+=== environment-table34.xlsx ===
+Cell A1 | value='End Use' | fill=FFFFFF00 | rows=[0] | cols=[0] | col_header=True | row_header=True | metadata=False
+Cell B1 | value='Daily Exposure Volume (L)' | fill=FFFFFF00 | rows=[0] | cols=[1] | col_header=True | row_header=False | metadata=False
+Cell C1 | value='Exposure Frequency (days/year)' | fill=FFFFFF00 | rows=[0] | cols=[2] | col_header=True | row_header=False | metadata=False
+Cell D1 | value='Fraction of Population Exposed' | fill=FFFFFF00 | rows=[0] | cols=[3] | col_header=True | row_header=False | metadata=False
+Cell E1 | value='Key Assumptions' | fill=FFFFFF00 | rows=[0] | cols=[4] | col_header=True | row_header=False | metadata=False
+Cell A2 | value='Potable use' | fill=FF00B050 | rows=[1] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B2 | value='2.4' | fill=00000000 | rows=[1] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C2 | value='365' | fill=00000000 | rows=[1] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D2 | value='1' | fill=00000000 | rows=[1] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E2 | value='90th percentile per capita U.S. ingestion1,2' | fill=00000000 | rows=[1] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell A3 | value='Indoor non-potable water use' | fill=FF00B050 | rows=[2] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B3 | value='4e-05' | fill=00000000 | rows=[2] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C3 | value='365' | fill=00000000 | rows=[2] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D3 | value='1' | fill=00000000 | rows=[2] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E3 | value='Adopted from Australian guidelines3' | fill=00000000 | rows=[2] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell A4 | value='Unrestricted irrigation and dust suppression' | fill=FF00B050 | rows=[3] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B4 | value='0.001' | fill=00000000 | rows=[3] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C4 | value='50' | fill=00000000 | rows=[3] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D4 | value='1' | fill=00000000 | rows=[3] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E4 | value='Adopted from Australian guidelines3' | fill=00000000 | rows=[3] | cols=[4] | col_header=False | row_header=False | metadata=False
+Cell A5 | value='Cross-connection of treated water with potable water or accidental ingestion' | fill=FF00B050 | rows=[4] | cols=[0] | col_header=False | row_header=True | metadata=False
+Cell B5 | value='2' | fill=00000000 | rows=[4] | cols=[1] | col_header=False | row_header=False | metadata=False
+Cell C5 | value='1' | fill=00000000 | rows=[4] | cols=[2] | col_header=False | row_header=False | metadata=False
+Cell D5 | value='0.1' | fill=00000000 | rows=[4] | cols=[3] | col_header=False | row_header=False | metadata=False
+Cell E5 | value='Only used in indoor use calculation4' | fill=00000000 | rows=[4] | cols=[4] | col_header=False | row_header=False | metadata=False
+
