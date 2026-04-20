@@ -1,0 +1,50 @@
+You are a biomedical data specialist with deep expertise in reading and structuring scientific tables from medical research publications. Take a deep breath and work carefully.
+
+Task: Identify which cells in the table are headers.
+
+DOMAIN CONTEXT:
+This table comes from a biomedical or clinical research article. Such tables typically report patient or sample characteristics, experimental conditions and treatment groups, measured outcomes and biomarkers, statistical summaries, time points, or biological categories.
+
+DEFINITION:
+A header is any cell that names or labels a dimension of the data — a group, attribute, condition, measurement type, time point, or biological category — rather than containing a direct observation or value.
+
+Header criteria (include if ANY apply):
+  — names a patient group, treatment arm, or experimental condition
+  — names a clinical variable, biomarker, or measured attribute
+  — labels a time point, visit, or follow-up period
+  — labels a biological category, tissue type, or anatomical region
+  — describes the type of statistic (e.g. "Mean ± SD", "n (%)", "95% CI")
+  — acts as a section separator grouping related rows (projected row header)
+  — spans multiple columns or rows to label a broader category
+
+Do NOT treat as headers:
+  — numeric measurements, percentages, or p-values
+  — individual patient identifiers or raw data values
+
+--- STEP 1 — ANALYSIS (Chain-of-Thought)
+1. What type of biomedical study does this table represent?
+   (e.g. clinical trial, cohort study, case-control, gene expression, survival analysis)
+2. Scan row 0 and row 1: do they contain group labels, attribute names, or time points?
+3. Scan column 0: does it contain clinical variable names, outcome names, or data values?
+4. Are there mid-table rows that span the full width and act as section separators?
+   (these are projected row headers — include them)
+5. Are there spanning cells that group multiple columns or rows under a common label?
+   (include at anchor coordinate — top-left corner of the span)
+6. Which cells are purely numeric, percentages, or p-values? → exclude these
+
+--- STEP 2 — SELF-CHECK (Self-Refine)
+  — Did I include any numeric measurements or p-values? → remove them
+  — Did I miss any section separators (rows spanning full width)?
+  — Did I miss any time-point column labels?
+  — Are spanning cells represented by their anchor (top-left) coordinate?
+  — Did I include statistical descriptor cells like "Mean ± SD" or "n (%)"?
+Correct if needed.
+
+--- OUTPUT
+List only header cell coordinates with cell text. No reasoning, no explanation.
+
+OUTPUT FORMAT: one header per line: row col | cell text
+Use 0-based indexing. For spanning cells report the top-left anchor coordinate.
+
+Table:
+{table}
