@@ -96,7 +96,7 @@ EXPERIMENT_PLAN = [
         "json_root": PROJECT_ROOT / "Get_500_Tables_from_PubTables" / "JSON_Complex_TOP500_normalized",
         "html_root": PROJECT_ROOT / "Get_500_Tables_from_PubTables" / "JSON_Complex_TOP500_normalized_html",
         "limit":     500,
-        "prompts":   ["zero_domain", "fewshot_domain", "reasoning_domain", "reasoning_few_domain"],
+        "prompts":   ["zero_domain", "fewshot_domain", "reasoning_domain"],
     },
     {
         # MAX-strategy prompts — matches dataset annotation
@@ -104,7 +104,7 @@ EXPERIMENT_PLAN = [
         "json_root": PROJECT_ROOT / "Convert_from_xlsx_to_Json" / "maximum_viewpoint_converted_json",
         "html_root": PROJECT_ROOT / "Convert_from_json_to_html" / "maximum_viewpoint_converted_html",
         "limit":     500,
-        "prompts":   ["zero_max", "fewshot_max", "reasoning_max", "fewshot_reasoning_max"],
+        "prompts":   ["zero_max", "fewshot_max", "reasoning_max"],
     },
     {
         # MIN-strategy prompts — matches dataset annotation
@@ -112,7 +112,7 @@ EXPERIMENT_PLAN = [
         "json_root": PROJECT_ROOT / "Convert_from_xlsx_to_Json" / "table_normalization_converted_json",
         "html_root": PROJECT_ROOT / "Convert_from_json_to_html" / "table_normalization_converted_html",
         "limit":     500,
-        "prompts":   ["zero_min", "fewshot_min", "reasoning_min", "fewshot_reasoning_min"],
+        "prompts":   ["zero_min", "fewshot_min", "reasoning_min"],
     },
 ]
 
@@ -963,10 +963,16 @@ class ResponseCollector:
         return records
 
     def _sample_tables(self, records: List[Dict[str, Any]],
-                        n_json: int, n_html: int) -> Tuple[List[Dict], List[Dict]]:
-        with_html   = [r for r in records if r.get("table_html")]
-        json_sample = records[:n_json]
-        html_sample = with_html[:n_html]
+                        n_total: int) -> Tuple[List[Dict], List[Dict]]:
+        """
+        Return the same N tables for both JSON and HTML formats.
+        JSON sample = first n_total records.
+        HTML sample = same records that have table_html loaded.
+        Both lists refer to the same underlying table set.
+        """
+        selected    = records[:n_total]
+        json_sample = selected
+        html_sample = [r for r in selected if r.get("table_html")]
         return json_sample, html_sample
 
     def _load_all_tables(self) -> Dict[str, Dict[str, List[Dict[str, Any]]]]:
@@ -1012,9 +1018,18 @@ class ResponseCollector:
                 if per_source is not None:
                     n_src = per_source + (1 if i < remainder else 0)
                     records = records[:n_src]
-                n_json = round(len(records) * self.json_frac)
-                n_html = len(records) - n_json
-                json_sample, html_sample = self._sample_tables(records, n_json, n_html)
+                # Same tables for both formats — format_ratio controls only
+                # whether HTML tasks are generated, not which tables are used.
+                # json_frac=1.0 → JSON only; html_frac=1.0 → HTML only; 50:50 → both.
+                if self.html_frac == 0:
+                    json_sample = records
+                    html_sample = []
+                elif self.json_frac == 0:
+                    json_sample = []
+                    html_sample = [r for r in records if r.get("table_html")]
+                else:
+                    # Both formats — same table set
+                    json_sample, html_sample = self._sample_tables(records, len(records))
 
             table_map[src["name"]] = {"json": json_sample, "html": html_sample}
             seed_data[src["name"]] = {
