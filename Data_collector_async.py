@@ -58,10 +58,10 @@ MAX_TOKENS          = int(os.getenv("MAX_TOKENS",           "8192"))
 # Per-prompt token overrides — reasoning prompts need more headroom.
 # Keys are prompt stem names (without .txt). Missing keys use MAX_TOKENS.
 MAX_TOKENS_BY_PROMPT: Dict[str, int] = {
-    "reasoning_max":         16384,
-    "reasoning_min":         16384,
-    "fewshot_reasoning_max": 16384,
-    "fewshot_reasoning_min": 16384,
+    "reasoning_max":         12288,
+    "reasoning_min":         12288,
+    "fewshot_reasoning_max": 12288,
+    "fewshot_reasoning_min": 12288,
 }
 
 CONCURRENCY         = int(os.getenv("CONCURRENCY",          "2"))
@@ -480,13 +480,34 @@ def parse_output(raw_text: str) -> Tuple[bool, List[Dict[str, Any]], str]:
 
     Each returned dict: {"row": int, "col": int, "text": str}
     "text" is empty string if not provided by the model.
+
+    Thinking-block handling (Qwen3 and other reasoning models):
+    - If </think> is present: parse ONLY the content after it.
+      Prevents picking up coordinates from the reasoning chain,
+      which are written without pipe separators and produce text="".
+    - If truncated inside <think> (no </think>): return parse failure.
+      Better an honest empty result than coords from incomplete reasoning.
     """
     if not raw_text or not str(raw_text).strip():
         return True, [], ""
 
     text = str(raw_text).strip()
+
+    # Thinking-block extraction
+    think_close = "</think>"
+    if think_close in text:
+        # Take only what comes after </think>
+        text = text.split(think_close, 1)[1].strip()
+    elif "<think>" in text:
+        # Started thinking but truncated — no usable output
+        return False, [], "truncated_inside_think_block"
+
     text = re.sub(r"^```[a-z]*\s*", "", text, flags=re.IGNORECASE)
     text = re.sub(r"\s*```$",        "", text, flags=re.IGNORECASE).strip()
+
+    # Empty output after think block = model predicted no headers
+    if not text:
+        return True, [], ""
 
     seen   = set()
     coords = []
