@@ -89,12 +89,12 @@ FORMAT_RATIO  = os.getenv("FORMAT_RATIO", "50:50")      # "JSON:HTML"
 # =========================
 EXPERIMENT_PLAN = [
     {
-        # Domain prompts (zero_domain, reasoning_few_domain) + generic prompts
+        # Domain prompts only — tailored for biomedical PubTables content
         "name":      "pubtables_complex_top500",
         "json_root": PROJECT_ROOT / "Get_500_Tables_from_PubTables" / "JSON_Complex_TOP500_normalized",
         "html_root": PROJECT_ROOT / "Get_500_Tables_from_PubTables" / "JSON_Complex_TOP500_normalized_html",
         "limit":     500,
-        "prompts":   None,  # all prompts loaded from prompts/
+        "prompts":   ["zero_domain", "fewshot_domain", "reasoning_few_domain"],
     },
     {
         # MAX-strategy prompts only — matches dataset annotation
