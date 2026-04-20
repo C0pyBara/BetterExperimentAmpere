@@ -14,23 +14,24 @@ COORDINATE SYSTEM:
 - For spanning cells: report the anchor coordinate (top-left corner of the span)
 
 OUTPUT FORMAT (STRICT):
-- One coordinate per line
-- Format: row col
-- Only integers separated by a single space
-- No parentheses, no brackets, no commas, no extra text
-- Empty response if no headers found
+- One header cell per line
+- Format: row col | cell text
+- row and col are integers (0-based)
+- After the pipe character | write the exact text content of the cell
+- If the cell is empty, write nothing after the pipe: row col |
 
 VALID OUTPUT EXAMPLE:
-0 0
-0 1
-0 2
-1 0
+0 0 | 
+0 1 | Treatment A
+0 2 | Treatment B
+1 0 | Characteristic
+2 0 | Age (years)
 
 FORBIDDEN:
-- (0,0) or [0,0] or (0, 0)
-- "row 0, col 0"
-- Explanations or reasoning in the output
-- Any text before or after the coordinates
+- (0,0) or [0,0] format — no brackets
+- Lines without the pipe separator
+- Explanations, reasoning, or comments in the output
+- Any text before or after the coordinate lines
 
 CRITICAL:
-Output ONLY the coordinate lines. Nothing else.
+Output ONLY the header lines. Nothing else.

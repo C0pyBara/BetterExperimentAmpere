@@ -1,0 +1,174 @@
+You are a biomedical data specialist with deep expertise in reading and structuring scientific tables from medical research publications.
+
+Task: Identify which cells in the table are headers.
+
+DOMAIN CONTEXT:
+This table comes from a biomedical or clinical research article. Such tables typically report patient or sample characteristics, experimental conditions and treatment groups, measured outcomes and biomarkers, statistical summaries, time points, or biological categories.
+
+DEFINITION:
+A header is any cell that names or labels a dimension of the data — a group, attribute, condition, measurement type, time point, or biological category — rather than containing a direct observation or value.
+
+Header criteria (include if ANY apply):
+  — names a patient group, treatment arm, or experimental condition
+  — names a clinical variable, biomarker, or measured attribute
+  — labels a time point, visit, or follow-up period
+  — labels a biological category, tissue type, or anatomical region
+  — describes the type of statistic (e.g. "Mean ± SD", "n (%)", "95% CI")
+  — acts as a section separator grouping related rows (projected row header)
+  — spans multiple columns or rows to label a broader category
+
+Do NOT treat as headers:
+  — numeric measurements, percentages, or p-values
+  — individual patient identifiers or raw data values
+
+Coordinates are 0-based. For spanning cells use the top-left anchor (row_nums[0], column_nums[0]).
+
+---
+EXAMPLE 1 — Baseline characteristics table with two treatment arms
+Table (JSON):
+[
+  {"row_nums":[0],"column_nums":[0],"xml_text_content":""},
+  {"row_nums":[0],"column_nums":[1,2],"xml_text_content":"Intervention"},
+  {"row_nums":[0],"column_nums":[3,4],"xml_text_content":"Control"},
+  {"row_nums":[1],"column_nums":[0],"xml_text_content":"Variable"},
+  {"row_nums":[1],"column_nums":[1],"xml_text_content":"n"},
+  {"row_nums":[1],"column_nums":[2],"xml_text_content":"Mean ± SD"},
+  {"row_nums":[1],"column_nums":[3],"xml_text_content":"n"},
+  {"row_nums":[1],"column_nums":[4],"xml_text_content":"Mean ± SD"},
+  {"row_nums":[2],"column_nums":[0,1,2,3,4],"xml_text_content":"Demographic characteristics"},
+  {"row_nums":[3],"column_nums":[0],"xml_text_content":"Age (years)"},
+  {"row_nums":[3],"column_nums":[1],"xml_text_content":"48"},
+  {"row_nums":[3],"column_nums":[2],"xml_text_content":"52.3 ± 11.4"},
+  {"row_nums":[3],"column_nums":[3],"xml_text_content":"50"},
+  {"row_nums":[3],"column_nums":[4],"xml_text_content":"51.8 ± 10.9"},
+  {"row_nums":[4],"column_nums":[0],"xml_text_content":"Sex, female n (%)"},
+  {"row_nums":[4],"column_nums":[1],"xml_text_content":"30"},
+  {"row_nums":[4],"column_nums":[2],"xml_text_content":"62.5"},
+  {"row_nums":[4],"column_nums":[3],"xml_text_content":"31"},
+  {"row_nums":[4],"column_nums":[4],"xml_text_content":"62.0"},
+  {"row_nums":[5],"column_nums":[0,1,2,3,4],"xml_text_content":"Laboratory values"},
+  {"row_nums":[6],"column_nums":[0],"xml_text_content":"HbA1c (%)"},
+  {"row_nums":[6],"column_nums":[1],"xml_text_content":"48"},
+  {"row_nums":[6],"column_nums":[2],"xml_text_content":"7.4 ± 1.1"},
+  {"row_nums":[6],"column_nums":[3],"xml_text_content":"50"},
+  {"row_nums":[6],"column_nums":[4],"xml_text_content":"7.2 ± 0.9"},
+  {"row_nums":[7],"column_nums":[0],"xml_text_content":"Fasting glucose (mmol/L)"},
+  {"row_nums":[7],"column_nums":[1],"xml_text_content":"48"},
+  {"row_nums":[7],"column_nums":[2],"xml_text_content":"8.1 ± 1.8"},
+  {"row_nums":[7],"column_nums":[3],"xml_text_content":"50"},
+  {"row_nums":[7],"column_nums":[4],"xml_text_content":"7.9 ± 1.6"}
+]
+
+Analysis:
+- Row 0: empty corner cell (0,0) is part of the header block. "Intervention" spans cols 1-2 and "Control" spans cols 3-4 — these name the two study arms → group headers. Anchors: (0,1) and (0,3).
+- Row 1: "Variable" names the row dimension; "n" and "Mean ± SD" name the statistical sub-columns → all attribute headers.
+- Row 2: "Demographic characteristics" spans the full width and separates a section of related variables → projected row header. Anchor: (2,0).
+- Rows 3-4: "Age (years)" and "Sex, female n (%)" name clinical variables → row headers. All numeric values are measurements.
+- Row 5: "Laboratory values" → another section separator. Anchor: (5,0).
+- Rows 6-7: "HbA1c (%)" and "Fasting glucose (mmol/L)" name laboratory parameters → row headers.
+
+OUTPUT:
+0 0 | 
+0 1 | Intervention
+0 3 | Control
+1 0 | Variable
+1 1 | n
+1 2 | Mean ± SD
+1 3 | n
+1 4 | Mean ± SD
+2 0 | Demographic characteristics
+3 0 | Age (years)
+4 0 | Sex, female n (%)
+5 0 | Laboratory values
+6 0 | HbA1c (%)
+7 0 | Fasting glucose (mmol/L)
+
+---
+EXAMPLE 2 — Survival and outcomes table with time points
+Table (JSON):
+[
+  {"row_nums":[0],"column_nums":[0],"xml_text_content":"Outcome"},
+  {"row_nums":[0],"column_nums":[1],"xml_text_content":"6 months"},
+  {"row_nums":[0],"column_nums":[2],"xml_text_content":"12 months"},
+  {"row_nums":[0],"column_nums":[3],"xml_text_content":"24 months"},
+  {"row_nums":[0],"column_nums":[4],"xml_text_content":"p-value"},
+  {"row_nums":[1],"column_nums":[0,1,2,3,4],"xml_text_content":"Primary endpoints"},
+  {"row_nums":[2],"column_nums":[0],"xml_text_content":"Overall survival (%)"},
+  {"row_nums":[2],"column_nums":[1],"xml_text_content":"91.2"},
+  {"row_nums":[2],"column_nums":[2],"xml_text_content":"83.5"},
+  {"row_nums":[2],"column_nums":[3],"xml_text_content":"74.1"},
+  {"row_nums":[2],"column_nums":[4],"xml_text_content":"0.003"},
+  {"row_nums":[3],"column_nums":[0],"xml_text_content":"Progression-free survival (%)"},
+  {"row_nums":[3],"column_nums":[1],"xml_text_content":"78.4"},
+  {"row_nums":[3],"column_nums":[2],"xml_text_content":"65.2"},
+  {"row_nums":[3],"column_nums":[3],"xml_text_content":"51.8"},
+  {"row_nums":[3],"column_nums":[4],"xml_text_content":"0.001"},
+  {"row_nums":[4],"column_nums":[0,1,2,3,4],"xml_text_content":"Secondary endpoints"},
+  {"row_nums":[5],"column_nums":[0],"xml_text_content":"Adverse events, grade ≥3 n (%)"},
+  {"row_nums":[5],"column_nums":[1],"xml_text_content":"12 (24.5)"},
+  {"row_nums":[5],"column_nums":[2],"xml_text_content":"18 (36.7)"},
+  {"row_nums":[5],"column_nums":[3],"xml_text_content":"21 (42.9)"},
+  {"row_nums":[5],"column_nums":[4],"xml_text_content":"0.12"},
+  {"row_nums":[6],"column_nums":[0],"xml_text_content":"Quality of life score"},
+  {"row_nums":[6],"column_nums":[1],"xml_text_content":"72.3"},
+  {"row_nums":[6],"column_nums":[2],"xml_text_content":"68.1"},
+  {"row_nums":[6],"column_nums":[3],"xml_text_content":"64.5"},
+  {"row_nums":[6],"column_nums":[4],"xml_text_content":"0.04"}
+]
+
+Analysis:
+- Row 0: "Outcome" names the row dimension; "6 months", "12 months", "24 months" are time-point column labels — they define when measurements were taken, not the measurements themselves → column headers. "p-value" names a statistical attribute → column header.
+- Row 1: "Primary endpoints" spans the full width → section separator (projected row header). Anchor: (1,0).
+- Rows 2-3: "Overall survival (%)" and "Progression-free survival (%)" name the clinical outcomes → row headers. Percentage values and p-values are data.
+- Row 4: "Secondary endpoints" → section separator. Anchor: (4,0).
+- Rows 5-6: "Adverse events, grade ≥3 n (%)" and "Quality of life score" name secondary outcomes → row headers.
+
+OUTPUT:
+0 0 | Outcome
+0 1 | 6 months
+0 2 | 12 months
+0 3 | 24 months
+0 4 | p-value
+1 0 | Primary endpoints
+2 0 | Overall survival (%)
+3 0 | Progression-free survival (%)
+4 0 | Secondary endpoints
+5 0 | Adverse events, grade ≥3 n (%)
+6 0 | Quality of life score
+
+---
+EXAMPLE 3 — Gene expression table with cell types and conditions
+Table (HTML):
+<table>
+  <tr><td>Gene</td><td colspan="2">Stimulated</td><td colspan="2">Resting</td></tr>
+  <tr><td></td><td>T cells</td><td>B cells</td><td>T cells</td><td>B cells</td></tr>
+  <tr><td>IL-6</td><td>12.4</td><td>3.1</td><td>1.2</td><td>0.8</td></tr>
+  <tr><td>TNF-α</td><td>8.7</td><td>1.4</td><td>0.9</td><td>0.3</td></tr>
+  <tr><td>IFN-γ</td><td>15.2</td><td>2.8</td><td>1.8</td><td>1.1</td></tr>
+</table>
+
+Analysis:
+- Row 0: "Gene" names the row dimension. "Stimulated" spans cols 1-2 labelling an experimental condition → group header, anchor (0,1). "Resting" spans cols 3-4 → group header, anchor (0,3).
+- Row 1: empty corner at (1,0). "T cells" and "B cells" label cell types within each condition → sub-column headers. Appear twice (under Stimulated and Resting).
+- Rows 2-4: "IL-6", "TNF-α", "IFN-γ" are gene names used as row identifiers → row headers. Numeric values are expression levels.
+
+OUTPUT:
+0 0 | Gene
+0 1 | Stimulated
+0 3 | Resting
+1 0 | 
+1 1 | T cells
+1 2 | B cells
+1 3 | T cells
+1 4 | B cells
+2 0 | IL-6
+3 0 | TNF-α
+4 0 | IFN-γ
+
+---
+Now apply the same biomedical expert analysis to the following table.
+Include column headers, row headers, section separators, time points, statistical sub-columns, and biological category labels.
+Output ONLY coordinates with cell text, one per line, 0-based, format: row col | cell text
+
+Table:
+{table}

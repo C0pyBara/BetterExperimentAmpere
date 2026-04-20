@@ -37,16 +37,18 @@ Analysis:
 - Rows 2-3: "Age (years)", "Sex (F/M)" describe what the row measures → row headers. Numeric values are data.
 
 MAXIMUM output (all structural and contextual labels):
-0 0
-0 1
-0 3
-1 0
-1 1
-1 2
-1 3
-1 4
-2 0
-3 0
+0 0 | 
+0 1 | Treatment A
+0 3 | Treatment B
+1 0 | Characteristic
+1 1 | n
+1 2 | %
+1 3 | n
+1 4 | %
+
+2 0 | 
+
+3 0 | 
 
 ---
 EXAMPLE 2 — Section separators (projected row headers) mid-table
@@ -80,15 +82,16 @@ Analysis:
 - Numeric values: data, not headers.
 
 MAXIMUM output:
-0 0
-0 1
-0 2
-1 0
-2 0
-3 0
-4 0
-5 0
-6 0
+0 0 | Variable
+0 1 | Cases
+0 2 | Controls
+1 0 | Demographic factors
+2 0 | Age
+3 0 | BMI
+4 0 | Clinical factors
+5 0 | Smoking
+
+6 0 | 
 
 ---
 EXAMPLE 3 — Simple matrix, no row headers
@@ -107,18 +110,17 @@ Analysis:
 - All numeric cells in rows 1-3: data values.
 
 MAXIMUM output:
-0 0
-0 1
-0 2
-0 3
-1 0
-2 0
-3 0
+0 0 | Region
+0 1 | 2020
+0 2 | 2021
+0 3 | 2022
+1 0 | North
+2 0 | South
+3 0 | Total
 
 ---
 Now apply the MAXIMUM STRATEGY to the following table.
 Include column headers, row headers, section separators, spanning labels, and all contextual labels.
-Output ONLY coordinates, one per line, 0-based, format: row col
-
+Output ONLY coordinates with cell text, one per line, 0-based, format: row col | cell text
 Table:
 {table}

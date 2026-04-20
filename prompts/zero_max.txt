@@ -28,5 +28,7 @@ Requirement:
 Identify ALL header cells using the maximum interpretation.
 Include column headers, row headers, section separators, and spanning labels.
 
+OUTPUT FORMAT: one header per line: row col | cell text
+
 Table:
 {table}

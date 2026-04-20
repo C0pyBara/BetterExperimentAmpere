@@ -1,25 +1,22 @@
 """
-Table header detection experiment — v5
+Table header detection experiment — v6
 
-Changes vs v4:
-  STRUCTURED OUTPUT: guided_regex with compact pattern (no whitespace allowed)
-    - Pattern: (\\d+ \\d+\\n)* — "row col\n" per line, lm-format-enforcer backend
-    - Eliminates outlines flooding; guarantees 100% parseable output
-    - max_tokens raised to 8192 for reasoning prompts headroom
+Changes vs v5:
+  FIX-1  Chunking threshold now row×col based (not rows-only).
+         Fixes context_length_exceeded for wide tables like economy-table106 (95×27).
+         New config: CHUNK_CELL_THRESHOLD (default 2000 cells = rows×cols).
 
-  HTML FORMAT:
-    - Reads pre-converted .html files from html_root directory
-    - Strips <th>/<th> → <td>/<td> and removes class/id/style attrs before prompting
-    - Ground truth stays identical (coordinates from JSON, same anchor logic)
-    - HTML coordinate = (r0, c0) from json_to_html_table converter = row_nums[0], col_nums[0]
+  FIX-2  Per-prompt max_tokens override (MAX_TOKENS_BY_PROMPT dict).
+         Reasoning prompts get more tokens; zero/fewshot get baseline.
 
-  SAMPLING:
-    - --total-tables N: total unique tables to use across experiment
-    - --format-ratio R: JSON:HTML ratio, e.g. "50:50" or "100:0" or "0:100"
-    - Tables sampled deterministically (sorted filenames) from available files
+  NEW-1  --model-alias CLI param. Run dir named run_{ts}_{alias}_{runid}.
+         Avoids confusion when running multiple models in parallel.
 
-  COORD SYSTEM: 0-based throughout (matches converter and source JSON)
-  METRICS: compare pred_set vs true_headers_raw, OOB filtered by table dims
+  NEW-2  selected_tables.json saved at run start — lists every table used.
+         --table-seed PATH loads a prior selected_tables.json so all models
+         run on exactly the same tables.
+
+  NEW-3  model_alias stored in every result record and checkpoint metadata.
 """
 
 import os
@@ -48,6 +45,7 @@ PROMPTS_DIR  = PROJECT_ROOT / "prompts"
 VLLM_BASE_URL = os.getenv("VLLM_BASE_URL", "http://127.0.0.1:8000/v1")
 VLLM_API_KEY  = os.getenv("VLLM_API_KEY",  "EMPTY")
 MODEL_NAME    = os.getenv("MODEL_NAME",    "Qwen/Qwen3-VL-30B-A3B-Thinking")
+MODEL_ALIAS   = os.getenv("MODEL_ALIAS",   "")   # short name for run dir, e.g. "qwen30b"
 
 OUTPUT_DIR   = os.getenv("OUTPUT_DIR",   "results")
 LOG_LEVEL    = os.getenv("LOG_LEVEL",    "INFO")
@@ -57,59 +55,62 @@ RETRY_BACKOFF_BASE  = float(os.getenv("RETRY_BACKOFF_BASE", "3.0"))
 TEMPERATURE         = float(os.getenv("TEMPERATURE",        "0.0"))
 MAX_TOKENS          = int(os.getenv("MAX_TOKENS",           "8192"))
 
+# Per-prompt token overrides — reasoning prompts need more headroom.
+# Keys are prompt stem names (without .txt). Missing keys use MAX_TOKENS.
+MAX_TOKENS_BY_PROMPT: Dict[str, int] = {
+    "reasoning_max":         16384,
+    "reasoning_min":         16384,
+    "fewshot_reasoning_max": 16384,
+    "fewshot_reasoning_min": 16384,
+}
+
 CONCURRENCY         = int(os.getenv("CONCURRENCY",          "2"))
 CHECKPOINT_EVERY    = int(os.getenv("CHECKPOINT_EVERY",     "10"))
 REQUEST_TIMEOUT_SEC = float(os.getenv("REQUEST_TIMEOUT_SECONDS", "300.0"))
 INTER_REQUEST_DELAY = float(os.getenv("INTER_REQUEST_DELAY",     "1.0"))
 EARLY_STOP_FAILURES = int(os.getenv("EARLY_STOP_FAILURES",       "10"))
 
-CHUNK_THRESHOLD     = int(os.getenv("CHUNK_THRESHOLD", "100"))
-CHUNK_SIZE          = int(os.getenv("CHUNK_SIZE",      "80"))
-CHUNK_OVERLAP       = int(os.getenv("CHUNK_OVERLAP",   "10"))
+# FIX-1: chunk threshold based on total cells (rows × cols), not rows alone.
+# economy-table106: 95 rows × 27 cols = 2565 cells → exceeds 2000 → chunked.
+# A plain 100-row × 5-col table: 500 cells → not chunked. Correct behaviour.
+CHUNK_CELL_THRESHOLD = int(os.getenv("CHUNK_CELL_THRESHOLD", "2000"))  # rows×cols
+CHUNK_SIZE           = int(os.getenv("CHUNK_SIZE",           "80"))    # rows per chunk
+CHUNK_OVERLAP        = int(os.getenv("CHUNK_OVERLAP",        "10"))    # row overlap
+
+# Kept for backward compat / override; set to 0 to disable row-only check
+CHUNK_ROW_THRESHOLD  = int(os.getenv("CHUNK_ROW_THRESHOLD",  "0"))
 
 # Total tables and JSON:HTML ratio — overridable via CLI
 TOTAL_TABLES  = int(os.getenv("TOTAL_TABLES",  "0"))   # 0 = use all available
 FORMAT_RATIO  = os.getenv("FORMAT_RATIO", "50:50")      # "JSON:HTML"
 
-# guided_regex: "row col\n" lines, no whitespace inside numbers, no extra text
-# lm-format-enforcer enforces this at token level → 100% parseable output
-# Pattern allows: empty response OR one-or-more "int int\n" lines
-GUIDED_REGEX = r"(\d+ \d+\n)*"
-GUIDED_BACKEND = "lm-format-enforcer"
-
 # =========================
 # EXPERIMENT PLAN
-# Each entry: name, json_root, html_root, limit, prompts
-# limit is the max tables to load; actual count depends on --total-tables
 # =========================
 EXPERIMENT_PLAN = [
     {
+        # Domain prompts (zero_domain, reasoning_few_domain) + generic prompts
         "name":      "pubtables_complex_top500",
         "json_root": PROJECT_ROOT / "Get_500_Tables_from_PubTables" / "JSON_Complex_TOP500_normalized",
-        "html_root": PROJECT_ROOT / "Get_500_Tables_from_PubTables" / "HTML_Complex_TOP500",
+        "html_root": PROJECT_ROOT / "Get_500_Tables_from_PubTables" / "JSON_Complex_TOP500_normalized_html",
         "limit":     500,
-        "prompts":   None,  # all prompts
+        "prompts":   None,  # all prompts loaded from prompts/
     },
     {
-        "name":      "expert_viewpoint",
-        "json_root": PROJECT_ROOT / "Convert_from_xlsx_to_Json" / "expert_viewpoint_converted_json",
-        "html_root": PROJECT_ROOT / "Convert_from_xlsx_to_Json" / "expert_viewpoint_converted_html",
-        "limit":     500,
-        "prompts":   None,
-    },
-    {
+        # MAX-strategy prompts only — matches dataset annotation
         "name":      "maximum_viewpoint",
         "json_root": PROJECT_ROOT / "Convert_from_xlsx_to_Json" / "maximum_viewpoint_converted_json",
-        "html_root": PROJECT_ROOT / "Convert_from_xlsx_to_Json" / "maximum_viewpoint_converted_html",
+        "html_root": PROJECT_ROOT / "Convert_from_json_to_html" / "maximum_viewpoint_converted_html",
         "limit":     500,
-        "prompts":   ["zero_max", "reasoning_max"],
+        "prompts":   ["zero_max", "fewshot_max", "reasoning_max", "fewshot_reasoning_max"],
     },
     {
+        # MIN-strategy prompts only — matches dataset annotation
         "name":      "table_normalization",
         "json_root": PROJECT_ROOT / "Convert_from_xlsx_to_Json" / "table_normalization_converted_json",
-        "html_root": PROJECT_ROOT / "Convert_from_xlsx_to_Json" / "table_normalization_converted_html",
+        "html_root": PROJECT_ROOT / "Convert_from_json_to_html" / "table_normalization_converted_html",
         "limit":     500,
-        "prompts":   ["zero_min", "reasoning_min"],
+        "prompts":   ["zero_min", "fewshot_min", "reasoning_min", "fewshot_reasoning_min"],
     },
 ]
 
@@ -139,22 +140,6 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[logging.StreamHandler()],
 )
-
-
-# =========================
-# FORMAT RATIO PARSER
-# =========================
-def parse_format_ratio(ratio_str: str) -> Tuple[float, float]:
-    """Parse 'J:H' string, return (json_frac, html_frac) summing to 1.0."""
-    try:
-        j, h = ratio_str.strip().split(":")
-        j, h = float(j), float(h)
-        total = j + h
-        if total <= 0:
-            raise ValueError
-        return j / total, h / total
-    except Exception:
-        raise ValueError(f"Invalid FORMAT_RATIO '{ratio_str}'. Use e.g. '50:50' or '70:30'.")
 
 
 # =========================
@@ -193,6 +178,18 @@ def count_bin(n: int) -> str:
     return "6+"
 
 
+def parse_format_ratio(ratio_str: str) -> Tuple[float, float]:
+    try:
+        j, h = ratio_str.strip().split(":")
+        j, h = float(j), float(h)
+        total = j + h
+        if total <= 0:
+            raise ValueError
+        return j / total, h / total
+    except Exception:
+        raise ValueError(f"Invalid FORMAT_RATIO '{ratio_str}'. Use e.g. '50:50'.")
+
+
 def coords_to_set(coords: List[Dict[str, int]]) -> set:
     out = set()
     for h in coords or []:
@@ -204,7 +201,6 @@ def coords_to_set(coords: List[Dict[str, int]]) -> set:
 
 
 def to_one_based_coords(coords: List[Dict[str, int]]) -> List[Dict[str, int]]:
-    """0-based → 1-based; stored as reference only, not used in eval."""
     out = set()
     for h in coords:
         try:
@@ -214,13 +210,16 @@ def to_one_based_coords(coords: List[Dict[str, int]]) -> List[Dict[str, int]]:
     return [{"row": r, "col": c} for r, c in sorted(out)]
 
 
-def extract_true_coords_from_cells(cells: List[Dict[str, Any]]) -> List[Dict[str, int]]:
+def extract_true_coords_from_cells(
+        cells: List[Dict[str, Any]]
+) -> Tuple[List[Dict[str, int]], Dict[Tuple[int,int], str]]:
     """
-    Extract 0-based anchor coords (row_nums[0], col_nums[0]) for header cells.
-    Matches json_to_html_table converter logic: r0=rows[0], c0=cols[0].
-    Includes is_column_header, is_projected_row_header, is_spanning.
+    Returns:
+      coords  — list of 0-based anchor dicts for header cells
+      gt_text — dict mapping (row, col) → ground truth cell text
     """
-    coords = set()
+    coords:  set = set()
+    gt_text: Dict[Tuple[int,int], str] = {}
     for cell in cells or []:
         if (bool(cell.get("is_column_header"))
                 or bool(cell.get("is_projected_row_header"))
@@ -229,10 +228,15 @@ def extract_true_coords_from_cells(cells: List[Dict[str, Any]]) -> List[Dict[str
             col_nums = cell.get("column_nums", []) or []
             if row_nums and col_nums:
                 try:
-                    coords.add((int(row_nums[0]), int(col_nums[0])))
+                    anchor = (int(row_nums[0]), int(col_nums[0]))
+                    coords.add(anchor)
+                    gt_text[anchor] = str(
+                        cell.get("xml_text_content") or ""
+                    ).strip()
                 except Exception:
                     continue
-    return [{"row": r, "col": c} for r, c in sorted(coords)]
+    coord_list = [{"row": r, "col": c} for r, c in sorted(coords)]
+    return coord_list, gt_text
 
 
 def extract_type_coords_from_cells(cells: List[Dict[str, Any]]) -> Dict[str, Any]:
@@ -263,33 +267,38 @@ def extract_type_coords_from_cells(cells: List[Dict[str, Any]]) -> Dict[str, Any
     }
 
 
-def extract_true_coords_from_headers(headers: List[Any]) -> List[Dict[str, int]]:
-    coords = set()
+def extract_true_coords_from_headers(
+        headers: List[Any]
+) -> Tuple[List[Dict[str, int]], Dict[Tuple[int,int], str]]:
+    """
+    Returns:
+      coords  — list of 0-based anchor dicts
+      gt_text — dict mapping (row, col) → text (empty for matrix format)
+    """
+    coords: set = set()
+    gt_text: Dict[Tuple[int,int], str] = {}
     for h in headers or []:
         if isinstance(h, dict) and "row" in h and "col" in h:
             try:
-                coords.add((int(h["row"]), int(h["col"])))
+                anchor = (int(h["row"]), int(h["col"]))
+                coords.add(anchor)
+                gt_text[anchor] = str(h.get("text", "")).strip()
             except Exception:
                 continue
-    return [{"row": r, "col": c} for r, c in sorted(coords)]
+    coord_list = [{"row": r, "col": c} for r, c in sorted(coords)]
+    return coord_list, gt_text
 
 
 def evaluate_coord_sets(true_set: set, pred_set: set,
                          table_rows: int = 0, table_cols: int = 0) -> Dict[str, Any]:
-    """
-    Compute P/R/F1/Jaccard/Exact/Partial in 0-based space.
-    OOB filter: drop pred coords outside [0, table_rows) x [0, table_cols).
-    """
     if table_rows > 0 and table_cols > 0:
         pred_set = {(r, c) for r, c in pred_set
                     if 0 <= r < table_rows and 0 <= c < table_cols}
-
     support = len(true_set); pred_count = len(pred_set)
     if support == 0 and pred_count == 0:
         return dict(support=0, pred_count=0, tp=0, fp=0, fn=0,
                     precision=1.0, recall=1.0, f1=1.0, jaccard=1.0,
                     exact_match=True, partial_match=True, header_coverage=1.0)
-
     tp    = len(true_set & pred_set)
     fp    = len(pred_set - true_set)
     fn    = len(true_set - pred_set)
@@ -300,10 +309,102 @@ def evaluate_coord_sets(true_set: set, pred_set: set,
     jacc  = tp / union if union else 1.0
     exact   = true_set == pred_set
     partial = exact or (support > 0 and rec >= 0.5)
-
     return dict(support=support, pred_count=pred_count, tp=tp, fp=fp, fn=fn,
                 precision=prec, recall=rec, f1=f1, jaccard=jacc,
                 exact_match=exact, partial_match=partial, header_coverage=rec)
+
+def token_f1(pred_text: str, true_text: str) -> float:
+    """Token-level F1 between two strings (whitespace tokenisation)."""
+    pred_tokens = pred_text.lower().split()
+    true_tokens = true_text.lower().split()
+    if not pred_tokens and not true_tokens:
+        return 1.0
+    if not pred_tokens or not true_tokens:
+        return 0.0
+    from collections import Counter
+    pc = Counter(pred_tokens)
+    tc = Counter(true_tokens)
+    common = sum((pc & tc).values())
+    if common == 0:
+        return 0.0
+    p = common / len(pred_tokens)
+    r = common / len(true_tokens)
+    return 2 * p * r / (p + r)
+
+
+def evaluate_text_metrics(
+    true_text_map: Dict[Tuple[int,int], str],   # (r,c) → gt text
+    pred_headers:  List[Dict[str, Any]],         # parsed headers with optional "text"
+    true_set:      set,                          # 0-based coord set (after OOB filter)
+    pred_set_filtered: set,                      # 0-based coord set (after OOB filter)
+) -> Dict[str, Any]:
+    """
+    Three text-aware metrics:
+      text_exact_match_rate  — among TP coords, fraction where pred text == gt text
+                               (case-insensitive, stripped)
+      text_token_f1_mean     — mean token F1 across TP coords
+      joint_f1               — coord F1 recomputed counting a cell correct only if
+                               coord AND text both match (exact, case-insensitive)
+    """
+    if not true_text_map:
+        return {
+            "text_exact_match_rate": None,
+            "text_token_f1_mean":    None,
+            "joint_f1":              None,
+            "joint_precision":       None,
+            "joint_recall":          None,
+        }
+
+    # Build pred text map: coord → pred text (if available)
+    pred_text_map: Dict[Tuple[int,int], str] = {}
+    for h in pred_headers or []:
+        try:
+            key = (int(h["row"]), int(h["col"]))
+            pred_text_map[key] = str(h.get("text", "")).strip()
+        except Exception:
+            continue
+
+    # TP coords
+    tp_coords = true_set & pred_set_filtered
+
+    exact_matches: List[int] = []
+    token_f1s:     List[float] = []
+    joint_tp = 0
+
+    for coord in tp_coords:
+        gt   = true_text_map.get(coord, "").lower().strip()
+        pred = pred_text_map.get(coord, "").lower().strip()
+        exact = int(gt == pred)
+        tf1   = token_f1(pred, gt)
+        exact_matches.append(exact)
+        token_f1s.append(tf1)
+        if exact:
+            joint_tp += 1
+
+    n_tp = len(tp_coords)
+    text_exact = sum(exact_matches) / n_tp if n_tp else None
+    text_tf1   = sum(token_f1s)    / n_tp if n_tp else None
+
+    # Joint F1: coord must match AND text exact match
+    n_pred = len(pred_set_filtered)
+    n_true = len(true_set)
+    if n_pred == 0 and n_true == 0:
+        joint_p = joint_r = joint_f = 1.0
+    else:
+        joint_p = joint_tp / n_pred if n_pred else 0.0
+        joint_r = joint_tp / n_true if n_true else 0.0
+        joint_f = (2 * joint_p * joint_r / (joint_p + joint_r)
+                   if (joint_p + joint_r) else 0.0)
+
+    return {
+        "text_exact_match_rate": text_exact,
+        "text_token_f1_mean":    text_tf1,
+        "joint_f1":              joint_f,
+        "joint_precision":       joint_p,
+        "joint_recall":          joint_r,
+    }
+
+
 
 
 def dataframe_friendly(records: List[Dict[str, Any]]) -> pd.DataFrame:
@@ -311,7 +412,8 @@ def dataframe_friendly(records: List[Dict[str, Any]]) -> pd.DataFrame:
     for rec in records:
         row = dict(rec)
         for key in ["true_headers_raw", "true_headers_1based",
-                    "true_headers_by_type_raw", "parsed_headers"]:
+                    "true_headers_by_type_raw", "true_headers_text",
+                    "parsed_headers"]:
             if key in row and isinstance(row[key], (list, dict)):
                 row[key] = json.dumps(row[key], ensure_ascii=False)
         rows.append(row)
@@ -335,19 +437,30 @@ def classify_api_error(msg: str) -> str:
     return "api_error"
 
 
+def needs_chunking(table_rows: int, table_cols: int) -> bool:
+    """
+    FIX-1: Use cell count (rows×cols) as chunking trigger, not rows alone.
+    Also respects legacy CHUNK_ROW_THRESHOLD if set > 0.
+    """
+    cell_count = table_rows * table_cols
+    if cell_count > CHUNK_CELL_THRESHOLD:
+        return True
+    if CHUNK_ROW_THRESHOLD > 0 and table_rows > CHUNK_ROW_THRESHOLD:
+        return True
+    return False
+
+
+def get_max_tokens_for_prompt(prompt_name: str) -> int:
+    """FIX-2: Return per-prompt token limit, falling back to global MAX_TOKENS."""
+    return MAX_TOKENS_BY_PROMPT.get(prompt_name, MAX_TOKENS)
+
+
 # =========================
 # HTML PREPROCESSING
 # =========================
 def strip_html_header_hints(html: str) -> str:
-    """
-    Replace <th ...> with <td> and </th> with </td>.
-    Remove class, id, style attributes from all tags.
-    This prevents the model from seeing semantic hints about header cells.
-    """
-    # th → td
     html = re.sub(r"<th(\b[^>]*)>", r"<td\1>", html, flags=re.IGNORECASE)
     html = re.sub(r"</th>",          "</td>",    html, flags=re.IGNORECASE)
-    # strip class, id, style attributes
     html = re.sub(r'\s+(?:class|id|style)=["\'][^"\']*["\']', "", html, flags=re.IGNORECASE)
     return html
 
@@ -355,43 +468,63 @@ def strip_html_header_hints(html: str) -> str:
 # =========================
 # OUTPUT PARSER
 # =========================
-def parse_output(raw_text: str) -> Tuple[bool, List[Dict[str, int]], str]:
+def parse_output(raw_text: str) -> Tuple[bool, List[Dict[str, Any]], str]:
     """
-    Parse guided_regex output: zero or more "row col\n" lines (0-based).
-    Also handles fallback formats for robustness.
+    Parse model output into a list of header dicts.
+
+    Primary format (with text):
+        0 1 | Treatment A
+        1 0 | Characteristic
+
+    Legacy fallbacks (coord-only): "row col", [[r,c]], (r,c)
+
+    Each returned dict: {"row": int, "col": int, "text": str}
+    "text" is empty string if not provided by the model.
     """
     if not raw_text or not str(raw_text).strip():
-        return True, [], ""  # empty = no headers, valid
+        return True, [], ""
 
     text = str(raw_text).strip()
+    text = re.sub(r"^```[a-z]*\s*", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\s*```$",        "", text, flags=re.IGNORECASE).strip()
 
     seen   = set()
     coords = []
 
-    # Primary: "int int" per line (guided_regex guaranteed format)
+    # Primary: "row col | text" per line (pipe separator)
     for line in text.splitlines():
         line = line.strip()
         if not line:
             continue
-        m = re.fullmatch(r"(\d+)\s+(\d+)", line)
-        if m:
-            r, c = int(m.group(1)), int(m.group(2))
-            if (r, c) not in seen:
-                seen.add((r, c))
-                coords.append({"row": r, "col": c})
+        if "|" in line:
+            left, _, cell_text = line.partition("|")
+            m = re.search(r"(\d+)\s+(\d+)", left)
+            if m:
+                r, c = int(m.group(1)), int(m.group(2))
+                if (r, c) not in seen:
+                    seen.add((r, c))
+                    coords.append({"row": r, "col": c,
+                                   "text": cell_text.strip()})
+        else:
+            m = re.fullmatch(r"(\d+)\s+(\d+)", line)
+            if m:
+                r, c = int(m.group(1)), int(m.group(2))
+                if (r, c) not in seen:
+                    seen.add((r, c))
+                    coords.append({"row": r, "col": c, "text": ""})
 
     if coords:
         coords.sort(key=lambda x: (x["row"], x["col"]))
         return True, coords, ""
 
-    # Fallback A: any "int int" pair on a line (looser match)
+    # Fallback A: loose "int ... int" per line (no pipe, no text)
     for line in text.splitlines():
         m = re.search(r"(\d+)\D+(\d+)", line.strip())
         if m:
             r, c = int(m.group(1)), int(m.group(2))
             if (r, c) not in seen:
                 seen.add((r, c))
-                coords.append({"row": r, "col": c})
+                coords.append({"row": r, "col": c, "text": ""})
     if coords:
         coords.sort(key=lambda x: (x["row"], x["col"]))
         return True, coords, "fallback_loose_lines"
@@ -403,7 +536,7 @@ def parse_output(raw_text: str) -> Tuple[bool, List[Dict[str, int]], str]:
             r, c = int(rs), int(cs)
             if (r, c) not in seen:
                 seen.add((r, c))
-                coords.append({"row": r, "col": c})
+                coords.append({"row": r, "col": c, "text": ""})
         coords.sort(key=lambda x: (x["row"], x["col"]))
         return True, coords, "fallback_json_array"
 
@@ -414,7 +547,7 @@ def parse_output(raw_text: str) -> Tuple[bool, List[Dict[str, int]], str]:
             r, c = int(rs), int(cs)
             if (r, c) not in seen:
                 seen.add((r, c))
-                coords.append({"row": r, "col": c})
+                coords.append({"row": r, "col": c, "text": ""})
         coords.sort(key=lambda x: (x["row"], x["col"]))
         return True, coords, "fallback_paren_format"
 
@@ -422,7 +555,7 @@ def parse_output(raw_text: str) -> Tuple[bool, List[Dict[str, int]], str]:
 
 
 # =========================
-# CHUNKING (JSON only; HTML tables use pre-built files)
+# CHUNKING
 # =========================
 def chunk_cells_table(obj: Dict, s: int, e: int) -> Tuple[Dict, int]:
     out_cells = []
@@ -448,7 +581,6 @@ def chunk_matrix_table(obj: Dict, s: int, e: int) -> Tuple[Dict, int]:
 
 def make_chunks(table_json: str, table_rows: int,
                 table_kind: str) -> List[Tuple[str, int]]:
-    """Returns list of (json_repr, row_offset_0based)."""
     try:
         obj = json.loads(table_json)
     except Exception:
@@ -482,7 +614,6 @@ def make_chunks(table_json: str, table_rows: int,
 
 
 def merge_chunk_predictions(chunk_results: List[Tuple[List[Dict], int]]) -> List[Dict[str, int]]:
-    """Merge 0-based per-chunk predictions to full-table 0-based coords."""
     seen   = set()
     merged = []
     for headers, row_offset in chunk_results:
@@ -502,19 +633,15 @@ async def async_api_call(
     client:   httpx.AsyncClient,
     model:    str,
     messages: List[Dict[str, str]],
+    max_tokens: int = MAX_TOKENS,          # FIX-2: per-call token limit
 ) -> Dict[str, Any]:
     url     = f"{VLLM_BASE_URL}/chat/completions"
     payload = {
         "model":       model,
         "messages":    messages,
         "temperature": TEMPERATURE,
-        "max_tokens":  MAX_TOKENS,
-        # Structured output via guided_regex:
-        # Pattern "(\\d+ \\d+\\n)*" forces output to be zero or more "row col\n" lines.
-        # lm-format-enforcer backend — handles this simple pattern reliably.
-        # No whitespace injection possible → 100% parseable output guaranteed.
-        "guided_regex":             GUIDED_REGEX,
-        "guided_decoding_backend":  GUIDED_BACKEND,
+        "max_tokens":  max_tokens,
+        # No guided decoding — free output, parser handles any format
     }
     hdrs = {
         "Content-Type":  "application/json",
@@ -550,6 +677,7 @@ async def async_api_call(
                 "parse_error":    pe,
                 "duration_sec":   duration,
                 "retry_attempts": attempt,
+                "max_tokens_used": max_tokens,
                 "tokens_used": {
                     "prompt":     usage.get("prompt_tokens"),
                     "completion": usage.get("completion_tokens"),
@@ -568,7 +696,8 @@ async def async_api_call(
     return {
         "api_success": False, "raw_response": "", "parse_success": False,
         "parsed_headers": [], "parse_error": "", "duration_sec": None,
-        "retry_attempts": MAX_RETRIES, "tokens_used": None,
+        "retry_attempts": MAX_RETRIES, "max_tokens_used": max_tokens,
+        "tokens_used": None,
         "error_type":    classify_api_error(last_error),
         "error_message": last_error,
     }
@@ -580,13 +709,20 @@ async def async_api_call(
 class ResponseCollector:
     def __init__(self, output_dir: str = OUTPUT_DIR,
                  total_tables: int = TOTAL_TABLES,
-                 format_ratio: str = FORMAT_RATIO):
+                 format_ratio: str = FORMAT_RATIO,
+                 model_alias: str = MODEL_ALIAS,
+                 table_seed_path: Optional[str] = None):
+
         self.total_tables  = total_tables
         self.json_frac, self.html_frac = parse_format_ratio(format_ratio)
+        self.model_alias   = model_alias or slugify(MODEL_NAME.split("/")[-1])[:12]
+        self.table_seed_path = table_seed_path
 
-        self.run_id      = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-        self.base_dir    = Path(output_dir)
-        self.run_dir     = self.base_dir / f"run_{self.run_id}"
+        ts_short = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
+        self.run_id   = f"{ts_short}_{self.model_alias}"
+        self.base_dir = Path(output_dir)
+        self.run_dir  = self.base_dir / f"run_{self.run_id}"
+
         self.logs_dir    = self.run_dir / "logs"
         self.results_dir = self.run_dir / "results"
         self.metrics_dir = self.run_dir / "metrics"
@@ -599,7 +735,6 @@ class ResponseCollector:
 
         self.system_prompt = self._load_system_prompt()
         self.prompts       = self._load_prompt_configs()
-        # table_map[source_name] = {"json": [...], "html": [...]}
         self.table_map: Dict[str, Dict[str, List[Dict[str, Any]]]] = self._load_all_tables()
 
         self.responses:             List[Dict[str, Any]] = []
@@ -615,12 +750,13 @@ class ResponseCollector:
 
         logging.info(
             f"Run dir: {self.run_dir}\n"
-            f"  Model: {MODEL_NAME}\n"
-            f"  guided_regex: {GUIDED_REGEX!r} backend: {GUIDED_BACKEND}\n"
-            f"  max_tokens={MAX_TOKENS} concurrency={CONCURRENCY} "
-            f"timeout={REQUEST_TIMEOUT_SEC}s\n"
+            f"  Model: {MODEL_NAME} (alias: {self.model_alias})\n"
+            f"  max_tokens={MAX_TOKENS} overrides={MAX_TOKENS_BY_PROMPT}\n"
+            f"  concurrency={CONCURRENCY} timeout={REQUEST_TIMEOUT_SEC}s\n"
             f"  total_tables={self.total_tables or 'all'} "
-            f"format_ratio=json:{self.json_frac:.0%} html:{self.html_frac:.0%}"
+            f"format_ratio=json:{self.json_frac:.0%} html:{self.html_frac:.0%}\n"
+            f"  chunk_cell_threshold={CHUNK_CELL_THRESHOLD} "
+            f"chunk_row_threshold={CHUNK_ROW_THRESHOLD}"
         )
 
     # ---------- setup ----------
@@ -637,15 +773,23 @@ class ResponseCollector:
         root.addHandler(fh)
 
     async def _check_server(self) -> bool:
-        url = f"{VLLM_BASE_URL}/health"
-        try:
-            async with httpx.AsyncClient(timeout=10.0) as c:
-                r = await c.get(url)
-                if r.status_code == 200:
-                    logging.info(f"Server healthy: {url}"); return True
-                logging.critical(f"Server returned {r.status_code}"); return False
-        except Exception as e:
-            logging.critical(f"Server not reachable at {url}: {e}"); return False
+        base = VLLM_BASE_URL.rstrip("/").removesuffix("/v1")
+        candidates = [
+            f"{base}/health",
+            f"{base}/ping",
+            f"{VLLM_BASE_URL}/models",
+        ]
+        async with httpx.AsyncClient(timeout=10.0) as c:
+            for url in candidates:
+                try:
+                    r = await c.get(url)
+                    if r.status_code in (200, 405):
+                        logging.info(f"Server reachable via {url} (status {r.status_code})")
+                        return True
+                except Exception:
+                    continue
+        logging.critical(f"Server not reachable. Tried: {candidates}")
+        return False
 
     def _load_system_prompt(self) -> str:
         path = PROMPTS_DIR / "system.txt"
@@ -692,7 +836,6 @@ class ResponseCollector:
 
     def _make_table_record(self, filepath: Path, item: Dict,
                             idx: int, source_name: str) -> Optional[Dict[str, Any]]:
-        """Build a table record from a JSON item. Contains both JSON and HTML repr."""
         if not isinstance(item, dict): return None
 
         prompt_obj = sanitize_for_prompt(item)
@@ -700,16 +843,16 @@ class ResponseCollector:
         table_hash = stable_hash(table_json, 12)
 
         if "cells" in item:
-            ti       = extract_type_coords_from_cells(item.get("cells", []))
-            true_raw = extract_true_coords_from_cells(item.get("cells", []))
-            kind     = "cells"
-            nr, nc   = self._table_dims_cells(item.get("cells", []))
-            has_ti   = True
+            ti            = extract_type_coords_from_cells(item.get("cells", []))
+            true_raw, gt_text = extract_true_coords_from_cells(item.get("cells", []))
+            kind          = "cells"
+            nr, nc        = self._table_dims_cells(item.get("cells", []))
+            has_ti        = True
         elif "data" in item:
-            true_raw = extract_true_coords_from_headers(item.get("headers", []))
-            kind     = "matrix"
-            nr, nc   = self._table_dims_matrix(item.get("data", []))
-            has_ti   = False
+            true_raw, gt_text = extract_true_coords_from_headers(item.get("headers", []))
+            kind          = "matrix"
+            nr, nc        = self._table_dims_matrix(item.get("data", []))
+            has_ti        = False
             ti = {"column_headers": [], "projected_row_headers": [], "spanning": [],
                   "column_header_cell_count": 0, "projected_row_header_cell_count": 0,
                   "spanning_cell_count": 0}
@@ -729,15 +872,16 @@ class ResponseCollector:
             "table_cols":     nc,
             "table_rows_bin": rows_bin(nr),
             "table_hash":     table_hash,
-            "table_json":     table_json,          # JSON repr (sanitized)
-            # HTML repr loaded separately from html_root; set to "" initially
+            "table_json":     table_json,
             "table_html":     "",
-            # Ground truth — 0-based anchor coords
             "true_headers_raw":         true_raw,
             "true_headers_1based":      to_one_based_coords(true_raw),
             "true_headers_count":       len(true_raw),
             "true_headers_count_bin":   count_bin(len(true_raw)),
             "true_headers_by_type_raw": th_by_type,
+            # gt_text: (row,col) → ground truth cell text (str keys for JSON compat)
+            "true_headers_text":        {f"{r},{c}": t
+                                         for (r, c), t in gt_text.items()},
             "has_type_info":            has_ti,
             "column_header_cell_count":         ti["column_header_cell_count"],
             "projected_row_header_cell_count":  ti["projected_row_header_cell_count"],
@@ -754,7 +898,6 @@ class ResponseCollector:
             try:
                 with open(fp, "r", encoding="utf-8") as f:
                     raw = json.load(f)
-                # Handle both single-item dict and list formats
                 items = []
                 if isinstance(raw, dict):
                     items = [raw]
@@ -777,19 +920,12 @@ class ResponseCollector:
 
     def _attach_html(self, records: List[Dict[str, Any]],
                      html_root: Path) -> List[Dict[str, Any]]:
-        """
-        For each record, look up the matching .html file by stem.
-        If found, load and preprocess (strip <th>, attrs).
-        Records without an HTML file are kept but table_html stays "".
-        """
         if not html_root.exists():
             logging.warning(f"HTML root not found: {html_root}. HTML format unavailable.")
             return records
-
         html_files: Dict[str, Path] = {}
         for hp in sorted(html_root.rglob("*.html"), key=str):
             html_files[hp.stem] = hp
-
         attached = 0
         for rec in records:
             stem = rec["source_stem"]
@@ -800,29 +936,24 @@ class ResponseCollector:
                     attached += 1
                 except Exception as e:
                     logging.warning(f"Could not read HTML for {stem}: {e}")
-
         logging.info(f"  HTML attached: {attached}/{len(records)} records")
         return records
 
     def _sample_tables(self, records: List[Dict[str, Any]],
                         n_json: int, n_html: int) -> Tuple[List[Dict], List[Dict]]:
-        """
-        Split records into json_sample and html_sample.
-        html_sample only includes records that have table_html loaded.
-        """
-        # Records with HTML available
-        with_html = [r for r in records if r.get("table_html")]
-        # All records can be used for JSON
+        with_html   = [r for r in records if r.get("table_html")]
         json_sample = records[:n_json]
         html_sample = with_html[:n_html]
         return json_sample, html_sample
 
     def _load_all_tables(self) -> Dict[str, Dict[str, List[Dict[str, Any]]]]:
-        """
-        Returns table_map[source_name] = {"json": [...records...], "html": [...records...]}
-        Respects --total-tables and --format-ratio.
-        """
-        # First pass: load all JSON records per source
+        # Load seed if provided — ensures identical table selection across models
+        seed: Optional[Dict] = None
+        if self.table_seed_path:
+            with open(self.table_seed_path, "r", encoding="utf-8") as f:
+                seed = json.load(f)
+            logging.info(f"Loaded table seed from {self.table_seed_path}")
+
         raw_map: Dict[str, List[Dict[str, Any]]] = {}
         for src in EXPERIMENT_PLAN:
             records = self._load_json_records(
@@ -832,42 +963,59 @@ class ResponseCollector:
             raw_map[src["name"]] = records
             logging.info(f"Loaded {len(records)} records from {src['name']}")
 
-        # Determine per-source sampling counts
         if self.total_tables > 0:
-            # Distribute total_tables proportionally across sources
-            n_sources   = len(EXPERIMENT_PLAN)
-            per_source  = self.total_tables // n_sources
-            remainder   = self.total_tables - per_source * n_sources
+            n_sources = len(EXPERIMENT_PLAN)
+            per_source = self.total_tables // n_sources
+            remainder  = self.total_tables - per_source * n_sources
         else:
-            per_source  = None
-            remainder   = 0
+            per_source = None
+            remainder  = 0
 
         table_map: Dict[str, Dict[str, List[Dict]]] = {}
         total_json = total_html = 0
+        seed_data: Dict[str, Dict[str, List[str]]] = {}  # NEW-2: for selected_tables.json
 
         for i, src in enumerate(EXPERIMENT_PLAN):
             records = raw_map[src["name"]]
-            if per_source is not None:
-                n_src = per_source + (1 if i < remainder else 0)
-                records = records[:n_src]
 
-            n_json = round(len(records) * self.json_frac)
-            n_html = len(records) - n_json
+            if seed:
+                # Restrict to stems listed in seed file
+                allowed_json = set(seed.get(src["name"], {}).get("json", []))
+                allowed_html = set(seed.get(src["name"], {}).get("html", []))
+                json_sample = [r for r in records if r["source_stem"] in allowed_json]
+                html_sample = [r for r in records
+                               if r.get("table_html") and r["source_stem"] in allowed_html]
+            else:
+                if per_source is not None:
+                    n_src = per_source + (1 if i < remainder else 0)
+                    records = records[:n_src]
+                n_json = round(len(records) * self.json_frac)
+                n_html = len(records) - n_json
+                json_sample, html_sample = self._sample_tables(records, n_json, n_html)
 
-            json_sample, html_sample = self._sample_tables(records, n_json, n_html)
-            table_map[src["name"]] = {
-                "json": json_sample,
-                "html": html_sample,
+            table_map[src["name"]] = {"json": json_sample, "html": html_sample}
+            seed_data[src["name"]] = {
+                "json": [r["source_stem"] for r in json_sample],
+                "html": [r["source_stem"] for r in html_sample],
             }
             total_json += len(json_sample)
             total_html += len(html_sample)
-            logging.info(
-                f"  {src['name']}: "
-                f"json={len(json_sample)} html={len(html_sample)}"
-            )
+            logging.info(f"  {src['name']}: json={len(json_sample)} html={len(html_sample)}")
 
-        logging.info(f"Total: json={total_json} html={total_html} "
-                     f"sum={total_json+total_html}")
+        logging.info(f"Total: json={total_json} html={total_html} sum={total_json+total_html}")
+
+        # NEW-2: Save selected_tables.json at run start
+        seed_out = self.run_dir / "selected_tables.json"
+        with open(seed_out, "w", encoding="utf-8") as f:
+            json.dump({
+                "model":        MODEL_NAME,
+                "model_alias":  self.model_alias,
+                "total_tables": self.total_tables,
+                "format_ratio": f"json:{self.json_frac:.0%} html:{self.html_frac:.0%}",
+                "sources":      seed_data,
+            }, f, ensure_ascii=False, indent=2)
+        logging.info(f"Table selection saved: {seed_out}")
+
         return table_map
 
     # ---------- request building ----------
@@ -894,7 +1042,8 @@ class ResponseCollector:
     def _build_request_id(self, prompt_name: str, tr: Dict,
                            table_format: str) -> str:
         base = (f"{prompt_name}__{tr['source_group']}__{tr['source_stem']}"
-                f"__t{tr['table_index']}__{tr['table_hash']}__{table_format}")
+                f"__t{tr['table_index']}__{tr['table_hash']}__{table_format}"
+                f"__{self.model_alias}")
         return slugify(base)
 
     # ---------- result assembly ----------
@@ -905,19 +1054,40 @@ class ResponseCollector:
                      chunked: bool = False, n_chunks: int = 1) -> Dict[str, Any]:
         pname    = str(prompt_config.get("name", f"prompt_{prompt_idx}"))
         tr       = table_record
-        true_set = coords_to_set(tr["true_headers_raw"])   # 0-based
+        true_set = coords_to_set(tr["true_headers_raw"])
         pred_set = (coords_to_set(api_result["parsed_headers"])
                     if api_result["api_success"] and api_result["parse_success"]
                     else set())
 
-        overall  = evaluate_coord_sets(
+        overall = evaluate_coord_sets(
             true_set, pred_set,
             table_rows=tr["table_rows"], table_cols=tr["table_cols"]
+        )
+
+        # Filtered pred_set (OOB already removed inside evaluate_coord_sets)
+        nr, nc = tr["table_rows"], tr["table_cols"]
+        pred_set_f = {(r, c) for r, c in pred_set
+                      if 0 <= r < nr and 0 <= c < nc}
+
+        # Ground truth text map: convert str-key dict back to tuple keys
+        raw_gt = tr.get("true_headers_text", {})
+        gt_text_map: Dict[Tuple[int,int], str] = {
+            (int(k.split(",")[0]), int(k.split(",")[1])): v
+            for k, v in raw_gt.items()
+        }
+
+        text_metrics = evaluate_text_metrics(
+            gt_text_map,
+            api_result.get("parsed_headers", []),
+            true_set,
+            pred_set_f,
         )
 
         tu  = api_result.get("tokens_used") or {}
         ct  = tu.get("completion")
         tef = (ct / overall["f1"]) if (ct and overall["f1"] > 0) else None
+        mt  = api_result.get("max_tokens_used", MAX_TOKENS)
+        capped = (ct is not None and ct >= mt)
 
         type_metrics: Dict[str, Any] = {}
         for tname in ["column_headers", "projected_row_headers", "spanning"]:
@@ -937,6 +1107,7 @@ class ResponseCollector:
             "request_id":    self._build_request_id(pname, tr, table_format),
             "timestamp":     datetime.now().isoformat(),
             "model":         MODEL_NAME,
+            "model_alias":   self.model_alias,       # NEW-1
             "table_format":  table_format,
             "prompt_idx":    prompt_idx,
             "prompt_name":   pname,
@@ -950,7 +1121,6 @@ class ResponseCollector:
             "table_cols":    tr["table_cols"],
             "table_rows_bin":tr["table_rows_bin"],
             "table_hash":    tr["table_hash"],
-            # Ground truth — 0-based anchor coords (same for JSON and HTML)
             "true_headers_raw":          tr["true_headers_raw"],
             "true_headers_1based":       tr["true_headers_1based"],
             "true_headers_count":        tr["true_headers_count"],
@@ -974,6 +1144,8 @@ class ResponseCollector:
             "error_message":     api_result["error_message"],
             "duration_sec":      api_result["duration_sec"],
             "retry_attempts":    api_result["retry_attempts"],
+            "max_tokens_used":   mt,
+            "completion_capped": capped,             # FIX-2: flag for truncation
             "tokens_used":       api_result.get("tokens_used"),
             "prompt_tokens":     tu.get("prompt"),
             "completion_tokens": ct,
@@ -983,15 +1155,17 @@ class ResponseCollector:
         }
         result.update(overall)
         result.update(type_metrics)
+        result.update(text_metrics)   # text_exact_match_rate, text_token_f1_mean, joint_f1, …
         return result
 
     # ---------- async workers ----------
 
     async def _call_one(self, client: httpx.AsyncClient,
                          semaphore: asyncio.Semaphore,
-                         messages: List[Dict]) -> Dict[str, Any]:
+                         messages: List[Dict],
+                         max_tokens: int = MAX_TOKENS) -> Dict[str, Any]:
         async with semaphore:
-            result = await async_api_call(client, MODEL_NAME, messages)
+            result = await async_api_call(client, MODEL_NAME, messages, max_tokens)
             if INTER_REQUEST_DELAY > 0:
                 await asyncio.sleep(INTER_REQUEST_DELAY)
         return result
@@ -1004,28 +1178,29 @@ class ResponseCollector:
             return self._make_result(prompt_idx, prompt_config, table_record, {
                 "api_success": False, "parse_success": False, "parsed_headers": [],
                 "parse_error": "", "raw_response": "", "duration_sec": None,
-                "retry_attempts": 0, "tokens_used": None,
+                "retry_attempts": 0, "max_tokens_used": MAX_TOKENS,
+                "tokens_used": None,
                 "error_type": "aborted", "error_message": "early stop",
             }, table_format)
 
-        # Select representation
-        if table_format == "html":
-            table_repr = table_record.get("table_html") or table_record["table_json"]
-        else:
-            table_repr = table_record["table_json"]
+        pname      = prompt_config.get("name", "")
+        mt         = get_max_tokens_for_prompt(pname)   # FIX-2
+        table_repr = (table_record.get("table_html") or table_record["table_json"]
+                      if table_format == "html" else table_record["table_json"])
 
-        # Non-chunked path
-        if table_record["table_rows"] <= CHUNK_THRESHOLD:
+        # FIX-1: cell-count based chunking
+        do_chunk = needs_chunking(table_record["table_rows"], table_record["table_cols"])
+
+        if not do_chunk:
             msgs = self._prepare_messages(prompt_config, table_repr, table_format)
-            ar   = await self._call_one(client, semaphore, msgs)
+            ar   = await self._call_one(client, semaphore, msgs, mt)
             return self._make_result(prompt_idx, prompt_config, table_record,
                                      ar, table_format)
 
-        # Chunked path — JSON only (HTML files are pre-built, not chunked)
-        # For HTML of large tables: send full HTML (may be large but no JSON overhead)
+        # HTML: send full file, no JSON chunking
         if table_format == "html":
             msgs = self._prepare_messages(prompt_config, table_repr, table_format)
-            ar   = await self._call_one(client, semaphore, msgs)
+            ar   = await self._call_one(client, semaphore, msgs, mt)
             return self._make_result(prompt_idx, prompt_config, table_record,
                                      ar, table_format)
 
@@ -1033,8 +1208,12 @@ class ResponseCollector:
         chunks = make_chunks(table_record["table_json"],
                              table_record["table_rows"],
                              table_record["table_kind"])
-        logging.info(f"Chunking {table_record['source_stem']} "
-                     f"({table_record['table_rows']} rows) → {len(chunks)} chunks")
+        logging.info(
+            f"Chunking {table_record['source_stem']} "
+            f"({table_record['table_rows']}×{table_record['table_cols']}"
+            f" = {table_record['table_rows']*table_record['table_cols']} cells)"
+            f" → {len(chunks)} chunks"
+        )
 
         chunk_results: List[Tuple[List[Dict], int]] = []
         total_dur = total_pt = total_ct = total_ret = 0
@@ -1047,7 +1226,7 @@ class ResponseCollector:
             info = (f"Chunk {ci+1}/{len(chunks)} of a large table. "
                     f"Row 0 in this chunk = row {offset} in the full table (0-based).")
             msgs = self._prepare_messages(prompt_config, chunk_repr, "json", info)
-            ar   = await self._call_one(client, semaphore, msgs)
+            ar   = await self._call_one(client, semaphore, msgs, mt)
 
             if ar["api_success"] and ar["parse_success"]:
                 chunk_results.append((ar["parsed_headers"], offset))
@@ -1077,6 +1256,7 @@ class ResponseCollector:
                                if any_fail else ""),
             "duration_sec":   total_dur,
             "retry_attempts": total_ret,
+            "max_tokens_used": mt,
             "tokens_used":    {"prompt": total_pt, "completion": total_ct,
                                "total":  total_pt + total_ct},
         }
@@ -1124,7 +1304,6 @@ class ResponseCollector:
                         self._register_result(result)
                         since += 1
 
-                        # Early-stop on connection failures
                         if result.get("error_type") == "connection_error" \
                                 or result.get("error_message") == "early stop":
                             self._consec_fail += 1
@@ -1134,22 +1313,25 @@ class ResponseCollector:
                         if self._consec_fail >= EARLY_STOP_FAILURES and not self._abort:
                             self._abort = True
                             logging.critical(
-                                f"EARLY STOP: {self._consec_fail} consecutive connection "
-                                f"failures. Saving checkpoint.")
+                                f"EARLY STOP: {self._consec_fail} consecutive "
+                                f"connection failures. Saving checkpoint.")
                             self._save_checkpoint(timestamp)
 
-                        dur_s = (f"{result['duration_sec']:.1f}s"
-                                 if result.get("duration_sec") else "n/a")
-                        c_str = (f" [×{result.get('n_chunks',1)}ch]"
-                                 if result.get("chunked") else "")
-                        f_str = f" [{result.get('table_format','?')}]"
-                        f1_s  = (f" F1={result.get('f1',0):.3f}"
-                                 if result.get("f1") is not None else "")
+                        dur_s  = (f"{result['duration_sec']:.1f}s"
+                                  if result.get("duration_sec") else "n/a")
+                        c_str  = (f" [×{result.get('n_chunks',1)}ch]"
+                                  if result.get("chunked") else "")
+                        f_str  = f" [{result.get('table_format','?')}]"
+                        f1_s   = (f" F1={result.get('f1',0):.3f}"
+                                  if result.get("f1") is not None else "")
+                        cap_s  = " [CAP]" if result.get("completion_capped") else ""
+                        mt_s   = f" mt={result.get('max_tokens_used',MAX_TOKENS)}"
                         logging.info(
                             f"[{self.completed_count}/{total}] "
                             f"{result['prompt_name']}{f_str} | "
                             f"{result['source_stem']}{c_str} | "
-                            f"status={result['status']}{f1_s} | dur={dur_s}"
+                            f"status={result['status']}{f1_s}{cap_s}"
+                            f"{mt_s} | dur={dur_s}"
                         )
 
                         if since >= CHECKPOINT_EVERY:
@@ -1192,12 +1374,13 @@ class ResponseCollector:
                 allowed = src["prompts"]
                 np = (len(self.prompts) if allowed is None
                       else len([p for p in self.prompts if p["name"] in allowed]))
-                logging.info(f"  {src['name']} [{fmt}]: {np} prompts × {len(recs)} tables"
-                             f" = {np * len(recs)}")
+                logging.info(f"  {src['name']} [{fmt}]: "
+                             f"{np} prompts × {len(recs)} tables = {np*len(recs)}")
         logging.info(
             f"Total {total} tasks | CONCURRENCY={CONCURRENCY} "
-            f"MAX_TOKENS={MAX_TOKENS} guided_regex={GUIDED_REGEX!r} "
-            f"backend={GUIDED_BACKEND} early_stop={EARLY_STOP_FAILURES}"
+            f"MAX_TOKENS={MAX_TOKENS} overrides={MAX_TOKENS_BY_PROMPT} "
+            f"CHUNK_CELL_THRESHOLD={CHUNK_CELL_THRESHOLD} "
+            f"early_stop={EARLY_STOP_FAILURES}"
         )
 
         await self._run_tasks(tasks, ts)
@@ -1249,7 +1432,6 @@ class ResponseCollector:
                    rec.get("table_index", 0), rec.get("table_hash", ""))
             tr  = tlookup.get(key)
             if tr is None:
-                # Fallback without hash
                 key2 = next(((sg, ss, ti, th) for (sg, ss, ti, th) in tlookup
                              if sg == rec.get("source_group")
                              and ss == rec.get("source_stem")
@@ -1277,14 +1459,17 @@ class ResponseCollector:
         with open(path, "w", encoding="utf-8") as f:
             json.dump({
                 "metadata": {
-                    "timestamp":       datetime.now().isoformat(),
-                    "model":           MODEL_NAME,
-                    "guided_regex":    GUIDED_REGEX,
-                    "guided_backend":  GUIDED_BACKEND,
-                    "completed_count": self.completed_count,
-                    "responses":       len(self.responses),
-                    "api_failed":      len(self.api_failed_requests),
-                    "parse_failed":    len(self.parse_failed_requests),
+                    "timestamp":            datetime.now().isoformat(),
+                    "model":                MODEL_NAME,
+                    "model_alias":          self.model_alias,
+                    "guided_decoding":      "none",
+                    "chunk_cell_threshold": CHUNK_CELL_THRESHOLD,
+                    "max_tokens":           MAX_TOKENS,
+                    "max_tokens_by_prompt": MAX_TOKENS_BY_PROMPT,
+                    "completed_count":      self.completed_count,
+                    "responses":            len(self.responses),
+                    "api_failed":           len(self.api_failed_requests),
+                    "parse_failed":         len(self.parse_failed_requests),
                 },
                 "responses":             self.responses,
                 "api_failed_requests":   self.api_failed_requests,
@@ -1337,7 +1522,8 @@ class ResponseCollector:
                 for col, val in zip(group_cols, ks): row[col] = val
             row["count"] = len(sub)
             for col, alias in [("api_success", "api_success_rate"),
-                                ("parse_success", "parse_success_rate")]:
+                                ("parse_success", "parse_success_rate"),
+                                ("completion_capped", "capped_rate")]:
                 if col in sub.columns:
                     row[alias] = float(pd.to_numeric(sub[col], errors="coerce").mean())
             for m in metrics:
@@ -1348,7 +1534,7 @@ class ResponseCollector:
                         row[f"{m}_mean"]   = float(s.mean())
                         row[f"{m}_median"] = float(s.median())
             for col in ["duration_sec", "prompt_tokens", "completion_tokens",
-                        "total_tokens", "token_efficiency"]:
+                        "total_tokens", "token_efficiency", "max_tokens_used"]:
                 if col in sub.columns:
                     s = pd.to_numeric(sub[col], errors="coerce").dropna()
                     if len(s):
@@ -1367,6 +1553,7 @@ class ResponseCollector:
 
         views = {
             "overall":           self._summarize_table(df),
+            "by_model":          self._summarize_table(df, ["model_alias"]),
             "by_prompt":         self._summarize_table(df, ["prompt_name"]),
             "by_format":         self._summarize_table(df, ["table_format"]),
             "by_prompt_format":  self._summarize_table(df, ["prompt_name", "table_format"]),
@@ -1413,10 +1600,12 @@ class ResponseCollector:
         with open(self.metrics_dir / f"metrics_summary_{timestamp}.txt",
                   "w", encoding="utf-8") as f:
             f.write("METRICS SUMMARY\n" + "=" * 80 + "\n")
-            f.write(f"Model:          {MODEL_NAME}\n")
-            f.write(f"guided_regex:   {GUIDED_REGEX!r}\n")
-            f.write(f"guided_backend: {GUIDED_BACKEND}\n")
-            f.write(f"Coord system:   0-based (eval vs true_headers_raw)\n")
+            f.write(f"Model:            {MODEL_NAME}\n")
+            f.write(f"Model alias:      {self.model_alias}\n")
+            f.write("guided_decoding: none (free output)\n")
+            f.write(f"Coord system:     0-based (eval vs true_headers_raw)\n")
+            f.write(f"Chunk threshold:  {CHUNK_CELL_THRESHOLD} cells (rows×cols)\n")
+            f.write(f"Max tokens:       {MAX_TOKENS} default | overrides={MAX_TOKENS_BY_PROMPT}\n")
             f.write(f"Total: {total}  ok: {ok} ({ok/total*100:.1f}%)\n\n")
             for label, key in [
                 ("Precision",     "precision_mean"),
@@ -1427,7 +1616,8 @@ class ResponseCollector:
                 ("Partial match", "partial_match_mean"),
             ]:
                 f.write(f"  {label:14s}: {ov.get(key, 0):.4f}\n")
-            f.write(f"  Completion tok:  {ov.get('completion_tokens_mean', 0):.1f} (mean)\n\n")
+            f.write(f"  Capped rate:   {ov.get('capped_rate', 0):.1%}\n")
+            f.write(f"  Completion tok: {ov.get('completion_tokens_mean', 0):.1f} (mean)\n\n")
             f.write("JSON vs HTML:\n")
             if not views["by_format"].empty:
                 f.write(views["by_format"].to_string(index=False) + "\n\n")
@@ -1443,7 +1633,8 @@ class ResponseCollector:
 
         logging.info(f"Metrics → {self.metrics_dir}")
         logging.info(f"F1={ov.get('f1_mean',0):.4f}  "
-                     f"Exact={ov.get('exact_match_mean',0):.4f}")
+                     f"Exact={ov.get('exact_match_mean',0):.4f}  "
+                     f"Capped={ov.get('capped_rate',0):.1%}")
 
 
 # =========================
@@ -1451,25 +1642,31 @@ class ResponseCollector:
 # =========================
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Table header detection — v5 (guided_regex, JSON+HTML)",
+        description="Table header detection — v6 (multi-model, fixed chunking)",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     parser.add_argument("--vllm-url",      default=None)
-    parser.add_argument("--model",         default=None)
+    parser.add_argument("--model",         default=None,
+                        help="Full model name on vLLM server")
+    parser.add_argument("--model-alias",   default=None,
+                        help="Short alias for run dir name, e.g. 'qwen30b', 'llama8b'")
     parser.add_argument("--output-dir",    default=None)
     parser.add_argument("--concurrency",   type=int,   default=None)
-    parser.add_argument("--max-tokens",    type=int,   default=None)
+    parser.add_argument("--max-tokens",    type=int,   default=None,
+                        help="Default max tokens (reasoning prompts get more via override)")
     parser.add_argument("--timeout",       type=float, default=None)
-    parser.add_argument("--inter-delay",   type=float, default=None,
-                        help="Seconds between requests (throttle)")
-    parser.add_argument("--early-stop",    type=int,   default=None,
-                        help="Consecutive connection failures before abort")
-    parser.add_argument("--total-tables",  type=int,   default=None,
-                        help="Total unique tables to use (0 = all). "
-                             "Distributed proportionally across sources.")
+    parser.add_argument("--inter-delay",   type=float, default=None)
+    parser.add_argument("--early-stop",    type=int,   default=None)
+    parser.add_argument("--total-tables",  type=int,   default=None)
     parser.add_argument("--format-ratio",  default=None,
-                        help="JSON:HTML ratio, e.g. '50:50' or '70:30'")
-    parser.add_argument("--retry", metavar="CHECKPOINT_PATH", default=None,
+                        help="JSON:HTML ratio, e.g. '50:50' or '100:0'")
+    parser.add_argument("--chunk-cells",   type=int,   default=None,
+                        help=f"Chunking threshold in cells (rows×cols). "
+                             f"Default: {CHUNK_CELL_THRESHOLD}")
+    parser.add_argument("--table-seed",    default=None, metavar="PATH",
+                        help="Path to selected_tables.json from a prior run. "
+                             "Ensures all models use identical table sets.")
+    parser.add_argument("--retry",         default=None, metavar="CHECKPOINT_PATH",
                         help="Retry api_failed entries from a checkpoint")
     args = parser.parse_args()
 
@@ -1478,19 +1675,23 @@ if __name__ == "__main__":
     if args.output_dir:
         OUTPUT_DIR = args.output_dir
         Path(OUTPUT_DIR).mkdir(parents=True, exist_ok=True)
-    if args.concurrency  is not None: CONCURRENCY         = args.concurrency
-    if args.max_tokens   is not None: MAX_TOKENS          = args.max_tokens
-    if args.timeout      is not None: REQUEST_TIMEOUT_SEC = args.timeout
-    if args.inter_delay  is not None: INTER_REQUEST_DELAY = args.inter_delay
-    if args.early_stop   is not None: EARLY_STOP_FAILURES = args.early_stop
+    if args.concurrency  is not None: CONCURRENCY          = args.concurrency
+    if args.max_tokens   is not None: MAX_TOKENS           = args.max_tokens
+    if args.timeout      is not None: REQUEST_TIMEOUT_SEC  = args.timeout
+    if args.inter_delay  is not None: INTER_REQUEST_DELAY  = args.inter_delay
+    if args.early_stop   is not None: EARLY_STOP_FAILURES  = args.early_stop
+    if args.chunk_cells  is not None: CHUNK_CELL_THRESHOLD = args.chunk_cells
 
+    model_alias  = args.model_alias  if args.model_alias  else MODEL_ALIAS
     total_tables = args.total_tables if args.total_tables is not None else TOTAL_TABLES
-    format_ratio = args.format_ratio  if args.format_ratio  is not None else FORMAT_RATIO
+    format_ratio = args.format_ratio if args.format_ratio is not None else FORMAT_RATIO
 
     collector = ResponseCollector(
         output_dir=OUTPUT_DIR,
         total_tables=total_tables,
         format_ratio=format_ratio,
+        model_alias=model_alias,
+        table_seed_path=args.table_seed,
     )
     if args.retry:
         logging.info(f"=== RETRY MODE: {args.retry} ===")

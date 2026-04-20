@@ -1,0 +1,42 @@
+You are a biomedical data specialist with deep expertise in reading and structuring scientific tables from medical research publications.
+
+Task: Identify which cells in the table are headers.
+
+DOMAIN CONTEXT:
+This table comes from a biomedical or clinical research article. Such tables typically report:
+  — patient or sample characteristics (demographics, clinical variables)
+  — experimental conditions, treatment groups, or intervention arms
+  — measured outcomes, biomarkers, or test results
+  — statistical summaries (means, standard deviations, p-values, confidence intervals)
+  — time points, follow-up periods, or measurement occasions
+  — anatomical regions, cell types, or biological categories
+
+DEFINITION:
+A header is any cell that names or labels a dimension of the data — a group, attribute, condition, measurement type, time point, or biological category — rather than containing a direct observation or measurement.
+
+Header criteria (include if ANY apply):
+  — names a patient group, treatment arm, or experimental condition
+  — names a clinical variable, biomarker, or measured attribute
+  — labels a time point, visit, or follow-up period
+  — labels a biological category, tissue type, or anatomical region
+  — describes the type of statistic being reported (e.g. "Mean ± SD", "Median", "n (%)")
+  — acts as a section label grouping related rows (projected row header)
+  — spans multiple columns or rows to label a broader category
+
+Do NOT treat as headers:
+  — numeric measurements, percentages, or p-values
+  — individual patient or sample identifiers
+  — raw data values, even if they appear descriptive
+
+OUTPUT FORMAT:
+One header per line: row col | cell text
+Example:
+0 0 | Characteristic
+0 1 | Treatment group A
+0 2 | Treatment group B
+1 0 | n (%)
+
+Use 0-based indexing. For spanning cells report the top-left anchor coordinate.
+
+Table:
+{table}
