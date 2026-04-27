@@ -72,6 +72,10 @@ REQUEST_TIMEOUT_SEC = float(os.getenv("REQUEST_TIMEOUT_SECONDS", "300.0"))
 INTER_REQUEST_DELAY = float(os.getenv("INTER_REQUEST_DELAY",     "1.0"))
 EARLY_STOP_FAILURES = int(os.getenv("EARLY_STOP_FAILURES",       "10"))
 
+# Tables exceeding this cell count are skipped entirely — too large for any model.
+# At 3000 cells (default): covers 95.2% of RealHeatBench, excludes only outliers.
+MAX_TABLE_CELLS = int(os.getenv("MAX_TABLE_CELLS", "3000"))
+
 # FIX-1: chunk threshold based on total cells (rows × cols), not rows alone.
 # economy-table106: 95 rows × 27 cols = 2565 cells → exceeds 2000 → chunked.
 # A plain 100-row × 5-col table: 500 cells → not chunked. Correct behaviour.
@@ -452,9 +456,36 @@ def needs_chunking(table_rows: int, table_cols: int) -> bool:
     return False
 
 
-def get_max_tokens_for_prompt(prompt_name: str) -> int:
-    """FIX-2: Return per-prompt token limit, falling back to global MAX_TOKENS."""
-    return MAX_TOKENS_BY_PROMPT.get(prompt_name, MAX_TOKENS)
+# Absolute ceiling the vLLM server will accept
+MODEL_MAX_TOKENS = int(os.getenv("MODEL_MAX_TOKENS", "32768"))
+
+def get_max_tokens_for_prompt(prompt_name: str,
+                               table_rows: int = 0,
+                               table_cols: int = 0,
+                               true_headers_count: int = 0) -> int:
+    """
+    Return a dynamically computed token limit that accounts for:
+      - Base per-prompt override (reasoning prompts need CoT headroom)
+      - Table size: larger tables need more output tokens
+      - Estimated header count: each line costs ~12 tokens
+
+    Formula:
+      base    = MAX_TOKENS_BY_PROMPT.get(prompt) or MAX_TOKENS
+      output  = max(true_headers_count, table_rows * 0.35) * 15
+                (0.35 = empirical fraction of cells that are headers;
+                 15 tokens per "row col | cell text" line)
+      total   = base + output, clamped to MODEL_MAX_TOKENS
+    """
+    base = MAX_TOKENS_BY_PROMPT.get(prompt_name, MAX_TOKENS)
+
+    # Estimate output size only if table dimensions are known
+    if table_rows > 0:
+        estimated_headers = max(true_headers_count, int(table_rows * 0.35))
+        output_tokens     = estimated_headers * 15
+        dynamic           = base + output_tokens
+        return min(dynamic, MODEL_MAX_TOKENS)
+
+    return min(base, MODEL_MAX_TOKENS)
 
 
 # =========================
@@ -861,6 +892,48 @@ class ResponseCollector:
                             idx: int, source_name: str) -> Optional[Dict[str, Any]]:
         if not isinstance(item, dict): return None
 
+        # Measure table size before doing anything else
+        _cells = item.get("cells")
+        _data  = item.get("data")
+        if _cells is not None:
+            _rows_set = set(); _cols_set = set()
+            for _c in _cells:
+                for _r in (_c.get("row_nums") or []): _rows_set.add(_r)
+                for _c2 in (_c.get("column_nums") or []): _cols_set.add(_c2)
+            _nr_full = max(_rows_set) + 1 if _rows_set else 0
+            _nc_full = max(_cols_set) + 1 if _cols_set else 0
+        elif _data is not None and isinstance(_data, list):
+            _nr_full = len(_data)
+            _nc_full = max((len(r) for r in _data if isinstance(r, list)), default=0)
+        else:
+            return None
+
+        # If the table exceeds MAX_TABLE_CELLS, truncate to the first N rows
+        # that keep total cells ≤ MAX_TABLE_CELLS.
+        # Ground truth is also filtered to only include headers within those rows.
+        # The table is kept in the experiment — only its size is capped.
+        _was_truncated = False
+        _max_rows_full = _nr_full  # original row count
+        if MAX_TABLE_CELLS > 0 and _nc_full > 0:
+            _max_rows_allowed = MAX_TABLE_CELLS // _nc_full
+            if _nr_full > _max_rows_allowed:
+                _was_truncated = True
+                # Truncate cells/data to first _max_rows_allowed rows
+                if _cells is not None:
+                    item = dict(item)
+                    item["cells"] = [
+                        c for c in _cells
+                        if all(r < _max_rows_allowed
+                               for r in (c.get("row_nums") or []))
+                    ]
+                elif _data is not None:
+                    item = dict(item)
+                    item["data"] = _data[:_max_rows_allowed]
+                logging.debug(
+                    f"Truncated {filepath.stem}: "
+                    f"{_nr_full}×{_nc_full} → {_max_rows_allowed}×{_nc_full} rows"
+                )
+
         prompt_obj = sanitize_for_prompt(item)
         table_json = json.dumps(prompt_obj, ensure_ascii=False, separators=(",", ":"))
         table_hash = stable_hash(table_json, 12)
@@ -895,6 +968,9 @@ class ResponseCollector:
             "table_cols":     nc,
             "table_rows_bin": rows_bin(nr),
             "table_hash":     table_hash,
+            # Truncation metadata — filled when MAX_TABLE_CELLS trimmed the table
+            "was_truncated":      _was_truncated,
+            "original_row_count": _max_rows_full,
             "table_json":     table_json,
             "table_html":     "",
             "true_headers_raw":         true_raw,
@@ -990,7 +1066,10 @@ class ResponseCollector:
             )
             records = self._attach_html(records, src["html_root"])
             raw_map[src["name"]] = records
-            logging.info(f"Loaded {len(records)} records from {src['name']}")
+            logging.info(
+                f"Loaded {len(records)} records from {src['name']} "
+                f"(MAX_TABLE_CELLS={MAX_TABLE_CELLS}, oversized tables truncated)"
+            )
 
         if self.total_tables > 0:
             n_sources = len(EXPERIMENT_PLAN)
@@ -1150,15 +1229,17 @@ class ResponseCollector:
             "prompt_idx":    prompt_idx,
             "prompt_name":   pname,
             "prompt_file":   prompt_config.get("file", ""),
-            "source_group":  tr["source_group"],
-            "source_file":   tr["source_file"],
-            "source_stem":   tr["source_stem"],
-            "table_index":   tr["table_index"],
-            "table_kind":    tr["table_kind"],
-            "table_rows":    tr["table_rows"],
-            "table_cols":    tr["table_cols"],
-            "table_rows_bin":tr["table_rows_bin"],
-            "table_hash":    tr["table_hash"],
+            "source_group":      tr["source_group"],
+            "source_file":       tr["source_file"],
+            "source_stem":       tr["source_stem"],
+            "table_index":       tr["table_index"],
+            "table_kind":        tr["table_kind"],
+            "table_rows":        tr["table_rows"],
+            "table_cols":        tr["table_cols"],
+            "table_rows_bin":    tr["table_rows_bin"],
+            "table_hash":        tr["table_hash"],
+            "was_truncated":     tr.get("was_truncated", False),
+            "original_row_count":tr.get("original_row_count", tr["table_rows"]),
             "true_headers_raw":          tr["true_headers_raw"],
             "true_headers_1based":       tr["true_headers_1based"],
             "true_headers_count":        tr["true_headers_count"],
@@ -1175,6 +1256,17 @@ class ResponseCollector:
             "parse_success":     api_result["parse_success"],
             "status": ("api_failed"  if not api_result["api_success"]
                        else ("ok"    if api_result["parse_success"] else "parse_failed")),
+            # Flag tasks that produced a valid API response but zero F1 due to
+            # truncation — these are candidates for retry with higher max_tokens.
+            "needs_retry": (
+                api_result["api_success"]
+                and api_result.get("max_tokens_used", 0) > 0
+                and api_result.get("tokens_used", {}) is not None
+                and (api_result.get("tokens_used") or {}).get("completion", 0)
+                    >= api_result.get("max_tokens_used", 0)
+                and (api_result.get("parse_error") == "truncated_inside_think_block"
+                     or api_result.get("parse_success") is False)
+            ),
             "raw_response":      api_result["raw_response"],
             "parsed_headers":    api_result["parsed_headers"],
             "parse_error":       api_result["parse_error"],
@@ -1222,7 +1314,12 @@ class ResponseCollector:
             }, table_format)
 
         pname      = prompt_config.get("name", "")
-        mt         = get_max_tokens_for_prompt(pname)   # FIX-2
+        mt         = get_max_tokens_for_prompt(
+            pname,
+            table_rows=table_record["table_rows"],
+            table_cols=table_record["table_cols"],
+            true_headers_count=table_record["true_headers_count"],
+        )
         table_repr = (table_record.get("table_html") or table_record["table_json"]
                       if table_format == "html" else table_record["table_json"])
 
@@ -1429,6 +1526,79 @@ class ResponseCollector:
         asyncio.run(self._run_async())
 
     # ---------- retry mode ----------
+
+    async def _run_retry_capped_async(self, checkpoint_path: str):
+        """
+        Retry tasks that were capped AND produced F1=0 (or truncated_inside_think).
+        Uses dynamic max_tokens so each task gets the budget it actually needs.
+        """
+        self.start_time = datetime.now()
+        ts = self.start_time.strftime("%Y%m%d_%H%M%S") + "_capped_retry"
+
+        if not await self._check_server():
+            logging.critical("Aborting capped retry: server not healthy."); return
+
+        with open(checkpoint_path, "r", encoding="utf-8") as f:
+            ckpt = json.load(f)
+
+        # Restore successful results
+        self.responses             = ckpt.get("responses", [])
+        self.parse_failed_requests = ckpt.get("parse_failed_requests", [])
+        self.valid_responses       = [r for r in self.responses if r.get("parse_success")]
+        self.api_failed_requests   = ckpt.get("api_failed_requests", [])
+
+        # Find candidates: capped responses with F1=0 or truncated_inside_think
+        candidates = [
+            r for r in self.responses
+            if r.get("completion_capped")
+            and (r.get("f1", 1.0) == 0.0
+                 or r.get("parse_error") == "truncated_inside_think_block")
+        ]
+        logging.info(
+            f"Capped retry: {len(candidates)} candidates "
+            f"(capped + F1=0 or truncated_think) from {len(self.responses)} responses"
+        )
+        if not candidates:
+            logging.info("No capped candidates to retry."); return
+
+        # Remove candidates from responses (will be replaced)
+        candidate_ids = {r["request_id"] for r in candidates}
+        self.responses       = [r for r in self.responses if r["request_id"] not in candidate_ids]
+        self.valid_responses = [r for r in self.valid_responses if r["request_id"] not in candidate_ids]
+
+        pbn = {pc["name"]: (pi, pc) for pi, pc in enumerate(self.prompts)}
+        tlookup: Dict[Tuple, Dict] = {}
+        for fmt_records in self.table_map.values():
+            for records in fmt_records.values():
+                for tr in records:
+                    key = (tr["source_group"], tr["source_stem"],
+                           tr["table_index"], tr["table_hash"])
+                    tlookup[key] = tr
+
+        tasks, skipped = [], 0
+        for rec in candidates:
+            pname = rec.get("prompt_name", "")
+            if pname not in pbn:
+                logging.warning(f"Prompt '{pname}' not found, skip"); skipped += 1; continue
+            pi, pc = pbn[pname]
+            key = (rec.get("source_group"), rec.get("source_stem"),
+                   rec.get("table_index", 0), rec.get("table_hash", ""))
+            tr = tlookup.get(key)
+            if tr is None:
+                logging.warning(f"Table not found for {key}, skip"); skipped += 1; continue
+            fmt = rec.get("table_format", "json")
+            tasks.append((pi, pc, tr, fmt))
+
+        logging.info(f"Rebuilt {len(tasks)} capped-retry tasks (skipped {skipped})")
+        self.completed_count = (len(self.responses) + len(self.valid_responses)
+                                + len(self.parse_failed_requests)
+                                + len(self.api_failed_requests))
+        await self._run_tasks(tasks, ts)
+        self._save_final_results(ts)
+        self._build_metrics_artifacts(ts)
+
+    def run_retry_capped(self, checkpoint_path: str):
+        asyncio.run(self._run_retry_capped_async(checkpoint_path))
 
     async def _run_retry_async(self, checkpoint_path: str):
         self.start_time = datetime.now()
@@ -1701,11 +1871,17 @@ if __name__ == "__main__":
     parser.add_argument("--chunk-cells",   type=int,   default=None,
                         help=f"Chunking threshold in cells (rows×cols). "
                              f"Default: {CHUNK_CELL_THRESHOLD}")
+    parser.add_argument("--max-table-cells", type=int, default=None,
+                        help="Skip tables larger than this cell count entirely. "
+                             "Default: 3000 (covers 95%% of RealHeatBench). "
+                             "0 = no limit.")
     parser.add_argument("--table-seed",    default=None, metavar="PATH",
                         help="Path to selected_tables.json from a prior run. "
                              "Ensures all models use identical table sets.")
     parser.add_argument("--retry",         default=None, metavar="CHECKPOINT_PATH",
                         help="Retry api_failed entries from a checkpoint")
+    parser.add_argument("--retry-capped",  default=None, metavar="CHECKPOINT_PATH",
+                        help="Retry capped+F1=0 responses with dynamic max_tokens")
     args = parser.parse_args()
 
     if args.vllm_url:    VLLM_BASE_URL      = args.vllm_url
@@ -1714,11 +1890,13 @@ if __name__ == "__main__":
         OUTPUT_DIR = args.output_dir
         Path(OUTPUT_DIR).mkdir(parents=True, exist_ok=True)
     if args.concurrency  is not None: CONCURRENCY          = args.concurrency
+    if args.max_tokens   is not None: MODEL_MAX_TOKENS     = args.max_tokens * 4  # ceiling scales with base
     if args.max_tokens   is not None: MAX_TOKENS           = args.max_tokens
     if args.timeout      is not None: REQUEST_TIMEOUT_SEC  = args.timeout
     if args.inter_delay  is not None: INTER_REQUEST_DELAY  = args.inter_delay
     if args.early_stop   is not None: EARLY_STOP_FAILURES  = args.early_stop
-    if args.chunk_cells  is not None: CHUNK_CELL_THRESHOLD = args.chunk_cells
+    if args.chunk_cells      is not None: CHUNK_CELL_THRESHOLD = args.chunk_cells
+    if args.max_table_cells  is not None: MAX_TABLE_CELLS      = args.max_table_cells
 
     model_alias  = args.model_alias  if args.model_alias  else MODEL_ALIAS
     total_tables = args.total_tables if args.total_tables is not None else TOTAL_TABLES
@@ -1734,5 +1912,8 @@ if __name__ == "__main__":
     if args.retry:
         logging.info(f"=== RETRY MODE: {args.retry} ===")
         collector.run_retry(args.retry)
+    elif args.retry_capped:
+        logging.info(f"=== CAPPED RETRY MODE: {args.retry_capped} ===")
+        collector.run_retry_capped(args.retry_capped)
     else:
         collector.run()
