@@ -551,13 +551,14 @@ def main():
     overall = views["comparison_by_model"]
     if not overall.empty and "f1_mean" in overall.columns:
         for _, row in overall.sort_values("f1_mean", ascending=False).iterrows():
+            alias = str(row.get("model_alias", "?"))
             print(
-                f"  {row.get('model_alias','?'):15s}  "
-                f"n={int(row.get('n',0)):5d}  "
-                f"F1={row.get('f1_mean',0):.3f}  "
-                f"P={row.get('precision_mean',0):.3f}  "
-                f"R={row.get('recall_mean',0):.3f}  "
-                f"Exact={row.get('exact_match_mean',0):.3f}"
+                f"  {alias:<15}  "
+                f"n={int(row.get('n', 0)):5d}  "
+                f"F1={float(row.get('f1_mean', 0)):.3f}  "
+                f"P={float(row.get('precision_mean', 0)):.3f}  "
+                f"R={float(row.get('recall_mean', 0)):.3f}  "
+                f"Exact={float(row.get('exact_match_mean', 0)):.3f}"
             )
 
     if "comparison_by_model_format" in views:
@@ -567,12 +568,14 @@ def main():
             print("F1 by model × format")
             print("-" * 70)
             for _, row in fmt_df.iterrows():
+                alias = str(row.get("model_alias", "?"))
+                fmt   = str(row.get("table_format", "?"))
                 print(
-                    f"  {row.get('model_alias','?'):15s}  "
-                    f"[{row.get('table_format','?'):4s}]  "
-                    f"F1={row.get('f1_mean',0):.3f}  "
-                    f"P={row.get('precision_mean',0):.3f}  "
-                    f"R={row.get('recall_mean',0):.3f}"
+                    f"  {alias:<15}  "
+                    f"[{fmt:<4}]  "
+                    f"F1={float(row.get('f1_mean', 0)):.3f}  "
+                    f"P={float(row.get('precision_mean', 0)):.3f}  "
+                    f"R={float(row.get('recall_mean', 0)):.3f}"
                 )
 
     print(f"\nFull analysis → {out_dir}/")
