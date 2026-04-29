@@ -123,6 +123,18 @@ def load_all_runs(run_dirs: List[Path]) -> pd.DataFrame:
 
     df = pd.DataFrame(all_rows)
 
+    # Add predicted_no_headers flag:
+    # True when model returned empty prediction on a table that has ground truth headers
+    # (distinguishes genuine "no headers" from failed/capped responses)
+    if "pred_count" in df.columns and "support" in df.columns:
+        df["predicted_no_headers"] = (
+            pd.to_numeric(df["pred_count"], errors="coerce").fillna(0) == 0
+        ) & (
+            pd.to_numeric(df["support"], errors="coerce").fillna(0) > 0
+        ) & (
+            pd.to_numeric(df.get("api_success", 1), errors="coerce").fillna(1) == 1
+        )
+
     # Coerce numeric columns
     num_cols = [
         "f1", "precision", "recall", "jaccard",
@@ -130,6 +142,8 @@ def load_all_runs(run_dirs: List[Path]) -> pd.DataFrame:
         "support", "pred_count", "tp", "fp", "fn",
         "duration_sec", "prompt_tokens", "completion_tokens", "total_tokens",
         "column_headers_f1", "projected_row_headers_f1", "spanning_f1",
+        "text_token_f1_mean", "text_exact_match_rate", "joint_f1",
+        "spanning_soft_f1", "output_complete",
     ]
     for col in num_cols:
         if col in df.columns:
@@ -220,6 +234,9 @@ def agg_group(df: pd.DataFrame, group_cols: List[str],
         "exact_match", "partial_match", "header_coverage",
         "support", "pred_count", "tp", "fp", "fn",
         "duration_sec", "completion_tokens", "prompt_tokens",
+        # Text quality metrics (Section 3.6.2 in paper)
+        "text_token_f1_mean", "text_exact_match_rate",
+        "joint_f1", "joint_precision", "joint_recall",
     ]
     if metric_prefix:
         base_metrics = [m for m in [
@@ -262,6 +279,77 @@ def agg_group(df: pd.DataFrame, group_cols: List[str],
 # COMPARISON TABLES
 # =========================
 
+
+
+def build_format_consistency(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    For tables processed in both JSON and HTML formats,
+    compute Jaccard similarity of predicted header sets between the two formats.
+    High Jaccard = model agrees with itself across formats (stable).
+    Low Jaccard = model predicts very different headers for same table (unstable).
+    """
+    if "table_format" not in df.columns or "parsed_headers" not in df.columns:
+        return pd.DataFrame()
+
+    json_df = df[df["table_format"] == "json"].copy()
+    html_df = df[df["table_format"] == "html"].copy()
+
+    # Match by (model_alias, prompt_name, source_stem, table_index)
+    key_cols = ["model_alias", "prompt_name", "source_group", "source_stem", "table_index"]
+    merge_cols = [c for c in key_cols if c in json_df.columns and c in html_df.columns]
+
+    if not merge_cols:
+        return pd.DataFrame()
+
+    merged = json_df[merge_cols + ["parsed_headers"]].merge(
+        html_df[merge_cols + ["parsed_headers"]],
+        on=merge_cols, suffixes=("_json", "_html")
+    )
+
+    rows = []
+    for _, row in merged.iterrows():
+        try:
+            ph_j = row["parsed_headers_json"]
+            ph_h = row["parsed_headers_html"]
+            if isinstance(ph_j, str):
+                import json as _json
+                ph_j = _json.loads(ph_j)
+            if isinstance(ph_h, str):
+                import json as _json
+                ph_h = _json.loads(ph_h)
+            set_j = {(h["row"], h["col"]) for h in (ph_j or [])}
+            set_h = {(h["row"], h["col"]) for h in (ph_h or [])}
+            union = set_j | set_h
+            inter = set_j & set_h
+            jacc  = len(inter) / len(union) if union else 1.0
+        except Exception:
+            jacc = None
+        entry = {c: row[c] for c in merge_cols}
+        entry["format_consistency_jaccard"] = jacc
+        rows.append(entry)
+
+    if not rows:
+        return pd.DataFrame()
+
+    result = pd.DataFrame(rows)
+    group_cols = [c for c in ["model_alias", "prompt_name"] if c in result.columns]
+    if not group_cols:
+        return result
+
+    summary_rows = []
+    for key, sub in result.groupby(group_cols, dropna=False):
+        r: dict = {}
+        ks = [key] if len(group_cols) == 1 else list(key)
+        for col, val in zip(group_cols, ks): r[col] = val
+        s = pd.to_numeric(sub["format_consistency_jaccard"], errors="coerce").dropna()
+        r["n_paired"]              = len(s)
+        r["consistency_mean"]      = float(s.mean()) if len(s) else None
+        r["consistency_median"]    = float(s.median()) if len(s) else None
+        r["consistency_low_pct"]   = float((s < 0.5).mean()) if len(s) else None
+        summary_rows.append(r)
+
+    return pd.DataFrame(summary_rows)
+
 def build_model_summary(df: pd.DataFrame) -> pd.DataFrame:
     """One row per model — the main paper table."""
     return agg_group(df, ["model_alias"])
@@ -273,6 +361,29 @@ def build_model_prompt(df: pd.DataFrame) -> pd.DataFrame:
 
 def build_model_format(df: pd.DataFrame) -> pd.DataFrame:
     return agg_group(df, ["model_alias", "table_format"])
+
+
+def _add_strategy_column(df: pd.DataFrame) -> pd.DataFrame:
+    """Add 'strategy' column: domain / max / min based on prompt_name."""
+    if "prompt_name" not in df.columns:
+        return df
+    df = df.copy()
+    def get_strategy(p: str) -> str:
+        p = str(p).lower()
+        if "domain" in p: return "domain"
+        if "_max" in p or "max" in p: return "max"
+        if "_min" in p or "min" in p: return "min"
+        return "other"
+    df["strategy"] = df["prompt_name"].apply(get_strategy)
+    return df
+
+
+def build_model_strategy(df: pd.DataFrame) -> pd.DataFrame:
+    """Aggregate by model × strategy (domain/max/min)."""
+    df2 = _add_strategy_column(df)
+    if "strategy" not in df2.columns:
+        return pd.DataFrame()
+    return agg_group(df2, ["model_alias", "strategy"])
 
 
 def build_model_prompt_format(df: pd.DataFrame) -> pd.DataFrame:
@@ -402,6 +513,31 @@ def write_summary(df: pd.DataFrame, out_path: Path, run_dirs: List[Path]):
                 )
             f.write("\n")
 
+        # Strategy breakdown
+        strat = views.get("comparison_by_model_strategy", pd.DataFrame())
+        if not strat.empty:
+            f.write("STRATEGY BREAKDOWN (domain/max/min)\n" + "-" * 40 + "\n")
+            s_cols = [c for c in ["strategy","n","f1_mean","precision_mean",
+                                  "recall_mean","capped_rate"] if c in strat.columns]
+            f.write(strat[s_cols].to_string(index=False) + "\n\n")
+
+        # Format consistency
+        cons = views.get("format_consistency", pd.DataFrame())
+        if not cons.empty and "consistency_mean" in cons.columns:
+            f.write("FORMAT CONSISTENCY (JSON vs HTML Jaccard)\n" + "-" * 40 + "\n")
+            f.write(cons.to_string(index=False) + "\n\n")
+
+        # predicted_no_headers
+        if "predicted_no_headers" in df.columns:
+            f.write("PREDICTED NO HEADERS (false negatives on non-empty tables)\n"
+                    + "-" * 40 + "\n")
+            for model in models:
+                sub = df[df["model_alias"] == model]
+                no_h = sub[sub["predicted_no_headers"] == True]
+                f.write(f"  {model}: {len(no_h)}/{len(sub)} "
+                        f"({len(no_h)/max(1,len(sub)):.1%})\n")
+            f.write("\n")
+
     logging.info(f"Summary → {out_path}")
 
 
@@ -528,6 +664,8 @@ def main():
         "comparison_by_model_format":       build_model_format(df),
         "comparison_by_model_prompt_format":build_model_prompt_format(df),
         "comparison_by_model_source":       build_model_source(df),
+        "comparison_by_model_strategy":     build_model_strategy(df),
+        "format_consistency":               build_format_consistency(df),
         "comparison_by_model_size":         build_model_size(df),
         "comparison_by_model_type":         build_model_type(df),
     }

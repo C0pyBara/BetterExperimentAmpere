@@ -248,6 +248,9 @@ def extract_true_coords_from_cells(
 def extract_type_coords_from_cells(cells: List[Dict[str, Any]]) -> Dict[str, Any]:
     col_c, proj_c, span_c = set(), set(), set()
     col_n = proj_n = span_n = 0
+    # span_zones: maps anchor coord → frozenset of ALL (row,col) positions in the span
+    # Used for soft evaluation: a prediction is correct if it hits any position in the zone
+    span_zones: Dict[Tuple[int,int], set] = {}
     for cell in cells or []:
         row_nums = cell.get("row_nums", []) or []
         col_nums = cell.get("column_nums", []) or []
@@ -263,6 +266,14 @@ def extract_type_coords_from_cells(cells: List[Dict[str, Any]]) -> Dict[str, Any
             proj_c.add(anchor); proj_n += 1
         if cell.get("is_spanning"):
             span_c.add(anchor); span_n += 1
+            # Store all positions covered by this spanning cell
+            zone = set()
+            for r in row_nums:
+                for c in col_nums:
+                    try: zone.add((int(r), int(c)))
+                    except: pass
+            if zone:
+                span_zones[anchor] = zone
     return {
         "column_headers":                   [{"row": r, "col": c} for r, c in sorted(col_c)],
         "projected_row_headers":            [{"row": r, "col": c} for r, c in sorted(proj_c)],
@@ -270,6 +281,11 @@ def extract_type_coords_from_cells(cells: List[Dict[str, Any]]) -> Dict[str, Any
         "column_header_cell_count":         col_n,
         "projected_row_header_cell_count":  proj_n,
         "spanning_cell_count":              span_n,
+        # Span zones stored as list of {anchor, zone} for JSON serialisation
+        "spanning_zones": [
+            {"anchor": list(anchor), "zone": [list(pos) for pos in sorted(zone)]}
+            for anchor, zone in span_zones.items()
+        ],
     }
 
 
@@ -294,6 +310,72 @@ def extract_true_coords_from_headers(
     coord_list = [{"row": r, "col": c} for r, c in sorted(coords)]
     return coord_list, gt_text
 
+
+
+
+def evaluate_spanning_soft(
+    span_zones: List[Dict],
+    pred_set:   set,
+    table_rows: int = 0,
+    table_cols: int = 0,
+) -> Dict[str, float]:
+    """
+    Soft evaluation for spanning cells:
+    A predicted coordinate is a true positive if it falls anywhere within
+    the span zone of a ground-truth spanning cell (not just the anchor).
+
+    This corrects for anchor-mismatch errors where the model predicts (0,3)
+    for a spanning cell anchored at (0,2) with colspan=3.
+
+    Returns: soft_precision, soft_recall, soft_f1
+    """
+    if not span_zones:
+        return {"spanning_soft_precision": None,
+                "spanning_soft_recall":    None,
+                "spanning_soft_f1":        None}
+
+    # Filter pred_set to bounds
+    if table_rows > 0 and table_cols > 0:
+        pred_filtered = {(r, c) for r, c in pred_set
+                         if 0 <= r < table_rows and 0 <= c < table_cols}
+    else:
+        pred_filtered = pred_set
+
+    # Build union of all span positions
+    all_span_positions: set = set()
+    for z in span_zones:
+        for pos in z.get("zone", []):
+            try: all_span_positions.add((int(pos[0]), int(pos[1])))
+            except: pass
+
+    n_true = len(span_zones)  # one ground-truth spanning cell = one TP candidate
+
+    # For each spanning cell, check if any predicted coord hits its zone
+    soft_tp = 0
+    matched_preds: set = set()
+    for z in span_zones:
+        zone_set = set()
+        for pos in z.get("zone", []):
+            try: zone_set.add((int(pos[0]), int(pos[1])))
+            except: pass
+        hits = pred_filtered & zone_set
+        if hits:
+            soft_tp += 1
+            matched_preds.update(hits)
+
+    # FP = predicted coords that hit no span zone
+    soft_fp = len(pred_filtered - all_span_positions)
+    soft_fn = n_true - soft_tp
+
+    soft_p = soft_tp / (soft_tp + soft_fp) if (soft_tp + soft_fp) else 0.0
+    soft_r = soft_tp / n_true if n_true else 0.0
+    soft_f = 2*soft_p*soft_r/(soft_p+soft_r) if (soft_p+soft_r) else 0.0
+
+    return {
+        "spanning_soft_precision": soft_p,
+        "spanning_soft_recall":    soft_r,
+        "spanning_soft_f1":        soft_f,
+    }
 
 def evaluate_coord_sets(true_set: set, pred_set: set,
                          table_rows: int = 0, table_cols: int = 0) -> Dict[str, Any]:
@@ -457,7 +539,10 @@ def needs_chunking(table_rows: int, table_cols: int) -> bool:
 
 
 # Absolute ceiling the vLLM server will accept
-MODEL_MAX_TOKENS = int(os.getenv("MODEL_MAX_TOKENS", "32768"))
+MODEL_MAX_TOKENS   = int(os.getenv("MODEL_MAX_TOKENS",   "32768"))
+# Two-pass generation: if first pass is capped, do a continuation pass
+# asking model to resume from where it stopped
+ENABLE_TWO_PASS    = os.getenv("ENABLE_TWO_PASS", "1") == "1"
 
 def get_max_tokens_for_prompt(prompt_name: str,
                                table_rows: int = 0,
@@ -529,16 +614,19 @@ def parse_output(raw_text: str) -> Tuple[bool, List[Dict[str, Any]], str]:
     # Thinking-block extraction
     think_close = "</think>"
     if think_close in text:
-        # Take only what comes after </think>
         text = text.split(think_close, 1)[1].strip()
     elif "<think>" in text:
-        # Started thinking but truncated — no usable output
         return False, [], "truncated_inside_think_block"
 
     text = re.sub(r"^```[a-z]*\s*", "", text, flags=re.IGNORECASE)
     text = re.sub(r"\s*```$",        "", text, flags=re.IGNORECASE).strip()
 
-    # Empty output after think block = model predicted no headers
+    # Detect DONE marker — signals model completed full output (not truncated)
+    # Strip DONE before parsing so it doesn't interfere with coordinate extraction
+    has_done_marker = bool(re.search(r"^DONE\s*$", text, re.MULTILINE | re.IGNORECASE))
+    text = re.sub(r"^DONE\s*$", "", text, flags=re.MULTILINE | re.IGNORECASE).strip()
+
+    # Empty output = model predicted no headers
     if not text:
         return True, [], ""
 
@@ -569,7 +657,7 @@ def parse_output(raw_text: str) -> Tuple[bool, List[Dict[str, Any]], str]:
 
     if coords:
         coords.sort(key=lambda x: (x["row"], x["col"]))
-        return True, coords, ""
+        return True, coords, ("done_marker" if has_done_marker else "")
 
     # Fallback A: loose "int ... int" per line (no pipe, no text)
     for line in text.splitlines():
@@ -581,7 +669,7 @@ def parse_output(raw_text: str) -> Tuple[bool, List[Dict[str, Any]], str]:
                 coords.append({"row": r, "col": c, "text": ""})
     if coords:
         coords.sort(key=lambda x: (x["row"], x["col"]))
-        return True, coords, "fallback_loose_lines"
+        return True, coords, ("done_marker" if has_done_marker else "fallback_loose_lines")
 
     # Fallback B: [[row,col],...] JSON array
     pairs = re.findall(r"\[\s*(\d+)\s*,\s*(\d+)\s*\]", text)
@@ -592,7 +680,7 @@ def parse_output(raw_text: str) -> Tuple[bool, List[Dict[str, Any]], str]:
                 seen.add((r, c))
                 coords.append({"row": r, "col": c, "text": ""})
         coords.sort(key=lambda x: (x["row"], x["col"]))
-        return True, coords, "fallback_json_array"
+        return True, coords, ("done_marker" if has_done_marker else "fallback_json_array")
 
     # Fallback C: (row,col) paren format
     parens = re.findall(r"\(\s*(\d+)\s*,\s*(\d+)\s*\)", text)
@@ -603,7 +691,7 @@ def parse_output(raw_text: str) -> Tuple[bool, List[Dict[str, Any]], str]:
                 seen.add((r, c))
                 coords.append({"row": r, "col": c, "text": ""})
         coords.sort(key=lambda x: (x["row"], x["col"]))
-        return True, coords, "fallback_paren_format"
+        return True, coords, ("done_marker" if has_done_marker else "fallback_paren_format")
 
     return False, [], "no_parseable_coordinates"
 
@@ -633,17 +721,41 @@ def chunk_matrix_table(obj: Dict, s: int, e: int) -> Tuple[Dict, int]:
     return result, s
 
 
+def _adaptive_chunk_rows(table_cols: int) -> int:
+    """
+    Compute how many rows fit in one chunk given the column count.
+    Ensures chunk_rows × table_cols ≤ CHUNK_CELL_THRESHOLD so wide
+    tables don't produce per-chunk inputs that exceed the context window.
+    Falls back to CHUNK_SIZE if columns are unknown.
+    """
+    if table_cols <= 0:
+        return CHUNK_SIZE
+    max_rows = CHUNK_CELL_THRESHOLD // max(table_cols, 1)
+    # Clamp: at least 5 rows per chunk, at most CHUNK_SIZE
+    return max(5, min(max_rows, CHUNK_SIZE))
+
+
 def make_chunks(table_json: str, table_rows: int,
-                table_kind: str) -> List[Tuple[str, int]]:
+                table_kind: str,
+                table_cols: int = 0) -> List[Tuple[str, int]]:
+    """
+    Split a large table into row-based chunks.
+    Chunk size is adaptive: narrow tables use CHUNK_SIZE rows,
+    wide tables use fewer rows so each chunk stays within
+    CHUNK_CELL_THRESHOLD cells (rows × cols ≤ threshold).
+    """
     try:
         obj = json.loads(table_json)
     except Exception:
         return [(table_json, 0)]
 
+    chunk_rows = _adaptive_chunk_rows(table_cols)
+    overlap    = min(CHUNK_OVERLAP, chunk_rows // 4)  # scale overlap proportionally
+
     chunks = []
     start  = 0
     while start < table_rows:
-        end = min(start + CHUNK_SIZE, table_rows)
+        end = min(start + chunk_rows, table_rows)
         try:
             if table_kind == "cells":
                 co, off = chunk_cells_table(obj, start, end)
@@ -662,7 +774,7 @@ def make_chunks(table_json: str, table_rows: int,
             break
         if end >= table_rows:
             break
-        start = start + CHUNK_SIZE - CHUNK_OVERLAP
+        start = start + chunk_rows - overlap
 
     return chunks or [(table_json, 0)]
 
@@ -683,11 +795,43 @@ def merge_chunk_predictions(chunk_results: List[Tuple[List[Dict], int]]) -> List
 # =========================
 # ASYNC API CALL
 # =========================
+
+
+def build_continuation_messages(
+    original_messages: List[Dict[str, str]],
+    first_response:    str,
+    last_row:          int,
+) -> List[Dict[str, str]]:
+    """
+    Build a continuation prompt for the second pass.
+    Includes the first response as assistant turn, then asks to continue
+    from the last row that was output.
+    """
+    continuation_user = (
+        f"Your previous response was cut off. "
+        f"Continue listing header cells starting from row {last_row} "
+        f"(inclusive if you haven't finished that row). "
+        f"Use the same format: row col | cell text. "
+        f"Output ONLY the remaining headers, no repetition of already listed ones."
+    )
+    return original_messages + [
+        {"role": "assistant", "content": first_response},
+        {"role": "user",      "content": continuation_user},
+    ]
+
+
+def extract_last_row(parsed_headers: List[Dict]) -> int:
+    """Return the highest row index seen in parsed headers (0 if none)."""
+    if not parsed_headers:
+        return 0
+    return max(h.get("row", 0) for h in parsed_headers)
+
 async def async_api_call(
-    client:   httpx.AsyncClient,
-    model:    str,
-    messages: List[Dict[str, str]],
-    max_tokens: int = MAX_TOKENS,          # FIX-2: per-call token limit
+    client:     httpx.AsyncClient,
+    model:      str,
+    messages:   List[Dict[str, str]],
+    max_tokens: int = MAX_TOKENS,
+    _pass:      int = 1,               # internal: 1 = first pass, 2 = continuation
 ) -> Dict[str, Any]:
     url     = f"{VLLM_BASE_URL}/chat/completions"
     payload = {
@@ -721,21 +865,61 @@ async def async_api_call(
             raw      = data_r["choices"][0]["message"]["content"] or ""
 
             ok, parsed_hdrs, pe = parse_output(raw)
-            usage = data_r.get("usage") or {}
+            usage      = data_r.get("usage") or {}
+            comp_toks  = usage.get("completion_tokens", 0) or 0
+            is_capped  = comp_toks >= max_tokens
+
+            # ── TWO-PASS: if first pass was capped, request continuation ──────
+            output_complete = (pe == "done_marker")
+            if (ENABLE_TWO_PASS
+                    and _pass == 1
+                    and is_capped
+                    and not output_complete  # skip second pass if DONE was written
+                    and ok
+                    and parsed_hdrs):
+                last_row = extract_last_row(parsed_hdrs)
+                cont_msgs = build_continuation_messages(messages, raw, last_row)
+                logging.debug(
+                    f"Two-pass continuation: first pass capped at {comp_toks} tokens, "
+                    f"last_row={last_row}, requesting continuation"
+                )
+                cont_result = await async_api_call(
+                    client, model, cont_msgs, max_tokens, _pass=2
+                )
+                if cont_result["api_success"] and cont_result["parse_success"]:
+                    # Merge: deduplicate by (row, col)
+                    seen_coords = {(h["row"], h["col"]) for h in parsed_hdrs}
+                    for h in cont_result["parsed_headers"]:
+                        key = (h["row"], h["col"])
+                        if key not in seen_coords:
+                            seen_coords.add(key)
+                            parsed_hdrs.append(h)
+                    parsed_hdrs.sort(key=lambda x: (x["row"], x["col"]))
+                    # Accumulate token usage
+                    cu = cont_result.get("tokens_used") or {}
+                    comp_toks  += cu.get("completion", 0) or 0
+                    duration   += cont_result.get("duration_sec", 0) or 0
+                    is_capped   = False  # continuation completed
+                    pe = pe or cont_result.get("parse_error", "")
+                else:
+                    logging.warning("Two-pass continuation failed, keeping first-pass result")
+            # ─────────────────────────────────────────────────────────────────
 
             return {
                 "api_success":    True,
                 "raw_response":   raw,
                 "parse_success":  ok,
                 "parsed_headers": parsed_hdrs,
-                "parse_error":    pe,
+                "parse_error":    pe if pe != "done_marker" else "",
+            "output_complete": (pe == "done_marker"),  # True = model wrote DONE
                 "duration_sec":   duration,
                 "retry_attempts": attempt,
                 "max_tokens_used": max_tokens,
+                "two_pass_used":  (_pass == 1 and not is_capped and comp_toks > max_tokens),
                 "tokens_used": {
                     "prompt":     usage.get("prompt_tokens"),
-                    "completion": usage.get("completion_tokens"),
-                    "total":      usage.get("total_tokens"),
+                    "completion": comp_toks,
+                    "total":      (usage.get("prompt_tokens") or 0) + comp_toks,
                 } if usage else None,
                 "error_type":    "",
                 "error_message": "",
@@ -957,6 +1141,7 @@ class ResponseCollector:
 
         th_by_type = {k: ti[k] for k in
                       ["column_headers", "projected_row_headers", "spanning"]}
+        span_zones  = ti.get("spanning_zones", [])
 
         return {
             "source_group":   source_name,
@@ -982,6 +1167,8 @@ class ResponseCollector:
             "true_headers_text":        {f"{r},{c}": t
                                          for (r, c), t in gt_text.items()},
             "has_type_info":            has_ti,
+            # span_zones: list of {anchor, zone} dicts for soft spanning evaluation
+            "spanning_zones":           span_zones,
             "column_header_cell_count":         ti["column_header_cell_count"],
             "projected_row_header_cell_count":  ti["projected_row_header_cell_count"],
             "spanning_cell_count":              ti["spanning_cell_count"],
@@ -1220,6 +1407,15 @@ class ResponseCollector:
                           "f1","jaccard","exact_match","partial_match","header_coverage"]:
                     type_metrics[f"{tname}_{k}"] = None
 
+        # Soft spanning evaluation — counts hit anywhere in span zone, not just anchor
+        soft_span = evaluate_spanning_soft(
+            tr.get("spanning_zones", []),
+            pred_set_f,
+            table_rows=tr["table_rows"],
+            table_cols=tr["table_cols"],
+        )
+        type_metrics.update(soft_span)
+
         result = {
             "request_id":    self._build_request_id(pname, tr, table_format),
             "timestamp":     datetime.now().isoformat(),
@@ -1252,6 +1448,7 @@ class ResponseCollector:
             "spanning_cell_count_bin":           tr["spanning_cell_count_bin"],
             "chunked":           chunked,
             "n_chunks":          n_chunks,
+            "two_pass_used":     api_result.get("two_pass_used", False),
             "api_success":       api_result["api_success"],
             "parse_success":     api_result["parse_success"],
             "status": ("api_failed"  if not api_result["api_success"]
@@ -1342,12 +1539,14 @@ class ResponseCollector:
         # JSON chunked
         chunks = make_chunks(table_record["table_json"],
                              table_record["table_rows"],
-                             table_record["table_kind"])
+                             table_record["table_kind"],
+                             table_cols=table_record["table_cols"])
+        chunk_rows_used = _adaptive_chunk_rows(table_record["table_cols"])
         logging.info(
             f"Chunking {table_record['source_stem']} "
             f"({table_record['table_rows']}×{table_record['table_cols']}"
             f" = {table_record['table_rows']*table_record['table_cols']} cells)"
-            f" → {len(chunks)} chunks"
+            f" → {len(chunks)} chunks ({chunk_rows_used} rows/chunk)"
         )
 
         chunk_results: List[Tuple[List[Dict], int]] = []
@@ -1882,6 +2081,8 @@ if __name__ == "__main__":
                         help="Retry api_failed entries from a checkpoint")
     parser.add_argument("--retry-capped",  default=None, metavar="CHECKPOINT_PATH",
                         help="Retry capped+F1=0 responses with dynamic max_tokens")
+    parser.add_argument("--no-two-pass", action="store_true", default=False,
+                        help="Disable two-pass generation (single pass only)")
     args = parser.parse_args()
 
     if args.vllm_url:    VLLM_BASE_URL      = args.vllm_url
@@ -1897,6 +2098,7 @@ if __name__ == "__main__":
     if args.early_stop   is not None: EARLY_STOP_FAILURES  = args.early_stop
     if args.chunk_cells      is not None: CHUNK_CELL_THRESHOLD = args.chunk_cells
     if args.max_table_cells  is not None: MAX_TABLE_CELLS      = args.max_table_cells
+    if args.no_two_pass:                  ENABLE_TWO_PASS      = False
 
     model_alias  = args.model_alias  if args.model_alias  else MODEL_ALIAS
     total_tables = args.total_tables if args.total_tables is not None else TOTAL_TABLES

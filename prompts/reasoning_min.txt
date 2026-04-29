@@ -1,47 +1,40 @@
-You are a senior data engineer specializing in data normalization and schema design.
+You are a data engineer specializing in relational data modeling.
 Take a deep breath and work carefully.
 
-Task: Identify header cells using the MINIMUM STRATEGY (STRUCTURAL / NORMALIZATION).
+Task: Identify which cells in the table are headers.
+
+ANALYSIS MODE: MINIMUM STRATEGY (STRUCTURAL)
 
 Definition:
-A header is a cell that represents an INDEPENDENT ATTRIBUTE or ENTITY NAME required to express the table in normalized (relational) form.
+A header NAMES an attribute or dimension. It answers "what is this column/row measuring?"
+A non-header IS data — a value, measurement, entity key, or category label.
 
-Key logic:
-Mentally normalize the table into flat relational tuples:
-  — identify entities (what each row describes)
-  — identify attributes (what each column measures)
-  — separate structural labels from data values
+Simple test per cell: "Does this cell name an attribute, or is it a value of an attribute?"
 
-Header criteria (include ONLY if ALL apply):
-  — names an attribute or entity dimension
-  — its associated values are homogeneous (same type across the group)
-  — required to reconstruct the relational structure of the table
-  — part of an "entity → attribute → value" triplet
+INCLUDE: column attribute names, row dimension labels, sub-column labels, group names.
+EXCLUDE: row-level entity keys (values of the row dimension), aggregates, section separators.
 
-Do NOT treat as headers:
-  — aggregations or totals ("Total", "Sum", "Average", "Subtotal")
-  — descriptive or explanatory cells mid-table that are not attribute names
-  — raw values, even if they contextually label a group
-  — section separators unless they define a new relational entity
-  — data cells that appear in the first row
-
---- STEP 1 — ANALYSIS (Chain-of-Thought)
-1. What entities does this table describe?
-2. What attributes (column names) uniquely identify each measurement?
-3. Are there row identifiers that serve as entity keys?
-4. Which cells are attribute names vs data values?
-5. Can the table be expressed as (entity, attribute, value) triples?
-6. What is the minimal set of cells required for that structure?
+--- STEP 1 — ANALYSIS
+1. What does each COLUMN measure? The cells that name what a column measures are headers.
+2. What does each ROW identify? The cell naming the ROW AXIS is a header (e.g. "Variable", "Country").
+   BUT the actual row identifiers in that column (e.g. "Age", "Germany") are VALUES, not headers.
+3. Are there multi-level column headers? Both levels name attributes → both are headers.
+4. Are there section separators mid-table? → EXCLUDE (they label groups, not attributes).
+5. Are there aggregate rows (Total, Mean, Sum)? → EXCLUDE.
+6. Are there empty corner cells? → EXCLUDE.
 
 --- STEP 2 — SELF-CHECK (Self-Refine)
-  — Did I include any aggregate rows (totals, averages)?
-  — Did I include any pure data values as headers?
-  — Can the table structure be fully reconstructed from only these headers?
-  — Am I including more than the minimal structural set?
+  — Did I include any row-level entity identifiers? (values of the row dimension) → remove
+  — Did I include any section separator rows? → remove
+  — Did I include any aggregates or totals? → remove
+  — Can I reconstruct the column schema from only the cells I included? → if yes, done
 Correct if needed.
 
 --- OUTPUT
-List only header cell coordinates. No reasoning, no explanation.
+List only header cell coordinates with cell text. No reasoning, no explanation.
+
+OUTPUT FORMAT: one header per line: row col | cell text
+Use 0-based indexing. For spanning cells report the top-left anchor coordinate.
 
 Table:
 {table}

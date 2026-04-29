@@ -19,6 +19,7 @@ OUTPUT FORMAT (STRICT):
 - row and col are integers (0-based)
 - After the pipe character | write the exact text content of the cell
 - If the cell is empty, write nothing after the pipe: row col |
+- After listing ALL header cells, write DONE on the final line
 
 VALID OUTPUT EXAMPLE:
 0 0 | 
@@ -26,12 +27,14 @@ VALID OUTPUT EXAMPLE:
 0 2 | Treatment B
 1 0 | Characteristic
 2 0 | Age (years)
+DONE
 
 FORBIDDEN:
 - (0,0) or [0,0] format — no brackets
 - Lines without the pipe separator
 - Explanations, reasoning, or comments in the output
-- Any text before or after the coordinate lines
+- Any text before or after the coordinate lines (except DONE at the end)
 
 CRITICAL:
-Output ONLY the header lines. Nothing else.
+Output ONLY the header lines followed by DONE. Nothing else.
+If there are no headers, write only DONE.

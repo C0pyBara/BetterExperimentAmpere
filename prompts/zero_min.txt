@@ -1,31 +1,38 @@
 Task: Identify which cells in the table are headers.
 
-ANALYSIS MODE: MINIMUM STRATEGY (STRUCTURAL / NORMALIZATION)
+ANALYSIS MODE: MINIMUM STRATEGY (STRUCTURAL)
 
 Definition:
-A header is a cell that represents an INDEPENDENT ATTRIBUTE or ENTITY NAME required to express the table in normalized (database) form.
+A header is a cell that NAMES what is measured or identified — an attribute name or entity dimension label. It tells you WHAT the data in a column or row represents, not the data itself.
 
-Key logic:
-Mentally normalize the table into a flat relational structure:
-  — identify entities (what rows describe)
-  — identify attributes (what columns measure)
-  — separate structural labels from data values
+Simple test for each cell:
+  Ask: "Is this cell naming an attribute or is it a value of an attribute?"
+  — If it NAMES an attribute → header
+  — If it IS a value → not a header
 
-Header criteria (include ONLY if ALL apply):
-  — names an attribute or entity dimension
-  — its associated values are homogeneous (same type across the group)
-  — required to reconstruct the table's relational structure
-  — part of an "entity → attribute → value" triplet
+INCLUDE (attribute names and dimension labels):
+  — Column names that define what is measured (e.g. "Age", "Country", "GDP", "n", "%")
+  — Row dimension labels that define the row axis (e.g. "Variable", "Indicator", "Category")
+  — Sub-column labels in multi-level headers (e.g. "Mean", "SD", "2020", "2021")
+  — Group labels that name a column group (e.g. "Treatment A", "Baseline")
 
-Do NOT treat as headers:
-  — aggregations or totals (e.g., "Total", "Sum", "Mean")
-  — descriptive or explanatory text mid-table
-  — raw values, even if they label a group contextually
-  — cells that are data even if they appear in the first row
+EXCLUDE (values, not attribute names):
+  — Individual data values even if they appear in the first row or column
+  — Row-level entity identifiers (e.g. "Age (years)", "Smoking" — these are VALUES of the "Variable" column)
+  — Aggregate rows and totals ("Total", "Sum", "Average", "Subtotal")
+  — Section separators and category labels mid-table ("Demographic factors", "Clinical variables")
+  — Empty corner cells
 
-Requirement:
-Identify ONLY the minimal structural headers needed for normalization.
-When in doubt, exclude.
+CONCRETE EXAMPLE:
+Table: Variable | Cases | Controls
+       Age (years) | 52.3 | 48.7
+       BMI | 26.1 | 24.9
+
+Headers (MIN): "Variable", "Cases", "Controls" — these name the data dimensions.
+NOT headers: "Age (years)", "BMI" — these are VALUES of the Variable column, not attribute names.
+
+OUTPUT FORMAT: one header per line: row col | cell text
+Use 0-based indexing. For spanning cells report the top-left anchor coordinate.
 
 Table:
 {table}
