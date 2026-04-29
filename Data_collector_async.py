@@ -956,9 +956,17 @@ class ResponseCollector:
         self.model_alias   = model_alias or slugify(MODEL_NAME.split("/")[-1])[:12]
         self.table_seed_path = table_seed_path
 
-        ts_short = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
+        _now          = datetime.now()
+        ts_short      = _now.strftime("%d.%m.%Y")   # dd.mm.yyyy
         self.run_id   = f"{ts_short}_{self.model_alias}"
         self.base_dir = Path(output_dir)
+        # Если директория уже существует (повторный запуск того же дня) — добавляем счётчик
+        _run_base = self.base_dir / f"run_{self.run_id}"
+        if _run_base.exists():
+            _counter = 2
+            while (_run_base.parent / f"run_{self.run_id}_{_counter}").exists():
+                _counter += 1
+            self.run_id = f"{self.run_id}_{_counter}"
         self.run_dir  = self.base_dir / f"run_{self.run_id}"
 
         self.logs_dir    = self.run_dir / "logs"
@@ -1000,7 +1008,7 @@ class ResponseCollector:
     # ---------- setup ----------
 
     def _setup_file_logging(self):
-        log_file = self.logs_dir / f"experiment_{self.run_id}.log"
+        log_file = self.logs_dir / f"experiment.log"
         root = logging.getLogger()
         for h in list(root.handlers):
             if isinstance(h, logging.FileHandler):
@@ -1686,7 +1694,7 @@ class ResponseCollector:
 
     async def _run_async(self):
         self.start_time = datetime.now()
-        ts = self.start_time.strftime("%Y%m%d_%H%M%S")
+        ts = self.start_time.strftime("%d.%m.%Y")
 
         if not await self._check_server():
             logging.critical("Aborting: server not healthy."); return
@@ -1732,7 +1740,7 @@ class ResponseCollector:
         Uses dynamic max_tokens so each task gets the budget it actually needs.
         """
         self.start_time = datetime.now()
-        ts = self.start_time.strftime("%Y%m%d_%H%M%S") + "_capped_retry"
+        ts = self.start_time.strftime("%d.%m.%Y") + "_capped_retry"
 
         if not await self._check_server():
             logging.critical("Aborting capped retry: server not healthy."); return
@@ -1801,7 +1809,7 @@ class ResponseCollector:
 
     async def _run_retry_async(self, checkpoint_path: str):
         self.start_time = datetime.now()
-        ts = self.start_time.strftime("%Y%m%d_%H%M%S") + "_retry"
+        ts = self.start_time.strftime("%d.%m.%Y") + "_retry"
 
         if not await self._check_server():
             logging.critical("Aborting retry: server not healthy."); return
@@ -1863,6 +1871,8 @@ class ResponseCollector:
 
     def _save_checkpoint(self, timestamp: str):
         path = self.ckpt_dir / f"checkpoint_{timestamp}.json"
+        # Also maintain a fixed-name latest checkpoint for easy access
+        latest = self.ckpt_dir / "checkpoint_latest.json"
         with open(path, "w", encoding="utf-8") as f:
             json.dump({
                 "metadata": {
@@ -1882,7 +1892,9 @@ class ResponseCollector:
                 "api_failed_requests":   self.api_failed_requests,
                 "parse_failed_requests": self.parse_failed_requests,
             }, f, ensure_ascii=False, indent=2)
-        logging.info(f"Checkpoint ({self.completed_count} done): {path}")
+        import shutil
+        shutil.copy2(path, latest)
+        logging.info(f"Checkpoint ({self.completed_count} done): {path.name}")
 
     def _save_final_results(self, timestamp: str):
         base = self.results_dir
@@ -1893,6 +1905,16 @@ class ResponseCollector:
         ]:
             with open(base / name, "w", encoding="utf-8") as f:
                 json.dump(d, f, ensure_ascii=False, indent=2)
+        # Fixed-name symlinks for easy access
+        for src_name, dst_name in [
+            (f"responses_{timestamp}.json",    "responses_latest.json"),
+            (f"api_failed_{timestamp}.json",   "api_failed_latest.json"),
+        ]:
+            try:
+                dst = base / dst_name
+                if dst.exists() or dst.is_symlink(): dst.unlink()
+                dst.symlink_to(src_name)
+            except Exception: pass
 
         for name, d in [
             (f"responses_{timestamp}.csv",    self.responses),
@@ -1986,10 +2008,10 @@ class ResponseCollector:
 
         for key, vdf in views.items():
             if not vdf.empty:
-                vdf.to_csv(self.metrics_dir / f"metrics_{key}_{timestamp}.csv",
+                vdf.to_csv(self.metrics_dir / f"metrics_{key}.csv",
                            index=False, encoding="utf-8-sig")
         try:
-            with pd.ExcelWriter(self.metrics_dir / f"metrics_{timestamp}.xlsx",
+            with pd.ExcelWriter(self.metrics_dir / "metrics.xlsx",
                                 engine="openpyxl") as w:
                 for key, vdf in views.items():
                     if not vdf.empty:
@@ -1997,14 +2019,14 @@ class ResponseCollector:
         except Exception as e:
             logging.warning(f"Metrics XLSX failed: {e}")
 
-        with open(self.metrics_dir / f"metrics_{timestamp}.json",
+        with open(self.metrics_dir / "metrics.json",
                   "w", encoding="utf-8") as f:
             json.dump({k: v.to_dict(orient="records") for k, v in views.items()},
                       f, ensure_ascii=False, indent=2)
 
         ov    = views["overall"].iloc[0].to_dict() if not views["overall"].empty else {}
         total = len(all_r); ok = len(self.responses)
-        with open(self.metrics_dir / f"metrics_summary_{timestamp}.txt",
+        with open(self.metrics_dir / "metrics_summary.txt",
                   "w", encoding="utf-8") as f:
             f.write("METRICS SUMMARY\n" + "=" * 80 + "\n")
             f.write(f"Model:            {MODEL_NAME}\n")
