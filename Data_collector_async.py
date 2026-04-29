@@ -94,24 +94,24 @@ FORMAT_RATIO  = os.getenv("FORMAT_RATIO", "50:50")      # "JSON:HTML"
 # EXPERIMENT PLAN
 # =========================
 EXPERIMENT_PLAN = [
+    # NOTE: pubtables and maximum_viewpoint are commented out —
+    # running MIN-only rerun with rewritten prompts.
+    # {
+    #     "name":      "pubtables_complex_top500",
+    #     "json_root": PROJECT_ROOT / "Get_500_Tables_from_PubTables" / "JSON_Complex_TOP500_normalized",
+    #     "html_root": PROJECT_ROOT / "Get_500_Tables_from_PubTables" / "JSON_Complex_TOP500_normalized_html",
+    #     "limit":     500,
+    #     "prompts":   ["zero_domain", "fewshot_domain", "reasoning_domain"],
+    # },
+    # {
+    #     "name":      "maximum_viewpoint",
+    #     "json_root": PROJECT_ROOT / "Convert_from_xlsx_to_Json" / "maximum_viewpoint_converted_json",
+    #     "html_root": PROJECT_ROOT / "Convert_from_json_to_html" / "maximum_viewpoint_converted_html",
+    #     "limit":     500,
+    #     "prompts":   ["zero_max", "fewshot_max", "reasoning_max"],
+    # },
     {
-        # Domain prompts — tailored for biomedical PubTables content
-        "name":      "pubtables_complex_top500",
-        "json_root": PROJECT_ROOT / "Get_500_Tables_from_PubTables" / "JSON_Complex_TOP500_normalized",
-        "html_root": PROJECT_ROOT / "Get_500_Tables_from_PubTables" / "JSON_Complex_TOP500_normalized_html",
-        "limit":     500,
-        "prompts":   ["zero_domain", "fewshot_domain", "reasoning_domain"],
-    },
-    {
-        # MAX-strategy prompts — matches dataset annotation
-        "name":      "maximum_viewpoint",
-        "json_root": PROJECT_ROOT / "Convert_from_xlsx_to_Json" / "maximum_viewpoint_converted_json",
-        "html_root": PROJECT_ROOT / "Convert_from_json_to_html" / "maximum_viewpoint_converted_html",
-        "limit":     500,
-        "prompts":   ["zero_max", "fewshot_max", "reasoning_max"],
-    },
-    {
-        # MIN-strategy prompts — matches dataset annotation
+        # MIN-strategy prompts — rewritten prompts, fresh run
         "name":      "table_normalization",
         "json_root": PROJECT_ROOT / "Convert_from_xlsx_to_Json" / "table_normalization_converted_json",
         "html_root": PROJECT_ROOT / "Convert_from_json_to_html" / "table_normalization_converted_html",
