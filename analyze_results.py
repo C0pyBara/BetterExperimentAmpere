@@ -142,7 +142,7 @@ def load_all_runs(run_dirs: List[Path]) -> pd.DataFrame:
         "support", "pred_count", "tp", "fp", "fn",
         "duration_sec", "prompt_tokens", "completion_tokens", "total_tokens",
         "column_headers_f1", "projected_row_headers_f1", "spanning_f1",
-        "text_token_f1_mean", "text_exact_match_rate", "joint_f1",
+        "text_token_f1_mean", "text_exact_match_rate", "text_containment_mean", "joint_f1",
         "spanning_soft_f1", "output_complete",
     ]
     for col in num_cols:
@@ -236,6 +236,7 @@ def agg_group(df: pd.DataFrame, group_cols: List[str],
         "duration_sec", "completion_tokens", "prompt_tokens",
         # Text quality metrics (Section 3.6.2 in paper)
         "text_token_f1_mean", "text_exact_match_rate",
+        "text_containment_mean",
         "joint_f1", "joint_precision", "joint_recall",
     ]
     if metric_prefix:

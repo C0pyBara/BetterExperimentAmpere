@@ -420,6 +420,56 @@ def token_f1(pred_text: str, true_text: str) -> float:
     return 2 * p * r / (p + r)
 
 
+def _normalize_text(text: str) -> str:
+    """
+    Normalize cell text for containment check:
+    lowercase, strip whitespace, remove footnote markers like [note 2],
+    collapse multiple spaces.
+    """
+    t = text.lower().strip()
+    # Remove footnote markers: [note N], [N], (note N)
+    t = re.sub(r"\[note\s*\d+\]", "", t, flags=re.IGNORECASE)
+    t = re.sub(r"\(note\s*\d+\)", "", t, flags=re.IGNORECASE)
+    t = re.sub(r"\[\d+\]", "", t)
+    # Collapse whitespace
+    t = re.sub(r"\s+", " ", t).strip()
+    return t
+
+
+def text_containment(pred_text: str, true_text: str) -> float:
+    """
+    Containment score between predicted and ground truth cell text.
+
+    Returns 1.0 if either:
+      - pred (normalized) == true (normalized)           — exact match
+      - pred (normalized) is substring of true (normalized) — model gave shorter version
+      - true (normalized) is substring of pred (normalized) — model added extra words
+
+    Returns token F1 otherwise — as a soft fallback for partial overlap.
+
+    Rationale: model often omits footnote markers ([note 2]) or trailing
+    punctuation that are present in GT. These should count as correct.
+    """
+    pred_n = _normalize_text(pred_text)
+    true_n = _normalize_text(true_text)
+
+    if not pred_n and not true_n:
+        return 1.0
+    if not pred_n or not true_n:
+        return 0.0
+
+    # Exact after normalization
+    if pred_n == true_n:
+        return 1.0
+
+    # Containment: one is substring of the other
+    if pred_n in true_n or true_n in pred_n:
+        return 1.0
+
+    # Soft fallback: token F1 on normalized text
+    return token_f1(pred_n, true_n)
+
+
 def evaluate_text_metrics(
     true_text_map: Dict[Tuple[int,int], str],   # (r,c) → gt text
     pred_headers:  List[Dict[str, Any]],         # parsed headers with optional "text"
@@ -427,23 +477,32 @@ def evaluate_text_metrics(
     pred_set_filtered: set,                      # 0-based coord set (after OOB filter)
 ) -> Dict[str, Any]:
     """
-    Three text-aware metrics:
-      text_exact_match_rate  — among TP coords, fraction where pred text == gt text
-                               (case-insensitive, stripped)
-      text_token_f1_mean     — mean token F1 across TP coords
-      joint_f1               — coord F1 recomputed counting a cell correct only if
-                               coord AND text both match (exact, case-insensitive)
-    """
-    if not true_text_map:
-        return {
-            "text_exact_match_rate": None,
-            "text_token_f1_mean":    None,
-            "joint_f1":              None,
-            "joint_precision":       None,
-            "joint_recall":          None,
-        }
+    Text quality metrics computed on TP cells (correct coordinate predictions):
 
-    # Build pred text map: coord → pred text (if available)
+      text_exact_match_rate  — fraction of TP where pred text == gt text
+                               (case-insensitive, stripped)
+      text_token_f1_mean     — mean token F1 across TP cells (whitespace tokenisation)
+      text_containment_mean  — mean containment score across TP cells:
+                               1.0 if pred is substring of gt or vice versa
+                               (after footnote/punctuation normalisation),
+                               falls back to token F1 for partial overlap.
+                               Handles cases like gt="Treatment A [note 2]",
+                               pred="Treatment A" → containment=1.0.
+      joint_f1               — F1 counting a cell correct only if coord AND
+                               exact text both match (strictest metric)
+    """
+    empty = {
+        "text_exact_match_rate":  None,
+        "text_token_f1_mean":     None,
+        "text_containment_mean":  None,
+        "joint_f1":               None,
+        "joint_precision":        None,
+        "joint_recall":           None,
+    }
+    if not true_text_map:
+        return empty
+
+    # Build pred text map: coord → pred text
     pred_text_map: Dict[Tuple[int,int], str] = {}
     for h in pred_headers or []:
         try:
@@ -452,28 +511,37 @@ def evaluate_text_metrics(
         except Exception:
             continue
 
-    # TP coords
     tp_coords = true_set & pred_set_filtered
 
-    exact_matches: List[int] = []
-    token_f1s:     List[float] = []
+    exact_scores:       List[float] = []
+    token_f1_scores:    List[float] = []
+    containment_scores: List[float] = []
     joint_tp = 0
 
     for coord in tp_coords:
-        gt   = true_text_map.get(coord, "").lower().strip()
-        pred = pred_text_map.get(coord, "").lower().strip()
-        exact = int(gt == pred)
-        tf1   = token_f1(pred, gt)
-        exact_matches.append(exact)
-        token_f1s.append(tf1)
+        gt   = true_text_map.get(coord, "")
+        pred = pred_text_map.get(coord, "")
+
+        gt_lower   = gt.lower().strip()
+        pred_lower = pred.lower().strip()
+
+        exact = float(gt_lower == pred_lower)
+        tf1   = token_f1(pred_lower, gt_lower)
+        cont  = text_containment(pred, gt)
+
+        exact_scores.append(exact)
+        token_f1_scores.append(tf1)
+        containment_scores.append(cont)
+
         if exact:
             joint_tp += 1
 
     n_tp = len(tp_coords)
-    text_exact = sum(exact_matches) / n_tp if n_tp else None
-    text_tf1   = sum(token_f1s)    / n_tp if n_tp else None
+    text_exact = sum(exact_scores)       / n_tp if n_tp else None
+    text_tf1   = sum(token_f1_scores)    / n_tp if n_tp else None
+    text_cont  = sum(containment_scores) / n_tp if n_tp else None
 
-    # Joint F1: coord must match AND text exact match
+    # Joint F1: coord correct AND text exact match
     n_pred = len(pred_set_filtered)
     n_true = len(true_set)
     if n_pred == 0 and n_true == 0:
@@ -485,11 +553,12 @@ def evaluate_text_metrics(
                    if (joint_p + joint_r) else 0.0)
 
     return {
-        "text_exact_match_rate": text_exact,
-        "text_token_f1_mean":    text_tf1,
-        "joint_f1":              joint_f,
-        "joint_precision":       joint_p,
-        "joint_recall":          joint_r,
+        "text_exact_match_rate":  text_exact,
+        "text_token_f1_mean":     text_tf1,
+        "text_containment_mean":  text_cont,
+        "joint_f1":               joint_f,
+        "joint_precision":        joint_p,
+        "joint_recall":           joint_r,
     }
 
 
