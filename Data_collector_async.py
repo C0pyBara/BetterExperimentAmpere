@@ -68,7 +68,7 @@ MAX_TOKENS_BY_PROMPT: Dict[str, int] = {
 
 CONCURRENCY         = int(os.getenv("CONCURRENCY",          "2"))
 CHECKPOINT_EVERY    = int(os.getenv("CHECKPOINT_EVERY",     "10"))
-REQUEST_TIMEOUT_SEC = float(os.getenv("REQUEST_TIMEOUT_SECONDS", "300.0"))
+REQUEST_TIMEOUT_SEC = float(os.getenv("REQUEST_TIMEOUT_SECONDS", "0"))  # 0 = no timeout
 INTER_REQUEST_DELAY = float(os.getenv("INTER_REQUEST_DELAY",     "1.0"))
 EARLY_STOP_FAILURES = int(os.getenv("EARLY_STOP_FAILURES",       "10"))
 
@@ -1457,6 +1457,7 @@ class ResponseCollector:
             "chunked":           chunked,
             "n_chunks":          n_chunks,
             "two_pass_used":     api_result.get("two_pass_used", False),
+            "output_complete":   api_result.get("output_complete", False),
             "api_success":       api_result["api_success"],
             "parse_success":     api_result["parse_success"],
             "status": ("api_failed"  if not api_result["api_success"]
@@ -1630,7 +1631,10 @@ class ResponseCollector:
             max_keepalive_connections=CONCURRENCY,
         )
 
-        async with httpx.AsyncClient(timeout=REQUEST_TIMEOUT_SEC, limits=limits) as client:
+        async with httpx.AsyncClient(
+            timeout=httpx.Timeout(REQUEST_TIMEOUT_SEC if REQUEST_TIMEOUT_SEC > 0 else None),
+            limits=limits,
+        ) as client:
 
             async def worker():
                 nonlocal since
