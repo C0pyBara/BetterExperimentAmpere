@@ -435,7 +435,7 @@ def build_pivot(df: pd.DataFrame,
 # SUMMARY TEXT
 # =========================
 
-def write_summary(df: pd.DataFrame, out_path: Path, run_dirs: List[Path]):
+def write_summary(df: pd.DataFrame, out_path: Path, run_dirs: List[Path], views: dict = None):
     models = sorted(df["model_alias"].dropna().unique())
     with open(out_path, "w", encoding="utf-8") as f:
         f.write("CROSS-MODEL COMPARISON SUMMARY\n")
@@ -515,7 +515,7 @@ def write_summary(df: pd.DataFrame, out_path: Path, run_dirs: List[Path]):
             f.write("\n")
 
         # Strategy breakdown
-        strat = views.get("comparison_by_model_strategy", pd.DataFrame())
+        strat = views.get("comparison_by_model_strategy", pd.DataFrame()) if views else pd.DataFrame()
         if not strat.empty:
             f.write("STRATEGY BREAKDOWN (domain/max/min)\n" + "-" * 40 + "\n")
             s_cols = [c for c in ["strategy","n","f1_mean","precision_mean",
@@ -523,7 +523,7 @@ def write_summary(df: pd.DataFrame, out_path: Path, run_dirs: List[Path]):
             f.write(strat[s_cols].to_string(index=False) + "\n\n")
 
         # Format consistency
-        cons = views.get("format_consistency", pd.DataFrame())
+        cons = views.get("format_consistency", pd.DataFrame()) if views else pd.DataFrame()
         if not cons.empty and "consistency_mean" in cons.columns:
             f.write("FORMAT CONSISTENCY (JSON vs HTML Jaccard)\n" + "-" * 40 + "\n")
             f.write(cons.to_string(index=False) + "\n\n")
@@ -681,7 +681,7 @@ def main():
 
     save_views(views, out_dir)
     save_flat_responses(df, out_dir)
-    write_summary(df, out_dir / "summary.txt", run_dirs)
+    write_summary(df, out_dir / "summary.txt", run_dirs, views=views)
 
     # Print quick overview to console
     print("\n" + "=" * 70)
