@@ -361,8 +361,6 @@ Produces three CSVs:
 ## Authors
 
 - Ilia I. Okhotin
-- Nikita O. Dorodnykh
-- Aleksandr Yu. Yurin
 
 ## Citation
 
